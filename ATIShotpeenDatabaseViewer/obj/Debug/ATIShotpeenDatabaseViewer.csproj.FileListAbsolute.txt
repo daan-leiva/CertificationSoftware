@@ -10,3 +10,6 @@ C:\Users\dleiva\documents\visual studio 2013\Projects\ATIShotpeenDatabaseViewer\
 C:\Users\dleiva\documents\visual studio 2013\Projects\ATIShotpeenDatabaseViewer\ATIShotpeenDatabaseViewer\obj\Debug\ATIShotpeenDatabaseViewer.ShotpeenCert.resources
 C:\Users\dleiva\documents\visual studio 2013\Projects\ATIShotpeenDatabaseViewer\ATIShotpeenDatabaseViewer\obj\Debug\ATIShotpeenDatabaseViewer.ShotpeenListViewer.resources
 C:\Users\dleiva\documents\visual studio 2013\Projects\ATIShotpeenDatabaseViewer\ATIShotpeenDatabaseViewer\obj\Debug\ATIShotpeenDatabaseViewer.LogInForm.resources
+C:\Users\ResearchBeast\Documents\Visual Studio 2015\Projects\ATIShotPeenDatabaseViewer\CertificationSoftware\ATIShotpeenDatabaseViewer\bin\Debug\ATIShotpeenDatabaseViewer.exe.config
+C:\Users\ResearchBeast\Documents\Visual Studio 2015\Projects\ATIShotPeenDatabaseViewer\CertificationSoftware\ATIShotpeenDatabaseViewer\obj\Debug\ATIShotpeenDatabaseViewer.exe
+C:\Users\ResearchBeast\Documents\Visual Studio 2015\Projects\ATIShotPeenDatabaseViewer\CertificationSoftware\ATIShotpeenDatabaseViewer\obj\Debug\ATIShotpeenDatabaseViewer.pdb
