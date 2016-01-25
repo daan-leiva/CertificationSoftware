@@ -57,6 +57,7 @@ namespace ATIShotpeenDatabaseViewer
                 PasswordHash hash = new PasswordHash(passwordTextBox.Text);
                 byte[] password = hash.ToArray();
 
+               // MessageBox.Show(System.Text.Encoding.Default.GetString(password));
 
                 // else submit userdata
                 query = "INSERT INTO ATIDelivery.dbo.CertUserLogIns\n" +
