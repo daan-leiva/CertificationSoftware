@@ -53,11 +53,16 @@ namespace ATIShotpeenDatabaseViewer
                     return;
                 }
 
+                // convert passwords
+                PasswordHash hash = new PasswordHash(passwordTextBox.Text);
+                byte[] password = hash.ToArray();
+
+
                 // else submit userdata
                 query = "INSERT INTO ATIDelivery.dbo.CertUserLogIns\n" +
                         "VALUES (\n" +
                         "'" + userNameTextBox.Text + "',\n" +
-                        "'" + passwordTextBox.Text + "',\n" +
+                        "'" + System.Text.Encoding.Default.GetString(password) + "',\n" +
                         "'Active',\n" +
                         "'operator',\n" +
                         "'" + Convert.ToByte(dataGridView1.Rows[0].Cells[0].Value) + "',\n" +
