@@ -39,9 +39,9 @@ namespace ATIShotpeenDatabaseViewer
                 {
                     conn.Open();
 
-                    string query = "SELECT userId, shotpeenRead, magRead, edmRead, stressRelieveRead, role, shotpeenWrite, magWrite, edmWrite, stressRelieveWrite\n" +
+                    string query = "SELECT userId, shotpeenRead, magRead, edmRead, stressRelieveRead, role, shotpeenWrite, magWrite, edmWrite, stressRelieveWrite, password\n" +
                                     "FROM ATIDelivery.dbo.CertUserLogIns\n" +
-                                    "WHERE userID = '" + userNameTextBox.Text.Trim().ToLower() + "' AND password = '" + passwordTextBox.Text + "'AND status = 'Active'";
+                                    "WHERE userID = '" + userNameTextBox.Text.Trim().ToLower() + "' AND status = 'Active'";
 
                     OdbcCommand com = new OdbcCommand(query, conn);
 
@@ -49,14 +49,20 @@ namespace ATIShotpeenDatabaseViewer
 
                     if (reader.Read())
                     {
-                        this.Hide();
+                        byte[] enteredPasswordHashByes = System.Text.Encoding.Default.GetBytes(reader.GetString(10));
+                        PasswordHash hash = new PasswordHash(enteredPasswordHashByes);
+                        if (hash.Verify(passwordTextBox.Text))
+                        {
 
-                        Form mainForm = new MainForm(reader.GetString(0), Convert.ToBoolean(reader.GetByte(1)), Convert.ToBoolean(reader.GetByte(2)), Convert.ToBoolean(reader.GetByte(3)), Convert.ToBoolean(reader.GetByte(4)), reader.GetString(5).Equals("admin"), Convert.ToBoolean(reader.GetByte(6)), Convert.ToBoolean(reader.GetByte(7)), Convert.ToBoolean(reader.GetByte(8)), Convert.ToBoolean(reader.GetByte(9)));
-                        mainForm.FormClosed += (s, args) => this.Close();
-                        mainForm.Show();
+                            this.Hide();
+
+                            Form mainForm = new MainForm(reader.GetString(0), Convert.ToBoolean(reader.GetByte(1)), Convert.ToBoolean(reader.GetByte(2)), Convert.ToBoolean(reader.GetByte(3)), Convert.ToBoolean(reader.GetByte(4)), reader.GetString(5).Equals("admin"), Convert.ToBoolean(reader.GetByte(6)), Convert.ToBoolean(reader.GetByte(7)), Convert.ToBoolean(reader.GetByte(8)), Convert.ToBoolean(reader.GetByte(9)));
+                            mainForm.FormClosed += (s, args) => this.Close();
+                            mainForm.Show();
+                        }
+                        else
+                            MessageBox.Show("Invalid password and/or username\nMake user that user account is currently active.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    else
-                        MessageBox.Show("Invalid password and/or username\nMake user that user account is currently active.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             else
                 MessageBox.Show("Username and password fields cannnot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
