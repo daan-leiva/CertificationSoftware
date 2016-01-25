@@ -33,10 +33,10 @@
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Read = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Write = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.submitButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.Read = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Write = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,34 +79,24 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Read,
             this.Write});
-            this.dataGridView1.Location = new System.Drawing.Point(41, 95);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 90);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 190;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(244, 134);
+            this.dataGridView1.Size = new System.Drawing.Size(302, 104);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Read
-            // 
-            this.Read.HeaderText = "Read";
-            this.Read.Name = "Read";
-            this.Read.ReadOnly = true;
-            // 
-            // Write
-            // 
-            this.Write.HeaderText = "Column1";
-            this.Write.Name = "Write";
-            this.Write.ReadOnly = true;
-            // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(77, 260);
+            this.submitButton.Location = new System.Drawing.Point(77, 217);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 5;
@@ -116,7 +106,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(174, 260);
+            this.cancelButton.Location = new System.Drawing.Point(174, 217);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 6;
@@ -124,11 +114,23 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
+            // Read
+            // 
+            this.Read.HeaderText = "Read";
+            this.Read.Name = "Read";
+            this.Read.ReadOnly = true;
+            // 
+            // Write
+            // 
+            this.Write.HeaderText = "Write";
+            this.Write.Name = "Write";
+            this.Write.ReadOnly = true;
+            // 
             // RegisterUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 303);
+            this.ClientSize = new System.Drawing.Size(326, 254);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.dataGridView1);
@@ -138,6 +140,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RegisterUserForm";
             this.Text = "User Registration";
+            this.Load += new System.EventHandler(this.RegisterUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -151,9 +154,9 @@
         private System.Windows.Forms.TextBox userNameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Read;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Write;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Read;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Write;
     }
 }

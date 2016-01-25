@@ -105,5 +105,11 @@ namespace ATIShotpeenDatabaseViewer
             Form registerForm = new RegisterUserForm();
             registerForm.ShowDialog();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            if (!admin)
+                registerUserButton.Enabled = false;
+        }
     }
 }

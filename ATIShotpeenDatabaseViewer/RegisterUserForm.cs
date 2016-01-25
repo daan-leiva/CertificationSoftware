@@ -20,18 +20,6 @@ namespace ATIShotpeenDatabaseViewer
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // fix datagridview
-            dataGridView1.Rows.Add("Shotpeen");
-            dataGridView1.Rows.Add("Mag");
-            dataGridView1.Rows.Add("EDM");
-            dataGridView1.Rows.Add("Stress Releive");
-
-            // set up password field
-            passwordTextBox.PasswordChar = '*';
-        }
-
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -66,10 +54,10 @@ namespace ATIShotpeenDatabaseViewer
                 }
 
                 // else submit userdata
-                query = "INSER INTO ATIDelivery.dbo.CertUserLogIns\n" +
+                query = "INSERT INTO ATIDelivery.dbo.CertUserLogIns\n" +
                         "VALUES (\n" +
                         "'" + userNameTextBox.Text + "',\n" +
-                        "'" + userNameTextBox.Text + "',\n" +
+                        "'" + passwordTextBox.Text + "',\n" +
                         "'Active',\n" +
                         "'operator',\n" +
                         "'" + Convert.ToByte(dataGridView1.Rows[0].Cells[0].Value) + "',\n" +
@@ -79,7 +67,7 @@ namespace ATIShotpeenDatabaseViewer
                         "'" + Convert.ToByte(dataGridView1.Rows[0].Cells[1].Value) + "',\n" +
                         "'" + Convert.ToByte(dataGridView1.Rows[1].Cells[1].Value) + "',\n" +
                         "'" + Convert.ToByte(dataGridView1.Rows[2].Cells[1].Value) + "',\n" +
-                        "'" + Convert.ToByte(dataGridView1.Rows[3].Cells[1].Value) + "',\n" +
+                        "'" + Convert.ToByte(dataGridView1.Rows[3].Cells[1].Value) + "'\n" +
                         ");";
 
                 com = new OdbcCommand(query, conn);
@@ -107,6 +95,29 @@ namespace ATIShotpeenDatabaseViewer
         {
             if (e.KeyCode == Keys.Enter)
                 SubmitForm();
+        }
+
+        private void RegisterUserForm_Load(object sender, EventArgs e)
+        {
+            // fix datagridview
+            dataGridView1.Rows.Add(4);
+
+            dataGridView1.Rows[0].HeaderCell.Value = "Shotpeen Permissions";
+            dataGridView1.Rows[0].ReadOnly = false;
+            dataGridView1.Rows[1].HeaderCell.Value = "Mag Permissions";
+            dataGridView1.Rows[1].ReadOnly = false;
+            dataGridView1.Rows[2].HeaderCell.Value = "EDM Permissions";
+            dataGridView1.Rows[2].ReadOnly = false;
+            dataGridView1.Rows[3].HeaderCell.Value = "Stress Relieve Permissions";
+            dataGridView1.Rows[3].ReadOnly = false;
+
+            // set up password field
+            passwordTextBox.PasswordChar = '*';
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = !(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null ? false : (bool)dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
         }
     }
 }
