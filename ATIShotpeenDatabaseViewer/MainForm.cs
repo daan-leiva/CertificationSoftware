@@ -98,6 +98,12 @@ namespace ATIShotpeenDatabaseViewer
             {
                 MessageBox.Show("You do not have access to this module. Contact IT administrator if you think this is an error.");
             }
-        }     
+        }
+
+        private void registerUserButton_Click(object sender, EventArgs e)
+        {
+            Form registerForm = new RegisterUserForm();
+            registerForm.ShowDialog();
+        }
     }
 }

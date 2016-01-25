@@ -33,6 +33,7 @@
             this.magButton = new System.Windows.Forms.Button();
             this.edmButton = new System.Windows.Forms.Button();
             this.stressRelieveButton = new System.Windows.Forms.Button();
+            this.registerUserButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // shotpeenButton
@@ -86,11 +87,22 @@
             this.stressRelieveButton.UseVisualStyleBackColor = true;
             this.stressRelieveButton.Click += new System.EventHandler(this.stressRelieveButton_Click);
             // 
+            // registerUserButton
+            // 
+            this.registerUserButton.Location = new System.Drawing.Point(75, 231);
+            this.registerUserButton.Name = "registerUserButton";
+            this.registerUserButton.Size = new System.Drawing.Size(97, 23);
+            this.registerUserButton.TabIndex = 5;
+            this.registerUserButton.Text = "Register User";
+            this.registerUserButton.UseVisualStyleBackColor = true;
+            this.registerUserButton.Click += new System.EventHandler(this.registerUserButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(247, 227);
+            this.ClientSize = new System.Drawing.Size(247, 266);
+            this.Controls.Add(this.registerUserButton);
             this.Controls.Add(this.stressRelieveButton);
             this.Controls.Add(this.edmButton);
             this.Controls.Add(this.magButton);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Button magButton;
         private System.Windows.Forms.Button edmButton;
         private System.Windows.Forms.Button stressRelieveButton;
+        private System.Windows.Forms.Button registerUserButton;
     }
 }

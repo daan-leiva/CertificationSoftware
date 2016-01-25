@@ -55,6 +55,7 @@
     <Compile Include="LogInForm.Designer.cs">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PasswordHash.cs" />
     <Compile Include="RegisterUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,9 +82,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestGit.cs" />
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterUserForm.resx">
+      <DependentUpon>RegisterUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ShotpeenCert.resx">
       <DependentUpon>ShotpeenCert.cs</DependentUpon>
