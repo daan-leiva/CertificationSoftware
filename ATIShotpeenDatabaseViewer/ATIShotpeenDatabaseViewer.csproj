@@ -11,6 +11,7 @@
     <AssemblyName>ATIShotpeenDatabaseViewer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,11 +52,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ATIDeliveryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EditUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUserForm.Designer.cs">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EDMCert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EDMCert.Designer.cs">
+      <DependentUpon>EDMCert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EDMListViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EDMListViewer.Designer.cs">
+      <DependentUpon>EDMListViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LogInForm.Designer.cs">
       <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagCert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagCert.Designer.cs">
+      <DependentUpon>MagCert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagListViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagListViewer.Designer.cs">
+      <DependentUpon>MagListViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="PasswordHash.cs" />
     <Compile Include="RegisterUserForm.cs">
@@ -82,8 +115,34 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StressRelieveCert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StressRelieveCert.Designer.cs">
+      <DependentUpon>StressRelieveCert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StressRelieveListViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StressRelieveListViewer.Designer.cs">
+      <DependentUpon>StressRelieveListViewer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EditUserForm.resx">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EDMCert.resx">
+      <DependentUpon>EDMCert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EDMListViewer.resx">
+      <DependentUpon>EDMListViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagListViewer.resx">
+      <DependentUpon>MagListViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterUserForm.resx">
       <DependentUpon>RegisterUserForm.cs</DependentUpon>
@@ -105,7 +164,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StressRelieveCert.resx">
+      <DependentUpon>StressRelieveCert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StressRelieveListViewer.resx">
+      <DependentUpon>StressRelieveListViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ATIDeliveryDataSet.xsc">
       <DependentUpon>ATIDeliveryDataSet.xsd</DependentUpon>
     </None>

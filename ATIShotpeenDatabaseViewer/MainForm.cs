@@ -109,7 +109,18 @@ namespace ATIShotpeenDatabaseViewer
         private void MainForm_Load(object sender, EventArgs e)
         {
             if (!admin)
-                registerUserButton.Enabled = false;
+            {
+                registerUserButton.Hide();
+                editUserButton.Hide();
+
+                this.Height = this.Height * 5 / 6;
+            }
+        }
+
+        private void editUserButton_Click(object sender, EventArgs e)
+        {
+            Form editUserForm = new EditUserForm();
+            editUserForm.ShowDialog();
         }
     }
 }

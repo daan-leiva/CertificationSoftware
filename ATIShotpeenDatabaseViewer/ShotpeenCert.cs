@@ -21,19 +21,21 @@ namespace ATIShotpeenDatabaseViewer
 
         public ShotpeenCert(bool _canEdit, string _userName)
         {
-            InitializeComponent();
             newForm = true;
             canEdit = _canEdit;
             userName = _userName;
+            
+            InitializeComponent();
         }
 
         public ShotpeenCert(string process_num, bool _canEdit, string _userName)
         {
-            InitializeComponent();
             newForm = false;
             canEdit = _canEdit;
             processNumberTextBox.Text = process_num;
             userName = _userName;
+            
+            InitializeComponent();
         }
 
         private void JobProcessForm_Load(object sender, EventArgs e)

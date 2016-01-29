@@ -162,11 +162,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(107, 18);
+            this.label1.Location = new System.Drawing.Point(58, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 18);
+            this.label1.Size = new System.Drawing.Size(510, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "JOB PROCESS CONTROL LOG DATA ENTRY FORM";
+            this.label1.Text = "SHOTPEEN JOB PROCESS CONTROL LOG DATA ENTRY FORM";
             // 
             // label2
             // 
@@ -1327,7 +1327,7 @@
             this.shotSizeComboBox.Size = new System.Drawing.Size(100, 21);
             this.shotSizeComboBox.TabIndex = 134;
             // 
-            // JobProcessForm
+            // ShotpeenCert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1405,8 +1405,8 @@
             this.Controls.Add(this.partDescriptionTextBox);
             this.Controls.Add(this.customerTextBox);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "JobProcessForm";
-            this.Text = "Job Process Control";
+            this.Name = "ShotpeenCert";
+            this.Text = "Mag Job Process Control";
             this.Load += new System.EventHandler(this.JobProcessForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

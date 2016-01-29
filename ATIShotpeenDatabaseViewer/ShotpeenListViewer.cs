@@ -20,10 +20,11 @@ namespace ATIShotpeenDatabaseViewer
 
         public ShotpeenListViewer(bool _isAdmin, string _userName, bool _canWrite)
         {
-            InitializeComponent();
             isAdmin = _isAdmin;
             userName = _userName;
             canWrite = _canWrite;
+
+            InitializeComponent();
         }
 
         private void ListViewer_Load(object sender, EventArgs e)
@@ -54,12 +55,12 @@ namespace ATIShotpeenDatabaseViewer
 
             if (!canWrite)
                 jobProcessForm = new ShotpeenCert(jobProcessNumber, false, userName);
-            else if(isAdmin)
+            else if (isAdmin)
                 jobProcessForm = new ShotpeenCert(jobProcessNumber, true, userName);
             else
             {
                 // check if owner of cert
-                using(OdbcConnection conn = new OdbcConnection(connectionString))
+                using (OdbcConnection conn = new OdbcConnection(connectionString))
                 {
                     conn.Open();
 
@@ -68,7 +69,7 @@ namespace ATIShotpeenDatabaseViewer
                                     "WHERE process_num = '" + jobProcessNumber.Trim() + "';";
 
                     OdbcCommand com = new OdbcCommand(query, conn);
-                    OdbcDataReader reader =  com.ExecuteReader();
+                    OdbcDataReader reader = com.ExecuteReader();
                     reader.Read();
 
                     bool isOwner = reader.IsDBNull(0) ? false : reader.GetString(0).Equals(userName);

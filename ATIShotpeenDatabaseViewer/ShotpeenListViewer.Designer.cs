@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tblJobProcessLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aTIDeliveryDataSet = new ATIShotpeenDatabaseViewer.ATIDeliveryDataSet();
+            this.tblJobProcessLogTableAdapter = new ATIShotpeenDatabaseViewer.ATIDeliveryDataSetTableAdapters.tblJobProcessLogTableAdapter();
+            this.newButton = new System.Windows.Forms.Button();
+            this.viewEditButton = new System.Windows.Forms.Button();
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jobnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,14 +48,6 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.finishdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.specificationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblJobProcessLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aTIDeliveryDataSet = new ATIShotpeenDatabaseViewer.ATIDeliveryDataSet();
-            this.tblJobProcessLogTableAdapter = new ATIShotpeenDatabaseViewer.ATIDeliveryDataSetTableAdapters.tblJobProcessLogTableAdapter();
-            this.newButton = new System.Windows.Forms.Button();
-            this.viewEditButton = new System.Windows.Forms.Button();
-            this.refreshButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.exitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblJobProcessLogBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).BeginInit();
@@ -83,10 +83,74 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // tblJobProcessLogBindingSource
+            // 
+            this.tblJobProcessLogBindingSource.DataMember = "tblJobProcessLog";
+            this.tblJobProcessLogBindingSource.DataSource = this.aTIDeliveryDataSet;
+            // 
+            // aTIDeliveryDataSet
+            // 
+            this.aTIDeliveryDataSet.DataSetName = "ATIDeliveryDataSet";
+            this.aTIDeliveryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblJobProcessLogTableAdapter
+            // 
+            this.tblJobProcessLogTableAdapter.ClearBeforeFill = true;
+            // 
+            // newButton
+            // 
+            this.newButton.Location = new System.Drawing.Point(12, 310);
+            this.newButton.Name = "newButton";
+            this.newButton.Size = new System.Drawing.Size(75, 23);
+            this.newButton.TabIndex = 1;
+            this.newButton.Text = "New";
+            this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
+            // 
+            // viewEditButton
+            // 
+            this.viewEditButton.Location = new System.Drawing.Point(105, 310);
+            this.viewEditButton.Name = "viewEditButton";
+            this.viewEditButton.Size = new System.Drawing.Size(75, 23);
+            this.viewEditButton.TabIndex = 3;
+            this.viewEditButton.Text = "View/Edit";
+            this.viewEditButton.UseVisualStyleBackColor = true;
+            this.viewEditButton.Click += new System.EventHandler(this.viewEditButton_Click);
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.Location = new System.Drawing.Point(198, 310);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(75, 23);
+            this.refreshButton.TabIndex = 4;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(449, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Shotpeen Certs";
+            // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(977, 310);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(75, 23);
+            this.exitButton.TabIndex = 6;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "process_num";
-            this.Column1.HeaderText = "Process Num";
+            this.Column1.HeaderText = "Cert Num";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -153,70 +217,6 @@
             this.specificationDataGridViewTextBoxColumn.Name = "specificationDataGridViewTextBoxColumn";
             this.specificationDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // tblJobProcessLogBindingSource
-            // 
-            this.tblJobProcessLogBindingSource.DataMember = "tblJobProcessLog";
-            this.tblJobProcessLogBindingSource.DataSource = this.aTIDeliveryDataSet;
-            // 
-            // aTIDeliveryDataSet
-            // 
-            this.aTIDeliveryDataSet.DataSetName = "ATIDeliveryDataSet";
-            this.aTIDeliveryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblJobProcessLogTableAdapter
-            // 
-            this.tblJobProcessLogTableAdapter.ClearBeforeFill = true;
-            // 
-            // newButton
-            // 
-            this.newButton.Location = new System.Drawing.Point(12, 310);
-            this.newButton.Name = "newButton";
-            this.newButton.Size = new System.Drawing.Size(75, 23);
-            this.newButton.TabIndex = 1;
-            this.newButton.Text = "New";
-            this.newButton.UseVisualStyleBackColor = true;
-            this.newButton.Click += new System.EventHandler(this.newButton_Click);
-            // 
-            // viewEditButton
-            // 
-            this.viewEditButton.Location = new System.Drawing.Point(105, 310);
-            this.viewEditButton.Name = "viewEditButton";
-            this.viewEditButton.Size = new System.Drawing.Size(75, 23);
-            this.viewEditButton.TabIndex = 3;
-            this.viewEditButton.Text = "View/Edit";
-            this.viewEditButton.UseVisualStyleBackColor = true;
-            this.viewEditButton.Click += new System.EventHandler(this.viewEditButton_Click);
-            // 
-            // refreshButton
-            // 
-            this.refreshButton.Location = new System.Drawing.Point(198, 310);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(75, 23);
-            this.refreshButton.TabIndex = 4;
-            this.refreshButton.Text = "Refresh";
-            this.refreshButton.UseVisualStyleBackColor = true;
-            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(449, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Process Viewer";
-            // 
-            // exitButton
-            // 
-            this.exitButton.Location = new System.Drawing.Point(977, 310);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 23);
-            this.exitButton.TabIndex = 6;
-            this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            // 
             // ShotpeenListViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +244,12 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private ATIDeliveryDataSet aTIDeliveryDataSet;
         private System.Windows.Forms.BindingSource tblJobProcessLogBindingSource;
+        private ATIDeliveryDataSetTableAdapters.tblJobProcessLogTableAdapter tblJobProcessLogTableAdapter;
+        private System.Windows.Forms.Button newButton;
+        private System.Windows.Forms.Button viewEditButton;
+        private System.Windows.Forms.Button refreshButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn jobnumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn partnumDataGridViewTextBoxColumn;
@@ -254,11 +260,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn finishdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn specificationDataGridViewTextBoxColumn;
-        private ATIDeliveryDataSetTableAdapters.tblJobProcessLogTableAdapter tblJobProcessLogTableAdapter;
-        private System.Windows.Forms.Button newButton;
-        private System.Windows.Forms.Button viewEditButton;
-        private System.Windows.Forms.Button refreshButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button exitButton;
     }
 }
