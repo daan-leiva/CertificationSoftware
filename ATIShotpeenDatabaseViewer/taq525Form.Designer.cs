@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(taq525Form));
             this.verticalLabel1 = new ATIShotpeenDatabaseViewer.VerticalLabel();
             this.verticalLabel2 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel3 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel4 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel5 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel6 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel7 = new ATIShotpeenDatabaseViewer.VerticalLabel();
+            this.particleConc = new ATIShotpeenDatabaseViewer.VerticalLabel();
+            this.blackLightMin = new ATIShotpeenDatabaseViewer.VerticalLabel();
+            this.uvAmbientLight = new ATIShotpeenDatabaseViewer.VerticalLabel();
+            this.availLight = new ATIShotpeenDatabaseViewer.VerticalLabel();
+            this.as500 = new ATIShotpeenDatabaseViewer.VerticalLabel();
             this.verticalLabel8 = new ATIShotpeenDatabaseViewer.VerticalLabel();
             this.verticalLabel9 = new ATIShotpeenDatabaseViewer.VerticalLabel();
             this.verticalLabel10 = new ATIShotpeenDatabaseViewer.VerticalLabel();
@@ -47,23 +47,23 @@
             this.verticalLabel16 = new ATIShotpeenDatabaseViewer.VerticalLabel();
             this.verticalLabel17 = new ATIShotpeenDatabaseViewer.VerticalLabel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.internalShortsTextBox = new System.Windows.Forms.TextBox();
+            this.particleConcTextBox = new System.Windows.Forms.TextBox();
+            this.blacklightMinTextBox = new System.Windows.Forms.TextBox();
+            this.availLightMinTextBox = new System.Windows.Forms.TextBox();
+            this.uvAmbientLightTextBox = new System.Windows.Forms.TextBox();
+            this.as500TextBox = new System.Windows.Forms.TextBox();
+            this.as1000TextBox = new System.Windows.Forms.TextBox();
+            this.as1500TextBox = new System.Windows.Forms.TextBox();
+            this.as2500TextBox = new System.Windows.Forms.TextBox();
+            this.as3500TextBox = new System.Windows.Forms.TextBox();
+            this.as5282QQITextBox = new System.Windows.Forms.TextBox();
+            this.astm1400TextBox = new System.Windows.Forms.TextBox();
+            this.astm2500TextBox = new System.Windows.Forms.TextBox();
+            this.astm3400TextBox = new System.Windows.Forms.TextBox();
+            this.bathComparisonTextBox = new System.Windows.Forms.TextBox();
+            this.inspectorTextBox = new System.Windows.Forms.TextBox();
+            this.commentsTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.verticalLabel18 = new ATIShotpeenDatabaseViewer.VerticalLabel();
             this.label2 = new System.Windows.Forms.Label();
@@ -92,61 +92,61 @@
             this.verticalLabel2.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
             this.verticalLabel2.TransparentBackground = false;
             // 
-            // verticalLabel3
+            // particleConc
             // 
-            this.verticalLabel3.Location = new System.Drawing.Point(138, 86);
-            this.verticalLabel3.Name = "verticalLabel3";
-            this.verticalLabel3.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
-            this.verticalLabel3.Size = new System.Drawing.Size(14, 119);
-            this.verticalLabel3.TabIndex = 2;
-            this.verticalLabel3.Text = "Particle Conc 0.1-0.4 ml";
-            this.verticalLabel3.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
-            this.verticalLabel3.TransparentBackground = false;
+            this.particleConc.Location = new System.Drawing.Point(138, 86);
+            this.particleConc.Name = "particleConc";
+            this.particleConc.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            this.particleConc.Size = new System.Drawing.Size(14, 119);
+            this.particleConc.TabIndex = 2;
+            this.particleConc.Text = "Particle Conc 0.1-0.4 ml";
+            this.particleConc.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.particleConc.TransparentBackground = false;
             // 
-            // verticalLabel4
+            // blackLightMin
             // 
-            this.verticalLabel4.Location = new System.Drawing.Point(179, 131);
-            this.verticalLabel4.Name = "verticalLabel4";
-            this.verticalLabel4.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
-            this.verticalLabel4.Size = new System.Drawing.Size(31, 74);
-            this.verticalLabel4.TabIndex = 3;
-            this.verticalLabel4.Text = "Blacklight Min\n1200uw@ 15\"";
-            this.verticalLabel4.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
-            this.verticalLabel4.TransparentBackground = false;
+            this.blackLightMin.Location = new System.Drawing.Point(179, 131);
+            this.blackLightMin.Name = "blackLightMin";
+            this.blackLightMin.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            this.blackLightMin.Size = new System.Drawing.Size(31, 74);
+            this.blackLightMin.TabIndex = 3;
+            this.blackLightMin.Text = "Blacklight Min\n1200uw@ 15\"";
+            this.blackLightMin.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.blackLightMin.TransparentBackground = false;
             // 
-            // verticalLabel5
+            // uvAmbientLight
             // 
-            this.verticalLabel5.Location = new System.Drawing.Point(339, 101);
-            this.verticalLabel5.Name = "verticalLabel5";
-            this.verticalLabel5.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
-            this.verticalLabel5.Size = new System.Drawing.Size(38, 104);
-            this.verticalLabel5.TabIndex = 4;
-            this.verticalLabel5.Text = "UV Ambient Light/\nAmbient White Light\nMax 2FC";
-            this.verticalLabel5.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
-            this.verticalLabel5.TransparentBackground = false;
+            this.uvAmbientLight.Location = new System.Drawing.Point(339, 101);
+            this.uvAmbientLight.Name = "uvAmbientLight";
+            this.uvAmbientLight.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            this.uvAmbientLight.Size = new System.Drawing.Size(38, 104);
+            this.uvAmbientLight.TabIndex = 4;
+            this.uvAmbientLight.Text = "UV Ambient Light/\nAmbient White Light\nMax 2FC";
+            this.uvAmbientLight.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.uvAmbientLight.TransparentBackground = false;
             // 
-            // verticalLabel6
+            // availLight
             // 
-            this.verticalLabel6.Location = new System.Drawing.Point(259, 132);
-            this.verticalLabel6.Name = "verticalLabel6";
-            this.verticalLabel6.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
-            this.verticalLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.verticalLabel6.Size = new System.Drawing.Size(24, 73);
-            this.verticalLabel6.TabIndex = 5;
-            this.verticalLabel6.Text = "Avail Light Min\n100FC";
-            this.verticalLabel6.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
-            this.verticalLabel6.TransparentBackground = false;
+            this.availLight.Location = new System.Drawing.Point(259, 132);
+            this.availLight.Name = "availLight";
+            this.availLight.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            this.availLight.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.availLight.Size = new System.Drawing.Size(24, 73);
+            this.availLight.TabIndex = 5;
+            this.availLight.Text = "Avail Light Min\n100FC";
+            this.availLight.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.availLight.TransparentBackground = false;
             // 
-            // verticalLabel7
+            // as500
             // 
-            this.verticalLabel7.Location = new System.Drawing.Point(395, 143);
-            this.verticalLabel7.Name = "verticalLabel7";
-            this.verticalLabel7.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
-            this.verticalLabel7.Size = new System.Drawing.Size(17, 62);
-            this.verticalLabel7.TabIndex = 6;
-            this.verticalLabel7.Text = "500 (3 holes)";
-            this.verticalLabel7.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
-            this.verticalLabel7.TransparentBackground = false;
+            this.as500.Location = new System.Drawing.Point(395, 143);
+            this.as500.Name = "as500";
+            this.as500.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            this.as500.Size = new System.Drawing.Size(17, 62);
+            this.as500.TabIndex = 6;
+            this.as500.Text = "500 (3 holes)";
+            this.as500.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.as500.TransparentBackground = false;
             // 
             // verticalLabel8
             // 
@@ -266,124 +266,124 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(82, 20);
             this.dateTimePicker1.TabIndex = 17;
             // 
-            // textBox1
+            // internalShortsTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 231);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 20);
-            this.textBox1.TabIndex = 18;
+            this.internalShortsTextBox.Location = new System.Drawing.Point(97, 231);
+            this.internalShortsTextBox.Name = "internalShortsTextBox";
+            this.internalShortsTextBox.Size = new System.Drawing.Size(40, 20);
+            this.internalShortsTextBox.TabIndex = 18;
             // 
-            // textBox2
+            // particleConcTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(138, 231);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(40, 20);
-            this.textBox2.TabIndex = 19;
+            this.particleConcTextBox.Location = new System.Drawing.Point(138, 231);
+            this.particleConcTextBox.Name = "particleConcTextBox";
+            this.particleConcTextBox.Size = new System.Drawing.Size(40, 20);
+            this.particleConcTextBox.TabIndex = 19;
             // 
-            // textBox3
+            // blacklightMinTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(179, 231);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(79, 20);
-            this.textBox3.TabIndex = 20;
+            this.blacklightMinTextBox.Location = new System.Drawing.Point(179, 231);
+            this.blacklightMinTextBox.Name = "blacklightMinTextBox";
+            this.blacklightMinTextBox.Size = new System.Drawing.Size(79, 20);
+            this.blacklightMinTextBox.TabIndex = 20;
             // 
-            // textBox4
+            // availLightMinTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(259, 231);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(79, 20);
-            this.textBox4.TabIndex = 21;
+            this.availLightMinTextBox.Location = new System.Drawing.Point(259, 231);
+            this.availLightMinTextBox.Name = "availLightMinTextBox";
+            this.availLightMinTextBox.Size = new System.Drawing.Size(79, 20);
+            this.availLightMinTextBox.TabIndex = 21;
             // 
-            // textBox5
+            // uvAmbientLightTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(339, 231);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(55, 20);
-            this.textBox5.TabIndex = 22;
+            this.uvAmbientLightTextBox.Location = new System.Drawing.Point(339, 231);
+            this.uvAmbientLightTextBox.Name = "uvAmbientLightTextBox";
+            this.uvAmbientLightTextBox.Size = new System.Drawing.Size(55, 20);
+            this.uvAmbientLightTextBox.TabIndex = 22;
             // 
-            // textBox6
+            // as500TextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(395, 231);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(50, 20);
-            this.textBox6.TabIndex = 23;
+            this.as500TextBox.Location = new System.Drawing.Point(395, 231);
+            this.as500TextBox.Name = "as500TextBox";
+            this.as500TextBox.Size = new System.Drawing.Size(50, 20);
+            this.as500TextBox.TabIndex = 23;
             // 
-            // textBox7
+            // as1000TextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(446, 231);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(50, 20);
-            this.textBox7.TabIndex = 24;
+            this.as1000TextBox.Location = new System.Drawing.Point(446, 231);
+            this.as1000TextBox.Name = "as1000TextBox";
+            this.as1000TextBox.Size = new System.Drawing.Size(50, 20);
+            this.as1000TextBox.TabIndex = 24;
             // 
-            // textBox8
+            // as1500TextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(497, 231);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(50, 20);
-            this.textBox8.TabIndex = 25;
+            this.as1500TextBox.Location = new System.Drawing.Point(497, 231);
+            this.as1500TextBox.Name = "as1500TextBox";
+            this.as1500TextBox.Size = new System.Drawing.Size(50, 20);
+            this.as1500TextBox.TabIndex = 25;
             // 
-            // textBox9
+            // as2500TextBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(548, 231);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(50, 20);
-            this.textBox9.TabIndex = 26;
+            this.as2500TextBox.Location = new System.Drawing.Point(548, 231);
+            this.as2500TextBox.Name = "as2500TextBox";
+            this.as2500TextBox.Size = new System.Drawing.Size(50, 20);
+            this.as2500TextBox.TabIndex = 26;
             // 
-            // textBox10
+            // as3500TextBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(599, 231);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(50, 20);
-            this.textBox10.TabIndex = 27;
+            this.as3500TextBox.Location = new System.Drawing.Point(599, 231);
+            this.as3500TextBox.Name = "as3500TextBox";
+            this.as3500TextBox.Size = new System.Drawing.Size(50, 20);
+            this.as3500TextBox.TabIndex = 27;
             // 
-            // textBox11
+            // as5282QQITextBox
             // 
-            this.textBox11.Location = new System.Drawing.Point(650, 231);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(50, 20);
-            this.textBox11.TabIndex = 28;
+            this.as5282QQITextBox.Location = new System.Drawing.Point(650, 231);
+            this.as5282QQITextBox.Name = "as5282QQITextBox";
+            this.as5282QQITextBox.Size = new System.Drawing.Size(50, 20);
+            this.as5282QQITextBox.TabIndex = 28;
             // 
-            // textBox12
+            // astm1400TextBox
             // 
-            this.textBox12.Location = new System.Drawing.Point(701, 231);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(50, 20);
-            this.textBox12.TabIndex = 29;
+            this.astm1400TextBox.Location = new System.Drawing.Point(701, 231);
+            this.astm1400TextBox.Name = "astm1400TextBox";
+            this.astm1400TextBox.Size = new System.Drawing.Size(50, 20);
+            this.astm1400TextBox.TabIndex = 29;
             // 
-            // textBox13
+            // astm2500TextBox
             // 
-            this.textBox13.Location = new System.Drawing.Point(752, 231);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(50, 20);
-            this.textBox13.TabIndex = 30;
+            this.astm2500TextBox.Location = new System.Drawing.Point(752, 231);
+            this.astm2500TextBox.Name = "astm2500TextBox";
+            this.astm2500TextBox.Size = new System.Drawing.Size(50, 20);
+            this.astm2500TextBox.TabIndex = 30;
             // 
-            // textBox14
+            // astm3400TextBox
             // 
-            this.textBox14.Location = new System.Drawing.Point(803, 231);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(50, 20);
-            this.textBox14.TabIndex = 31;
+            this.astm3400TextBox.Location = new System.Drawing.Point(803, 231);
+            this.astm3400TextBox.Name = "astm3400TextBox";
+            this.astm3400TextBox.Size = new System.Drawing.Size(50, 20);
+            this.astm3400TextBox.TabIndex = 31;
             // 
-            // textBox15
+            // bathComparisonTextBox
             // 
-            this.textBox15.Location = new System.Drawing.Point(854, 231);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(25, 20);
-            this.textBox15.TabIndex = 32;
+            this.bathComparisonTextBox.Location = new System.Drawing.Point(854, 231);
+            this.bathComparisonTextBox.Name = "bathComparisonTextBox";
+            this.bathComparisonTextBox.Size = new System.Drawing.Size(25, 20);
+            this.bathComparisonTextBox.TabIndex = 32;
             // 
-            // textBox16
+            // inspectorTextBox
             // 
-            this.textBox16.Location = new System.Drawing.Point(880, 231);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(69, 20);
-            this.textBox16.TabIndex = 33;
+            this.inspectorTextBox.Location = new System.Drawing.Point(880, 231);
+            this.inspectorTextBox.Name = "inspectorTextBox";
+            this.inspectorTextBox.Size = new System.Drawing.Size(69, 20);
+            this.inspectorTextBox.TabIndex = 33;
             // 
-            // textBox17
+            // commentsTextBox
             // 
-            this.textBox17.Location = new System.Drawing.Point(950, 231);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(236, 20);
-            this.textBox17.TabIndex = 34;
+            this.commentsTextBox.Location = new System.Drawing.Point(950, 231);
+            this.commentsTextBox.Name = "commentsTextBox";
+            this.commentsTextBox.Size = new System.Drawing.Size(236, 20);
+            this.commentsTextBox.TabIndex = 34;
             // 
             // label1
             // 
@@ -434,23 +434,23 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.verticalLabel18);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.commentsTextBox);
+            this.Controls.Add(this.inspectorTextBox);
+            this.Controls.Add(this.bathComparisonTextBox);
+            this.Controls.Add(this.astm3400TextBox);
+            this.Controls.Add(this.astm2500TextBox);
+            this.Controls.Add(this.astm1400TextBox);
+            this.Controls.Add(this.as5282QQITextBox);
+            this.Controls.Add(this.as3500TextBox);
+            this.Controls.Add(this.as2500TextBox);
+            this.Controls.Add(this.as1500TextBox);
+            this.Controls.Add(this.as1000TextBox);
+            this.Controls.Add(this.as500TextBox);
+            this.Controls.Add(this.uvAmbientLightTextBox);
+            this.Controls.Add(this.availLightMinTextBox);
+            this.Controls.Add(this.blacklightMinTextBox);
+            this.Controls.Add(this.particleConcTextBox);
+            this.Controls.Add(this.internalShortsTextBox);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.verticalLabel17);
             this.Controls.Add(this.verticalLabel16);
@@ -462,11 +462,11 @@
             this.Controls.Add(this.verticalLabel10);
             this.Controls.Add(this.verticalLabel9);
             this.Controls.Add(this.verticalLabel8);
-            this.Controls.Add(this.verticalLabel7);
-            this.Controls.Add(this.verticalLabel6);
-            this.Controls.Add(this.verticalLabel5);
-            this.Controls.Add(this.verticalLabel4);
-            this.Controls.Add(this.verticalLabel3);
+            this.Controls.Add(this.as500);
+            this.Controls.Add(this.availLight);
+            this.Controls.Add(this.uvAmbientLight);
+            this.Controls.Add(this.blackLightMin);
+            this.Controls.Add(this.particleConc);
             this.Controls.Add(this.verticalLabel2);
             this.Controls.Add(this.verticalLabel1);
             this.Name = "taq525Form";
@@ -480,11 +480,11 @@
 
         private VerticalLabel verticalLabel1;
         private VerticalLabel verticalLabel2;
-        private VerticalLabel verticalLabel3;
-        private VerticalLabel verticalLabel4;
-        private VerticalLabel verticalLabel5;
-        private VerticalLabel verticalLabel6;
-        private VerticalLabel verticalLabel7;
+        private VerticalLabel particleConc;
+        private VerticalLabel blackLightMin;
+        private VerticalLabel uvAmbientLight;
+        private VerticalLabel availLight;
+        private VerticalLabel as500;
         private VerticalLabel verticalLabel8;
         private VerticalLabel verticalLabel9;
         private VerticalLabel verticalLabel10;
@@ -496,23 +496,23 @@
         private VerticalLabel verticalLabel16;
         private VerticalLabel verticalLabel17;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox internalShortsTextBox;
+        private System.Windows.Forms.TextBox particleConcTextBox;
+        private System.Windows.Forms.TextBox blacklightMinTextBox;
+        private System.Windows.Forms.TextBox availLightMinTextBox;
+        private System.Windows.Forms.TextBox uvAmbientLightTextBox;
+        private System.Windows.Forms.TextBox as500TextBox;
+        private System.Windows.Forms.TextBox as1000TextBox;
+        private System.Windows.Forms.TextBox as1500TextBox;
+        private System.Windows.Forms.TextBox as2500TextBox;
+        private System.Windows.Forms.TextBox as3500TextBox;
+        private System.Windows.Forms.TextBox as5282QQITextBox;
+        private System.Windows.Forms.TextBox astm1400TextBox;
+        private System.Windows.Forms.TextBox astm2500TextBox;
+        private System.Windows.Forms.TextBox astm3400TextBox;
+        private System.Windows.Forms.TextBox bathComparisonTextBox;
+        private System.Windows.Forms.TextBox inspectorTextBox;
+        private System.Windows.Forms.TextBox commentsTextBox;
         private System.Windows.Forms.Label label1;
         private VerticalLabel verticalLabel18;
         private System.Windows.Forms.Label label2;
