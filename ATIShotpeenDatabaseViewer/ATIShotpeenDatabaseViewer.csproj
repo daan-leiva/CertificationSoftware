@@ -190,6 +190,9 @@
     <EmbeddedResource Include="taq525Form.resx">
       <DependentUpon>taq525Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VerticalLabel.resx">
+      <DependentUpon>VerticalLabel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ATIDeliveryDataSet.xsc">
       <DependentUpon>ATIDeliveryDataSet.xsd</DependentUpon>
     </None>
