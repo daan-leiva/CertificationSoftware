@@ -16,10 +16,5 @@ namespace ATIShotpeenDatabaseViewer
         {
             InitializeComponent();
         }
-
-        private void taq525Form_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
