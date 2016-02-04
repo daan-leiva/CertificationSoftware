@@ -60,6 +60,8 @@
             this.label62 = new System.Windows.Forms.Label();
             this.technicianComboBox = new System.Windows.Forms.ComboBox();
             this.label70 = new System.Windows.Forms.Label();
+            this.submitButton = new System.Windows.Forms.Button();
+            this.printCertButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // autoFillButton
@@ -70,6 +72,7 @@
             this.autoFillButton.TabIndex = 170;
             this.autoFillButton.Text = "Auto Fill From JB";
             this.autoFillButton.UseVisualStyleBackColor = true;
+            this.autoFillButton.Click += new System.EventHandler(this.autoFillButton_Click);
             // 
             // label68
             // 
@@ -331,11 +334,33 @@
             this.label70.TabIndex = 186;
             this.label70.Text = "Technician:";
             // 
+            // submitButton
+            // 
+            this.submitButton.Location = new System.Drawing.Point(307, 404);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.TabIndex = 189;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
+            // printCertButton
+            // 
+            this.printCertButton.Location = new System.Drawing.Point(218, 404);
+            this.printCertButton.Name = "printCertButton";
+            this.printCertButton.Size = new System.Drawing.Size(75, 23);
+            this.printCertButton.TabIndex = 188;
+            this.printCertButton.Text = "Print";
+            this.printCertButton.UseVisualStyleBackColor = true;
+            this.printCertButton.Click += new System.EventHandler(this.printCertButton_Click);
+            // 
             // EDMCert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 415);
+            this.ClientSize = new System.Drawing.Size(600, 454);
+            this.Controls.Add(this.submitButton);
+            this.Controls.Add(this.printCertButton);
             this.Controls.Add(this.technicianComboBox);
             this.Controls.Add(this.label70);
             this.Controls.Add(this.notesTextBox);
@@ -409,5 +434,7 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.ComboBox technicianComboBox;
         private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.Button printCertButton;
     }
 }

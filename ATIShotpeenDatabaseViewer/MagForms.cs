@@ -16,5 +16,20 @@ namespace ATIShotpeenDatabaseViewer
         {
             InitializeComponent();
         }
+
+        private void taqButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void magCertButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void d2060Button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,6 +42,7 @@
             this.d2060Button.TabIndex = 10;
             this.d2060Button.Text = "D-2060R";
             this.d2060Button.UseVisualStyleBackColor = true;
+            this.d2060Button.Click += new System.EventHandler(this.d2060Button_Click);
             // 
             // taqButton
             // 
@@ -51,6 +52,7 @@
             this.taqButton.TabIndex = 9;
             this.taqButton.Text = "TAQ 525";
             this.taqButton.UseVisualStyleBackColor = true;
+            this.taqButton.Click += new System.EventHandler(this.taqButton_Click);
             // 
             // label1
             // 
@@ -71,6 +73,7 @@
             this.magCertButton.TabIndex = 7;
             this.magCertButton.Text = "Mag Cert";
             this.magCertButton.UseVisualStyleBackColor = true;
+            this.magCertButton.Click += new System.EventHandler(this.magCertButton_Click);
             // 
             // MagForms
             // 
