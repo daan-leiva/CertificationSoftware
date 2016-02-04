@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ATIShotpeenDatabaseViewer
 {
-    public partial class TAQ525Form : Form
+    public partial class D2060RForm : Form
     {
-        public TAQ525Form()
+        public D2060RForm()
         {
             InitializeComponent();
         }

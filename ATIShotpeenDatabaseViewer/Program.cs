@@ -16,8 +16,7 @@ namespace ATIShotpeenDatabaseViewer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LogInForm()); Debugging
-            Application.Run(new taq525Form());
+            Application.Run(new LogInForm());
         }
     }
 }

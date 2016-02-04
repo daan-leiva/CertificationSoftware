@@ -52,6 +52,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ATIDeliveryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="D2060RForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D2060RForm.Designer.cs">
+      <DependentUpon>D2060RForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="LogInForm.Designer.cs">
       <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagForms.Designer.cs">
+      <DependentUpon>MagForms.cs</DependentUpon>
     </Compile>
     <Compile Include="MagCert.cs">
       <SubType>Form</SubType>
@@ -127,11 +139,11 @@
     <Compile Include="StressRelieveListViewer.Designer.cs">
       <DependentUpon>StressRelieveListViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="taq525Form.cs">
+    <Compile Include="TAQ525Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="taq525Form.Designer.cs">
-      <DependentUpon>taq525Form.cs</DependentUpon>
+    <Compile Include="TAQ525Form.Designer.cs">
+      <DependentUpon>TAQ525Form.cs</DependentUpon>
     </Compile>
     <Compile Include="VerticalLabel.cs">
       <SubType>Component</SubType>
@@ -139,6 +151,9 @@
     <Compile Include="VerticalLabel.Designer.cs">
       <DependentUpon>VerticalLabel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="D2060RForm.resx">
+      <DependentUpon>D2060RForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -152,6 +167,9 @@
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagForms.resx">
+      <DependentUpon>MagForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MagCert.resx">
       <DependentUpon>MagCert.cs</DependentUpon>
@@ -187,8 +205,8 @@
     <EmbeddedResource Include="StressRelieveListViewer.resx">
       <DependentUpon>StressRelieveListViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="taq525Form.resx">
-      <DependentUpon>taq525Form.cs</DependentUpon>
+    <EmbeddedResource Include="TAQ525Form.resx">
+      <DependentUpon>TAQ525Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerticalLabel.resx">
       <DependentUpon>VerticalLabel.cs</DependentUpon>

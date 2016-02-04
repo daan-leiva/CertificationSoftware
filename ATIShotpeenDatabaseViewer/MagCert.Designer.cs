@@ -87,12 +87,6 @@
             this.rejectionTypeComboBox = new System.Windows.Forms.ComboBox();
             this.remarksTextBox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.openTaw525OpenFormButton = new System.Windows.Forms.Button();
-            this.openD2060RFormButton = new System.Windows.Forms.Button();
-            this.label27 = new System.Windows.Forms.Label();
-            this.taq252FormDone = new System.Windows.Forms.CheckBox();
-            this.d2060FormDoneCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // autoFillButton
@@ -587,75 +581,11 @@
             this.label25.TabIndex = 192;
             this.label25.Text = "Remarks:";
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(80, 564);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(50, 13);
-            this.label26.TabIndex = 194;
-            this.label26.Text = "Taq 525:";
-            // 
-            // openTaw525OpenFormButton
-            // 
-            this.openTaw525OpenFormButton.Location = new System.Drawing.Point(160, 559);
-            this.openTaw525OpenFormButton.Name = "openTaw525OpenFormButton";
-            this.openTaw525OpenFormButton.Size = new System.Drawing.Size(114, 23);
-            this.openTaw525OpenFormButton.TabIndex = 195;
-            this.openTaw525OpenFormButton.Text = "Open Taq 525 Form";
-            this.openTaw525OpenFormButton.UseVisualStyleBackColor = true;
-            this.openTaw525OpenFormButton.Click += new System.EventHandler(this.openTaw525OpenFormButton_Click);
-            // 
-            // openD2060RFormButton
-            // 
-            this.openD2060RFormButton.Location = new System.Drawing.Point(160, 589);
-            this.openD2060RFormButton.Name = "openD2060RFormButton";
-            this.openD2060RFormButton.Size = new System.Drawing.Size(114, 23);
-            this.openD2060RFormButton.TabIndex = 197;
-            this.openD2060RFormButton.Text = "Open D-2060R Form";
-            this.openD2060RFormButton.UseVisualStyleBackColor = true;
-            this.openD2060RFormButton.Click += new System.EventHandler(this.openD2060RFormButton_Click);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(77, 594);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(53, 13);
-            this.label27.TabIndex = 196;
-            this.label27.Text = "D-2060R:";
-            // 
-            // taq252FormDone
-            // 
-            this.taq252FormDone.AutoSize = true;
-            this.taq252FormDone.Enabled = false;
-            this.taq252FormDone.Location = new System.Drawing.Point(135, 564);
-            this.taq252FormDone.Name = "taq252FormDone";
-            this.taq252FormDone.Size = new System.Drawing.Size(15, 14);
-            this.taq252FormDone.TabIndex = 198;
-            this.taq252FormDone.UseVisualStyleBackColor = true;
-            // 
-            // d2060FormDoneCheckBox
-            // 
-            this.d2060FormDoneCheckBox.AutoSize = true;
-            this.d2060FormDoneCheckBox.Enabled = false;
-            this.d2060FormDoneCheckBox.Location = new System.Drawing.Point(135, 594);
-            this.d2060FormDoneCheckBox.Name = "d2060FormDoneCheckBox";
-            this.d2060FormDoneCheckBox.Size = new System.Drawing.Size(15, 14);
-            this.d2060FormDoneCheckBox.TabIndex = 199;
-            this.d2060FormDoneCheckBox.UseVisualStyleBackColor = true;
-            // 
             // MagCert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 674);
-            this.Controls.Add(this.d2060FormDoneCheckBox);
-            this.Controls.Add(this.taq252FormDone);
-            this.Controls.Add(this.openD2060RFormButton);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.openTaw525OpenFormButton);
-            this.Controls.Add(this.label26);
             this.Controls.Add(this.remarksTextBox);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.rejectionTypeComboBox);
@@ -783,11 +713,5 @@
         private System.Windows.Forms.ComboBox rejectionTypeComboBox;
         private System.Windows.Forms.TextBox remarksTextBox;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button openTaw525OpenFormButton;
-        private System.Windows.Forms.Button openD2060RFormButton;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.CheckBox taq252FormDone;
-        private System.Windows.Forms.CheckBox d2060FormDoneCheckBox;
     }
 }

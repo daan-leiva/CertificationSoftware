@@ -1,6 +1,6 @@
 ﻿namespace ATIShotpeenDatabaseViewer
 {
-    partial class taq525Form
+    partial class TAQ525Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(taq525Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TAQ525Form));
             this.verticalLabel1 = new ATIShotpeenDatabaseViewer.VerticalLabel();
             this.verticalLabel2 = new ATIShotpeenDatabaseViewer.VerticalLabel();
             this.particleConc = new ATIShotpeenDatabaseViewer.VerticalLabel();
@@ -161,7 +161,7 @@
             // 
             // verticalLabel9
             // 
-            this.verticalLabel9.Location = new System.Drawing.Point(599, 86);
+            this.verticalLabel9.Location = new System.Drawing.Point(599, 132);
             this.verticalLabel9.Name = "verticalLabel9";
             this.verticalLabel9.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
             this.verticalLabel9.Size = new System.Drawing.Size(11, 73);
@@ -425,11 +425,11 @@
             this.label3.TabIndex = 38;
             this.label3.Text = resources.GetString("label3.Text");
             // 
-            // taq525Form
+            // TAQ525Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 339);
+            this.ClientSize = new System.Drawing.Size(1204, 342);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.verticalLabel18);
@@ -469,7 +469,7 @@
             this.Controls.Add(this.particleConc);
             this.Controls.Add(this.verticalLabel2);
             this.Controls.Add(this.verticalLabel1);
-            this.Name = "taq525Form";
+            this.Name = "TAQ525Form";
             this.Text = "taq525Form";
             this.ResumeLayout(false);
             this.PerformLayout();
