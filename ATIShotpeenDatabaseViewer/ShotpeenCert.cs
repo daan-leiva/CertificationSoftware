@@ -53,7 +53,6 @@ namespace ATIShotpeenDatabaseViewer
             // lock if the form is user can't edit
             if (!canEdit)
                 LockForm();
-
         }
 
         private void ValidateListBoxes(object o, EventArgs e)
@@ -609,7 +608,7 @@ namespace ATIShotpeenDatabaseViewer
 
 
                 if (reader.Read())
-                    return reader.GetString(0);
+                    return reader.IsDBNull(0) ? "1000" : reader.GetString(0);
                 else
                 {
                     MessageBox.Show("DB error. Contact IT Suppor", "DB ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -660,7 +659,6 @@ namespace ATIShotpeenDatabaseViewer
             bool textBoxesFormattingOk = jobNumberTextBox.Text.Length > 0
                                         && partNumberTextBox.Text.Length > 0
                                         && revisionTextBox.Text.Length > 0
-                                        && partDescriptionTextBox.Text.Length > 0
                                         && customerTextBox.Text.Length > 0
                                         && quantityTextBox.Text.Length > 0
                                         && fractureCountPriorTextBox.Text.Length > 0
@@ -668,7 +666,7 @@ namespace ATIShotpeenDatabaseViewer
                                         && almen1PriorTextBox.Text.Length > 0
                                         && almen1PostTextBox.Text.Length > 0;
 
-            return numberFormattignOk && dropDownFormattingOk;
+            return numberFormattignOk && dropDownFormattingOk && textBoxesFormattingOk;
 
         }
 

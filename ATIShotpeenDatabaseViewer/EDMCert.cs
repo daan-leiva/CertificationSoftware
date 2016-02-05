@@ -19,8 +19,22 @@ namespace ATIShotpeenDatabaseViewer
         private bool canEdit;
         private string userName;
 
-        public EDMCert()
+        public EDMCert(bool _canEdit, string _userName)
         {
+            newForm = true;
+            canEdit = _canEdit;
+            userName = _userName;
+
+            InitializeComponent();
+        }
+
+        public EDMCert(string process_num, bool _canEdit, string _userName)
+        {
+            newForm = false;
+            canEdit = _canEdit;
+            certNumberTextBox.Text = process_num;
+            userName = _userName;
+
             InitializeComponent();
         }
 
@@ -71,7 +85,342 @@ namespace ATIShotpeenDatabaseViewer
 
         private void submitButton_Click(object sender, EventArgs e)
         {
+            // check if the process number is empty
+            if (certNumberTextBox.Text.Length == 0)
+            {
+                // check document formating
+                if (!CheckFormatting())
+                {
+                    MessageBox.Show("Formatting error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
+                // get new process number
+                string newProcessNumber = GetNextProcessNumber();
+
+                // assign it to the document
+                certNumberTextBox.Text = newProcessNumber;
+
+                // submit to DB
+                SubmitNewRow();
+            }
+            else // run update query
+            {
+                UpdateRow();
+            }
+        }
+
+        // TO_DO
+        private void UpdateForm()
+        {
+            using (OdbcConnection conn = new OdbcConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = "SELECT job_num ,part_num ,part_rev ,part_desc ,customer ,lot_num ,op_num ,date ,edm_program ,qty ,performed ,specification ,specificationRev ,certifier\n" +
+                                "FROM ATIDelivery.dbo.tblJobProcessLog\n" +
+                                "WHERE process_num = " + certNumberTextBox.Text + ";";
+
+                OdbcCommand com = new OdbcCommand(query, conn);
+
+                OdbcDataReader reader = com.ExecuteReader();
+
+                try
+                {
+                    reader.Read();
+
+                    // Fill out corresponding form values
+                    jobNumberTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                    partDescriptionTextBox.Text = reader.IsDBNull(1) ? "" : reader.GetString(1);
+                    revisionTextBox.Text = reader.IsDBNull(2) ? "" : reader.GetString(2);
+                    partDescriptionTextBox.Text = reader.IsDBNull(3) ? "" : reader.GetString(3);
+                    customerTextBox.Text = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                    lotNumberTextBox.Text = reader.IsDBNull(5) ? "" : reader.GetString(5);
+                    operationNoTextBox.Text = reader.IsDBNull(6) ? "" : reader.GetString(6);
+                    dateTimePicker.Value = reader.IsDBNull(7) ? DateTime.MinValue : reader.GetDateTime(7);
+                    edmProgramTextBox.Text = reader.IsDBNull(8) ? "" : reader.GetString(8);
+                    quantityProcesseTextBox.Text = reader.IsDBNull(9) ? "" : reader.GetString(9);
+                    performedNotesTextBox.Text = reader.IsDBNull(10) ? "" : reader.GetString(10);
+                    TrySelectDropdownItem(specificationComboBox, reader.IsDBNull(11) ? "" : reader.GetString(11));
+                    TrySelectDropdownItem(specificationRevComboBox, reader.IsDBNull(12) ? "" : reader.GetString(12));
+                    certifiedByTextBox.Text = reader.IsDBNull(13) ? "" : reader.GetString(13);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void TrySelectDropdownItem(ComboBox cBox, string item)
+        {
+            if (cBox.Items.Contains(item))
+                cBox.SelectedItem = item;
+            else
+            {
+                cBox.Items.Add(item);
+                cBox.SelectedItem = item;
+            }
+        }
+
+        // TO_DO
+        private void FillInDropDowns()
+        {
+            string query = string.Empty;
+            List<string> controlContent;
+
+            // populate specification dropdown
+            query = "SELECT specification\n" +
+                    "FROM ATIDelivery.dbo.EDMSpecifications;";
+            controlContent = GetValuesFromDB(query, specificationComboBox);
+            PopulateControl(controlContent, specificationComboBox);
+
+            // populate rev specification dropdown
+            query = "SELECT REV\n" +
+                    "FROM ATIDelivery.dbo.Rev;";
+            controlContent = GetValuesFromDB(query, specificationRevComboBox);
+            PopulateControl(controlContent, specificationRevComboBox);
+        }
+
+        private List<string> GetValuesFromDB(string query, ListControl control)
+        {
+            List<string> values = new List<string>();
+
+            if (control is ComboBox)
+                values.Add("");
+
+            using (OdbcConnection conn = new OdbcConnection(connectionString))
+            {
+                conn.Open();
+
+                OdbcCommand comm = new OdbcCommand(query, conn);
+
+                OdbcDataReader reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    switch (Type.GetTypeCode(reader.GetFieldType(0)))
+                    {
+                        case TypeCode.Decimal:
+                            values.Add(reader.GetDecimal(0).ToString());
+                            break;
+                        case TypeCode.Double:
+                            values.Add(reader.GetDouble(0).ToString());
+                            break;
+                        case TypeCode.String:
+                            values.Add(reader.GetString(0).ToString());
+                            break;
+                        case TypeCode.Int32:
+                            values.Add(reader.GetInt32(0).ToString());
+                            break;
+                    }
+                }
+            }
+
+            return values;
+        }
+
+        // this adds the string of values to a single dropdown
+        private void PopulateControl(List<string> values, ListControl target)
+        {
+            if (target is ListBox)
+            {
+                ListBox control = (ListBox)target;
+                foreach (string value in values)
+                    control.Items.Add(value);
+            }
+            else
+            {
+                ComboBox control = (ComboBox)target;
+                foreach (string value in values)
+                    control.Items.Add(value);
+            }
+        }
+
+        private void EDMCert_Load(object sender, EventArgs e)
+        {
+            FillInDropDowns();
+
+            if (!newForm) // update form with current data
+                UpdateForm();
+
+            // lock if the form is user can't edit
+            if (!canEdit)
+                LockForm();
+        }
+
+        // inserts a new row to the Production.dbo.tblJobProcessLog database
+        private void SubmitNewRow()
+        {
+            // connect to DB
+            using (OdbcConnection conn = new OdbcConnection(connectionString))
+            {
+                // open connection
+                conn.Open();
+
+                // specify query
+                string query = "INSERT INTO ATIDelivery.dbo.EDMCerts\n" +
+                                "([cert_num]\n" +
+                                ",[job_num]\n" +
+                                ",[part_num]\n" +
+                                ",[part_rev]\n" +
+                                ",[part_desc]\n" +
+                                ",[customer]\n" +
+                                ",[lot_num]\n" +
+                                ",[op_num]\n" +
+                                ",[date]\n" +
+                                ",[edm_program]\n" +
+                                ",[qty]\n" +
+                                ",[performed]\n" +
+                                ",[specification]\n" +
+                                ",[specificationRev]\n" +
+                                ",[certifier]\n" +
+                                ",[owner])\n" +
+                                "VALUES (\n" +
+                                "'" + certNumberTextBox.Text + "',\n" +
+                                "'" + jobNumberTextBox.Text + "',\n" +
+                                "'" + partNumberTextBox.Text + "',\n" +
+                                "'" + revisionTextBox.Text + "',\n" +
+                                "'" + partDescriptionTextBox.Text + "',\n" +
+                                "'" + customerTextBox.Text + "',\n" +
+                                "'" + lotNumberTextBox.Text + "',\n" +
+                                "'" + operationNoTextBox.Text + "',\n" +
+                                "'" + dateTimePicker.Value.ToShortDateString() + "',\n" +
+                                "'" + edmProgramTextBox.Text + "',\n" +
+                                "'" + quantityProcesseTextBox.Text + "',\n" +
+                                "'" + performedNotesTextBox.Text + "',\n" +
+                                "'" + specificationComboBox.SelectedItem.ToString() + "',\n" +
+                                "'" + specificationRevComboBox.SelectedItem.ToString() + "',\n" +
+                                "'" + certifiedByTextBox.Text + "',\n" +
+                                "'" + userName + "'\n" +
+                                ");";
+
+                OdbcCommand com = new OdbcCommand(query, conn);
+
+                int rowsAffected = com.ExecuteNonQuery();
+
+                if (rowsAffected != 1)
+                    MessageBox.Show("Problem submitting to DB. Contact IT support");
+                else
+                    MessageBox.Show("Sucessfully submitted");
+            }
+        }
+
+        // updates an old row in the database based on the process number
+        private void UpdateRow()
+        {
+            // connect to DB
+            using (OdbcConnection conn = new OdbcConnection(connectionString))
+            {
+                // open connection
+                conn.Open();
+
+                // specify query
+                string query = "UPDATE ATIDelivery.dbo.tblJobProcessLog\n" +
+                                "SET [job_num] = '" + jobNumberTextBox.Text + "',\n" +
+                                "[part_num]= '" + partNumberTextBox.Text + "',\n" +
+                                "[part_rev] = '" + revisionTextBox.Text + "',\n" +
+                                "[part_desc] = '" + partDescriptionTextBox.Text + "',\n" +
+                                "[customer] = '" + customerTextBox.Text + "',\n" +
+                                "[lot_num] = '" + lotNumberTextBox.Text + "',\n" +
+                                "[op_num] = '" + operationNoTextBox.Text + ",\n" +
+                                "[date] = '" + dateTimePicker.Value.ToShortDateString() + "',\n" +
+                                "[edm_program] = '" + edmProgramTextBox.Text + "',\n" +
+                                "[qty] = '" + quantityProcesseTextBox.Text + "',\n" +
+                                "[performed] = '" + performedNotesTextBox.Text + "',\n" +
+                                "[specification] = '" + specificationComboBox.SelectedItem.ToString() + "',\n" +
+                                "[specificationRev] = '" + specificationRevComboBox.SelectedItem.ToString() + "',\n" +
+                                "[certifier] = '" + certifiedByTextBox.Text + "',\n" +
+                                "WHERE cert_num = '" + certNumberTextBox.Text + "';";
+
+                OdbcCommand com = new OdbcCommand(query, conn);
+
+                int rowsAffected = com.ExecuteNonQuery();
+
+                if (rowsAffected != 1)
+                    MessageBox.Show("Problem submitting to DB. Contact IT support");
+                else
+                    MessageBox.Show("Succesfully updated");
+            }
+        }
+
+        private string GetNextProcessNumber()
+        {
+            using (OdbcConnection conn = new OdbcConnection(connectionString))
+            {
+                // open connection to DB
+                // check if connection is available
+                try
+                {
+                    conn.Open();
+                }
+                catch (OdbcException)
+                {
+                    MessageBox.Show("No connection to DB available");
+                }
+
+                // query to run
+                string query = "SELECT MAX(cert_num) + 1\n" +
+                                "FROM ATIDelivery.dbo.EDMCerts;";
+
+                // execute query
+                OdbcCommand com = new OdbcCommand(query, conn);
+                OdbcDataReader reader = com.ExecuteReader();
+
+
+                // check tha query ran
+                if (reader.Read())
+                {
+                    // check for null (means it's the first record being added)
+                    return reader.IsDBNull(0) ? "1000" : reader.GetString(0);
+                }
+                else
+                {
+                    MessageBox.Show("DB error. Contact IT Suppor", "DB ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return "0000";
+                }
+            }
+        }
+
+        private bool CheckFormatting()
+        {
+            int dummyTest;
+
+            // check numeric values
+            bool numberFormattingOK = int.TryParse(quantityProcesseTextBox.Text, out dummyTest);
+
+            // check dropdowns
+            bool comboBoxesFormattingOK = specificationComboBox.SelectedItem != null
+                                        && specificationRevComboBox.SelectedItem != null;
+
+            // check textboxes
+            bool textBoxesFormattingOK = jobNumberTextBox.Text.Length > 0
+                                        && revisionTextBox.Text.Length > 0
+                                        && partNumberTextBox.Text.Length > 0
+                                        && operationNoTextBox.Text.Length > 0
+                                        && edmProgramTextBox.Text.Length > 0
+                                        && certifiedByTextBox.Text.Length > 0;
+
+            return numberFormattingOK && comboBoxesFormattingOK && textBoxesFormattingOK;
+        }
+
+        private void LockForm()
+        {
+            foreach (Control control in this.Controls)
+                DisableControls(control);
+
+            // leave print button enabled
+            printButton.Enabled = true;
+        }
+
+        private void DisableControls(Control con)
+        {
+            foreach (Control c in con.Controls)
+            {
+                DisableControls(c);
+            }
+            if (!(con is Label))
+                con.Enabled = false;
         }
     }
 }
