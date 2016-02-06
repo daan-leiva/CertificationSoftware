@@ -26,6 +26,12 @@ namespace ATIShotpeenDatabaseViewer {
         
         private tblJobProcessLogDataTable tabletblJobProcessLog;
         
+        private _MagD_2060RProcessControlLogDataTable _tableMagD_2060RProcessControlLog;
+        
+        private MagListLogDataTable tableMagListLog;
+        
+        private MagTaq525ProcessControlLogDataTable tableMagTaq525ProcessControlLog;
+        
         private EDMCertsDataTable tableEDMCerts;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -59,6 +65,15 @@ namespace ATIShotpeenDatabaseViewer {
                 if ((ds.Tables["tblJobProcessLog"] != null)) {
                     base.Tables.Add(new tblJobProcessLogDataTable(ds.Tables["tblJobProcessLog"]));
                 }
+                if ((ds.Tables["MagD-2060RProcessControlLog"] != null)) {
+                    base.Tables.Add(new _MagD_2060RProcessControlLogDataTable(ds.Tables["MagD-2060RProcessControlLog"]));
+                }
+                if ((ds.Tables["MagListLog"] != null)) {
+                    base.Tables.Add(new MagListLogDataTable(ds.Tables["MagListLog"]));
+                }
+                if ((ds.Tables["MagTaq525ProcessControlLog"] != null)) {
+                    base.Tables.Add(new MagTaq525ProcessControlLogDataTable(ds.Tables["MagTaq525ProcessControlLog"]));
+                }
                 if ((ds.Tables["EDMCerts"] != null)) {
                     base.Tables.Add(new EDMCertsDataTable(ds.Tables["EDMCerts"]));
                 }
@@ -87,6 +102,36 @@ namespace ATIShotpeenDatabaseViewer {
         public tblJobProcessLogDataTable tblJobProcessLog {
             get {
                 return this.tabletblJobProcessLog;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _MagD_2060RProcessControlLogDataTable _MagD_2060RProcessControlLog {
+            get {
+                return this._tableMagD_2060RProcessControlLog;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public MagListLogDataTable MagListLog {
+            get {
+                return this.tableMagListLog;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public MagTaq525ProcessControlLogDataTable MagTaq525ProcessControlLog {
+            get {
+                return this.tableMagTaq525ProcessControlLog;
             }
         }
         
@@ -170,6 +215,15 @@ namespace ATIShotpeenDatabaseViewer {
                 if ((ds.Tables["tblJobProcessLog"] != null)) {
                     base.Tables.Add(new tblJobProcessLogDataTable(ds.Tables["tblJobProcessLog"]));
                 }
+                if ((ds.Tables["MagD-2060RProcessControlLog"] != null)) {
+                    base.Tables.Add(new _MagD_2060RProcessControlLogDataTable(ds.Tables["MagD-2060RProcessControlLog"]));
+                }
+                if ((ds.Tables["MagListLog"] != null)) {
+                    base.Tables.Add(new MagListLogDataTable(ds.Tables["MagListLog"]));
+                }
+                if ((ds.Tables["MagTaq525ProcessControlLog"] != null)) {
+                    base.Tables.Add(new MagTaq525ProcessControlLogDataTable(ds.Tables["MagTaq525ProcessControlLog"]));
+                }
                 if ((ds.Tables["EDMCerts"] != null)) {
                     base.Tables.Add(new EDMCertsDataTable(ds.Tables["EDMCerts"]));
                 }
@@ -212,6 +266,24 @@ namespace ATIShotpeenDatabaseViewer {
                     this.tabletblJobProcessLog.InitVars();
                 }
             }
+            this._tableMagD_2060RProcessControlLog = ((_MagD_2060RProcessControlLogDataTable)(base.Tables["MagD-2060RProcessControlLog"]));
+            if ((initTable == true)) {
+                if ((this._tableMagD_2060RProcessControlLog != null)) {
+                    this._tableMagD_2060RProcessControlLog.InitVars();
+                }
+            }
+            this.tableMagListLog = ((MagListLogDataTable)(base.Tables["MagListLog"]));
+            if ((initTable == true)) {
+                if ((this.tableMagListLog != null)) {
+                    this.tableMagListLog.InitVars();
+                }
+            }
+            this.tableMagTaq525ProcessControlLog = ((MagTaq525ProcessControlLogDataTable)(base.Tables["MagTaq525ProcessControlLog"]));
+            if ((initTable == true)) {
+                if ((this.tableMagTaq525ProcessControlLog != null)) {
+                    this.tableMagTaq525ProcessControlLog.InitVars();
+                }
+            }
             this.tableEDMCerts = ((EDMCertsDataTable)(base.Tables["EDMCerts"]));
             if ((initTable == true)) {
                 if ((this.tableEDMCerts != null)) {
@@ -230,6 +302,12 @@ namespace ATIShotpeenDatabaseViewer {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tabletblJobProcessLog = new tblJobProcessLogDataTable();
             base.Tables.Add(this.tabletblJobProcessLog);
+            this._tableMagD_2060RProcessControlLog = new _MagD_2060RProcessControlLogDataTable();
+            base.Tables.Add(this._tableMagD_2060RProcessControlLog);
+            this.tableMagListLog = new MagListLogDataTable();
+            base.Tables.Add(this.tableMagListLog);
+            this.tableMagTaq525ProcessControlLog = new MagTaq525ProcessControlLogDataTable();
+            base.Tables.Add(this.tableMagTaq525ProcessControlLog);
             this.tableEDMCerts = new EDMCertsDataTable();
             base.Tables.Add(this.tableEDMCerts);
         }
@@ -237,6 +315,24 @@ namespace ATIShotpeenDatabaseViewer {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializetblJobProcessLog() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerialize_MagD_2060RProcessControlLog() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeMagListLog() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeMagTaq525ProcessControlLog() {
             return false;
         }
         
@@ -303,6 +399,15 @@ namespace ATIShotpeenDatabaseViewer {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void tblJobProcessLogRowChangeEventHandler(object sender, tblJobProcessLogRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void _MagD_2060RProcessControlLogRowChangeEventHandler(object sender, _MagD_2060RProcessControlLogRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void MagListLogRowChangeEventHandler(object sender, MagListLogRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void MagTaq525ProcessControlLogRowChangeEventHandler(object sender, MagTaq525ProcessControlLogRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void EDMCertsRowChangeEventHandler(object sender, EDMCertsRowChangeEvent e);
@@ -703,6 +808,1749 @@ namespace ATIShotpeenDatabaseViewer {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _MagD_2060RProcessControlLogDataTable : global::System.Data.TypedTableBase<_MagD_2060RProcessControlLogRow> {
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnDate;
+            
+            private global::System.Data.DataColumn columnInternal_Shorts;
+            
+            private global::System.Data.DataColumn _columnParticle_Conc_1_4_ml;
+            
+            private global::System.Data.DataColumn _columnBlacklight_Min_1000uw__15_;
+            
+            private global::System.Data.DataColumn columnAvail_Light_Min_100FC;
+            
+            private global::System.Data.DataColumn _columnUV_Ambient_Light___Ambient_White_Light_Max_2_FC;
+            
+            private global::System.Data.DataColumn _column500__3_holes_;
+            
+            private global::System.Data.DataColumn _column1000__5_holes_;
+            
+            private global::System.Data.DataColumn _column1500__6_holes_;
+            
+            private global::System.Data.DataColumn _column2500__7_holes_;
+            
+            private global::System.Data.DataColumn _column3500__9_holes_;
+            
+            private global::System.Data.DataColumn _columnAS5282_QQI___1000_amps__5_holes_;
+            
+            private global::System.Data.DataColumn columnBath_Comparison;
+            
+            private global::System.Data.DataColumn columnComments;
+            
+            private global::System.Data.DataColumn columnInspector;
+            
+            private global::System.Data.DataColumn columnASTM_1400;
+            
+            private global::System.Data.DataColumn columnASTM_2500;
+            
+            private global::System.Data.DataColumn columnASTM_3400;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _MagD_2060RProcessControlLogDataTable() {
+                this.TableName = "MagD-2060RProcessControlLog";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _MagD_2060RProcessControlLogDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected _MagD_2060RProcessControlLogDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DateColumn {
+                get {
+                    return this.columnDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Internal_ShortsColumn {
+                get {
+                    return this.columnInternal_Shorts;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _Particle_Conc_1_4_mlColumn {
+                get {
+                    return this._columnParticle_Conc_1_4_ml;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _Blacklight_Min_1000uw__15_Column {
+                get {
+                    return this._columnBlacklight_Min_1000uw__15_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Avail_Light_Min_100FCColumn {
+                get {
+                    return this.columnAvail_Light_Min_100FC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _UV_Ambient_Light___Ambient_White_Light_Max_2_FCColumn {
+                get {
+                    return this._columnUV_Ambient_Light___Ambient_White_Light_Max_2_FC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _500__3_holes_Column {
+                get {
+                    return this._column500__3_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _1000__5_holes_Column {
+                get {
+                    return this._column1000__5_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _1500__6_holes_Column {
+                get {
+                    return this._column1500__6_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _2500__7_holes_Column {
+                get {
+                    return this._column2500__7_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _3500__9_holes_Column {
+                get {
+                    return this._column3500__9_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _AS5282_QQI___1000_amps__5_holes_Column {
+                get {
+                    return this._columnAS5282_QQI___1000_amps__5_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Bath_ComparisonColumn {
+                get {
+                    return this.columnBath_Comparison;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CommentsColumn {
+                get {
+                    return this.columnComments;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn InspectorColumn {
+                get {
+                    return this.columnInspector;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ASTM_1400Column {
+                get {
+                    return this.columnASTM_1400;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ASTM_2500Column {
+                get {
+                    return this.columnASTM_2500;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ASTM_3400Column {
+                get {
+                    return this.columnASTM_3400;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _MagD_2060RProcessControlLogRow this[int index] {
+                get {
+                    return ((_MagD_2060RProcessControlLogRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _MagD_2060RProcessControlLogRowChangeEventHandler _MagD_2060RProcessControlLogRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _MagD_2060RProcessControlLogRowChangeEventHandler _MagD_2060RProcessControlLogRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _MagD_2060RProcessControlLogRowChangeEventHandler _MagD_2060RProcessControlLogRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _MagD_2060RProcessControlLogRowChangeEventHandler _MagD_2060RProcessControlLogRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Add_MagD_2060RProcessControlLogRow(_MagD_2060RProcessControlLogRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _MagD_2060RProcessControlLogRow Add_MagD_2060RProcessControlLogRow(
+                        System.DateTime Date, 
+                        string Internal_Shorts, 
+                        string _Particle_Conc_1_4_ml, 
+                        string _Blacklight_Min_1000uw__15_, 
+                        string Avail_Light_Min_100FC, 
+                        string _UV_Ambient_Light___Ambient_White_Light_Max_2_FC, 
+                        string _500__3_holes_, 
+                        string _1000__5_holes_, 
+                        string _1500__6_holes_, 
+                        string _2500__7_holes_, 
+                        string _3500__9_holes_, 
+                        string _AS5282_QQI___1000_amps__5_holes_, 
+                        string Bath_Comparison, 
+                        string Comments, 
+                        string Inspector, 
+                        string ASTM_1400, 
+                        string ASTM_2500, 
+                        string ASTM_3400) {
+                _MagD_2060RProcessControlLogRow row_MagD_2060RProcessControlLogRow = ((_MagD_2060RProcessControlLogRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Date,
+                        Internal_Shorts,
+                        _Particle_Conc_1_4_ml,
+                        _Blacklight_Min_1000uw__15_,
+                        Avail_Light_Min_100FC,
+                        _UV_Ambient_Light___Ambient_White_Light_Max_2_FC,
+                        _500__3_holes_,
+                        _1000__5_holes_,
+                        _1500__6_holes_,
+                        _2500__7_holes_,
+                        _3500__9_holes_,
+                        _AS5282_QQI___1000_amps__5_holes_,
+                        Bath_Comparison,
+                        Comments,
+                        Inspector,
+                        ASTM_1400,
+                        ASTM_2500,
+                        ASTM_3400};
+                row_MagD_2060RProcessControlLogRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_MagD_2060RProcessControlLogRow);
+                return row_MagD_2060RProcessControlLogRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _MagD_2060RProcessControlLogRow FindByID(int ID) {
+                return ((_MagD_2060RProcessControlLogRow)(this.Rows.Find(new object[] {
+                            ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _MagD_2060RProcessControlLogDataTable cln = ((_MagD_2060RProcessControlLogDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _MagD_2060RProcessControlLogDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID = base.Columns["ID"];
+                this.columnDate = base.Columns["Date"];
+                this.columnInternal_Shorts = base.Columns["Internal Shorts"];
+                this._columnParticle_Conc_1_4_ml = base.Columns["Particle Conc 1-4 ml"];
+                this._columnBlacklight_Min_1000uw__15_ = base.Columns["Blacklight Min 1000uw@ 15\""];
+                this.columnAvail_Light_Min_100FC = base.Columns["Avail Light Min 100FC"];
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2_FC = base.Columns["UV Ambient Light / Ambient White Light Max 2 FC"];
+                this._column500__3_holes_ = base.Columns["500 (3 holes)"];
+                this._column1000__5_holes_ = base.Columns["1000 (5 holes)"];
+                this._column1500__6_holes_ = base.Columns["1500 (6 holes)"];
+                this._column2500__7_holes_ = base.Columns["2500 (7 holes)"];
+                this._column3500__9_holes_ = base.Columns["3500 (9 holes)"];
+                this._columnAS5282_QQI___1000_amps__5_holes_ = base.Columns["AS5282 QQI @ 1000 amps (5 holes)"];
+                this.columnBath_Comparison = base.Columns["Bath Comparison"];
+                this.columnComments = base.Columns["Comments"];
+                this.columnInspector = base.Columns["Inspector"];
+                this.columnASTM_1400 = base.Columns["ASTM 1400"];
+                this.columnASTM_2500 = base.Columns["ASTM 2500"];
+                this.columnASTM_3400 = base.Columns["ASTM 3400"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDate);
+                this.columnInternal_Shorts = new global::System.Data.DataColumn("Internal Shorts", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInternal_Shorts);
+                this._columnParticle_Conc_1_4_ml = new global::System.Data.DataColumn("Particle Conc 1-4 ml", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnParticle_Conc_1_4_ml.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnParticle_Conc_1_4_ml");
+                this._columnParticle_Conc_1_4_ml.ExtendedProperties.Add("Generator_UserColumnName", "Particle Conc 1-4 ml");
+                base.Columns.Add(this._columnParticle_Conc_1_4_ml);
+                this._columnBlacklight_Min_1000uw__15_ = new global::System.Data.DataColumn("Blacklight Min 1000uw@ 15\"", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnBlacklight_Min_1000uw__15_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnBlacklight_Min_1000uw__15_");
+                this._columnBlacklight_Min_1000uw__15_.ExtendedProperties.Add("Generator_UserColumnName", "Blacklight Min 1000uw@ 15\"");
+                base.Columns.Add(this._columnBlacklight_Min_1000uw__15_);
+                this.columnAvail_Light_Min_100FC = new global::System.Data.DataColumn("Avail Light Min 100FC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAvail_Light_Min_100FC);
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2_FC = new global::System.Data.DataColumn("UV Ambient Light / Ambient White Light Max 2 FC", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2_FC.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnUV_Ambient_Light___Ambient_White_Light_Max_2_FC");
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2_FC.ExtendedProperties.Add("Generator_UserColumnName", "UV Ambient Light / Ambient White Light Max 2 FC");
+                base.Columns.Add(this._columnUV_Ambient_Light___Ambient_White_Light_Max_2_FC);
+                this._column500__3_holes_ = new global::System.Data.DataColumn("500 (3 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column500__3_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column500__3_holes_");
+                this._column500__3_holes_.ExtendedProperties.Add("Generator_UserColumnName", "500 (3 holes)");
+                base.Columns.Add(this._column500__3_holes_);
+                this._column1000__5_holes_ = new global::System.Data.DataColumn("1000 (5 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column1000__5_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column1000__5_holes_");
+                this._column1000__5_holes_.ExtendedProperties.Add("Generator_UserColumnName", "1000 (5 holes)");
+                base.Columns.Add(this._column1000__5_holes_);
+                this._column1500__6_holes_ = new global::System.Data.DataColumn("1500 (6 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column1500__6_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column1500__6_holes_");
+                this._column1500__6_holes_.ExtendedProperties.Add("Generator_UserColumnName", "1500 (6 holes)");
+                base.Columns.Add(this._column1500__6_holes_);
+                this._column2500__7_holes_ = new global::System.Data.DataColumn("2500 (7 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column2500__7_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column2500__7_holes_");
+                this._column2500__7_holes_.ExtendedProperties.Add("Generator_UserColumnName", "2500 (7 holes)");
+                base.Columns.Add(this._column2500__7_holes_);
+                this._column3500__9_holes_ = new global::System.Data.DataColumn("3500 (9 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column3500__9_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column3500__9_holes_");
+                this._column3500__9_holes_.ExtendedProperties.Add("Generator_UserColumnName", "3500 (9 holes)");
+                base.Columns.Add(this._column3500__9_holes_);
+                this._columnAS5282_QQI___1000_amps__5_holes_ = new global::System.Data.DataColumn("AS5282 QQI @ 1000 amps (5 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnAS5282_QQI___1000_amps__5_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnAS5282_QQI___1000_amps__5_holes_");
+                this._columnAS5282_QQI___1000_amps__5_holes_.ExtendedProperties.Add("Generator_UserColumnName", "AS5282 QQI @ 1000 amps (5 holes)");
+                base.Columns.Add(this._columnAS5282_QQI___1000_amps__5_holes_);
+                this.columnBath_Comparison = new global::System.Data.DataColumn("Bath Comparison", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBath_Comparison);
+                this.columnComments = new global::System.Data.DataColumn("Comments", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComments);
+                this.columnInspector = new global::System.Data.DataColumn("Inspector", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInspector);
+                this.columnASTM_1400 = new global::System.Data.DataColumn("ASTM 1400", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASTM_1400);
+                this.columnASTM_2500 = new global::System.Data.DataColumn("ASTM 2500", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASTM_2500);
+                this.columnASTM_3400 = new global::System.Data.DataColumn("ASTM 3400", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASTM_3400);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID}, true));
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
+                this.columnID.Unique = true;
+                this.columnInternal_Shorts.MaxLength = 5;
+                this._columnParticle_Conc_1_4_ml.MaxLength = 5;
+                this._columnBlacklight_Min_1000uw__15_.MaxLength = 5;
+                this.columnAvail_Light_Min_100FC.MaxLength = 5;
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2_FC.MaxLength = 5;
+                this._column500__3_holes_.MaxLength = 5;
+                this._column1000__5_holes_.MaxLength = 5;
+                this._column1500__6_holes_.MaxLength = 5;
+                this._column2500__7_holes_.MaxLength = 5;
+                this._column3500__9_holes_.MaxLength = 5;
+                this._columnAS5282_QQI___1000_amps__5_holes_.MaxLength = 5;
+                this.columnBath_Comparison.MaxLength = 5;
+                this.columnComments.MaxLength = 100;
+                this.columnInspector.MaxLength = 5;
+                this.columnASTM_1400.MaxLength = 10;
+                this.columnASTM_2500.MaxLength = 10;
+                this.columnASTM_3400.MaxLength = 10;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tableMagD_2060RProcessControlLog");
+                this.ExtendedProperties.Add("Generator_UserTableName", "MagD-2060RProcessControlLog");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _MagD_2060RProcessControlLogRow New_MagD_2060RProcessControlLogRow() {
+                return ((_MagD_2060RProcessControlLogRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _MagD_2060RProcessControlLogRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_MagD_2060RProcessControlLogRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._MagD_2060RProcessControlLogRowChanged != null)) {
+                    this._MagD_2060RProcessControlLogRowChanged(this, new _MagD_2060RProcessControlLogRowChangeEvent(((_MagD_2060RProcessControlLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._MagD_2060RProcessControlLogRowChanging != null)) {
+                    this._MagD_2060RProcessControlLogRowChanging(this, new _MagD_2060RProcessControlLogRowChangeEvent(((_MagD_2060RProcessControlLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._MagD_2060RProcessControlLogRowDeleted != null)) {
+                    this._MagD_2060RProcessControlLogRowDeleted(this, new _MagD_2060RProcessControlLogRowChangeEvent(((_MagD_2060RProcessControlLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._MagD_2060RProcessControlLogRowDeleting != null)) {
+                    this._MagD_2060RProcessControlLogRowDeleting(this, new _MagD_2060RProcessControlLogRowChangeEvent(((_MagD_2060RProcessControlLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Remove_MagD_2060RProcessControlLogRow(_MagD_2060RProcessControlLogRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ATIDeliveryDataSet ds = new ATIDeliveryDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_MagD_2060RProcessControlLogDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class MagListLogDataTable : global::System.Data.TypedTableBase<MagListLogRow> {
+            
+            private global::System.Data.DataColumn columnCert;
+            
+            private global::System.Data.DataColumn columnPart_Number;
+            
+            private global::System.Data.DataColumn columnRev;
+            
+            private global::System.Data.DataColumn columnPart_Description;
+            
+            private global::System.Data.DataColumn columnMaterial_Type;
+            
+            private global::System.Data.DataColumn columnJob_Number;
+            
+            private global::System.Data.DataColumn columnDate;
+            
+            private global::System.Data.DataColumn columnCustomer;
+            
+            private global::System.Data.DataColumn columnQuantity_Inspected;
+            
+            private global::System.Data.DataColumn columnQty_Accepted;
+            
+            private global::System.Data.DataColumn columnQty_Rejected;
+            
+            private global::System.Data.DataColumn columnInspector;
+            
+            private global::System.Data.DataColumn columnSpec;
+            
+            private global::System.Data.DataColumn columnSpec_Type;
+            
+            private global::System.Data.DataColumn columnSpec_Class;
+            
+            private global::System.Data.DataColumn columnAcceptance_Criteria;
+            
+            private global::System.Data.DataColumn columnAccept_Type;
+            
+            private global::System.Data.DataColumn columnAccept_grade;
+            
+            private global::System.Data.DataColumn columnType_grade;
+            
+            private global::System.Data.DataColumn columnAccept_Class;
+            
+            private global::System.Data.DataColumn columnComments;
+            
+            private global::System.Data.DataColumn columnMag_Machine;
+            
+            private global::System.Data.DataColumn columnSSMA_TimeStamp;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagListLogDataTable() {
+                this.TableName = "MagListLog";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal MagListLogDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected MagListLogDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CertColumn {
+                get {
+                    return this.columnCert;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Part_NumberColumn {
+                get {
+                    return this.columnPart_Number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RevColumn {
+                get {
+                    return this.columnRev;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Part_DescriptionColumn {
+                get {
+                    return this.columnPart_Description;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Material_TypeColumn {
+                get {
+                    return this.columnMaterial_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Job_NumberColumn {
+                get {
+                    return this.columnJob_Number;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DateColumn {
+                get {
+                    return this.columnDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CustomerColumn {
+                get {
+                    return this.columnCustomer;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Quantity_InspectedColumn {
+                get {
+                    return this.columnQuantity_Inspected;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Qty_AcceptedColumn {
+                get {
+                    return this.columnQty_Accepted;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Qty_RejectedColumn {
+                get {
+                    return this.columnQty_Rejected;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn InspectorColumn {
+                get {
+                    return this.columnInspector;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SpecColumn {
+                get {
+                    return this.columnSpec;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Spec_TypeColumn {
+                get {
+                    return this.columnSpec_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Spec_ClassColumn {
+                get {
+                    return this.columnSpec_Class;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Acceptance_CriteriaColumn {
+                get {
+                    return this.columnAcceptance_Criteria;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Accept_TypeColumn {
+                get {
+                    return this.columnAccept_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Accept_gradeColumn {
+                get {
+                    return this.columnAccept_grade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Type_gradeColumn {
+                get {
+                    return this.columnType_grade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Accept_ClassColumn {
+                get {
+                    return this.columnAccept_Class;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CommentsColumn {
+                get {
+                    return this.columnComments;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Mag_MachineColumn {
+                get {
+                    return this.columnMag_Machine;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SSMA_TimeStampColumn {
+                get {
+                    return this.columnSSMA_TimeStamp;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagListLogRow this[int index] {
+                get {
+                    return ((MagListLogRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MagListLogRowChangeEventHandler MagListLogRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MagListLogRowChangeEventHandler MagListLogRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MagListLogRowChangeEventHandler MagListLogRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MagListLogRowChangeEventHandler MagListLogRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddMagListLogRow(MagListLogRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagListLogRow AddMagListLogRow(
+                        int Cert, 
+                        string Part_Number, 
+                        string Rev, 
+                        string Part_Description, 
+                        string Material_Type, 
+                        string Job_Number, 
+                        System.DateTime Date, 
+                        string Customer, 
+                        short Quantity_Inspected, 
+                        short Qty_Accepted, 
+                        short Qty_Rejected, 
+                        string Inspector, 
+                        string Spec, 
+                        string Spec_Type, 
+                        string Spec_Class, 
+                        string Acceptance_Criteria, 
+                        string Accept_Type, 
+                        string Accept_grade, 
+                        string Type_grade, 
+                        string Accept_Class, 
+                        string Comments, 
+                        string Mag_Machine, 
+                        byte[] SSMA_TimeStamp) {
+                MagListLogRow rowMagListLogRow = ((MagListLogRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Cert,
+                        Part_Number,
+                        Rev,
+                        Part_Description,
+                        Material_Type,
+                        Job_Number,
+                        Date,
+                        Customer,
+                        Quantity_Inspected,
+                        Qty_Accepted,
+                        Qty_Rejected,
+                        Inspector,
+                        Spec,
+                        Spec_Type,
+                        Spec_Class,
+                        Acceptance_Criteria,
+                        Accept_Type,
+                        Accept_grade,
+                        Type_grade,
+                        Accept_Class,
+                        Comments,
+                        Mag_Machine,
+                        SSMA_TimeStamp};
+                rowMagListLogRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMagListLogRow);
+                return rowMagListLogRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagListLogRow FindByCert(int Cert) {
+                return ((MagListLogRow)(this.Rows.Find(new object[] {
+                            Cert})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                MagListLogDataTable cln = ((MagListLogDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MagListLogDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnCert = base.Columns["Cert"];
+                this.columnPart_Number = base.Columns["Part Number"];
+                this.columnRev = base.Columns["Rev"];
+                this.columnPart_Description = base.Columns["Part Description"];
+                this.columnMaterial_Type = base.Columns["Material Type"];
+                this.columnJob_Number = base.Columns["Job Number"];
+                this.columnDate = base.Columns["Date"];
+                this.columnCustomer = base.Columns["Customer"];
+                this.columnQuantity_Inspected = base.Columns["Quantity Inspected"];
+                this.columnQty_Accepted = base.Columns["Qty Accepted"];
+                this.columnQty_Rejected = base.Columns["Qty Rejected"];
+                this.columnInspector = base.Columns["Inspector"];
+                this.columnSpec = base.Columns["Spec"];
+                this.columnSpec_Type = base.Columns["Spec Type"];
+                this.columnSpec_Class = base.Columns["Spec Class"];
+                this.columnAcceptance_Criteria = base.Columns["Acceptance Criteria"];
+                this.columnAccept_Type = base.Columns["Accept Type"];
+                this.columnAccept_grade = base.Columns["Accept_grade"];
+                this.columnType_grade = base.Columns["Type_grade"];
+                this.columnAccept_Class = base.Columns["Accept Class"];
+                this.columnComments = base.Columns["Comments"];
+                this.columnMag_Machine = base.Columns["Mag Machine"];
+                this.columnSSMA_TimeStamp = base.Columns["SSMA_TimeStamp"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnCert = new global::System.Data.DataColumn("Cert", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCert);
+                this.columnPart_Number = new global::System.Data.DataColumn("Part Number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPart_Number);
+                this.columnRev = new global::System.Data.DataColumn("Rev", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRev);
+                this.columnPart_Description = new global::System.Data.DataColumn("Part Description", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPart_Description);
+                this.columnMaterial_Type = new global::System.Data.DataColumn("Material Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaterial_Type);
+                this.columnJob_Number = new global::System.Data.DataColumn("Job Number", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJob_Number);
+                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDate);
+                this.columnCustomer = new global::System.Data.DataColumn("Customer", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomer);
+                this.columnQuantity_Inspected = new global::System.Data.DataColumn("Quantity Inspected", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuantity_Inspected);
+                this.columnQty_Accepted = new global::System.Data.DataColumn("Qty Accepted", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQty_Accepted);
+                this.columnQty_Rejected = new global::System.Data.DataColumn("Qty Rejected", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQty_Rejected);
+                this.columnInspector = new global::System.Data.DataColumn("Inspector", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInspector);
+                this.columnSpec = new global::System.Data.DataColumn("Spec", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSpec);
+                this.columnSpec_Type = new global::System.Data.DataColumn("Spec Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSpec_Type);
+                this.columnSpec_Class = new global::System.Data.DataColumn("Spec Class", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSpec_Class);
+                this.columnAcceptance_Criteria = new global::System.Data.DataColumn("Acceptance Criteria", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAcceptance_Criteria);
+                this.columnAccept_Type = new global::System.Data.DataColumn("Accept Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAccept_Type);
+                this.columnAccept_grade = new global::System.Data.DataColumn("Accept_grade", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAccept_grade);
+                this.columnType_grade = new global::System.Data.DataColumn("Type_grade", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnType_grade);
+                this.columnAccept_Class = new global::System.Data.DataColumn("Accept Class", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAccept_Class);
+                this.columnComments = new global::System.Data.DataColumn("Comments", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComments);
+                this.columnMag_Machine = new global::System.Data.DataColumn("Mag Machine", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMag_Machine);
+                this.columnSSMA_TimeStamp = new global::System.Data.DataColumn("SSMA_TimeStamp", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSSMA_TimeStamp);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnCert}, true));
+                this.columnCert.AllowDBNull = false;
+                this.columnCert.Unique = true;
+                this.columnPart_Number.MaxLength = 50;
+                this.columnRev.MaxLength = 50;
+                this.columnPart_Description.MaxLength = 50;
+                this.columnMaterial_Type.MaxLength = 50;
+                this.columnJob_Number.MaxLength = 50;
+                this.columnCustomer.MaxLength = 50;
+                this.columnInspector.MaxLength = 50;
+                this.columnSpec.MaxLength = 50;
+                this.columnSpec_Type.MaxLength = 10;
+                this.columnSpec_Class.MaxLength = 10;
+                this.columnAcceptance_Criteria.MaxLength = 50;
+                this.columnAccept_Type.MaxLength = 10;
+                this.columnAccept_grade.MaxLength = 50;
+                this.columnType_grade.MaxLength = 7;
+                this.columnAccept_Class.MaxLength = 7;
+                this.columnComments.MaxLength = 2147483647;
+                this.columnMag_Machine.MaxLength = 50;
+                this.columnSSMA_TimeStamp.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagListLogRow NewMagListLogRow() {
+                return ((MagListLogRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MagListLogRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(MagListLogRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MagListLogRowChanged != null)) {
+                    this.MagListLogRowChanged(this, new MagListLogRowChangeEvent(((MagListLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MagListLogRowChanging != null)) {
+                    this.MagListLogRowChanging(this, new MagListLogRowChangeEvent(((MagListLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MagListLogRowDeleted != null)) {
+                    this.MagListLogRowDeleted(this, new MagListLogRowChangeEvent(((MagListLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MagListLogRowDeleting != null)) {
+                    this.MagListLogRowDeleting(this, new MagListLogRowChangeEvent(((MagListLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveMagListLogRow(MagListLogRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ATIDeliveryDataSet ds = new ATIDeliveryDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MagListLogDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class MagTaq525ProcessControlLogDataTable : global::System.Data.TypedTableBase<MagTaq525ProcessControlLogRow> {
+            
+            private global::System.Data.DataColumn columnID;
+            
+            private global::System.Data.DataColumn columnDate;
+            
+            private global::System.Data.DataColumn columnInternal_Shorts;
+            
+            private global::System.Data.DataColumn _columnParticle_Conc_1_4_ml;
+            
+            private global::System.Data.DataColumn _columnBlacklight_Min_1000uw__15_;
+            
+            private global::System.Data.DataColumn columnAvail_Light_Min_100FC;
+            
+            private global::System.Data.DataColumn _columnUV_Ambient_Light___Ambient_White_Light_Max_2FC;
+            
+            private global::System.Data.DataColumn _column500__3_holes_;
+            
+            private global::System.Data.DataColumn _column1000__5_holes_;
+            
+            private global::System.Data.DataColumn _column1500__6_holes_;
+            
+            private global::System.Data.DataColumn _column2500__7_holes_;
+            
+            private global::System.Data.DataColumn _column3500__9_holes_;
+            
+            private global::System.Data.DataColumn _columnAS5282_QQI___1000_amps__5_holes_;
+            
+            private global::System.Data.DataColumn columnBath_Comparison;
+            
+            private global::System.Data.DataColumn columnComments;
+            
+            private global::System.Data.DataColumn columnInspector;
+            
+            private global::System.Data.DataColumn columnASTM_1400;
+            
+            private global::System.Data.DataColumn columnASTM_2500;
+            
+            private global::System.Data.DataColumn columnASTM_3400;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagTaq525ProcessControlLogDataTable() {
+                this.TableName = "MagTaq525ProcessControlLog";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal MagTaq525ProcessControlLogDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected MagTaq525ProcessControlLogDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn IDColumn {
+                get {
+                    return this.columnID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DateColumn {
+                get {
+                    return this.columnDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Internal_ShortsColumn {
+                get {
+                    return this.columnInternal_Shorts;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _Particle_Conc_1_4_mlColumn {
+                get {
+                    return this._columnParticle_Conc_1_4_ml;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _Blacklight_Min_1000uw__15_Column {
+                get {
+                    return this._columnBlacklight_Min_1000uw__15_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Avail_Light_Min_100FCColumn {
+                get {
+                    return this.columnAvail_Light_Min_100FC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _UV_Ambient_Light___Ambient_White_Light_Max_2FCColumn {
+                get {
+                    return this._columnUV_Ambient_Light___Ambient_White_Light_Max_2FC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _500__3_holes_Column {
+                get {
+                    return this._column500__3_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _1000__5_holes_Column {
+                get {
+                    return this._column1000__5_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _1500__6_holes_Column {
+                get {
+                    return this._column1500__6_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _2500__7_holes_Column {
+                get {
+                    return this._column2500__7_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _3500__9_holes_Column {
+                get {
+                    return this._column3500__9_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn _AS5282_QQI___1000_amps__5_holes_Column {
+                get {
+                    return this._columnAS5282_QQI___1000_amps__5_holes_;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Bath_ComparisonColumn {
+                get {
+                    return this.columnBath_Comparison;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CommentsColumn {
+                get {
+                    return this.columnComments;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn InspectorColumn {
+                get {
+                    return this.columnInspector;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ASTM_1400Column {
+                get {
+                    return this.columnASTM_1400;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ASTM_2500Column {
+                get {
+                    return this.columnASTM_2500;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ASTM_3400Column {
+                get {
+                    return this.columnASTM_3400;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagTaq525ProcessControlLogRow this[int index] {
+                get {
+                    return ((MagTaq525ProcessControlLogRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MagTaq525ProcessControlLogRowChangeEventHandler MagTaq525ProcessControlLogRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MagTaq525ProcessControlLogRowChangeEventHandler MagTaq525ProcessControlLogRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MagTaq525ProcessControlLogRowChangeEventHandler MagTaq525ProcessControlLogRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event MagTaq525ProcessControlLogRowChangeEventHandler MagTaq525ProcessControlLogRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddMagTaq525ProcessControlLogRow(MagTaq525ProcessControlLogRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagTaq525ProcessControlLogRow AddMagTaq525ProcessControlLogRow(
+                        System.DateTime Date, 
+                        string Internal_Shorts, 
+                        string _Particle_Conc_1_4_ml, 
+                        string _Blacklight_Min_1000uw__15_, 
+                        string Avail_Light_Min_100FC, 
+                        string _UV_Ambient_Light___Ambient_White_Light_Max_2FC, 
+                        string _500__3_holes_, 
+                        string _1000__5_holes_, 
+                        string _1500__6_holes_, 
+                        string _2500__7_holes_, 
+                        string _3500__9_holes_, 
+                        string _AS5282_QQI___1000_amps__5_holes_, 
+                        string Bath_Comparison, 
+                        string Comments, 
+                        string Inspector, 
+                        string ASTM_1400, 
+                        string ASTM_2500, 
+                        string ASTM_3400) {
+                MagTaq525ProcessControlLogRow rowMagTaq525ProcessControlLogRow = ((MagTaq525ProcessControlLogRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Date,
+                        Internal_Shorts,
+                        _Particle_Conc_1_4_ml,
+                        _Blacklight_Min_1000uw__15_,
+                        Avail_Light_Min_100FC,
+                        _UV_Ambient_Light___Ambient_White_Light_Max_2FC,
+                        _500__3_holes_,
+                        _1000__5_holes_,
+                        _1500__6_holes_,
+                        _2500__7_holes_,
+                        _3500__9_holes_,
+                        _AS5282_QQI___1000_amps__5_holes_,
+                        Bath_Comparison,
+                        Comments,
+                        Inspector,
+                        ASTM_1400,
+                        ASTM_2500,
+                        ASTM_3400};
+                rowMagTaq525ProcessControlLogRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMagTaq525ProcessControlLogRow);
+                return rowMagTaq525ProcessControlLogRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagTaq525ProcessControlLogRow FindByID(int ID) {
+                return ((MagTaq525ProcessControlLogRow)(this.Rows.Find(new object[] {
+                            ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                MagTaq525ProcessControlLogDataTable cln = ((MagTaq525ProcessControlLogDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MagTaq525ProcessControlLogDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID = base.Columns["ID"];
+                this.columnDate = base.Columns["Date"];
+                this.columnInternal_Shorts = base.Columns["Internal Shorts"];
+                this._columnParticle_Conc_1_4_ml = base.Columns["Particle Conc 1-4 ml"];
+                this._columnBlacklight_Min_1000uw__15_ = base.Columns["Blacklight Min 1000uw@ 15\""];
+                this.columnAvail_Light_Min_100FC = base.Columns["Avail Light Min 100FC"];
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2FC = base.Columns["UV Ambient Light / Ambient White Light Max 2FC"];
+                this._column500__3_holes_ = base.Columns["500 (3 holes)"];
+                this._column1000__5_holes_ = base.Columns["1000 (5 holes)"];
+                this._column1500__6_holes_ = base.Columns["1500 (6 holes)"];
+                this._column2500__7_holes_ = base.Columns["2500 (7 holes)"];
+                this._column3500__9_holes_ = base.Columns["3500 (9 holes)"];
+                this._columnAS5282_QQI___1000_amps__5_holes_ = base.Columns["AS5282 QQI @ 1000 amps (5 holes)"];
+                this.columnBath_Comparison = base.Columns["Bath Comparison"];
+                this.columnComments = base.Columns["Comments"];
+                this.columnInspector = base.Columns["Inspector"];
+                this.columnASTM_1400 = base.Columns["ASTM 1400"];
+                this.columnASTM_2500 = base.Columns["ASTM 2500"];
+                this.columnASTM_3400 = base.Columns["ASTM 3400"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
+                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDate);
+                this.columnInternal_Shorts = new global::System.Data.DataColumn("Internal Shorts", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInternal_Shorts);
+                this._columnParticle_Conc_1_4_ml = new global::System.Data.DataColumn("Particle Conc 1-4 ml", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnParticle_Conc_1_4_ml.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnParticle_Conc_1_4_ml");
+                this._columnParticle_Conc_1_4_ml.ExtendedProperties.Add("Generator_UserColumnName", "Particle Conc 1-4 ml");
+                base.Columns.Add(this._columnParticle_Conc_1_4_ml);
+                this._columnBlacklight_Min_1000uw__15_ = new global::System.Data.DataColumn("Blacklight Min 1000uw@ 15\"", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnBlacklight_Min_1000uw__15_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnBlacklight_Min_1000uw__15_");
+                this._columnBlacklight_Min_1000uw__15_.ExtendedProperties.Add("Generator_UserColumnName", "Blacklight Min 1000uw@ 15\"");
+                base.Columns.Add(this._columnBlacklight_Min_1000uw__15_);
+                this.columnAvail_Light_Min_100FC = new global::System.Data.DataColumn("Avail Light Min 100FC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAvail_Light_Min_100FC);
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2FC = new global::System.Data.DataColumn("UV Ambient Light / Ambient White Light Max 2FC", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2FC.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnUV_Ambient_Light___Ambient_White_Light_Max_2FC");
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2FC.ExtendedProperties.Add("Generator_UserColumnName", "UV Ambient Light / Ambient White Light Max 2FC");
+                base.Columns.Add(this._columnUV_Ambient_Light___Ambient_White_Light_Max_2FC);
+                this._column500__3_holes_ = new global::System.Data.DataColumn("500 (3 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column500__3_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column500__3_holes_");
+                this._column500__3_holes_.ExtendedProperties.Add("Generator_UserColumnName", "500 (3 holes)");
+                base.Columns.Add(this._column500__3_holes_);
+                this._column1000__5_holes_ = new global::System.Data.DataColumn("1000 (5 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column1000__5_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column1000__5_holes_");
+                this._column1000__5_holes_.ExtendedProperties.Add("Generator_UserColumnName", "1000 (5 holes)");
+                base.Columns.Add(this._column1000__5_holes_);
+                this._column1500__6_holes_ = new global::System.Data.DataColumn("1500 (6 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column1500__6_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column1500__6_holes_");
+                this._column1500__6_holes_.ExtendedProperties.Add("Generator_UserColumnName", "1500 (6 holes)");
+                base.Columns.Add(this._column1500__6_holes_);
+                this._column2500__7_holes_ = new global::System.Data.DataColumn("2500 (7 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column2500__7_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column2500__7_holes_");
+                this._column2500__7_holes_.ExtendedProperties.Add("Generator_UserColumnName", "2500 (7 holes)");
+                base.Columns.Add(this._column2500__7_holes_);
+                this._column3500__9_holes_ = new global::System.Data.DataColumn("3500 (9 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._column3500__9_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_column3500__9_holes_");
+                this._column3500__9_holes_.ExtendedProperties.Add("Generator_UserColumnName", "3500 (9 holes)");
+                base.Columns.Add(this._column3500__9_holes_);
+                this._columnAS5282_QQI___1000_amps__5_holes_ = new global::System.Data.DataColumn("AS5282 QQI @ 1000 amps (5 holes)", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnAS5282_QQI___1000_amps__5_holes_.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnAS5282_QQI___1000_amps__5_holes_");
+                this._columnAS5282_QQI___1000_amps__5_holes_.ExtendedProperties.Add("Generator_UserColumnName", "AS5282 QQI @ 1000 amps (5 holes)");
+                base.Columns.Add(this._columnAS5282_QQI___1000_amps__5_holes_);
+                this.columnBath_Comparison = new global::System.Data.DataColumn("Bath Comparison", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBath_Comparison);
+                this.columnComments = new global::System.Data.DataColumn("Comments", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComments);
+                this.columnInspector = new global::System.Data.DataColumn("Inspector", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInspector);
+                this.columnASTM_1400 = new global::System.Data.DataColumn("ASTM 1400", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASTM_1400);
+                this.columnASTM_2500 = new global::System.Data.DataColumn("ASTM 2500", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASTM_2500);
+                this.columnASTM_3400 = new global::System.Data.DataColumn("ASTM 3400", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASTM_3400);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID}, true));
+                this.columnID.AutoIncrement = true;
+                this.columnID.AutoIncrementSeed = -1;
+                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AllowDBNull = false;
+                this.columnID.ReadOnly = true;
+                this.columnID.Unique = true;
+                this.columnInternal_Shorts.MaxLength = 5;
+                this._columnParticle_Conc_1_4_ml.MaxLength = 5;
+                this._columnBlacklight_Min_1000uw__15_.MaxLength = 5;
+                this.columnAvail_Light_Min_100FC.MaxLength = 5;
+                this._columnUV_Ambient_Light___Ambient_White_Light_Max_2FC.MaxLength = 5;
+                this._column500__3_holes_.MaxLength = 5;
+                this._column1000__5_holes_.MaxLength = 5;
+                this._column1500__6_holes_.MaxLength = 5;
+                this._column2500__7_holes_.MaxLength = 5;
+                this._column3500__9_holes_.MaxLength = 5;
+                this._columnAS5282_QQI___1000_amps__5_holes_.MaxLength = 5;
+                this.columnBath_Comparison.MaxLength = 5;
+                this.columnComments.MaxLength = 100;
+                this.columnInspector.MaxLength = 5;
+                this.columnASTM_1400.MaxLength = 10;
+                this.columnASTM_2500.MaxLength = 10;
+                this.columnASTM_3400.MaxLength = 10;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagTaq525ProcessControlLogRow NewMagTaq525ProcessControlLogRow() {
+                return ((MagTaq525ProcessControlLogRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MagTaq525ProcessControlLogRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(MagTaq525ProcessControlLogRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MagTaq525ProcessControlLogRowChanged != null)) {
+                    this.MagTaq525ProcessControlLogRowChanged(this, new MagTaq525ProcessControlLogRowChangeEvent(((MagTaq525ProcessControlLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MagTaq525ProcessControlLogRowChanging != null)) {
+                    this.MagTaq525ProcessControlLogRowChanging(this, new MagTaq525ProcessControlLogRowChangeEvent(((MagTaq525ProcessControlLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MagTaq525ProcessControlLogRowDeleted != null)) {
+                    this.MagTaq525ProcessControlLogRowDeleted(this, new MagTaq525ProcessControlLogRowChangeEvent(((MagTaq525ProcessControlLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MagTaq525ProcessControlLogRowDeleting != null)) {
+                    this.MagTaq525ProcessControlLogRowDeleting(this, new MagTaq525ProcessControlLogRowChangeEvent(((MagTaq525ProcessControlLogRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveMagTaq525ProcessControlLogRow(MagTaq525ProcessControlLogRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                ATIDeliveryDataSet ds = new ATIDeliveryDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MagTaq525ProcessControlLogDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EDMCertsDataTable : global::System.Data.TypedTableBase<EDMCertsRow> {
             
             private global::System.Data.DataColumn columncert_num;
@@ -734,6 +2582,8 @@ namespace ATIShotpeenDatabaseViewer {
             private global::System.Data.DataColumn columnspecificationRev;
             
             private global::System.Data.DataColumn columncertifier;
+            
+            private global::System.Data.DataColumn columnowner;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -890,6 +2740,14 @@ namespace ATIShotpeenDatabaseViewer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ownerColumn {
+                get {
+                    return this.columnowner;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -925,7 +2783,23 @@ namespace ATIShotpeenDatabaseViewer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EDMCertsRow AddEDMCertsRow(int cert_num, string job_num, string part_num, string part_rev, string part_desc, string customer, string lot_num, string op_num, System.DateTime date, string edm_program, string qty, string performed, string specification, string specificationRev, string certifier) {
+            public EDMCertsRow AddEDMCertsRow(
+                        int cert_num, 
+                        string job_num, 
+                        string part_num, 
+                        string part_rev, 
+                        string part_desc, 
+                        string customer, 
+                        string lot_num, 
+                        string op_num, 
+                        System.DateTime date, 
+                        string edm_program, 
+                        string qty, 
+                        string performed, 
+                        string specification, 
+                        string specificationRev, 
+                        string certifier, 
+                        string owner) {
                 EDMCertsRow rowEDMCertsRow = ((EDMCertsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cert_num,
@@ -942,7 +2816,8 @@ namespace ATIShotpeenDatabaseViewer {
                         performed,
                         specification,
                         specificationRev,
-                        certifier};
+                        certifier,
+                        owner};
                 rowEDMCertsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEDMCertsRow);
                 return rowEDMCertsRow;
@@ -987,6 +2862,7 @@ namespace ATIShotpeenDatabaseViewer {
                 this.columnspecification = base.Columns["specification"];
                 this.columnspecificationRev = base.Columns["specificationRev"];
                 this.columncertifier = base.Columns["certifier"];
+                this.columnowner = base.Columns["owner"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1022,6 +2898,8 @@ namespace ATIShotpeenDatabaseViewer {
                 base.Columns.Add(this.columnspecificationRev);
                 this.columncertifier = new global::System.Data.DataColumn("certifier", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncertifier);
+                this.columnowner = new global::System.Data.DataColumn("owner", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnowner);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columncert_num}, true));
                 this.columncert_num.AllowDBNull = false;
@@ -1039,6 +2917,8 @@ namespace ATIShotpeenDatabaseViewer {
                 this.columnspecification.MaxLength = 20;
                 this.columnspecificationRev.MaxLength = 10;
                 this.columncertifier.MaxLength = 20;
+                this.columnowner.AllowDBNull = false;
+                this.columnowner.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1446,6 +3326,1741 @@ namespace ATIShotpeenDatabaseViewer {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class _MagD_2060RProcessControlLogRow : global::System.Data.DataRow {
+            
+            private _MagD_2060RProcessControlLogDataTable _tableMagD_2060RProcessControlLog;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _MagD_2060RProcessControlLogRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tableMagD_2060RProcessControlLog = ((_MagD_2060RProcessControlLogDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this._tableMagD_2060RProcessControlLog.IDColumn]));
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this._tableMagD_2060RProcessControlLog.DateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Date\' in table \'MagD-2060RProcessControlLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Internal_Shorts {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog.Internal_ShortsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Internal Shorts\' in table \'MagD-2060RProcessControlLog\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.Internal_ShortsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _Particle_Conc_1_4_ml {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog._Particle_Conc_1_4_mlColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Particle Conc 1-4 ml\' in table \'MagD-2060RProcessControlLog" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog._Particle_Conc_1_4_mlColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _Blacklight_Min_1000uw__15_ {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog._Blacklight_Min_1000uw__15_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Blacklight Min 1000uw@ 15\"\' in table \'MagD-2060RProcessCont" +
+                                "rolLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog._Blacklight_Min_1000uw__15_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Avail_Light_Min_100FC {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog.Avail_Light_Min_100FCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Avail Light Min 100FC\' in table \'MagD-2060RProcessControlLo" +
+                                "g\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.Avail_Light_Min_100FCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _UV_Ambient_Light___Ambient_White_Light_Max_2_FC {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog._UV_Ambient_Light___Ambient_White_Light_Max_2_FCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UV Ambient Light / Ambient White Light Max 2 FC\' in table \'" +
+                                "MagD-2060RProcessControlLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog._UV_Ambient_Light___Ambient_White_Light_Max_2_FCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _500__3_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog._500__3_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'500 (3 holes)\' in table \'MagD-2060RProcessControlLog\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog._500__3_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _1000__5_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog._1000__5_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'1000 (5 holes)\' in table \'MagD-2060RProcessControlLog\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog._1000__5_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _1500__6_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog._1500__6_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'1500 (6 holes)\' in table \'MagD-2060RProcessControlLog\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog._1500__6_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _2500__7_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog._2500__7_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'2500 (7 holes)\' in table \'MagD-2060RProcessControlLog\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog._2500__7_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _3500__9_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog._3500__9_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'3500 (9 holes)\' in table \'MagD-2060RProcessControlLog\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog._3500__9_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _AS5282_QQI___1000_amps__5_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog._AS5282_QQI___1000_amps__5_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AS5282 QQI @ 1000 amps (5 holes)\' in table \'MagD-2060RProce" +
+                                "ssControlLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog._AS5282_QQI___1000_amps__5_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Bath_Comparison {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog.Bath_ComparisonColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Bath Comparison\' in table \'MagD-2060RProcessControlLog\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.Bath_ComparisonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comments {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog.CommentsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Comments\' in table \'MagD-2060RProcessControlLog\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.CommentsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Inspector {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog.InspectorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Inspector\' in table \'MagD-2060RProcessControlLog\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.InspectorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ASTM_1400 {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog.ASTM_1400Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ASTM 1400\' in table \'MagD-2060RProcessControlLog\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.ASTM_1400Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ASTM_2500 {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog.ASTM_2500Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ASTM 2500\' in table \'MagD-2060RProcessControlLog\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.ASTM_2500Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ASTM_3400 {
+                get {
+                    try {
+                        return ((string)(this[this._tableMagD_2060RProcessControlLog.ASTM_3400Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ASTM 3400\' in table \'MagD-2060RProcessControlLog\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this._tableMagD_2060RProcessControlLog.ASTM_3400Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateNull() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog.DateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateNull() {
+                this[this._tableMagD_2060RProcessControlLog.DateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsInternal_ShortsNull() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog.Internal_ShortsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetInternal_ShortsNull() {
+                this[this._tableMagD_2060RProcessControlLog.Internal_ShortsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_Particle_Conc_1_4_mlNull() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog._Particle_Conc_1_4_mlColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_Particle_Conc_1_4_mlNull() {
+                this[this._tableMagD_2060RProcessControlLog._Particle_Conc_1_4_mlColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_Blacklight_Min_1000uw__15_Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog._Blacklight_Min_1000uw__15_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_Blacklight_Min_1000uw__15_Null() {
+                this[this._tableMagD_2060RProcessControlLog._Blacklight_Min_1000uw__15_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAvail_Light_Min_100FCNull() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog.Avail_Light_Min_100FCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAvail_Light_Min_100FCNull() {
+                this[this._tableMagD_2060RProcessControlLog.Avail_Light_Min_100FCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_UV_Ambient_Light___Ambient_White_Light_Max_2_FCNull() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog._UV_Ambient_Light___Ambient_White_Light_Max_2_FCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_UV_Ambient_Light___Ambient_White_Light_Max_2_FCNull() {
+                this[this._tableMagD_2060RProcessControlLog._UV_Ambient_Light___Ambient_White_Light_Max_2_FCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_500__3_holes_Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog._500__3_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_500__3_holes_Null() {
+                this[this._tableMagD_2060RProcessControlLog._500__3_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_1000__5_holes_Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog._1000__5_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_1000__5_holes_Null() {
+                this[this._tableMagD_2060RProcessControlLog._1000__5_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_1500__6_holes_Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog._1500__6_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_1500__6_holes_Null() {
+                this[this._tableMagD_2060RProcessControlLog._1500__6_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_2500__7_holes_Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog._2500__7_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_2500__7_holes_Null() {
+                this[this._tableMagD_2060RProcessControlLog._2500__7_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_3500__9_holes_Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog._3500__9_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_3500__9_holes_Null() {
+                this[this._tableMagD_2060RProcessControlLog._3500__9_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_AS5282_QQI___1000_amps__5_holes_Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog._AS5282_QQI___1000_amps__5_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_AS5282_QQI___1000_amps__5_holes_Null() {
+                this[this._tableMagD_2060RProcessControlLog._AS5282_QQI___1000_amps__5_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBath_ComparisonNull() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog.Bath_ComparisonColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBath_ComparisonNull() {
+                this[this._tableMagD_2060RProcessControlLog.Bath_ComparisonColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCommentsNull() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog.CommentsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCommentsNull() {
+                this[this._tableMagD_2060RProcessControlLog.CommentsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsInspectorNull() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog.InspectorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetInspectorNull() {
+                this[this._tableMagD_2060RProcessControlLog.InspectorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsASTM_1400Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog.ASTM_1400Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetASTM_1400Null() {
+                this[this._tableMagD_2060RProcessControlLog.ASTM_1400Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsASTM_2500Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog.ASTM_2500Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetASTM_2500Null() {
+                this[this._tableMagD_2060RProcessControlLog.ASTM_2500Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsASTM_3400Null() {
+                return this.IsNull(this._tableMagD_2060RProcessControlLog.ASTM_3400Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetASTM_3400Null() {
+                this[this._tableMagD_2060RProcessControlLog.ASTM_3400Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class MagListLogRow : global::System.Data.DataRow {
+            
+            private MagListLogDataTable tableMagListLog;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal MagListLogRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMagListLog = ((MagListLogDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Cert {
+                get {
+                    return ((int)(this[this.tableMagListLog.CertColumn]));
+                }
+                set {
+                    this[this.tableMagListLog.CertColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Part_Number {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Part_NumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Part Number\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Part_NumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Rev {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.RevColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Rev\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.RevColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Part_Description {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Part_DescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Part Description\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Part_DescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Material_Type {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Material_TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Material Type\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Material_TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Job_Number {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Job_NumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Job Number\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Job_NumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableMagListLog.DateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Date\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Customer {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.CustomerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Customer\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.CustomerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Quantity_Inspected {
+                get {
+                    try {
+                        return ((short)(this[this.tableMagListLog.Quantity_InspectedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Quantity Inspected\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Quantity_InspectedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Qty_Accepted {
+                get {
+                    try {
+                        return ((short)(this[this.tableMagListLog.Qty_AcceptedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Qty Accepted\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Qty_AcceptedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short Qty_Rejected {
+                get {
+                    try {
+                        return ((short)(this[this.tableMagListLog.Qty_RejectedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Qty Rejected\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Qty_RejectedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Inspector {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.InspectorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Inspector\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.InspectorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Spec {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.SpecColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Spec\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.SpecColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Spec_Type {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Spec_TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Spec Type\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Spec_TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Spec_Class {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Spec_ClassColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Spec Class\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Spec_ClassColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Acceptance_Criteria {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Acceptance_CriteriaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Acceptance Criteria\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Acceptance_CriteriaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Accept_Type {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Accept_TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Accept Type\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Accept_TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Accept_grade {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Accept_gradeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Accept_grade\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Accept_gradeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Type_grade {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Type_gradeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Type_grade\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Type_gradeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Accept_Class {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Accept_ClassColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Accept Class\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Accept_ClassColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comments {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.CommentsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Comments\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.CommentsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Mag_Machine {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagListLog.Mag_MachineColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Mag Machine\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.Mag_MachineColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte[] SSMA_TimeStamp {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableMagListLog.SSMA_TimeStampColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SSMA_TimeStamp\' in table \'MagListLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagListLog.SSMA_TimeStampColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPart_NumberNull() {
+                return this.IsNull(this.tableMagListLog.Part_NumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPart_NumberNull() {
+                this[this.tableMagListLog.Part_NumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRevNull() {
+                return this.IsNull(this.tableMagListLog.RevColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRevNull() {
+                this[this.tableMagListLog.RevColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPart_DescriptionNull() {
+                return this.IsNull(this.tableMagListLog.Part_DescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPart_DescriptionNull() {
+                this[this.tableMagListLog.Part_DescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaterial_TypeNull() {
+                return this.IsNull(this.tableMagListLog.Material_TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaterial_TypeNull() {
+                this[this.tableMagListLog.Material_TypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsJob_NumberNull() {
+                return this.IsNull(this.tableMagListLog.Job_NumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetJob_NumberNull() {
+                this[this.tableMagListLog.Job_NumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateNull() {
+                return this.IsNull(this.tableMagListLog.DateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateNull() {
+                this[this.tableMagListLog.DateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCustomerNull() {
+                return this.IsNull(this.tableMagListLog.CustomerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCustomerNull() {
+                this[this.tableMagListLog.CustomerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQuantity_InspectedNull() {
+                return this.IsNull(this.tableMagListLog.Quantity_InspectedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQuantity_InspectedNull() {
+                this[this.tableMagListLog.Quantity_InspectedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQty_AcceptedNull() {
+                return this.IsNull(this.tableMagListLog.Qty_AcceptedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQty_AcceptedNull() {
+                this[this.tableMagListLog.Qty_AcceptedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQty_RejectedNull() {
+                return this.IsNull(this.tableMagListLog.Qty_RejectedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQty_RejectedNull() {
+                this[this.tableMagListLog.Qty_RejectedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsInspectorNull() {
+                return this.IsNull(this.tableMagListLog.InspectorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetInspectorNull() {
+                this[this.tableMagListLog.InspectorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSpecNull() {
+                return this.IsNull(this.tableMagListLog.SpecColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSpecNull() {
+                this[this.tableMagListLog.SpecColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSpec_TypeNull() {
+                return this.IsNull(this.tableMagListLog.Spec_TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSpec_TypeNull() {
+                this[this.tableMagListLog.Spec_TypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSpec_ClassNull() {
+                return this.IsNull(this.tableMagListLog.Spec_ClassColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSpec_ClassNull() {
+                this[this.tableMagListLog.Spec_ClassColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAcceptance_CriteriaNull() {
+                return this.IsNull(this.tableMagListLog.Acceptance_CriteriaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAcceptance_CriteriaNull() {
+                this[this.tableMagListLog.Acceptance_CriteriaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAccept_TypeNull() {
+                return this.IsNull(this.tableMagListLog.Accept_TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAccept_TypeNull() {
+                this[this.tableMagListLog.Accept_TypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAccept_gradeNull() {
+                return this.IsNull(this.tableMagListLog.Accept_gradeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAccept_gradeNull() {
+                this[this.tableMagListLog.Accept_gradeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsType_gradeNull() {
+                return this.IsNull(this.tableMagListLog.Type_gradeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetType_gradeNull() {
+                this[this.tableMagListLog.Type_gradeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAccept_ClassNull() {
+                return this.IsNull(this.tableMagListLog.Accept_ClassColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAccept_ClassNull() {
+                this[this.tableMagListLog.Accept_ClassColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCommentsNull() {
+                return this.IsNull(this.tableMagListLog.CommentsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCommentsNull() {
+                this[this.tableMagListLog.CommentsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMag_MachineNull() {
+                return this.IsNull(this.tableMagListLog.Mag_MachineColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMag_MachineNull() {
+                this[this.tableMagListLog.Mag_MachineColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSSMA_TimeStampNull() {
+                return this.IsNull(this.tableMagListLog.SSMA_TimeStampColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSSMA_TimeStampNull() {
+                this[this.tableMagListLog.SSMA_TimeStampColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class MagTaq525ProcessControlLogRow : global::System.Data.DataRow {
+            
+            private MagTaq525ProcessControlLogDataTable tableMagTaq525ProcessControlLog;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal MagTaq525ProcessControlLogRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMagTaq525ProcessControlLog = ((MagTaq525ProcessControlLogDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID {
+                get {
+                    return ((int)(this[this.tableMagTaq525ProcessControlLog.IDColumn]));
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableMagTaq525ProcessControlLog.DateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Date\' in table \'MagTaq525ProcessControlLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Internal_Shorts {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog.Internal_ShortsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Internal Shorts\' in table \'MagTaq525ProcessControlLog\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.Internal_ShortsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _Particle_Conc_1_4_ml {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog._Particle_Conc_1_4_mlColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Particle Conc 1-4 ml\' in table \'MagTaq525ProcessControlLog\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog._Particle_Conc_1_4_mlColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _Blacklight_Min_1000uw__15_ {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog._Blacklight_Min_1000uw__15_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Blacklight Min 1000uw@ 15\"\' in table \'MagTaq525ProcessContr" +
+                                "olLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog._Blacklight_Min_1000uw__15_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Avail_Light_Min_100FC {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog.Avail_Light_Min_100FCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Avail Light Min 100FC\' in table \'MagTaq525ProcessControlLog" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.Avail_Light_Min_100FCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _UV_Ambient_Light___Ambient_White_Light_Max_2FC {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog._UV_Ambient_Light___Ambient_White_Light_Max_2FCColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UV Ambient Light / Ambient White Light Max 2FC\' in table \'M" +
+                                "agTaq525ProcessControlLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog._UV_Ambient_Light___Ambient_White_Light_Max_2FCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _500__3_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog._500__3_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'500 (3 holes)\' in table \'MagTaq525ProcessControlLog\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog._500__3_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _1000__5_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog._1000__5_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'1000 (5 holes)\' in table \'MagTaq525ProcessControlLog\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog._1000__5_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _1500__6_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog._1500__6_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'1500 (6 holes)\' in table \'MagTaq525ProcessControlLog\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog._1500__6_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _2500__7_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog._2500__7_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'2500 (7 holes)\' in table \'MagTaq525ProcessControlLog\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog._2500__7_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _3500__9_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog._3500__9_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'3500 (9 holes)\' in table \'MagTaq525ProcessControlLog\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog._3500__9_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string _AS5282_QQI___1000_amps__5_holes_ {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog._AS5282_QQI___1000_amps__5_holes_Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AS5282 QQI @ 1000 amps (5 holes)\' in table \'MagTaq525Proces" +
+                                "sControlLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog._AS5282_QQI___1000_amps__5_holes_Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Bath_Comparison {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog.Bath_ComparisonColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Bath Comparison\' in table \'MagTaq525ProcessControlLog\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.Bath_ComparisonColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comments {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog.CommentsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Comments\' in table \'MagTaq525ProcessControlLog\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.CommentsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Inspector {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog.InspectorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Inspector\' in table \'MagTaq525ProcessControlLog\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.InspectorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ASTM_1400 {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog.ASTM_1400Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ASTM 1400\' in table \'MagTaq525ProcessControlLog\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.ASTM_1400Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ASTM_2500 {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog.ASTM_2500Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ASTM 2500\' in table \'MagTaq525ProcessControlLog\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.ASTM_2500Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ASTM_3400 {
+                get {
+                    try {
+                        return ((string)(this[this.tableMagTaq525ProcessControlLog.ASTM_3400Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ASTM 3400\' in table \'MagTaq525ProcessControlLog\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableMagTaq525ProcessControlLog.ASTM_3400Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDateNull() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog.DateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDateNull() {
+                this[this.tableMagTaq525ProcessControlLog.DateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsInternal_ShortsNull() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog.Internal_ShortsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetInternal_ShortsNull() {
+                this[this.tableMagTaq525ProcessControlLog.Internal_ShortsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_Particle_Conc_1_4_mlNull() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog._Particle_Conc_1_4_mlColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_Particle_Conc_1_4_mlNull() {
+                this[this.tableMagTaq525ProcessControlLog._Particle_Conc_1_4_mlColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_Blacklight_Min_1000uw__15_Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog._Blacklight_Min_1000uw__15_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_Blacklight_Min_1000uw__15_Null() {
+                this[this.tableMagTaq525ProcessControlLog._Blacklight_Min_1000uw__15_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAvail_Light_Min_100FCNull() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog.Avail_Light_Min_100FCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAvail_Light_Min_100FCNull() {
+                this[this.tableMagTaq525ProcessControlLog.Avail_Light_Min_100FCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_UV_Ambient_Light___Ambient_White_Light_Max_2FCNull() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog._UV_Ambient_Light___Ambient_White_Light_Max_2FCColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_UV_Ambient_Light___Ambient_White_Light_Max_2FCNull() {
+                this[this.tableMagTaq525ProcessControlLog._UV_Ambient_Light___Ambient_White_Light_Max_2FCColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_500__3_holes_Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog._500__3_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_500__3_holes_Null() {
+                this[this.tableMagTaq525ProcessControlLog._500__3_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_1000__5_holes_Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog._1000__5_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_1000__5_holes_Null() {
+                this[this.tableMagTaq525ProcessControlLog._1000__5_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_1500__6_holes_Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog._1500__6_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_1500__6_holes_Null() {
+                this[this.tableMagTaq525ProcessControlLog._1500__6_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_2500__7_holes_Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog._2500__7_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_2500__7_holes_Null() {
+                this[this.tableMagTaq525ProcessControlLog._2500__7_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_3500__9_holes_Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog._3500__9_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_3500__9_holes_Null() {
+                this[this.tableMagTaq525ProcessControlLog._3500__9_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is_AS5282_QQI___1000_amps__5_holes_Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog._AS5282_QQI___1000_amps__5_holes_Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set_AS5282_QQI___1000_amps__5_holes_Null() {
+                this[this.tableMagTaq525ProcessControlLog._AS5282_QQI___1000_amps__5_holes_Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBath_ComparisonNull() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog.Bath_ComparisonColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBath_ComparisonNull() {
+                this[this.tableMagTaq525ProcessControlLog.Bath_ComparisonColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCommentsNull() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog.CommentsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCommentsNull() {
+                this[this.tableMagTaq525ProcessControlLog.CommentsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsInspectorNull() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog.InspectorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetInspectorNull() {
+                this[this.tableMagTaq525ProcessControlLog.InspectorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsASTM_1400Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog.ASTM_1400Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetASTM_1400Null() {
+                this[this.tableMagTaq525ProcessControlLog.ASTM_1400Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsASTM_2500Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog.ASTM_2500Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetASTM_2500Null() {
+                this[this.tableMagTaq525ProcessControlLog.ASTM_2500Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsASTM_3400Null() {
+                return this.IsNull(this.tableMagTaq525ProcessControlLog.ASTM_3400Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetASTM_3400Null() {
+                this[this.tableMagTaq525ProcessControlLog.ASTM_3400Column] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class EDMCertsRow : global::System.Data.DataRow {
             
             private EDMCertsDataTable tableEDMCerts;
@@ -1694,6 +5309,17 @@ namespace ATIShotpeenDatabaseViewer {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string owner {
+                get {
+                    return ((string)(this[this.tableEDMCerts.ownerColumn]));
+                }
+                set {
+                    this[this.tableEDMCerts.ownerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isjob_numNull() {
                 return this.IsNull(this.tableEDMCerts.job_numColumn);
             }
@@ -1881,6 +5507,108 @@ namespace ATIShotpeenDatabaseViewer {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblJobProcessLogRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class _MagD_2060RProcessControlLogRowChangeEvent : global::System.EventArgs {
+            
+            private _MagD_2060RProcessControlLogRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _MagD_2060RProcessControlLogRowChangeEvent(_MagD_2060RProcessControlLogRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _MagD_2060RProcessControlLogRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class MagListLogRowChangeEvent : global::System.EventArgs {
+            
+            private MagListLogRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagListLogRowChangeEvent(MagListLogRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagListLogRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class MagTaq525ProcessControlLogRowChangeEvent : global::System.EventArgs {
+            
+            private MagTaq525ProcessControlLogRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagTaq525ProcessControlLogRowChangeEvent(MagTaq525ProcessControlLogRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MagTaq525ProcessControlLogRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -2514,6 +6242,2863 @@ SELECT process_num, job_num, part_num, part_rev, part_desc, customer, qty, date,
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class MagD_2060RProcessControlLogTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public MagD_2060RProcessControlLogTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "MagD-2060RProcessControlLog";
+            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("Date", "Date");
+            tableMapping.ColumnMappings.Add("Internal Shorts", "Internal Shorts");
+            tableMapping.ColumnMappings.Add("Particle Conc 1-4 ml", "Particle Conc 1-4 ml");
+            tableMapping.ColumnMappings.Add("Blacklight Min 1000uw@ 15\"", "Blacklight Min 1000uw@ 15\"");
+            tableMapping.ColumnMappings.Add("Avail Light Min 100FC", "Avail Light Min 100FC");
+            tableMapping.ColumnMappings.Add("UV Ambient Light / Ambient White Light Max 2 FC", "UV Ambient Light / Ambient White Light Max 2 FC");
+            tableMapping.ColumnMappings.Add("500 (3 holes)", "500 (3 holes)");
+            tableMapping.ColumnMappings.Add("1000 (5 holes)", "1000 (5 holes)");
+            tableMapping.ColumnMappings.Add("1500 (6 holes)", "1500 (6 holes)");
+            tableMapping.ColumnMappings.Add("2500 (7 holes)", "2500 (7 holes)");
+            tableMapping.ColumnMappings.Add("3500 (9 holes)", "3500 (9 holes)");
+            tableMapping.ColumnMappings.Add("AS5282 QQI @ 1000 amps (5 holes)", "AS5282 QQI @ 1000 amps (5 holes)");
+            tableMapping.ColumnMappings.Add("Bath Comparison", "Bath Comparison");
+            tableMapping.ColumnMappings.Add("Comments", "Comments");
+            tableMapping.ColumnMappings.Add("Inspector", "Inspector");
+            tableMapping.ColumnMappings.Add("ASTM 1400", "ASTM 1400");
+            tableMapping.ColumnMappings.Add("ASTM 2500", "ASTM 2500");
+            tableMapping.ColumnMappings.Add("ASTM 3400", "ASTM 3400");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MagD-2060RProcessControlLog] WHERE (([ID] = @Original_ID) AND " +
+                "((@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNu" +
+                "ll_Internal_Shorts = 1 AND [Internal Shorts] IS NULL) OR ([Internal Shorts] = @O" +
+                "riginal_Internal_Shorts)) AND ((@p3 = 1 AND [Particle Conc 1-4 ml] IS NULL) OR (" +
+                "[Particle Conc 1-4 ml] = @p2)) AND ((@p6 = 1 AND [Blacklight Min 1000uw@ 15\"] IS" +
+                " NULL) OR ([Blacklight Min 1000uw@ 15\"] = @p5)) AND ((@IsNull_Avail_Light_Min_10" +
+                "0FC = 1 AND [Avail Light Min 100FC] IS NULL) OR ([Avail Light Min 100FC] = @Orig" +
+                "inal_Avail_Light_Min_100FC)) AND ((@p9 = 1 AND [UV Ambient Light / Ambient White" +
+                " Light Max 2 FC] IS NULL) OR ([UV Ambient Light / Ambient White Light Max 2 FC] " +
+                "= @p8)) AND ((@p12 = 1 AND [500 (3 holes)] IS NULL) OR ([500 (3 holes)] = @p11))" +
+                " AND ((@p15 = 1 AND [1000 (5 holes)] IS NULL) OR ([1000 (5 holes)] = @p14)) AND " +
+                "((@p18 = 1 AND [1500 (6 holes)] IS NULL) OR ([1500 (6 holes)] = @p17)) AND ((@p2" +
+                "1 = 1 AND [2500 (7 holes)] IS NULL) OR ([2500 (7 holes)] = @p20)) AND ((@p24 = 1" +
+                " AND [3500 (9 holes)] IS NULL) OR ([3500 (9 holes)] = @p23)) AND ((@p27 = 1 AND " +
+                "[AS5282 QQI @ 1000 amps (5 holes)] IS NULL) OR ([AS5282 QQI @ 1000 amps (5 holes" +
+                ")] = @p26)) AND ((@IsNull_Bath_Comparison = 1 AND [Bath Comparison] IS NULL) OR " +
+                "([Bath Comparison] = @Original_Bath_Comparison)) AND ((@IsNull_Comments = 1 AND " +
+                "[Comments] IS NULL) OR ([Comments] = @Original_Comments)) AND ((@IsNull_Inspecto" +
+                "r = 1 AND [Inspector] IS NULL) OR ([Inspector] = @Original_Inspector)) AND ((@Is" +
+                "Null_ASTM_1400 = 1 AND [ASTM 1400] IS NULL) OR ([ASTM 1400] = @Original_ASTM_140" +
+                "0)) AND ((@IsNull_ASTM_2500 = 1 AND [ASTM 2500] IS NULL) OR ([ASTM 2500] = @Orig" +
+                "inal_ASTM_2500)) AND ((@IsNull_ASTM_3400 = 1 AND [ASTM 3400] IS NULL) OR ([ASTM " +
+                "3400] = @Original_ASTM_3400)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Internal_Shorts", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Internal_Shorts", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Avail_Light_Min_100FC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Avail_Light_Min_100FC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p9", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2 FC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p8", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2 FC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p12", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p11", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p15", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p14", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p18", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p17", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p21", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p20", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p24", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p23", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p27", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p26", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Bath_Comparison", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Bath_Comparison", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Comments", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Inspector", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_1400", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_1400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_2500", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_2500", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_3400", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_3400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MagD-2060RProcessControlLog] ([Date], [Internal Shorts], [Particle Conc 1-4 ml], [Blacklight Min 1000uw@ 15""], [Avail Light Min 100FC], [UV Ambient Light / Ambient White Light Max 2 FC], [500 (3 holes)], [1000 (5 holes)], [1500 (6 holes)], [2500 (7 holes)], [3500 (9 holes)], [AS5282 QQI @ 1000 amps (5 holes)], [Bath Comparison], [Comments], [Inspector], [ASTM 1400], [ASTM 2500], [ASTM 3400]) VALUES (@Date, @Internal_Shorts, @p1, @p4, @Avail_Light_Min_100FC, @p7, @p10, @p13, @p16, @p19, @p22, @p25, @Bath_Comparison, @Comments, @Inspector, @ASTM_1400, @ASTM_2500, @ASTM_3400);
+SELECT ID, Date, [Internal Shorts], [Particle Conc 1-4 ml], [Blacklight Min 1000uw@ 15""], [Avail Light Min 100FC], [UV Ambient Light / Ambient White Light Max 2 FC], [500 (3 holes)], [1000 (5 holes)], [1500 (6 holes)], [2500 (7 holes)], [3500 (9 holes)], [AS5282 QQI @ 1000 amps (5 holes)], [Bath Comparison], Comments, Inspector, [ASTM 1400], [ASTM 2500], [ASTM 3400] FROM [MagD-2060RProcessControlLog] WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Internal_Shorts", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Avail_Light_Min_100FC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p7", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2 FC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p10", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p13", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p16", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p19", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p22", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p25", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bath_Comparison", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_1400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_2500", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_3400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MagD-2060RProcessControlLog] SET [Date] = @Date, [Internal Shorts] " +
+                "= @Internal_Shorts, [Particle Conc 1-4 ml] = @p1, [Blacklight Min 1000uw@ 15\"] =" +
+                " @p4, [Avail Light Min 100FC] = @Avail_Light_Min_100FC, [UV Ambient Light / Ambi" +
+                "ent White Light Max 2 FC] = @p7, [500 (3 holes)] = @p10, [1000 (5 holes)] = @p13" +
+                ", [1500 (6 holes)] = @p16, [2500 (7 holes)] = @p19, [3500 (9 holes)] = @p22, [AS" +
+                "5282 QQI @ 1000 amps (5 holes)] = @p25, [Bath Comparison] = @Bath_Comparison, [C" +
+                "omments] = @Comments, [Inspector] = @Inspector, [ASTM 1400] = @ASTM_1400, [ASTM " +
+                "2500] = @ASTM_2500, [ASTM 3400] = @ASTM_3400 WHERE (([ID] = @Original_ID) AND ((" +
+                "@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull" +
+                "_Internal_Shorts = 1 AND [Internal Shorts] IS NULL) OR ([Internal Shorts] = @Ori" +
+                "ginal_Internal_Shorts)) AND ((@p3 = 1 AND [Particle Conc 1-4 ml] IS NULL) OR ([P" +
+                "article Conc 1-4 ml] = @p2)) AND ((@p6 = 1 AND [Blacklight Min 1000uw@ 15\"] IS N" +
+                "ULL) OR ([Blacklight Min 1000uw@ 15\"] = @p5)) AND ((@IsNull_Avail_Light_Min_100F" +
+                "C = 1 AND [Avail Light Min 100FC] IS NULL) OR ([Avail Light Min 100FC] = @Origin" +
+                "al_Avail_Light_Min_100FC)) AND ((@p9 = 1 AND [UV Ambient Light / Ambient White L" +
+                "ight Max 2 FC] IS NULL) OR ([UV Ambient Light / Ambient White Light Max 2 FC] = " +
+                "@p8)) AND ((@p12 = 1 AND [500 (3 holes)] IS NULL) OR ([500 (3 holes)] = @p11)) A" +
+                "ND ((@p15 = 1 AND [1000 (5 holes)] IS NULL) OR ([1000 (5 holes)] = @p14)) AND ((" +
+                "@p18 = 1 AND [1500 (6 holes)] IS NULL) OR ([1500 (6 holes)] = @p17)) AND ((@p21 " +
+                "= 1 AND [2500 (7 holes)] IS NULL) OR ([2500 (7 holes)] = @p20)) AND ((@p24 = 1 A" +
+                "ND [3500 (9 holes)] IS NULL) OR ([3500 (9 holes)] = @p23)) AND ((@p27 = 1 AND [A" +
+                "S5282 QQI @ 1000 amps (5 holes)] IS NULL) OR ([AS5282 QQI @ 1000 amps (5 holes)]" +
+                " = @p26)) AND ((@IsNull_Bath_Comparison = 1 AND [Bath Comparison] IS NULL) OR ([" +
+                "Bath Comparison] = @Original_Bath_Comparison)) AND ((@IsNull_Comments = 1 AND [C" +
+                "omments] IS NULL) OR ([Comments] = @Original_Comments)) AND ((@IsNull_Inspector " +
+                "= 1 AND [Inspector] IS NULL) OR ([Inspector] = @Original_Inspector)) AND ((@IsNu" +
+                "ll_ASTM_1400 = 1 AND [ASTM 1400] IS NULL) OR ([ASTM 1400] = @Original_ASTM_1400)" +
+                ") AND ((@IsNull_ASTM_2500 = 1 AND [ASTM 2500] IS NULL) OR ([ASTM 2500] = @Origin" +
+                "al_ASTM_2500)) AND ((@IsNull_ASTM_3400 = 1 AND [ASTM 3400] IS NULL) OR ([ASTM 34" +
+                "00] = @Original_ASTM_3400)));\r\nSELECT ID, Date, [Internal Shorts], [Particle Con" +
+                "c 1-4 ml], [Blacklight Min 1000uw@ 15\"], [Avail Light Min 100FC], [UV Ambient Li" +
+                "ght / Ambient White Light Max 2 FC], [500 (3 holes)], [1000 (5 holes)], [1500 (6" +
+                " holes)], [2500 (7 holes)], [3500 (9 holes)], [AS5282 QQI @ 1000 amps (5 holes)]" +
+                ", [Bath Comparison], Comments, Inspector, [ASTM 1400], [ASTM 2500], [ASTM 3400] " +
+                "FROM [MagD-2060RProcessControlLog] WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Internal_Shorts", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Avail_Light_Min_100FC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p7", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2 FC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p10", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p13", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p16", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p19", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p22", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p25", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bath_Comparison", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_1400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_2500", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_3400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Internal_Shorts", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Internal_Shorts", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Avail_Light_Min_100FC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Avail_Light_Min_100FC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p9", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2 FC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p8", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2 FC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p12", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p11", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p15", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p14", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p18", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p17", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p21", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p20", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p24", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p23", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p27", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p26", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Bath_Comparison", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Bath_Comparison", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Comments", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Inspector", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_1400", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_1400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_2500", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_2500", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_3400", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_3400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ATIShotpeenDatabaseViewer.Properties.Settings.Default.ATIDeliveryConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT ID, Date, [Internal Shorts], [Particle Conc 1-4 ml], [Blacklight Min 1000uw@ 15""], [Avail Light Min 100FC], [UV Ambient Light / Ambient White Light Max 2 FC], [500 (3 holes)], [1000 (5 holes)], [1500 (6 holes)], [2500 (7 holes)], [3500 (9 holes)], [AS5282 QQI @ 1000 amps (5 holes)], [Bath Comparison], Comments, Inspector, [ASTM 1400], [ASTM 2500], [ASTM 3400] FROM dbo.[MagD-2060RProcessControlLog]";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ATIDeliveryDataSet._MagD_2060RProcessControlLogDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ATIDeliveryDataSet._MagD_2060RProcessControlLogDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ATIDeliveryDataSet._MagD_2060RProcessControlLogDataTable dataTable = new ATIDeliveryDataSet._MagD_2060RProcessControlLogDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ATIDeliveryDataSet._MagD_2060RProcessControlLogDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ATIDeliveryDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "MagD-2060RProcessControlLog");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    int Original_ID, 
+                    global::System.Nullable<global::System.DateTime> Original_Date, 
+                    string Original_Internal_Shorts, 
+                    string p2, 
+                    string p5, 
+                    string Original_Avail_Light_Min_100FC, 
+                    string p8, 
+                    string p11, 
+                    string p14, 
+                    string p17, 
+                    string p20, 
+                    string p23, 
+                    string p26, 
+                    string Original_Bath_Comparison, 
+                    string Original_Comments, 
+                    string Original_Inspector, 
+                    string Original_ASTM_1400, 
+                    string Original_ASTM_2500, 
+                    string Original_ASTM_3400) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+            if ((Original_Date.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Date.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Internal_Shorts == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Internal_Shorts));
+            }
+            if ((p2 == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(p2));
+            }
+            if ((p5 == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(p5));
+            }
+            if ((Original_Avail_Light_Min_100FC == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Avail_Light_Min_100FC));
+            }
+            if ((p8 == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(p8));
+            }
+            if ((p11 == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(p11));
+            }
+            if ((p14 == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(p14));
+            }
+            if ((p17 == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(p17));
+            }
+            if ((p20 == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(p20));
+            }
+            if ((p23 == null)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(p23));
+            }
+            if ((p26 == null)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(p26));
+            }
+            if ((Original_Bath_Comparison == null)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_Bath_Comparison));
+            }
+            if ((Original_Comments == null)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_Comments));
+            }
+            if ((Original_Inspector == null)) {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_Inspector));
+            }
+            if ((Original_ASTM_1400 == null)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_ASTM_1400));
+            }
+            if ((Original_ASTM_2500 == null)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_ASTM_2500));
+            }
+            if ((Original_ASTM_3400 == null)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_ASTM_3400));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    string Internal_Shorts, 
+                    string p1, 
+                    string p4, 
+                    string Avail_Light_Min_100FC, 
+                    string p7, 
+                    string p10, 
+                    string p13, 
+                    string p16, 
+                    string p19, 
+                    string p22, 
+                    string p25, 
+                    string Bath_Comparison, 
+                    string Comments, 
+                    string Inspector, 
+                    string ASTM_1400, 
+                    string ASTM_2500, 
+                    string ASTM_3400) {
+            if ((Date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Internal_Shorts == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Internal_Shorts));
+            }
+            if ((p1 == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p1));
+            }
+            if ((p4 == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(p4));
+            }
+            if ((Avail_Light_Min_100FC == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Avail_Light_Min_100FC));
+            }
+            if ((p7 == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(p7));
+            }
+            if ((p10 == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(p10));
+            }
+            if ((p13 == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(p13));
+            }
+            if ((p16 == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(p16));
+            }
+            if ((p19 == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(p19));
+            }
+            if ((p22 == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(p22));
+            }
+            if ((p25 == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(p25));
+            }
+            if ((Bath_Comparison == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Bath_Comparison));
+            }
+            if ((Comments == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(Comments));
+            }
+            if ((Inspector == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Inspector));
+            }
+            if ((ASTM_1400 == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(ASTM_1400));
+            }
+            if ((ASTM_2500 == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(ASTM_2500));
+            }
+            if ((ASTM_3400 == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(ASTM_3400));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    string Internal_Shorts, 
+                    string p1, 
+                    string p4, 
+                    string Avail_Light_Min_100FC, 
+                    string p7, 
+                    string p10, 
+                    string p13, 
+                    string p16, 
+                    string p19, 
+                    string p22, 
+                    string p25, 
+                    string Bath_Comparison, 
+                    string Comments, 
+                    string Inspector, 
+                    string ASTM_1400, 
+                    string ASTM_2500, 
+                    string ASTM_3400, 
+                    int Original_ID, 
+                    global::System.Nullable<global::System.DateTime> Original_Date, 
+                    string Original_Internal_Shorts, 
+                    string p2, 
+                    string p5, 
+                    string Original_Avail_Light_Min_100FC, 
+                    string p8, 
+                    string p11, 
+                    string p14, 
+                    string p17, 
+                    string p20, 
+                    string p23, 
+                    string p26, 
+                    string Original_Bath_Comparison, 
+                    string Original_Comments, 
+                    string Original_Inspector, 
+                    string Original_ASTM_1400, 
+                    string Original_ASTM_2500, 
+                    string Original_ASTM_3400, 
+                    int ID) {
+            if ((Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Internal_Shorts == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Internal_Shorts));
+            }
+            if ((p1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p1));
+            }
+            if ((p4 == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
+            }
+            if ((Avail_Light_Min_100FC == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Avail_Light_Min_100FC));
+            }
+            if ((p7 == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(p7));
+            }
+            if ((p10 == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(p10));
+            }
+            if ((p13 == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(p13));
+            }
+            if ((p16 == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(p16));
+            }
+            if ((p19 == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(p19));
+            }
+            if ((p22 == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(p22));
+            }
+            if ((p25 == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(p25));
+            }
+            if ((Bath_Comparison == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Bath_Comparison));
+            }
+            if ((Comments == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Comments));
+            }
+            if ((Inspector == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Inspector));
+            }
+            if ((ASTM_1400 == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(ASTM_1400));
+            }
+            if ((ASTM_2500 == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(ASTM_2500));
+            }
+            if ((ASTM_3400 == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(ASTM_3400));
+            }
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_ID));
+            if ((Original_Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Internal_Shorts == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Internal_Shorts));
+            }
+            if ((p2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(p2));
+            }
+            if ((p5 == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(p5));
+            }
+            if ((Original_Avail_Light_Min_100FC == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Avail_Light_Min_100FC));
+            }
+            if ((p8 == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(p8));
+            }
+            if ((p11 == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(p11));
+            }
+            if ((p14 == null)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(p14));
+            }
+            if ((p17 == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(p17));
+            }
+            if ((p20 == null)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(p20));
+            }
+            if ((p23 == null)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(p23));
+            }
+            if ((p26 == null)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(p26));
+            }
+            if ((Original_Bath_Comparison == null)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_Bath_Comparison));
+            }
+            if ((Original_Comments == null)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_Comments));
+            }
+            if ((Original_Inspector == null)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_Inspector));
+            }
+            if ((Original_ASTM_1400 == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_ASTM_1400));
+            }
+            if ((Original_ASTM_2500 == null)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_ASTM_2500));
+            }
+            if ((Original_ASTM_3400 == null)) {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_ASTM_3400));
+            }
+            this.Adapter.UpdateCommand.Parameters[55].Value = ((int)(ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    string Internal_Shorts, 
+                    string p1, 
+                    string p4, 
+                    string Avail_Light_Min_100FC, 
+                    string p7, 
+                    string p10, 
+                    string p13, 
+                    string p16, 
+                    string p19, 
+                    string p22, 
+                    string p25, 
+                    string Bath_Comparison, 
+                    string Comments, 
+                    string Inspector, 
+                    string ASTM_1400, 
+                    string ASTM_2500, 
+                    string ASTM_3400, 
+                    int Original_ID, 
+                    global::System.Nullable<global::System.DateTime> Original_Date, 
+                    string Original_Internal_Shorts, 
+                    string p2, 
+                    string p5, 
+                    string Original_Avail_Light_Min_100FC, 
+                    string p8, 
+                    string p11, 
+                    string p14, 
+                    string p17, 
+                    string p20, 
+                    string p23, 
+                    string p26, 
+                    string Original_Bath_Comparison, 
+                    string Original_Comments, 
+                    string Original_Inspector, 
+                    string Original_ASTM_1400, 
+                    string Original_ASTM_2500, 
+                    string Original_ASTM_3400) {
+            return this.Update(Date, Internal_Shorts, p1, p4, Avail_Light_Min_100FC, p7, p10, p13, p16, p19, p22, p25, Bath_Comparison, Comments, Inspector, ASTM_1400, ASTM_2500, ASTM_3400, Original_ID, Original_Date, Original_Internal_Shorts, p2, p5, Original_Avail_Light_Min_100FC, p8, p11, p14, p17, p20, p23, p26, Original_Bath_Comparison, Original_Comments, Original_Inspector, Original_ASTM_1400, Original_ASTM_2500, Original_ASTM_3400, Original_ID);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class MagListLogTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public MagListLogTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "MagListLog";
+            tableMapping.ColumnMappings.Add("Cert", "Cert");
+            tableMapping.ColumnMappings.Add("Part Number", "Part Number");
+            tableMapping.ColumnMappings.Add("Rev", "Rev");
+            tableMapping.ColumnMappings.Add("Part Description", "Part Description");
+            tableMapping.ColumnMappings.Add("Material Type", "Material Type");
+            tableMapping.ColumnMappings.Add("Job Number", "Job Number");
+            tableMapping.ColumnMappings.Add("Date", "Date");
+            tableMapping.ColumnMappings.Add("Customer", "Customer");
+            tableMapping.ColumnMappings.Add("Quantity Inspected", "Quantity Inspected");
+            tableMapping.ColumnMappings.Add("Qty Accepted", "Qty Accepted");
+            tableMapping.ColumnMappings.Add("Qty Rejected", "Qty Rejected");
+            tableMapping.ColumnMappings.Add("Inspector", "Inspector");
+            tableMapping.ColumnMappings.Add("Spec", "Spec");
+            tableMapping.ColumnMappings.Add("Spec Type", "Spec Type");
+            tableMapping.ColumnMappings.Add("Spec Class", "Spec Class");
+            tableMapping.ColumnMappings.Add("Acceptance Criteria", "Acceptance Criteria");
+            tableMapping.ColumnMappings.Add("Accept Type", "Accept Type");
+            tableMapping.ColumnMappings.Add("Accept_grade", "Accept_grade");
+            tableMapping.ColumnMappings.Add("Type_grade", "Type_grade");
+            tableMapping.ColumnMappings.Add("Accept Class", "Accept Class");
+            tableMapping.ColumnMappings.Add("Comments", "Comments");
+            tableMapping.ColumnMappings.Add("Mag Machine", "Mag Machine");
+            tableMapping.ColumnMappings.Add("SSMA_TimeStamp", "SSMA_TimeStamp");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MagListLog] WHERE (([Cert] = @Original_Cert) AND ([SSMA_TimeSt" +
+                "amp] = @Original_SSMA_TimeStamp))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cert", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cert", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SSMA_TimeStamp", global::System.Data.SqlDbType.Timestamp, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SSMA_TimeStamp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MagListLog] ([Cert], [Part Number], [Rev], [Part Description], [Material Type], [Job Number], [Date], [Customer], [Quantity Inspected], [Qty Accepted], [Qty Rejected], [Inspector], [Spec], [Spec Type], [Spec Class], [Acceptance Criteria], [Accept Type], [Accept_grade], [Type_grade], [Accept Class], [Comments], [Mag Machine]) VALUES (@Cert, @Part_Number, @Rev, @Part_Description, @Material_Type, @Job_Number, @Date, @Customer, @Quantity_Inspected, @Qty_Accepted, @Qty_Rejected, @Inspector, @Spec, @Spec_Type, @Spec_Class, @Acceptance_Criteria, @Accept_Type, @Accept_grade, @Type_grade, @Accept_Class, @Comments, @Mag_Machine);
+SELECT Cert, [Part Number], Rev, [Part Description], [Material Type], [Job Number], Date, Customer, [Quantity Inspected], [Qty Accepted], [Qty Rejected], Inspector, Spec, [Spec Type], [Spec Class], [Acceptance Criteria], [Accept Type], Accept_grade, Type_grade, [Accept Class], Comments, [Mag Machine], SSMA_TimeStamp FROM MagListLog WHERE (Cert = @Cert)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cert", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cert", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_Number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rev", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Material_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Material Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Job_Number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Job Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Customer", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Customer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Inspected", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity Inspected", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qty_Accepted", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qty Accepted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qty_Rejected", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qty Rejected", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spec", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spec_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spec Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spec_Class", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spec Class", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Acceptance_Criteria", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Acceptance Criteria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Accept_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Accept Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Accept_grade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Accept_grade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Type_grade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type_grade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Accept_Class", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Accept Class", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Mag_Machine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mag Machine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[MagListLog] SET [Cert] = @Cert, [Part Number] = @Part_Number, [Rev] = @Rev, [Part Description] = @Part_Description, [Material Type] = @Material_Type, [Job Number] = @Job_Number, [Date] = @Date, [Customer] = @Customer, [Quantity Inspected] = @Quantity_Inspected, [Qty Accepted] = @Qty_Accepted, [Qty Rejected] = @Qty_Rejected, [Inspector] = @Inspector, [Spec] = @Spec, [Spec Type] = @Spec_Type, [Spec Class] = @Spec_Class, [Acceptance Criteria] = @Acceptance_Criteria, [Accept Type] = @Accept_Type, [Accept_grade] = @Accept_grade, [Type_grade] = @Type_grade, [Accept Class] = @Accept_Class, [Comments] = @Comments, [Mag Machine] = @Mag_Machine WHERE (([Cert] = @Original_Cert) AND ([SSMA_TimeStamp] = @Original_SSMA_TimeStamp));
+SELECT Cert, [Part Number], Rev, [Part Description], [Material Type], [Job Number], Date, Customer, [Quantity Inspected], [Qty Accepted], [Qty Rejected], Inspector, Spec, [Spec Type], [Spec Class], [Acceptance Criteria], [Accept Type], Accept_grade, Type_grade, [Accept Class], Comments, [Mag Machine], SSMA_TimeStamp FROM MagListLog WHERE (Cert = @Cert)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cert", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cert", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_Number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rev", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Part_Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Part Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Material_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Material Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Job_Number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Job Number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Customer", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Customer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantity_Inspected", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantity Inspected", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qty_Accepted", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qty Accepted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Qty_Rejected", global::System.Data.SqlDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Qty Rejected", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spec", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spec", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spec_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spec Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Spec_Class", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Spec Class", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Acceptance_Criteria", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Acceptance Criteria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Accept_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Accept Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Accept_grade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Accept_grade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Type_grade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Type_grade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Accept_Class", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Accept Class", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Mag_Machine", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mag Machine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cert", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cert", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SSMA_TimeStamp", global::System.Data.SqlDbType.Timestamp, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SSMA_TimeStamp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ATIShotpeenDatabaseViewer.Properties.Settings.Default.ATIDeliveryConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT Cert, [Part Number], Rev, [Part Description], [Material Type], [Job Number], Date, Customer, [Quantity Inspected], [Qty Accepted], [Qty Rejected], Inspector, Spec, [Spec Type], [Spec Class], [Acceptance Criteria], [Accept Type], Accept_grade, Type_grade, [Accept Class], Comments, [Mag Machine], SSMA_TimeStamp FROM dbo.MagListLog";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ATIDeliveryDataSet.MagListLogDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ATIDeliveryDataSet.MagListLogDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ATIDeliveryDataSet.MagListLogDataTable dataTable = new ATIDeliveryDataSet.MagListLogDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ATIDeliveryDataSet.MagListLogDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ATIDeliveryDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "MagListLog");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_Cert, byte[] Original_SSMA_TimeStamp) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Cert));
+            if ((Original_SSMA_TimeStamp == null)) {
+                throw new global::System.ArgumentNullException("Original_SSMA_TimeStamp");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((byte[])(Original_SSMA_TimeStamp));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    int Cert, 
+                    string Part_Number, 
+                    string Rev, 
+                    string Part_Description, 
+                    string Material_Type, 
+                    string Job_Number, 
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    string Customer, 
+                    global::System.Nullable<short> Quantity_Inspected, 
+                    global::System.Nullable<short> Qty_Accepted, 
+                    global::System.Nullable<short> Qty_Rejected, 
+                    string Inspector, 
+                    string Spec, 
+                    string Spec_Type, 
+                    string Spec_Class, 
+                    string Acceptance_Criteria, 
+                    string Accept_Type, 
+                    string Accept_grade, 
+                    string Type_grade, 
+                    string Accept_Class, 
+                    string Comments, 
+                    string Mag_Machine) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Cert));
+            if ((Part_Number == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Part_Number));
+            }
+            if ((Rev == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Rev));
+            }
+            if ((Part_Description == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Part_Description));
+            }
+            if ((Material_Type == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Material_Type));
+            }
+            if ((Job_Number == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Job_Number));
+            }
+            if ((Date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Customer == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Customer));
+            }
+            if ((Quantity_Inspected.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((short)(Quantity_Inspected.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Qty_Accepted.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((short)(Qty_Accepted.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Qty_Rejected.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((short)(Qty_Rejected.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Inspector == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(Inspector));
+            }
+            if ((Spec == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Spec));
+            }
+            if ((Spec_Type == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(Spec_Type));
+            }
+            if ((Spec_Class == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Spec_Class));
+            }
+            if ((Acceptance_Criteria == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Acceptance_Criteria));
+            }
+            if ((Accept_Type == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(Accept_Type));
+            }
+            if ((Accept_grade == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(Accept_grade));
+            }
+            if ((Type_grade == null)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(Type_grade));
+            }
+            if ((Accept_Class == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Accept_Class));
+            }
+            if ((Comments == null)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(Comments));
+            }
+            if ((Mag_Machine == null)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(Mag_Machine));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    int Cert, 
+                    string Part_Number, 
+                    string Rev, 
+                    string Part_Description, 
+                    string Material_Type, 
+                    string Job_Number, 
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    string Customer, 
+                    global::System.Nullable<short> Quantity_Inspected, 
+                    global::System.Nullable<short> Qty_Accepted, 
+                    global::System.Nullable<short> Qty_Rejected, 
+                    string Inspector, 
+                    string Spec, 
+                    string Spec_Type, 
+                    string Spec_Class, 
+                    string Acceptance_Criteria, 
+                    string Accept_Type, 
+                    string Accept_grade, 
+                    string Type_grade, 
+                    string Accept_Class, 
+                    string Comments, 
+                    string Mag_Machine, 
+                    int Original_Cert, 
+                    byte[] Original_SSMA_TimeStamp) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Cert));
+            if ((Part_Number == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Part_Number));
+            }
+            if ((Rev == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Rev));
+            }
+            if ((Part_Description == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Part_Description));
+            }
+            if ((Material_Type == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Material_Type));
+            }
+            if ((Job_Number == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Job_Number));
+            }
+            if ((Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((Customer == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Customer));
+            }
+            if ((Quantity_Inspected.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((short)(Quantity_Inspected.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Qty_Accepted.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((short)(Qty_Accepted.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Qty_Rejected.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((short)(Qty_Rejected.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Inspector == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Inspector));
+            }
+            if ((Spec == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Spec));
+            }
+            if ((Spec_Type == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Spec_Type));
+            }
+            if ((Spec_Class == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Spec_Class));
+            }
+            if ((Acceptance_Criteria == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Acceptance_Criteria));
+            }
+            if ((Accept_Type == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Accept_Type));
+            }
+            if ((Accept_grade == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Accept_grade));
+            }
+            if ((Type_grade == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Type_grade));
+            }
+            if ((Accept_Class == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Accept_Class));
+            }
+            if ((Comments == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Comments));
+            }
+            if ((Mag_Machine == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Mag_Machine));
+            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_Cert));
+            if ((Original_SSMA_TimeStamp == null)) {
+                throw new global::System.ArgumentNullException("Original_SSMA_TimeStamp");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((byte[])(Original_SSMA_TimeStamp));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string Part_Number, 
+                    string Rev, 
+                    string Part_Description, 
+                    string Material_Type, 
+                    string Job_Number, 
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    string Customer, 
+                    global::System.Nullable<short> Quantity_Inspected, 
+                    global::System.Nullable<short> Qty_Accepted, 
+                    global::System.Nullable<short> Qty_Rejected, 
+                    string Inspector, 
+                    string Spec, 
+                    string Spec_Type, 
+                    string Spec_Class, 
+                    string Acceptance_Criteria, 
+                    string Accept_Type, 
+                    string Accept_grade, 
+                    string Type_grade, 
+                    string Accept_Class, 
+                    string Comments, 
+                    string Mag_Machine, 
+                    int Original_Cert, 
+                    byte[] Original_SSMA_TimeStamp) {
+            return this.Update(Original_Cert, Part_Number, Rev, Part_Description, Material_Type, Job_Number, Date, Customer, Quantity_Inspected, Qty_Accepted, Qty_Rejected, Inspector, Spec, Spec_Type, Spec_Class, Acceptance_Criteria, Accept_Type, Accept_grade, Type_grade, Accept_Class, Comments, Mag_Machine, Original_Cert, Original_SSMA_TimeStamp);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class MagTaq525ProcessControlLogTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public MagTaq525ProcessControlLogTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "MagTaq525ProcessControlLog";
+            tableMapping.ColumnMappings.Add("ID", "ID");
+            tableMapping.ColumnMappings.Add("Date", "Date");
+            tableMapping.ColumnMappings.Add("Internal Shorts", "Internal Shorts");
+            tableMapping.ColumnMappings.Add("Particle Conc 1-4 ml", "Particle Conc 1-4 ml");
+            tableMapping.ColumnMappings.Add("Blacklight Min 1000uw@ 15\"", "Blacklight Min 1000uw@ 15\"");
+            tableMapping.ColumnMappings.Add("Avail Light Min 100FC", "Avail Light Min 100FC");
+            tableMapping.ColumnMappings.Add("UV Ambient Light / Ambient White Light Max 2FC", "UV Ambient Light / Ambient White Light Max 2FC");
+            tableMapping.ColumnMappings.Add("500 (3 holes)", "500 (3 holes)");
+            tableMapping.ColumnMappings.Add("1000 (5 holes)", "1000 (5 holes)");
+            tableMapping.ColumnMappings.Add("1500 (6 holes)", "1500 (6 holes)");
+            tableMapping.ColumnMappings.Add("2500 (7 holes)", "2500 (7 holes)");
+            tableMapping.ColumnMappings.Add("3500 (9 holes)", "3500 (9 holes)");
+            tableMapping.ColumnMappings.Add("AS5282 QQI @ 1000 amps (5 holes)", "AS5282 QQI @ 1000 amps (5 holes)");
+            tableMapping.ColumnMappings.Add("Bath Comparison", "Bath Comparison");
+            tableMapping.ColumnMappings.Add("Comments", "Comments");
+            tableMapping.ColumnMappings.Add("Inspector", "Inspector");
+            tableMapping.ColumnMappings.Add("ASTM 1400", "ASTM 1400");
+            tableMapping.ColumnMappings.Add("ASTM 2500", "ASTM 2500");
+            tableMapping.ColumnMappings.Add("ASTM 3400", "ASTM 3400");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MagTaq525ProcessControlLog] WHERE (([ID] = @Original_ID) AND (" +
+                "(@IsNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNul" +
+                "l_Internal_Shorts = 1 AND [Internal Shorts] IS NULL) OR ([Internal Shorts] = @Or" +
+                "iginal_Internal_Shorts)) AND ((@p3 = 1 AND [Particle Conc 1-4 ml] IS NULL) OR ([" +
+                "Particle Conc 1-4 ml] = @p2)) AND ((@p6 = 1 AND [Blacklight Min 1000uw@ 15\"] IS " +
+                "NULL) OR ([Blacklight Min 1000uw@ 15\"] = @p5)) AND ((@IsNull_Avail_Light_Min_100" +
+                "FC = 1 AND [Avail Light Min 100FC] IS NULL) OR ([Avail Light Min 100FC] = @Origi" +
+                "nal_Avail_Light_Min_100FC)) AND ((@p9 = 1 AND [UV Ambient Light / Ambient White " +
+                "Light Max 2FC] IS NULL) OR ([UV Ambient Light / Ambient White Light Max 2FC] = @" +
+                "p8)) AND ((@p12 = 1 AND [500 (3 holes)] IS NULL) OR ([500 (3 holes)] = @p11)) AN" +
+                "D ((@p15 = 1 AND [1000 (5 holes)] IS NULL) OR ([1000 (5 holes)] = @p14)) AND ((@" +
+                "p18 = 1 AND [1500 (6 holes)] IS NULL) OR ([1500 (6 holes)] = @p17)) AND ((@p21 =" +
+                " 1 AND [2500 (7 holes)] IS NULL) OR ([2500 (7 holes)] = @p20)) AND ((@p24 = 1 AN" +
+                "D [3500 (9 holes)] IS NULL) OR ([3500 (9 holes)] = @p23)) AND ((@p27 = 1 AND [AS" +
+                "5282 QQI @ 1000 amps (5 holes)] IS NULL) OR ([AS5282 QQI @ 1000 amps (5 holes)] " +
+                "= @p26)) AND ((@IsNull_Bath_Comparison = 1 AND [Bath Comparison] IS NULL) OR ([B" +
+                "ath Comparison] = @Original_Bath_Comparison)) AND ((@IsNull_Comments = 1 AND [Co" +
+                "mments] IS NULL) OR ([Comments] = @Original_Comments)) AND ((@IsNull_Inspector =" +
+                " 1 AND [Inspector] IS NULL) OR ([Inspector] = @Original_Inspector)) AND ((@IsNul" +
+                "l_ASTM_1400 = 1 AND [ASTM 1400] IS NULL) OR ([ASTM 1400] = @Original_ASTM_1400))" +
+                " AND ((@IsNull_ASTM_2500 = 1 AND [ASTM 2500] IS NULL) OR ([ASTM 2500] = @Origina" +
+                "l_ASTM_2500)) AND ((@IsNull_ASTM_3400 = 1 AND [ASTM 3400] IS NULL) OR ([ASTM 340" +
+                "0] = @Original_ASTM_3400)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Internal_Shorts", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Internal_Shorts", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Avail_Light_Min_100FC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Avail_Light_Min_100FC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p9", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2FC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p8", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2FC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p12", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p11", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p15", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p14", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p18", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p17", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p21", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p20", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p24", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p23", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p27", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p26", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Bath_Comparison", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Bath_Comparison", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Comments", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Inspector", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_1400", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_1400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_2500", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_2500", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_3400", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_3400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MagTaq525ProcessControlLog] ([Date], [Internal Shorts], [Particle Conc 1-4 ml], [Blacklight Min 1000uw@ 15""], [Avail Light Min 100FC], [UV Ambient Light / Ambient White Light Max 2FC], [500 (3 holes)], [1000 (5 holes)], [1500 (6 holes)], [2500 (7 holes)], [3500 (9 holes)], [AS5282 QQI @ 1000 amps (5 holes)], [Bath Comparison], [Comments], [Inspector], [ASTM 1400], [ASTM 2500], [ASTM 3400]) VALUES (@Date, @Internal_Shorts, @p1, @p4, @Avail_Light_Min_100FC, @p7, @p10, @p13, @p16, @p19, @p22, @p25, @Bath_Comparison, @Comments, @Inspector, @ASTM_1400, @ASTM_2500, @ASTM_3400);
+SELECT ID, Date, [Internal Shorts], [Particle Conc 1-4 ml], [Blacklight Min 1000uw@ 15""], [Avail Light Min 100FC], [UV Ambient Light / Ambient White Light Max 2FC], [500 (3 holes)], [1000 (5 holes)], [1500 (6 holes)], [2500 (7 holes)], [3500 (9 holes)], [AS5282 QQI @ 1000 amps (5 holes)], [Bath Comparison], Comments, Inspector, [ASTM 1400], [ASTM 2500], [ASTM 3400] FROM MagTaq525ProcessControlLog WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Internal_Shorts", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Avail_Light_Min_100FC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p7", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2FC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p10", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p13", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p16", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p19", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p22", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p25", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bath_Comparison", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_1400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_2500", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_3400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MagTaq525ProcessControlLog] SET [Date] = @Date, [Internal Shorts] =" +
+                " @Internal_Shorts, [Particle Conc 1-4 ml] = @p1, [Blacklight Min 1000uw@ 15\"] = " +
+                "@p4, [Avail Light Min 100FC] = @Avail_Light_Min_100FC, [UV Ambient Light / Ambie" +
+                "nt White Light Max 2FC] = @p7, [500 (3 holes)] = @p10, [1000 (5 holes)] = @p13, " +
+                "[1500 (6 holes)] = @p16, [2500 (7 holes)] = @p19, [3500 (9 holes)] = @p22, [AS52" +
+                "82 QQI @ 1000 amps (5 holes)] = @p25, [Bath Comparison] = @Bath_Comparison, [Com" +
+                "ments] = @Comments, [Inspector] = @Inspector, [ASTM 1400] = @ASTM_1400, [ASTM 25" +
+                "00] = @ASTM_2500, [ASTM 3400] = @ASTM_3400 WHERE (([ID] = @Original_ID) AND ((@I" +
+                "sNull_Date = 1 AND [Date] IS NULL) OR ([Date] = @Original_Date)) AND ((@IsNull_I" +
+                "nternal_Shorts = 1 AND [Internal Shorts] IS NULL) OR ([Internal Shorts] = @Origi" +
+                "nal_Internal_Shorts)) AND ((@p3 = 1 AND [Particle Conc 1-4 ml] IS NULL) OR ([Par" +
+                "ticle Conc 1-4 ml] = @p2)) AND ((@p6 = 1 AND [Blacklight Min 1000uw@ 15\"] IS NUL" +
+                "L) OR ([Blacklight Min 1000uw@ 15\"] = @p5)) AND ((@IsNull_Avail_Light_Min_100FC " +
+                "= 1 AND [Avail Light Min 100FC] IS NULL) OR ([Avail Light Min 100FC] = @Original" +
+                "_Avail_Light_Min_100FC)) AND ((@p9 = 1 AND [UV Ambient Light / Ambient White Lig" +
+                "ht Max 2FC] IS NULL) OR ([UV Ambient Light / Ambient White Light Max 2FC] = @p8)" +
+                ") AND ((@p12 = 1 AND [500 (3 holes)] IS NULL) OR ([500 (3 holes)] = @p11)) AND (" +
+                "(@p15 = 1 AND [1000 (5 holes)] IS NULL) OR ([1000 (5 holes)] = @p14)) AND ((@p18" +
+                " = 1 AND [1500 (6 holes)] IS NULL) OR ([1500 (6 holes)] = @p17)) AND ((@p21 = 1 " +
+                "AND [2500 (7 holes)] IS NULL) OR ([2500 (7 holes)] = @p20)) AND ((@p24 = 1 AND [" +
+                "3500 (9 holes)] IS NULL) OR ([3500 (9 holes)] = @p23)) AND ((@p27 = 1 AND [AS528" +
+                "2 QQI @ 1000 amps (5 holes)] IS NULL) OR ([AS5282 QQI @ 1000 amps (5 holes)] = @" +
+                "p26)) AND ((@IsNull_Bath_Comparison = 1 AND [Bath Comparison] IS NULL) OR ([Bath" +
+                " Comparison] = @Original_Bath_Comparison)) AND ((@IsNull_Comments = 1 AND [Comme" +
+                "nts] IS NULL) OR ([Comments] = @Original_Comments)) AND ((@IsNull_Inspector = 1 " +
+                "AND [Inspector] IS NULL) OR ([Inspector] = @Original_Inspector)) AND ((@IsNull_A" +
+                "STM_1400 = 1 AND [ASTM 1400] IS NULL) OR ([ASTM 1400] = @Original_ASTM_1400)) AN" +
+                "D ((@IsNull_ASTM_2500 = 1 AND [ASTM 2500] IS NULL) OR ([ASTM 2500] = @Original_A" +
+                "STM_2500)) AND ((@IsNull_ASTM_3400 = 1 AND [ASTM 3400] IS NULL) OR ([ASTM 3400] " +
+                "= @Original_ASTM_3400)));\r\nSELECT ID, Date, [Internal Shorts], [Particle Conc 1-" +
+                "4 ml], [Blacklight Min 1000uw@ 15\"], [Avail Light Min 100FC], [UV Ambient Light " +
+                "/ Ambient White Light Max 2FC], [500 (3 holes)], [1000 (5 holes)], [1500 (6 hole" +
+                "s)], [2500 (7 holes)], [3500 (9 holes)], [AS5282 QQI @ 1000 amps (5 holes)], [Ba" +
+                "th Comparison], Comments, Inspector, [ASTM 1400], [ASTM 2500], [ASTM 3400] FROM " +
+                "MagTaq525ProcessControlLog WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Internal_Shorts", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p4", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Avail_Light_Min_100FC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p7", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2FC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p10", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p13", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p16", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p19", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p22", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p25", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bath_Comparison", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_1400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_2500", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ASTM_3400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Internal_Shorts", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Internal_Shorts", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Internal Shorts", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Particle Conc 1-4 ml", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p6", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p5", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Blacklight Min 1000uw@ 15\"", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Avail_Light_Min_100FC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Avail_Light_Min_100FC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Avail Light Min 100FC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p9", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2FC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p8", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UV Ambient Light / Ambient White Light Max 2FC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p12", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p11", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "500 (3 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p15", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p14", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1000 (5 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p18", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p17", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "1500 (6 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p21", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p20", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "2500 (7 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p24", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p23", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "3500 (9 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p27", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p26", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AS5282 QQI @ 1000 amps (5 holes)", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Bath_Comparison", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Bath_Comparison", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bath Comparison", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Comments", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Comments", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comments", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Inspector", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Inspector", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Inspector", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_1400", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_1400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 1400", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_2500", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_2500", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 2500", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ASTM_3400", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ASTM_3400", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ASTM 3400", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::ATIShotpeenDatabaseViewer.Properties.Settings.Default.ATIDeliveryConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT ID, Date, [Internal Shorts], [Particle Conc 1-4 ml], [Blacklight Min 1000uw@ 15""], [Avail Light Min 100FC], [UV Ambient Light / Ambient White Light Max 2FC], [500 (3 holes)], [1000 (5 holes)], [1500 (6 holes)], [2500 (7 holes)], [3500 (9 holes)], [AS5282 QQI @ 1000 amps (5 holes)], [Bath Comparison], Comments, Inspector, [ASTM 1400], [ASTM 2500], [ASTM 3400] FROM dbo.MagTaq525ProcessControlLog";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(ATIDeliveryDataSet.MagTaq525ProcessControlLogDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual ATIDeliveryDataSet.MagTaq525ProcessControlLogDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            ATIDeliveryDataSet.MagTaq525ProcessControlLogDataTable dataTable = new ATIDeliveryDataSet.MagTaq525ProcessControlLogDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ATIDeliveryDataSet.MagTaq525ProcessControlLogDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(ATIDeliveryDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "MagTaq525ProcessControlLog");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    int Original_ID, 
+                    global::System.Nullable<global::System.DateTime> Original_Date, 
+                    string Original_Internal_Shorts, 
+                    string p2, 
+                    string p5, 
+                    string Original_Avail_Light_Min_100FC, 
+                    string p8, 
+                    string p11, 
+                    string p14, 
+                    string p17, 
+                    string p20, 
+                    string p23, 
+                    string p26, 
+                    string Original_Bath_Comparison, 
+                    string Original_Comments, 
+                    string Original_Inspector, 
+                    string Original_ASTM_1400, 
+                    string Original_ASTM_2500, 
+                    string Original_ASTM_3400) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
+            if ((Original_Date.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Date.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Internal_Shorts == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Internal_Shorts));
+            }
+            if ((p2 == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(p2));
+            }
+            if ((p5 == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(p5));
+            }
+            if ((Original_Avail_Light_Min_100FC == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Avail_Light_Min_100FC));
+            }
+            if ((p8 == null)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(p8));
+            }
+            if ((p11 == null)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(p11));
+            }
+            if ((p14 == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(p14));
+            }
+            if ((p17 == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(p17));
+            }
+            if ((p20 == null)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(p20));
+            }
+            if ((p23 == null)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(p23));
+            }
+            if ((p26 == null)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(p26));
+            }
+            if ((Original_Bath_Comparison == null)) {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_Bath_Comparison));
+            }
+            if ((Original_Comments == null)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_Comments));
+            }
+            if ((Original_Inspector == null)) {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((string)(Original_Inspector));
+            }
+            if ((Original_ASTM_1400 == null)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_ASTM_1400));
+            }
+            if ((Original_ASTM_2500 == null)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_ASTM_2500));
+            }
+            if ((Original_ASTM_3400 == null)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_ASTM_3400));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    string Internal_Shorts, 
+                    string p1, 
+                    string p4, 
+                    string Avail_Light_Min_100FC, 
+                    string p7, 
+                    string p10, 
+                    string p13, 
+                    string p16, 
+                    string p19, 
+                    string p22, 
+                    string p25, 
+                    string Bath_Comparison, 
+                    string Comments, 
+                    string Inspector, 
+                    string ASTM_1400, 
+                    string ASTM_2500, 
+                    string ASTM_3400) {
+            if ((Date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Internal_Shorts == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Internal_Shorts));
+            }
+            if ((p1 == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p1));
+            }
+            if ((p4 == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(p4));
+            }
+            if ((Avail_Light_Min_100FC == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Avail_Light_Min_100FC));
+            }
+            if ((p7 == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(p7));
+            }
+            if ((p10 == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(p10));
+            }
+            if ((p13 == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(p13));
+            }
+            if ((p16 == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(p16));
+            }
+            if ((p19 == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(p19));
+            }
+            if ((p22 == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(p22));
+            }
+            if ((p25 == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(p25));
+            }
+            if ((Bath_Comparison == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(Bath_Comparison));
+            }
+            if ((Comments == null)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(Comments));
+            }
+            if ((Inspector == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Inspector));
+            }
+            if ((ASTM_1400 == null)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(ASTM_1400));
+            }
+            if ((ASTM_2500 == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(ASTM_2500));
+            }
+            if ((ASTM_3400 == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(ASTM_3400));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    string Internal_Shorts, 
+                    string p1, 
+                    string p4, 
+                    string Avail_Light_Min_100FC, 
+                    string p7, 
+                    string p10, 
+                    string p13, 
+                    string p16, 
+                    string p19, 
+                    string p22, 
+                    string p25, 
+                    string Bath_Comparison, 
+                    string Comments, 
+                    string Inspector, 
+                    string ASTM_1400, 
+                    string ASTM_2500, 
+                    string ASTM_3400, 
+                    int Original_ID, 
+                    global::System.Nullable<global::System.DateTime> Original_Date, 
+                    string Original_Internal_Shorts, 
+                    string p2, 
+                    string p5, 
+                    string Original_Avail_Light_Min_100FC, 
+                    string p8, 
+                    string p11, 
+                    string p14, 
+                    string p17, 
+                    string p20, 
+                    string p23, 
+                    string p26, 
+                    string Original_Bath_Comparison, 
+                    string Original_Comments, 
+                    string Original_Inspector, 
+                    string Original_ASTM_1400, 
+                    string Original_ASTM_2500, 
+                    string Original_ASTM_3400, 
+                    int ID) {
+            if ((Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((Internal_Shorts == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Internal_Shorts));
+            }
+            if ((p1 == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p1));
+            }
+            if ((p4 == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
+            }
+            if ((Avail_Light_Min_100FC == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Avail_Light_Min_100FC));
+            }
+            if ((p7 == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(p7));
+            }
+            if ((p10 == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(p10));
+            }
+            if ((p13 == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(p13));
+            }
+            if ((p16 == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(p16));
+            }
+            if ((p19 == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(p19));
+            }
+            if ((p22 == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(p22));
+            }
+            if ((p25 == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(p25));
+            }
+            if ((Bath_Comparison == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Bath_Comparison));
+            }
+            if ((Comments == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Comments));
+            }
+            if ((Inspector == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Inspector));
+            }
+            if ((ASTM_1400 == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(ASTM_1400));
+            }
+            if ((ASTM_2500 == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(ASTM_2500));
+            }
+            if ((ASTM_3400 == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(ASTM_3400));
+            }
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_ID));
+            if ((Original_Date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_Date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Internal_Shorts == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_Internal_Shorts));
+            }
+            if ((p2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(p2));
+            }
+            if ((p5 == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(p5));
+            }
+            if ((Original_Avail_Light_Min_100FC == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Avail_Light_Min_100FC));
+            }
+            if ((p8 == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(p8));
+            }
+            if ((p11 == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(p11));
+            }
+            if ((p14 == null)) {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(p14));
+            }
+            if ((p17 == null)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(p17));
+            }
+            if ((p20 == null)) {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(p20));
+            }
+            if ((p23 == null)) {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(p23));
+            }
+            if ((p26 == null)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(p26));
+            }
+            if ((Original_Bath_Comparison == null)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_Bath_Comparison));
+            }
+            if ((Original_Comments == null)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_Comments));
+            }
+            if ((Original_Inspector == null)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_Inspector));
+            }
+            if ((Original_ASTM_1400 == null)) {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_ASTM_1400));
+            }
+            if ((Original_ASTM_2500 == null)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_ASTM_2500));
+            }
+            if ((Original_ASTM_3400 == null)) {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_ASTM_3400));
+            }
+            this.Adapter.UpdateCommand.Parameters[55].Value = ((int)(ID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    global::System.Nullable<global::System.DateTime> Date, 
+                    string Internal_Shorts, 
+                    string p1, 
+                    string p4, 
+                    string Avail_Light_Min_100FC, 
+                    string p7, 
+                    string p10, 
+                    string p13, 
+                    string p16, 
+                    string p19, 
+                    string p22, 
+                    string p25, 
+                    string Bath_Comparison, 
+                    string Comments, 
+                    string Inspector, 
+                    string ASTM_1400, 
+                    string ASTM_2500, 
+                    string ASTM_3400, 
+                    int Original_ID, 
+                    global::System.Nullable<global::System.DateTime> Original_Date, 
+                    string Original_Internal_Shorts, 
+                    string p2, 
+                    string p5, 
+                    string Original_Avail_Light_Min_100FC, 
+                    string p8, 
+                    string p11, 
+                    string p14, 
+                    string p17, 
+                    string p20, 
+                    string p23, 
+                    string p26, 
+                    string Original_Bath_Comparison, 
+                    string Original_Comments, 
+                    string Original_Inspector, 
+                    string Original_ASTM_1400, 
+                    string Original_ASTM_2500, 
+                    string Original_ASTM_3400) {
+            return this.Update(Date, Internal_Shorts, p1, p4, Avail_Light_Min_100FC, p7, p10, p13, p16, p19, p22, p25, Bath_Comparison, Comments, Inspector, ASTM_1400, ASTM_2500, ASTM_3400, Original_ID, Original_Date, Original_Internal_Shorts, p2, p5, Original_Avail_Light_Min_100FC, p8, p11, p14, p17, p20, p23, p26, Original_Bath_Comparison, Original_Comments, Original_Inspector, Original_ASTM_1400, Original_ASTM_2500, Original_ASTM_3400, Original_ID);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class EDMCertsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -2641,10 +9226,11 @@ SELECT process_num, job_num, part_num, part_rev, part_desc, customer, qty, date,
             tableMapping.ColumnMappings.Add("specification", "specification");
             tableMapping.ColumnMappings.Add("specificationRev", "specificationRev");
             tableMapping.ColumnMappings.Add("certifier", "certifier");
+            tableMapping.ColumnMappings.Add("owner", "owner");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[EDMCerts] WHERE (([cert_num] = @Original_cert_num) AND ((@IsNull_job_num = 1 AND [job_num] IS NULL) OR ([job_num] = @Original_job_num)) AND ((@IsNull_part_num = 1 AND [part_num] IS NULL) OR ([part_num] = @Original_part_num)) AND ((@IsNull_part_rev = 1 AND [part_rev] IS NULL) OR ([part_rev] = @Original_part_rev)) AND ((@IsNull_part_desc = 1 AND [part_desc] IS NULL) OR ([part_desc] = @Original_part_desc)) AND ((@IsNull_customer = 1 AND [customer] IS NULL) OR ([customer] = @Original_customer)) AND ((@IsNull_lot_num = 1 AND [lot_num] IS NULL) OR ([lot_num] = @Original_lot_num)) AND ((@IsNull_op_num = 1 AND [op_num] IS NULL) OR ([op_num] = @Original_op_num)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Original_date)) AND ((@IsNull_edm_program = 1 AND [edm_program] IS NULL) OR ([edm_program] = @Original_edm_program)) AND ((@IsNull_qty = 1 AND [qty] IS NULL) OR ([qty] = @Original_qty)) AND ((@IsNull_performed = 1 AND [performed] IS NULL) OR ([performed] = @Original_performed)) AND ((@IsNull_specification = 1 AND [specification] IS NULL) OR ([specification] = @Original_specification)) AND ((@IsNull_specificationRev = 1 AND [specificationRev] IS NULL) OR ([specificationRev] = @Original_specificationRev)) AND ((@IsNull_certifier = 1 AND [certifier] IS NULL) OR ([certifier] = @Original_certifier)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[EDMCerts] WHERE (([cert_num] = @Original_cert_num) AND ((@IsNull_job_num = 1 AND [job_num] IS NULL) OR ([job_num] = @Original_job_num)) AND ((@IsNull_part_num = 1 AND [part_num] IS NULL) OR ([part_num] = @Original_part_num)) AND ((@IsNull_part_rev = 1 AND [part_rev] IS NULL) OR ([part_rev] = @Original_part_rev)) AND ((@IsNull_part_desc = 1 AND [part_desc] IS NULL) OR ([part_desc] = @Original_part_desc)) AND ((@IsNull_customer = 1 AND [customer] IS NULL) OR ([customer] = @Original_customer)) AND ((@IsNull_lot_num = 1 AND [lot_num] IS NULL) OR ([lot_num] = @Original_lot_num)) AND ((@IsNull_op_num = 1 AND [op_num] IS NULL) OR ([op_num] = @Original_op_num)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Original_date)) AND ((@IsNull_edm_program = 1 AND [edm_program] IS NULL) OR ([edm_program] = @Original_edm_program)) AND ((@IsNull_qty = 1 AND [qty] IS NULL) OR ([qty] = @Original_qty)) AND ((@IsNull_performed = 1 AND [performed] IS NULL) OR ([performed] = @Original_performed)) AND ((@IsNull_specification = 1 AND [specification] IS NULL) OR ([specification] = @Original_specification)) AND ((@IsNull_specificationRev = 1 AND [specificationRev] IS NULL) OR ([specificationRev] = @Original_specificationRev)) AND ((@IsNull_certifier = 1 AND [certifier] IS NULL) OR ([certifier] = @Original_certifier)) AND ([owner] = @Original_owner))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cert_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cert_num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_job_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "job_num", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -2675,10 +9261,11 @@ SELECT process_num, job_num, part_num, part_rev, part_desc, customer, qty, date,
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_specificationRev", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "specificationRev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_certifier", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certifier", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_certifier", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certifier", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_owner", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "owner", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[EDMCerts] ([cert_num], [job_num], [part_num], [part_rev], [part_desc], [customer], [lot_num], [op_num], [date], [edm_program], [qty], [performed], [specification], [specificationRev], [certifier]) VALUES (@cert_num, @job_num, @part_num, @part_rev, @part_desc, @customer, @lot_num, @op_num, @date, @edm_program, @qty, @performed, @specification, @specificationRev, @certifier);
-SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_num, date, edm_program, qty, performed, specification, specificationRev, certifier FROM EDMCerts WHERE (cert_num = @cert_num)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[EDMCerts] ([cert_num], [job_num], [part_num], [part_rev], [part_desc], [customer], [lot_num], [op_num], [date], [edm_program], [qty], [performed], [specification], [specificationRev], [certifier], [owner]) VALUES (@cert_num, @job_num, @part_num, @part_rev, @part_desc, @customer, @lot_num, @op_num, @date, @edm_program, @qty, @performed, @specification, @specificationRev, @certifier, @owner);
+SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_num, date, edm_program, qty, performed, specification, specificationRev, certifier, owner FROM EDMCerts WHERE (cert_num = @cert_num)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cert_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cert_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@job_num", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "job_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2695,32 +9282,34 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@specification", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "specification", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@specificationRev", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "specificationRev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@certifier", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certifier", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@owner", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "owner", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[EDMCerts] SET [cert_num] = @cert_num, [job_num] = @job_num, [part_n" +
                 "um] = @part_num, [part_rev] = @part_rev, [part_desc] = @part_desc, [customer] = " +
                 "@customer, [lot_num] = @lot_num, [op_num] = @op_num, [date] = @date, [edm_progra" +
                 "m] = @edm_program, [qty] = @qty, [performed] = @performed, [specification] = @sp" +
-                "ecification, [specificationRev] = @specificationRev, [certifier] = @certifier WH" +
-                "ERE (([cert_num] = @Original_cert_num) AND ((@IsNull_job_num = 1 AND [job_num] I" +
-                "S NULL) OR ([job_num] = @Original_job_num)) AND ((@IsNull_part_num = 1 AND [part" +
-                "_num] IS NULL) OR ([part_num] = @Original_part_num)) AND ((@IsNull_part_rev = 1 " +
-                "AND [part_rev] IS NULL) OR ([part_rev] = @Original_part_rev)) AND ((@IsNull_part" +
-                "_desc = 1 AND [part_desc] IS NULL) OR ([part_desc] = @Original_part_desc)) AND (" +
-                "(@IsNull_customer = 1 AND [customer] IS NULL) OR ([customer] = @Original_custome" +
-                "r)) AND ((@IsNull_lot_num = 1 AND [lot_num] IS NULL) OR ([lot_num] = @Original_l" +
-                "ot_num)) AND ((@IsNull_op_num = 1 AND [op_num] IS NULL) OR ([op_num] = @Original" +
-                "_op_num)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date] = @Original_date" +
-                ")) AND ((@IsNull_edm_program = 1 AND [edm_program] IS NULL) OR ([edm_program] = " +
-                "@Original_edm_program)) AND ((@IsNull_qty = 1 AND [qty] IS NULL) OR ([qty] = @Or" +
-                "iginal_qty)) AND ((@IsNull_performed = 1 AND [performed] IS NULL) OR ([performed" +
-                "] = @Original_performed)) AND ((@IsNull_specification = 1 AND [specification] IS" +
-                " NULL) OR ([specification] = @Original_specification)) AND ((@IsNull_specificati" +
-                "onRev = 1 AND [specificationRev] IS NULL) OR ([specificationRev] = @Original_spe" +
-                "cificationRev)) AND ((@IsNull_certifier = 1 AND [certifier] IS NULL) OR ([certif" +
-                "ier] = @Original_certifier)));\r\nSELECT cert_num, job_num, part_num, part_rev, pa" +
-                "rt_desc, customer, lot_num, op_num, date, edm_program, qty, performed, specifica" +
-                "tion, specificationRev, certifier FROM EDMCerts WHERE (cert_num = @cert_num)";
+                "ecification, [specificationRev] = @specificationRev, [certifier] = @certifier, [" +
+                "owner] = @owner WHERE (([cert_num] = @Original_cert_num) AND ((@IsNull_job_num =" +
+                " 1 AND [job_num] IS NULL) OR ([job_num] = @Original_job_num)) AND ((@IsNull_part" +
+                "_num = 1 AND [part_num] IS NULL) OR ([part_num] = @Original_part_num)) AND ((@Is" +
+                "Null_part_rev = 1 AND [part_rev] IS NULL) OR ([part_rev] = @Original_part_rev)) " +
+                "AND ((@IsNull_part_desc = 1 AND [part_desc] IS NULL) OR ([part_desc] = @Original" +
+                "_part_desc)) AND ((@IsNull_customer = 1 AND [customer] IS NULL) OR ([customer] =" +
+                " @Original_customer)) AND ((@IsNull_lot_num = 1 AND [lot_num] IS NULL) OR ([lot_" +
+                "num] = @Original_lot_num)) AND ((@IsNull_op_num = 1 AND [op_num] IS NULL) OR ([o" +
+                "p_num] = @Original_op_num)) AND ((@IsNull_date = 1 AND [date] IS NULL) OR ([date" +
+                "] = @Original_date)) AND ((@IsNull_edm_program = 1 AND [edm_program] IS NULL) OR" +
+                " ([edm_program] = @Original_edm_program)) AND ((@IsNull_qty = 1 AND [qty] IS NUL" +
+                "L) OR ([qty] = @Original_qty)) AND ((@IsNull_performed = 1 AND [performed] IS NU" +
+                "LL) OR ([performed] = @Original_performed)) AND ((@IsNull_specification = 1 AND " +
+                "[specification] IS NULL) OR ([specification] = @Original_specification)) AND ((@" +
+                "IsNull_specificationRev = 1 AND [specificationRev] IS NULL) OR ([specificationRe" +
+                "v] = @Original_specificationRev)) AND ((@IsNull_certifier = 1 AND [certifier] IS" +
+                " NULL) OR ([certifier] = @Original_certifier)) AND ([owner] = @Original_owner));" +
+                "\r\nSELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op" +
+                "_num, date, edm_program, qty, performed, specification, specificationRev, certif" +
+                "ier, owner FROM EDMCerts WHERE (cert_num = @cert_num)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cert_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cert_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@job_num", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "job_num", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2737,6 +9326,7 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@specification", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "specification", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@specificationRev", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "specificationRev", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@certifier", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certifier", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@owner", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "owner", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cert_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cert_num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_job_num", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "job_num", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_job_num", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "job_num", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -2766,6 +9356,7 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_specificationRev", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "specificationRev", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_certifier", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certifier", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_certifier", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "certifier", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_owner", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "owner", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2783,7 +9374,7 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_nu" +
                 "m, date, edm_program, qty, performed, specification, specificationRev, certifier" +
-                " FROM dbo.EDMCerts";
+                ", owner FROM dbo.EDMCerts";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2844,7 +9435,23 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_cert_num, string Original_job_num, string Original_part_num, string Original_part_rev, string Original_part_desc, string Original_customer, string Original_lot_num, string Original_op_num, global::System.Nullable<global::System.DateTime> Original_date, string Original_edm_program, string Original_qty, string Original_performed, string Original_specification, string Original_specificationRev, string Original_certifier) {
+        public virtual int Delete(
+                    int Original_cert_num, 
+                    string Original_job_num, 
+                    string Original_part_num, 
+                    string Original_part_rev, 
+                    string Original_part_desc, 
+                    string Original_customer, 
+                    string Original_lot_num, 
+                    string Original_op_num, 
+                    global::System.Nullable<global::System.DateTime> Original_date, 
+                    string Original_edm_program, 
+                    string Original_qty, 
+                    string Original_performed, 
+                    string Original_specification, 
+                    string Original_specificationRev, 
+                    string Original_certifier, 
+                    string Original_owner) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_cert_num));
             if ((Original_job_num == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -2958,6 +9565,12 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_certifier));
             }
+            if ((Original_owner == null)) {
+                throw new global::System.ArgumentNullException("Original_owner");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((string)(Original_owner));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2978,7 +9591,23 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int cert_num, string job_num, string part_num, string part_rev, string part_desc, string customer, string lot_num, string op_num, global::System.Nullable<global::System.DateTime> date, string edm_program, string qty, string performed, string specification, string specificationRev, string certifier) {
+        public virtual int Insert(
+                    int cert_num, 
+                    string job_num, 
+                    string part_num, 
+                    string part_rev, 
+                    string part_desc, 
+                    string customer, 
+                    string lot_num, 
+                    string op_num, 
+                    global::System.Nullable<global::System.DateTime> date, 
+                    string edm_program, 
+                    string qty, 
+                    string performed, 
+                    string specification, 
+                    string specificationRev, 
+                    string certifier, 
+                    string owner) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(cert_num));
             if ((job_num == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -3064,6 +9693,12 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
             else {
                 this.Adapter.InsertCommand.Parameters[14].Value = ((string)(certifier));
             }
+            if ((owner == null)) {
+                throw new global::System.ArgumentNullException("owner");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(owner));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3100,6 +9735,7 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                     string specification, 
                     string specificationRev, 
                     string certifier, 
+                    string owner, 
                     int Original_cert_num, 
                     string Original_job_num, 
                     string Original_part_num, 
@@ -3114,7 +9750,8 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                     string Original_performed, 
                     string Original_specification, 
                     string Original_specificationRev, 
-                    string Original_certifier) {
+                    string Original_certifier, 
+                    string Original_owner) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(cert_num));
             if ((job_num == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -3200,118 +9837,130 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(certifier));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_cert_num));
-            if ((Original_job_num == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            if ((owner == null)) {
+                throw new global::System.ArgumentNullException("owner");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_job_num));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(owner));
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_cert_num));
+            if ((Original_job_num == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_job_num));
             }
             if ((Original_part_num == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_part_num));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_part_num));
             }
             if ((Original_part_rev == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_part_rev));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_part_rev));
             }
             if ((Original_part_desc == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_part_desc));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_part_desc));
             }
             if ((Original_customer == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_customer));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_customer));
             }
             if ((Original_lot_num == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_lot_num));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_lot_num));
             }
             if ((Original_op_num == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_op_num));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_op_num));
             }
             if ((Original_date.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((System.DateTime)(Original_date.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_date.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             if ((Original_edm_program == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_edm_program));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_edm_program));
             }
             if ((Original_qty == null)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_qty));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_qty));
             }
             if ((Original_performed == null)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_performed));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_performed));
             }
             if ((Original_specification == null)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_specification));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_specification));
             }
             if ((Original_specificationRev == null)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_specificationRev));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_specificationRev));
             }
             if ((Original_certifier == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_certifier));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_certifier));
+            }
+            if ((Original_owner == null)) {
+                throw new global::System.ArgumentNullException("Original_owner");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_owner));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3348,6 +9997,7 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                     string specification, 
                     string specificationRev, 
                     string certifier, 
+                    string owner, 
                     int Original_cert_num, 
                     string Original_job_num, 
                     string Original_part_num, 
@@ -3362,8 +10012,9 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                     string Original_performed, 
                     string Original_specification, 
                     string Original_specificationRev, 
-                    string Original_certifier) {
-            return this.Update(Original_cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_num, date, edm_program, qty, performed, specification, specificationRev, certifier, Original_cert_num, Original_job_num, Original_part_num, Original_part_rev, Original_part_desc, Original_customer, Original_lot_num, Original_op_num, Original_date, Original_edm_program, Original_qty, Original_performed, Original_specification, Original_specificationRev, Original_certifier);
+                    string Original_certifier, 
+                    string Original_owner) {
+            return this.Update(Original_cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_num, date, edm_program, qty, performed, specification, specificationRev, certifier, owner, Original_cert_num, Original_job_num, Original_part_num, Original_part_rev, Original_part_desc, Original_customer, Original_lot_num, Original_op_num, Original_date, Original_edm_program, Original_qty, Original_performed, Original_specification, Original_specificationRev, Original_certifier, Original_owner);
         }
     }
     
@@ -3380,6 +10031,12 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
         private UpdateOrderOption _updateOrder;
         
         private tblJobProcessLogTableAdapter _tblJobProcessLogTableAdapter;
+        
+        private MagD_2060RProcessControlLogTableAdapter _magD_2060RProcessControlLogTableAdapter;
+        
+        private MagListLogTableAdapter _magListLogTableAdapter;
+        
+        private MagTaq525ProcessControlLogTableAdapter _magTaq525ProcessControlLogTableAdapter;
         
         private EDMCertsTableAdapter _eDMCertsTableAdapter;
         
@@ -3409,6 +10066,48 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
             }
             set {
                 this._tblJobProcessLogTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public MagD_2060RProcessControlLogTableAdapter MagD_2060RProcessControlLogTableAdapter {
+            get {
+                return this._magD_2060RProcessControlLogTableAdapter;
+            }
+            set {
+                this._magD_2060RProcessControlLogTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public MagListLogTableAdapter MagListLogTableAdapter {
+            get {
+                return this._magListLogTableAdapter;
+            }
+            set {
+                this._magListLogTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public MagTaq525ProcessControlLogTableAdapter MagTaq525ProcessControlLogTableAdapter {
+            get {
+                return this._magTaq525ProcessControlLogTableAdapter;
+            }
+            set {
+                this._magTaq525ProcessControlLogTableAdapter = value;
             }
         }
         
@@ -3449,6 +10148,18 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                             && (this._tblJobProcessLogTableAdapter.Connection != null))) {
                     return this._tblJobProcessLogTableAdapter.Connection;
                 }
+                if (((this._magD_2060RProcessControlLogTableAdapter != null) 
+                            && (this._magD_2060RProcessControlLogTableAdapter.Connection != null))) {
+                    return this._magD_2060RProcessControlLogTableAdapter.Connection;
+                }
+                if (((this._magListLogTableAdapter != null) 
+                            && (this._magListLogTableAdapter.Connection != null))) {
+                    return this._magListLogTableAdapter.Connection;
+                }
+                if (((this._magTaq525ProcessControlLogTableAdapter != null) 
+                            && (this._magTaq525ProcessControlLogTableAdapter.Connection != null))) {
+                    return this._magTaq525ProcessControlLogTableAdapter.Connection;
+                }
                 if (((this._eDMCertsTableAdapter != null) 
                             && (this._eDMCertsTableAdapter.Connection != null))) {
                     return this._eDMCertsTableAdapter.Connection;
@@ -3467,6 +10178,15 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
             get {
                 int count = 0;
                 if ((this._tblJobProcessLogTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._magD_2060RProcessControlLogTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._magListLogTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._magTaq525ProcessControlLogTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._eDMCertsTableAdapter != null)) {
@@ -3489,6 +10209,33 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tblJobProcessLogTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._magD_2060RProcessControlLogTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet._MagD_2060RProcessControlLog.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._magD_2060RProcessControlLogTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._magListLogTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MagListLog.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._magListLogTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._magTaq525ProcessControlLogTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MagTaq525ProcessControlLog.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._magTaq525ProcessControlLogTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -3519,6 +10266,30 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._magD_2060RProcessControlLogTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet._MagD_2060RProcessControlLog.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._magD_2060RProcessControlLogTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._magListLogTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MagListLog.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._magListLogTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._magTaq525ProcessControlLogTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MagTaq525ProcessControlLog.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._magTaq525ProcessControlLogTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._eDMCertsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.EDMCerts.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -3542,6 +10313,30 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._eDMCertsTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._magTaq525ProcessControlLogTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MagTaq525ProcessControlLog.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._magTaq525ProcessControlLogTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._magListLogTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MagListLog.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._magListLogTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._magD_2060RProcessControlLogTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet._MagD_2060RProcessControlLog.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._magD_2060RProcessControlLogTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3597,6 +10392,21 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._magD_2060RProcessControlLogTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._magD_2060RProcessControlLogTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._magListLogTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._magListLogTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
+            if (((this._magTaq525ProcessControlLogTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._magTaq525ProcessControlLogTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             if (((this._eDMCertsTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._eDMCertsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -3641,6 +10451,33 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                     if (this._tblJobProcessLogTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._tblJobProcessLogTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._tblJobProcessLogTableAdapter.Adapter);
+                    }
+                }
+                if ((this._magD_2060RProcessControlLogTableAdapter != null)) {
+                    revertConnections.Add(this._magD_2060RProcessControlLogTableAdapter, this._magD_2060RProcessControlLogTableAdapter.Connection);
+                    this._magD_2060RProcessControlLogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._magD_2060RProcessControlLogTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._magD_2060RProcessControlLogTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._magD_2060RProcessControlLogTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._magD_2060RProcessControlLogTableAdapter.Adapter);
+                    }
+                }
+                if ((this._magListLogTableAdapter != null)) {
+                    revertConnections.Add(this._magListLogTableAdapter, this._magListLogTableAdapter.Connection);
+                    this._magListLogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._magListLogTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._magListLogTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._magListLogTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._magListLogTableAdapter.Adapter);
+                    }
+                }
+                if ((this._magTaq525ProcessControlLogTableAdapter != null)) {
+                    revertConnections.Add(this._magTaq525ProcessControlLogTableAdapter, this._magTaq525ProcessControlLogTableAdapter.Connection);
+                    this._magTaq525ProcessControlLogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._magTaq525ProcessControlLogTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._magTaq525ProcessControlLogTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._magTaq525ProcessControlLogTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._magTaq525ProcessControlLogTableAdapter.Adapter);
                     }
                 }
                 if ((this._eDMCertsTableAdapter != null)) {
@@ -3713,6 +10550,18 @@ SELECT cert_num, job_num, part_num, part_rev, part_desc, customer, lot_num, op_n
                 if ((this._tblJobProcessLogTableAdapter != null)) {
                     this._tblJobProcessLogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblJobProcessLogTableAdapter]));
                     this._tblJobProcessLogTableAdapter.Transaction = null;
+                }
+                if ((this._magD_2060RProcessControlLogTableAdapter != null)) {
+                    this._magD_2060RProcessControlLogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._magD_2060RProcessControlLogTableAdapter]));
+                    this._magD_2060RProcessControlLogTableAdapter.Transaction = null;
+                }
+                if ((this._magListLogTableAdapter != null)) {
+                    this._magListLogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._magListLogTableAdapter]));
+                    this._magListLogTableAdapter.Transaction = null;
+                }
+                if ((this._magTaq525ProcessControlLogTableAdapter != null)) {
+                    this._magTaq525ProcessControlLogTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._magTaq525ProcessControlLogTableAdapter]));
+                    this._magTaq525ProcessControlLogTableAdapter.Transaction = null;
                 }
                 if ((this._eDMCertsTableAdapter != null)) {
                     this._eDMCertsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._eDMCertsTableAdapter]));

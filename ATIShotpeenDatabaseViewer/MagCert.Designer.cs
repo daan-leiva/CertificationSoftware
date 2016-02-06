@@ -648,6 +648,7 @@
             this.Controls.Add(this.customerTextBox);
             this.Name = "MagCert";
             this.Text = "MagCert";
+            this.Load += new System.EventHandler(this.MagCert_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
