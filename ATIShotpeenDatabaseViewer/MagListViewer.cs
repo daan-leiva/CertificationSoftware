@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Odbc;
 
 namespace ATIShotpeenDatabaseViewer
 {
@@ -28,7 +29,6 @@ namespace ATIShotpeenDatabaseViewer
 
         private void MagListViewer_Load(object sender, EventArgs e)
         {
-
             // check if admin or writable account
             if (!(isAdmin || canWrite))
                 newButton.Enabled = false;
