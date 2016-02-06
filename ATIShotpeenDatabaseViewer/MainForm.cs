@@ -60,7 +60,7 @@ namespace ATIShotpeenDatabaseViewer
             if (magRead)
             {
                 this.Hide();
-                Form shotPeenform = new ShotpeenListViewer(admin, userName, magWrite);
+                Form shotPeenform = new MagListViewer(admin, userName, magWrite);
                 shotPeenform.FormClosed += (s, args) => this.Close();
                 shotPeenform.Show();
             }
@@ -75,7 +75,7 @@ namespace ATIShotpeenDatabaseViewer
             if (edmRead)
             {
                 this.Hide();
-                Form shotPeenform = new ShotpeenListViewer(admin, userName, edmWrite);
+                Form shotPeenform = new EDMListViewer(admin, userName, edmWrite);
                 shotPeenform.FormClosed += (s, args) => this.Close();
                 shotPeenform.Show();
             }
@@ -90,7 +90,7 @@ namespace ATIShotpeenDatabaseViewer
             if (stressRelieveRead)
             {
                 this.Hide();
-                Form shotPeenform = new ShotpeenListViewer(admin, userName, stressRelieveWrite);
+                Form shotPeenform = new StressRelieveListViewer(admin, userName, stressRelieveWrite);
                 shotPeenform.FormClosed += (s, args) => this.Close();
                 shotPeenform.Show();
             }
@@ -109,7 +109,18 @@ namespace ATIShotpeenDatabaseViewer
         private void MainForm_Load(object sender, EventArgs e)
         {
             if (!admin)
-                registerUserButton.Enabled = false;
+            {
+                registerUserButton.Hide();
+                editUserButton.Hide();
+
+                this.Height = this.Height * 5 / 6;
+            }
+        }
+
+        private void editUserButton_Click(object sender, EventArgs e)
+        {
+            Form editUserForm = new EditUserForm();
+            editUserForm.ShowDialog();
         }
     }
 }

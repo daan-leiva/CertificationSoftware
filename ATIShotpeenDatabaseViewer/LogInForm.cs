@@ -55,13 +55,25 @@ namespace ATIShotpeenDatabaseViewer
                         {
                             this.Hide();
 
-                            Form mainForm = new MainForm(reader.GetString(0), Convert.ToBoolean(reader.GetByte(1)), Convert.ToBoolean(reader.GetByte(2)), Convert.ToBoolean(reader.GetByte(3)), Convert.ToBoolean(reader.GetByte(4)), reader.GetString(5).Equals("admin"), Convert.ToBoolean(reader.GetByte(6)), Convert.ToBoolean(reader.GetByte(7)), Convert.ToBoolean(reader.GetByte(8)), Convert.ToBoolean(reader.GetByte(9)));
+                            Form mainForm = new MainForm(reader.GetString(0),
+                                reader.GetFieldType(1) == typeof(bool) ? reader.GetBoolean(1) : Convert.ToBoolean(reader.GetByte(1)),
+                                reader.GetFieldType(2) == typeof(bool) ? reader.GetBoolean(2) :  Convert.ToBoolean(reader.GetByte(2)),
+                                reader.GetFieldType(3) == typeof(bool) ? reader.GetBoolean(3) :  Convert.ToBoolean(reader.GetByte(3)),
+                                reader.GetFieldType(4) == typeof(bool) ? reader.GetBoolean(4) :  Convert.ToBoolean(reader.GetByte(4)),
+                                reader.GetString(5).Equals("admin"),
+                                reader.GetFieldType(6) == typeof(bool) ? reader.GetBoolean(6) :  Convert.ToBoolean(reader.GetByte(6)),
+                                reader.GetFieldType(7) == typeof(bool) ? reader.GetBoolean(7) :  Convert.ToBoolean(reader.GetByte(7)),
+                                reader.GetFieldType(8) == typeof(bool) ? reader.GetBoolean(8) :  Convert.ToBoolean(reader.GetByte(8)),
+                                reader.GetFieldType(9) == typeof(bool) ? reader.GetBoolean(9) : Convert.ToBoolean(reader.GetByte(9)));
+
                             mainForm.FormClosed += (s, args) => this.Close();
                             mainForm.Show();
                         }
                         else
                             MessageBox.Show("Invalid password and/or username\nMake user that user account is currently active.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    else
+                        MessageBox.Show("Invalid password and/or username\nMake user that user account is currently active.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             else
                 MessageBox.Show("Username and password fields cannnot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
