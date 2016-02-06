@@ -53,7 +53,6 @@ namespace ATIShotpeenDatabaseViewer
                         PasswordHash hash = new PasswordHash(enteredPasswordHashByes);
                         if (hash.Verify(passwordTextBox.Text))
                         {
-
                             this.Hide();
 
                             Form mainForm = new MainForm(reader.GetString(0), Convert.ToBoolean(reader.GetByte(1)), Convert.ToBoolean(reader.GetByte(2)), Convert.ToBoolean(reader.GetByte(3)), Convert.ToBoolean(reader.GetByte(4)), reader.GetString(5).Equals("admin"), Convert.ToBoolean(reader.GetByte(6)), Convert.ToBoolean(reader.GetByte(7)), Convert.ToBoolean(reader.GetByte(8)), Convert.ToBoolean(reader.GetByte(9)));
