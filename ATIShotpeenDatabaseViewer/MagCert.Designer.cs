@@ -36,7 +36,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lotNumberTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.jobNumberTextBox = new System.Windows.Forms.TextBox();
             this.processNumberTextBox = new System.Windows.Forms.TextBox();
@@ -49,8 +49,8 @@
             this.customerTextBox = new System.Windows.Forms.TextBox();
             this.materialTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.specRevComboBox = new System.Windows.Forms.ComboBox();
+            this.specComboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.quantityInspectedTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.specificatinTypeTextBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.classSpecificationTextBox = new System.Windows.Forms.TextBox();
+            this.specificationClassTextBox = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.gradeSpecificationTextBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -158,13 +158,13 @@
             this.label10.TabIndex = 141;
             this.label10.Text = "Lot Number:";
             // 
-            // startDateTimePicker
+            // dateTimePicker
             // 
-            this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startDateTimePicker.Location = new System.Drawing.Point(375, 81);
-            this.startDateTimePicker.Name = "startDateTimePicker";
-            this.startDateTimePicker.Size = new System.Drawing.Size(104, 20);
-            this.startDateTimePicker.TabIndex = 139;
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker.Location = new System.Drawing.Point(375, 81);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(104, 20);
+            this.dateTimePicker.TabIndex = 139;
             // 
             // label8
             // 
@@ -268,21 +268,21 @@
             this.label12.TabIndex = 152;
             this.label12.Text = "Material Type:";
             // 
-            // comboBox1
+            // specRevComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(238, 220);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(50, 21);
-            this.comboBox1.TabIndex = 157;
+            this.specRevComboBox.FormattingEnabled = true;
+            this.specRevComboBox.Location = new System.Drawing.Point(238, 220);
+            this.specRevComboBox.Name = "specRevComboBox";
+            this.specRevComboBox.Size = new System.Drawing.Size(50, 21);
+            this.specRevComboBox.TabIndex = 157;
             // 
-            // comboBox2
+            // specComboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(132, 220);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(100, 21);
-            this.comboBox2.TabIndex = 156;
+            this.specComboBox.FormattingEnabled = true;
+            this.specComboBox.Location = new System.Drawing.Point(132, 220);
+            this.specComboBox.Name = "specComboBox";
+            this.specComboBox.Size = new System.Drawing.Size(100, 21);
+            this.specComboBox.TabIndex = 156;
             // 
             // label7
             // 
@@ -382,12 +382,12 @@
             this.label16.TabIndex = 167;
             this.label16.Text = "Type:";
             // 
-            // classSpecificationTextBox
+            // specificationClassTextBox
             // 
-            this.classSpecificationTextBox.Location = new System.Drawing.Point(419, 220);
-            this.classSpecificationTextBox.Name = "classSpecificationTextBox";
-            this.classSpecificationTextBox.Size = new System.Drawing.Size(56, 20);
-            this.classSpecificationTextBox.TabIndex = 170;
+            this.specificationClassTextBox.Location = new System.Drawing.Point(419, 220);
+            this.specificationClassTextBox.Name = "specificationClassTextBox";
+            this.specificationClassTextBox.Size = new System.Drawing.Size(56, 20);
+            this.specificationClassTextBox.TabIndex = 170;
             // 
             // label17
             // 
@@ -609,7 +609,7 @@
             this.Controls.Add(this.label21);
             this.Controls.Add(this.gradeSpecificationTextBox);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.classSpecificationTextBox);
+            this.Controls.Add(this.specificationClassTextBox);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.specificatinTypeTextBox);
             this.Controls.Add(this.label16);
@@ -622,8 +622,8 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.quantityInspectedTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.specRevComboBox);
+            this.Controls.Add(this.specComboBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.materialTypeComboBox);
             this.Controls.Add(this.label12);
@@ -635,7 +635,7 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lotNumberTextBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.startDateTimePicker);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.jobNumberTextBox);
             this.Controls.Add(this.processNumberTextBox);
@@ -664,7 +664,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox lotNumberTextBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker startDateTimePicker;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox jobNumberTextBox;
         private System.Windows.Forms.TextBox processNumberTextBox;
@@ -677,8 +677,8 @@
         private System.Windows.Forms.TextBox customerTextBox;
         private System.Windows.Forms.ComboBox materialTypeComboBox;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox specRevComboBox;
+        private System.Windows.Forms.ComboBox specComboBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox quantityInspectedTextBox;
         private System.Windows.Forms.Label label6;
@@ -691,7 +691,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox specificatinTypeTextBox;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox classSpecificationTextBox;
+        private System.Windows.Forms.TextBox specificationClassTextBox;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox gradeSpecificationTextBox;
         private System.Windows.Forms.Label label18;

@@ -126,7 +126,85 @@ namespace ATIShotpeenDatabaseViewer
         // TO_DO
         private void UpdateForm()
         {
+            using (OdbcConnection conn = new OdbcConnection(connectionString))
+            {
+                conn.Open();
 
+                string query = "SELECT part_num, [rev], [part_description], [material_type], [job_num], [date], [customer], [qty_inspected], [qty_accepted], [qty_rejected], [inspector]," +
+                                "[spec], [spec_type], [spec_class], [acceptance_criteria], [accept_type], [accept_grade], [type_grade], [accept_class], [comments], [mag_machine]\n" +
+                                "FROM ATIDelivery.dbo.MagListLog\n" +
+                                "WHERE cert_num = " + processNumberTextBox.Text + ";";
+
+                OdbcCommand com = new OdbcCommand(query, conn);
+
+                OdbcDataReader reader = com.ExecuteReader();
+
+                try
+                {
+                    reader.Read();
+
+                    // Fill out corresponding form values
+                    partNumberTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                    revisionTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                    partDescriptionTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                    TrySelectDropdownItem(materialTypeComboBox, reader.IsDBNull(0) ? "" : reader.GetString(0));
+                    jobNumberTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                    dateTimePicker.Value = reader.IsDBNull(1) ? dateTimePicker.MinDate : (reader.GetString(1).Length > 0 ? Convert.ToDateTime(reader.GetString(1)) : dateTimePicker.MinDate);
+                    customerTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
+                    quantity
+
+                    finishDateTimePicker.Value = reader.IsDBNull(2) ? Convert.ToDateTime(reader.GetString(1)) : (reader.GetString(2).Length > 0 ? Convert.ToDateTime(reader.GetString(2)) : Convert.ToDateTime(reader.GetString(1)));
+                    partNumberTextBox.Text = reader.IsDBNull(3) ? "" : reader.GetString(3);
+                    partDescriptionTextBox.Text = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                    customerTextBox.Text = reader.IsDBNull(5) ? "" : reader.GetString(5);
+                    revisionTextBox.Text = reader.IsDBNull(6) ? "" : reader.GetString(6);
+                    lotNumberTextBox.Text = reader.IsDBNull(7) ? "" : reader.GetString(7);
+                    quantityTextBox.Text = reader.IsDBNull(8) ? "" : reader.GetString(8);
+                    serialNumbersTextBox.Text = reader.IsDBNull(9) ? "" : reader.GetString(9);
+                    TrySelectDropdownItem(specificationComboBox, reader.IsDBNull(10) ? "" : reader.GetString(10));
+                    TrySelectDropdownItem(specRevComboBox, reader.IsDBNull(11) ? "" : reader.GetString(11));
+                    TrySelectDropdownItem(additionalSpecsComboBox, reader.IsDBNull(12) ? "" : reader.GetString(12));
+                    TrySelectDropdownItem(additionalSpecRevComboBox, reader.IsDBNull(13) ? "" : reader.GetString(13));
+                    TrySelectDropdownItem(shotSizeComboBox, reader.IsDBNull(14) ? "" : reader.GetString(14));
+                    TrySelectDropdownItem(intensityComboBox, reader.IsDBNull(15) ? "" : reader.GetString(15));
+                    TrySelectDropdownItem(coverageComboBox, reader.IsDBNull(16) ? "" : reader.GetString(16));
+                    TrySelectDropdownItem(preCleanComboBox, reader.IsDBNull(17) ? "" : reader.GetString(17));
+                    TrySelectDropdownItem(toolingCheckComboBox, reader.IsDBNull(18) ? "" : reader.GetString(18));
+                    TrySelectDropdownItem(coverageMethodComboBox, reader.IsDBNull(19) ? "" : reader.GetString(19));
+                    TrySelectDropdownItem(sampleSizeComboBox, reader.IsDBNull(20) ? "" : reader.GetString(20));
+                    fractureCountPriorTextBox.Text = reader.IsDBNull(21) ? "" : reader.GetString(21);
+                    fractureCountPostTextBox.Text = reader.IsDBNull(22) ? "" : reader.GetString(22);
+                    almen1PriorTextBox.Text = reader.IsDBNull(23) ? "" : reader.GetString(23);
+                    almen1PostTextBox.Text = reader.IsDBNull(24) ? "" : reader.GetString(24);
+                    almen2PriorTextBox.Text = reader.IsDBNull(25) ? "" : reader.GetString(25);
+                    almen2PostTextBox.Text = reader.IsDBNull(26) ? "" : reader.GetString(26);
+                    machineNumberTextBox.Text = reader.IsDBNull(27) ? "" : reader.GetString(27);
+                    TrySelectDropdownItem(technicianComboBox, reader.IsDBNull(28) ? "" : reader.GetString(28));
+                    notesTextBox.SelectedText = reader.IsDBNull(29) ? "" : reader.GetString(29);
+                    sieve18PreTextBox.Text = reader.IsDBNull(30) ? "0" : reader.GetFloat(30).ToString();
+                    sieve20PreTextBox.Text = reader.IsDBNull(31) ? "0" : reader.GetFloat(31).ToString();
+                    sieve25PreTextBox.Text = reader.IsDBNull(32) ? "0" : reader.GetFloat(32).ToString();
+                    sieve30PreTextBox.Text = reader.IsDBNull(33) ? "0" : reader.GetFloat(33).ToString();
+                    sieve35PreTextBox.Text = reader.IsDBNull(34) ? "0" : reader.GetFloat(34).ToString();
+                    sieve40PreTextBox.Text = reader.IsDBNull(35) ? "0" : reader.GetFloat(35).ToString();
+                    sieve45PreTextBox.Text = reader.IsDBNull(36) ? "0" : reader.GetFloat(36).ToString();
+                    sieve50PreTextBox.Text = reader.IsDBNull(37) ? "0" : reader.GetFloat(37).ToString();
+                    sieve80PreTextBox.Text = reader.IsDBNull(38) ? "0" : reader.GetFloat(38).ToString();
+                    sieve18PostTextBox.Text = reader.IsDBNull(39) ? "0" : reader.GetFloat(39).ToString();
+                    sieve20PostTextBox.Text = reader.IsDBNull(40) ? "0" : reader.GetFloat(40).ToString();
+                    sieve25PostTextBox.Text = reader.IsDBNull(41) ? "0" : reader.GetFloat(41).ToString();
+                    sieve30PostTextBox.Text = reader.IsDBNull(42) ? "0" : reader.GetFloat(42).ToString();
+                    sieve35PostTextBox.Text = reader.IsDBNull(43) ? "0" : reader.GetFloat(43).ToString();
+                    sieve40PostTextBox.Text = reader.IsDBNull(44) ? "0" : reader.GetFloat(44).ToString();
+                    sieve45PostTextBox.Text = reader.IsDBNull(45) ? "0" : reader.GetFloat(45).ToString();
+                    sieve50PostTextBox.Text = reader.IsDBNull(46) ? "0" : reader.GetFloat(46).ToString();
+                    sieve80PostTextBox.Text = reader.IsDBNull(47) ? "0" : reader.GetFloat(47).ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void TrySelectDropdownItem(ComboBox cBox, string item)
@@ -140,10 +218,40 @@ namespace ATIShotpeenDatabaseViewer
             }
         }
 
-        // TO_DO
         private void FillInDropDowns()
         {
+            string query = string.Empty;
+            List<string> controlContent;
 
+            // material type
+            query = "SELECT [Material Type]\n" +
+                    "FROM ATIDelivery.dbo.MagMaterialType;";
+            controlContent = GetValuesFromDB(query, materialTypeComboBox);
+            PopulateControl(controlContent, materialTypeComboBox);
+
+            // spec
+            query = "SELECT Spec\n" +
+                    "FROM ATIDelivery.dbo.MagSpec;";
+            controlContent = GetValuesFromDB(query, specComboBox);
+            PopulateControl(controlContent, specComboBox);
+
+            // spec rev
+            query = "SELECT Rev\n" +
+                    "FROM ATIDelivery.dbo.Rev;";
+            controlContent = GetValuesFromDB(query, specRevComboBox);
+            PopulateControl(controlContent, specRevComboBox);
+
+            // accept criteria
+            query = "SELECT [Acceptance Criteria]\n" +
+                    "FROM ATIDelivery.dbo.MagAcceptanceCriteria;";
+            controlContent = GetValuesFromDB(query, acceptCriteriaComboBox);
+            PopulateControl(controlContent, acceptCriteriaComboBox);
+
+            // accept creteria rev
+            query = "SELECT Rev\n" +
+                    "FROM ATIDelivery.dbo.Rev;";
+            controlContent = GetValuesFromDB(query, acceptCriteriaRevComboBox);
+            PopulateControl(controlContent, acceptCriteriaRevComboBox);
         }
 
         private List<string> GetValuesFromDB(string query, ListControl control)
