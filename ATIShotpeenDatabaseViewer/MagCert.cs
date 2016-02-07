@@ -32,7 +32,7 @@ namespace ATIShotpeenDatabaseViewer
         {
             newForm = false;
             canEdit = _canEdit;
-            processNumberTextBox.Text = process_num;
+            certNumberTextBox.Text = process_num;
             userName = _userName;
 
             InitializeComponent();
@@ -87,7 +87,7 @@ namespace ATIShotpeenDatabaseViewer
         private void submitButton_Click(object sender, EventArgs e)
         {
             // check if the process number is empty
-            if (processNumberTextBox.Text.Length == 0)
+            if (certNumberTextBox.Text.Length == 0)
             {
                 // check document formating
                 if (!CheckFormatting())
@@ -100,7 +100,7 @@ namespace ATIShotpeenDatabaseViewer
                 string newProcessNumber = GetNextProcessNumber();
 
                 // assign it to the document
-                processNumberTextBox.Text = newProcessNumber;
+                certNumberTextBox.Text = newProcessNumber;
 
                 // submit to DB
                 SubmitNewRow();
@@ -123,7 +123,6 @@ namespace ATIShotpeenDatabaseViewer
                 LockForm();
         }
 
-        // TO_DO
         private void UpdateForm()
         {
             using (OdbcConnection conn = new OdbcConnection(connectionString))
@@ -131,9 +130,9 @@ namespace ATIShotpeenDatabaseViewer
                 conn.Open();
 
                 string query = "SELECT part_num, [rev], [part_description], [material_type], [job_num], [date], [customer], [qty_inspected], [qty_accepted], [qty_rejected], [inspector]," +
-                                "[spec], [spec_type], [spec_class], [acceptance_criteria], [accept_type], [accept_grade], [type_grade], [accept_class], [comments], [mag_machine]\n" +
+                                "[spec], spec_rev, [spec_type], [spec_class], [acceptance_criteria], acceptance_criteria_rev , [accept_type], [accept_grade], [spec_grade], [accept_class], [comments], [mag_machine]\n" +
                                 "FROM ATIDelivery.dbo.MagListLog\n" +
-                                "WHERE cert_num = " + processNumberTextBox.Text + ";";
+                                "WHERE cert_num = " + certNumberTextBox.Text + ";";
 
                 OdbcCommand com = new OdbcCommand(query, conn);
 
@@ -145,60 +144,28 @@ namespace ATIShotpeenDatabaseViewer
 
                     // Fill out corresponding form values
                     partNumberTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
-                    revisionTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
-                    partDescriptionTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
-                    TrySelectDropdownItem(materialTypeComboBox, reader.IsDBNull(0) ? "" : reader.GetString(0));
-                    jobNumberTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
-                    dateTimePicker.Value = reader.IsDBNull(1) ? dateTimePicker.MinDate : (reader.GetString(1).Length > 0 ? Convert.ToDateTime(reader.GetString(1)) : dateTimePicker.MinDate);
-                    customerTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
-                    quantity
-
-                    finishDateTimePicker.Value = reader.IsDBNull(2) ? Convert.ToDateTime(reader.GetString(1)) : (reader.GetString(2).Length > 0 ? Convert.ToDateTime(reader.GetString(2)) : Convert.ToDateTime(reader.GetString(1)));
-                    partNumberTextBox.Text = reader.IsDBNull(3) ? "" : reader.GetString(3);
-                    partDescriptionTextBox.Text = reader.IsDBNull(4) ? "" : reader.GetString(4);
-                    customerTextBox.Text = reader.IsDBNull(5) ? "" : reader.GetString(5);
-                    revisionTextBox.Text = reader.IsDBNull(6) ? "" : reader.GetString(6);
-                    lotNumberTextBox.Text = reader.IsDBNull(7) ? "" : reader.GetString(7);
-                    quantityTextBox.Text = reader.IsDBNull(8) ? "" : reader.GetString(8);
-                    serialNumbersTextBox.Text = reader.IsDBNull(9) ? "" : reader.GetString(9);
-                    TrySelectDropdownItem(specificationComboBox, reader.IsDBNull(10) ? "" : reader.GetString(10));
-                    TrySelectDropdownItem(specRevComboBox, reader.IsDBNull(11) ? "" : reader.GetString(11));
-                    TrySelectDropdownItem(additionalSpecsComboBox, reader.IsDBNull(12) ? "" : reader.GetString(12));
-                    TrySelectDropdownItem(additionalSpecRevComboBox, reader.IsDBNull(13) ? "" : reader.GetString(13));
-                    TrySelectDropdownItem(shotSizeComboBox, reader.IsDBNull(14) ? "" : reader.GetString(14));
-                    TrySelectDropdownItem(intensityComboBox, reader.IsDBNull(15) ? "" : reader.GetString(15));
-                    TrySelectDropdownItem(coverageComboBox, reader.IsDBNull(16) ? "" : reader.GetString(16));
-                    TrySelectDropdownItem(preCleanComboBox, reader.IsDBNull(17) ? "" : reader.GetString(17));
-                    TrySelectDropdownItem(toolingCheckComboBox, reader.IsDBNull(18) ? "" : reader.GetString(18));
-                    TrySelectDropdownItem(coverageMethodComboBox, reader.IsDBNull(19) ? "" : reader.GetString(19));
-                    TrySelectDropdownItem(sampleSizeComboBox, reader.IsDBNull(20) ? "" : reader.GetString(20));
-                    fractureCountPriorTextBox.Text = reader.IsDBNull(21) ? "" : reader.GetString(21);
-                    fractureCountPostTextBox.Text = reader.IsDBNull(22) ? "" : reader.GetString(22);
-                    almen1PriorTextBox.Text = reader.IsDBNull(23) ? "" : reader.GetString(23);
-                    almen1PostTextBox.Text = reader.IsDBNull(24) ? "" : reader.GetString(24);
-                    almen2PriorTextBox.Text = reader.IsDBNull(25) ? "" : reader.GetString(25);
-                    almen2PostTextBox.Text = reader.IsDBNull(26) ? "" : reader.GetString(26);
-                    machineNumberTextBox.Text = reader.IsDBNull(27) ? "" : reader.GetString(27);
-                    TrySelectDropdownItem(technicianComboBox, reader.IsDBNull(28) ? "" : reader.GetString(28));
-                    notesTextBox.SelectedText = reader.IsDBNull(29) ? "" : reader.GetString(29);
-                    sieve18PreTextBox.Text = reader.IsDBNull(30) ? "0" : reader.GetFloat(30).ToString();
-                    sieve20PreTextBox.Text = reader.IsDBNull(31) ? "0" : reader.GetFloat(31).ToString();
-                    sieve25PreTextBox.Text = reader.IsDBNull(32) ? "0" : reader.GetFloat(32).ToString();
-                    sieve30PreTextBox.Text = reader.IsDBNull(33) ? "0" : reader.GetFloat(33).ToString();
-                    sieve35PreTextBox.Text = reader.IsDBNull(34) ? "0" : reader.GetFloat(34).ToString();
-                    sieve40PreTextBox.Text = reader.IsDBNull(35) ? "0" : reader.GetFloat(35).ToString();
-                    sieve45PreTextBox.Text = reader.IsDBNull(36) ? "0" : reader.GetFloat(36).ToString();
-                    sieve50PreTextBox.Text = reader.IsDBNull(37) ? "0" : reader.GetFloat(37).ToString();
-                    sieve80PreTextBox.Text = reader.IsDBNull(38) ? "0" : reader.GetFloat(38).ToString();
-                    sieve18PostTextBox.Text = reader.IsDBNull(39) ? "0" : reader.GetFloat(39).ToString();
-                    sieve20PostTextBox.Text = reader.IsDBNull(40) ? "0" : reader.GetFloat(40).ToString();
-                    sieve25PostTextBox.Text = reader.IsDBNull(41) ? "0" : reader.GetFloat(41).ToString();
-                    sieve30PostTextBox.Text = reader.IsDBNull(42) ? "0" : reader.GetFloat(42).ToString();
-                    sieve35PostTextBox.Text = reader.IsDBNull(43) ? "0" : reader.GetFloat(43).ToString();
-                    sieve40PostTextBox.Text = reader.IsDBNull(44) ? "0" : reader.GetFloat(44).ToString();
-                    sieve45PostTextBox.Text = reader.IsDBNull(45) ? "0" : reader.GetFloat(45).ToString();
-                    sieve50PostTextBox.Text = reader.IsDBNull(46) ? "0" : reader.GetFloat(46).ToString();
-                    sieve80PostTextBox.Text = reader.IsDBNull(47) ? "0" : reader.GetFloat(47).ToString();
+                    revisionTextBox.Text = reader.IsDBNull(1) ? "" : reader.GetString(1);
+                    partDescriptionTextBox.Text = reader.IsDBNull(2) ? "" : reader.GetString(2);
+                    TrySelectDropdownItem(materialTypeComboBox, reader.IsDBNull(3) ? "" : reader.GetString(3));
+                    jobNumberTextBox.Text = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                    dateTimePicker.Value = reader.IsDBNull(5) ? dateTimePicker.MinDate : (reader.GetString(5).Length > 0 ? Convert.ToDateTime(reader.GetString(5)) : dateTimePicker.MinDate);
+                    customerTextBox.Text = reader.IsDBNull(6) ? "" : reader.GetString(6);
+                    quantityInspectedTextBox.Text = reader.IsDBNull(7) ? "" : reader.GetString(7);
+                    quantityAcceptedTextBox.Text = reader.IsDBNull(8) ? "" : reader.GetString(8);
+                    quantityRejectedTextBox.Text = reader.IsDBNull(9) ? "" : reader.GetString(9);
+                    TrySelectDropdownItem(technicianComboBox, reader.IsDBNull(10) ? "" : reader.GetString(10));
+                    TrySelectDropdownItem(specComboBox, reader.IsDBNull(11) ? "" : reader.GetString(11));
+                    TrySelectDropdownItem(specRevComboBox, reader.IsDBNull(12) ? "" : reader.GetString(12));
+                    specificatinTypeTextBox.Text = reader.IsDBNull(13) ? "" : reader.GetString(13);
+                    specificationClassTextBox.Text = reader.IsDBNull(14) ? "" : reader.GetString(14);
+                    TrySelectDropdownItem(acceptCriteriaComboBox, reader.IsDBNull(15) ? "" : reader.GetString(15));
+                    TrySelectDropdownItem(acceptCriteriaRevComboBox, reader.IsDBNull(16) ? "" : reader.GetString(16));
+                    typeAcceptCriteriaTextBox.Text = reader.IsDBNull(17) ? "" : reader.GetString(17);
+                    gradeAcceptCriteriaTextBox.Text = reader.IsDBNull(18) ? "" : reader.GetString(18);
+                    gradeSpecificationTextBox.Text = reader.IsDBNull(19) ? "" : reader.GetString(19);
+                    classAcceptCriteriaTextBox.Text = reader.IsDBNull(20) ? "" : reader.GetString(20);
+                    notesTextBox.Text = reader.IsDBNull(21) ? "" : reader.GetString(21);
+                    TrySelectDropdownItem(magMachineComboBox, reader.IsDBNull(22) ? "" : reader.GetString(22));
                 }
                 catch (Exception ex)
                 {
@@ -252,6 +219,12 @@ namespace ATIShotpeenDatabaseViewer
                     "FROM ATIDelivery.dbo.Rev;";
             controlContent = GetValuesFromDB(query, acceptCriteriaRevComboBox);
             PopulateControl(controlContent, acceptCriteriaRevComboBox);
+
+            // mag machine
+            query = "SELECT Machine\n" +
+                    "FROM ATIDelivery.dbo.MagMachine;";
+            controlContent = GetValuesFromDB(query, magMachineComboBox);
+            PopulateControl(controlContent, magMachineComboBox);
         }
 
         private List<string> GetValuesFromDB(string query, ListControl control)
@@ -309,16 +282,124 @@ namespace ATIShotpeenDatabaseViewer
             }
         }
 
-        // TO_DO
         private void SubmitNewRow()
         {
+            // connect to DB
+            using (OdbcConnection conn = new OdbcConnection(connectionString))
+            {
+                // open connection
+                conn.Open();
 
+                // specify query
+                string query = "INSERT INTO ATIDelivery.dbo.MagCerts\n" +
+                                "([cert_num]\n" +
+                                ",[part_num]\n" +
+                                ",[rev]\n" +
+                                ",[part_description]\n" +
+                                ",[material_type]\n" +
+                                ",[job_num]\n" +
+                                ",[date]\n" +
+                                ",[customer]\n" +
+                                ",[qty_inspected]\n" +
+                                ",[qty_accepted]\n" +
+                                ",[qty_rejected]\n" +
+                                ",[inspector]\n" +
+                                ",[spec]\n" +
+                                ",[spec_rev]\n" +
+                                ",[spec_type]\n" +
+                                ",[spec_class]\n" +
+                                ",[acceptance_criteria]\n" +
+                                ",[acceptance_criteria_rev]\n" +
+                                ",[accept_type]\n" +
+                                ",[accept_grade]\n" +
+                                ",[spec_grade]\n" +
+                                ",[accept_class]\n" +
+                                ",[comments]\n" +
+                                ",[mag_machine]\n" +
+                                ",[owner])\n" +
+                                "VALUES (\n" +
+                                "'" + certNumberTextBox.Text + "',\n" +
+                                "'" + partNumberTextBox.Text + "',\n" +
+                                "'" + revisionTextBox.Text + "',\n" +
+                                "'" + partDescriptionTextBox.Text + "',\n" +
+                                "'" + materialTypeComboBox.SelectedValue.ToString() + ",\n" +
+                                "'" + jobNumberTextBox.Text + ",\n" +
+                                "'" + dateTimePicker.Value.ToShortDateString() + "',\n" +
+                                "'" + customerTextBox.Text + ",\n" +
+                                "'" + quantityRejectedTextBox.Text + ",\n" +
+                                "'" + quantityAcceptedTextBox.Text + ",\n" +
+                                "'" + quantityRejectedTextBox.Text + ",\n" +
+                                "'" + technicianComboBox.SelectedValue.ToString() + ",\n" +
+                                "'" + specComboBox.SelectedValue.ToString() + ",\n" +
+                                "'" + specRevComboBox.SelectedValue.ToString() + ",\n" +
+                                "'" + specificatinTypeTextBox.Text + ",\n" +
+                                "'" + specificationClassTextBox.Text + ",\n" +
+                                "'" + acceptCriteriaComboBox.SelectedValue.ToString() + ",\n" +
+                                "'" + acceptCriteriaRevComboBox.SelectedValue.ToString() + ",\n" +
+                                "'" + typeAcceptCriteriaTextBox.Text + ",\n" +
+                                "'" + gradeAcceptCriteriaTextBox.Text + ",\n" +
+                                "'" + gradeSpecificationTextBox.Text + ",\n" +
+                                "'" + notesTextBox.Text + ",\n" +
+                                "'" + magMachineComboBox + ",\n" +
+                                "'" + userName + "'\n" +
+                                ");";
+
+                OdbcCommand com = new OdbcCommand(query, conn);
+
+                int rowsAffected = com.ExecuteNonQuery();
+
+                if (rowsAffected != 1)
+                    MessageBox.Show("Problem submitting to DB. Contact IT support");
+                else
+                    MessageBox.Show("Sucessfully submitted");
+            }
         }
 
-        // TO_DO
         private void UpdateRow()
         {
+            // connect to DB
+            using (OdbcConnection conn = new OdbcConnection(connectionString))
+            {
+                // open connection
+                conn.Open();
 
+                // specify query
+                string query = "UPDATE [dbo].[MagListLog]\n" +
+                                "SET [part_num] = '" + partNumberTextBox.Text + "'\n" +
+                                ",[rev] = '" + revisionTextBox.Text + "'\n" +
+                                ",[part_description] = '" + partDescriptionTextBox.Text + "'\n" +
+                                ",[material_type] = '" + materialTypeComboBox.SelectedItem.ToString() + "'\n" +
+                                ",[job_num] = '" + jobNumberTextBox.Text + "'\n" +
+                                ",[date] = '" + dateTimePicker.Value.ToShortDateString() + "'\n" +
+                                ",[customer] = '" + customerTextBox.Text + "'\n" +
+                                ",[qty_inspected] = '" + quantityInspectedTextBox.Text + "'\n" +
+                                ",[qty_accepted] = '" + quantityAcceptedTextBox.Text + "'\n" +
+                                ",[qty_rejected] = '" + quantityRejectedTextBox.Text + "'\n" +
+                                ",[inspector] = '" + technicianComboBox.SelectedItem.ToString() + "'\n" +
+                                ",[spec] = '" + specComboBox.SelectedItem.ToString() + "'\n" +
+                                ",[spec_rev] = '" + specRevComboBox.SelectedItem.ToString() + "'\n" +
+                                ",[spec_type] = '" + specificatinTypeTextBox.Text + "'\n" +
+                                ",[spec_class] = '" + specificationClassTextBox.Text + "'\n" +
+                                ",[acceptance_criteria] = '" + acceptCriteriaComboBox.SelectedItem.ToString() + "'\n" +
+                                ",[acceptance_criteria_rev] = '" + acceptCriteriaRevComboBox.SelectedItem.ToString() + "'\n" +
+                                ",[accept_type] = '" + typeAcceptCriteriaTextBox.Text + "'\n" +
+                                ",[accept_grade] = '" + gradeAcceptCriteriaTextBox.Text + "'\n" +
+                                ",[spec_grade] = '" + gradeSpecificationTextBox.Text + "'\n" +
+                                ",[accept_class] = '" + specificationClassTextBox.Text + "'\n" +
+                                ",[comments] = '" + notesTextBox.Text + "'\n" +
+                                ",[mag_machine] = '" + magMachineComboBox.SelectedItem.ToString() + "'\n" +
+                                ",[owner] = '" + userName + "'\n" +
+                                "WHERE cert_num = '" + certNumberTextBox.Text + "';";
+
+                OdbcCommand com = new OdbcCommand(query, conn);
+
+                int rowsAffected = com.ExecuteNonQuery();
+
+                if (rowsAffected != 1)
+                    MessageBox.Show("Problem submitting to DB. Contact IT support");
+                else
+                    MessageBox.Show("Succesfully updated");
+            }
         }
 
         private string GetNextProcessNumber()
@@ -355,20 +436,31 @@ namespace ATIShotpeenDatabaseViewer
             }
         }
 
-        // TO_DO
         // checks that all of the values are numeric for sieve section and that combo boxes have an item selected
         private bool CheckFormatting()
         {
-            decimal dummyTest;
+            int dummyTest;
 
             // check numeric values
-            bool numberFormattignOk = true;
+            bool numberFormattignOk = int.TryParse(lotNumberTextBox.Text, out dummyTest) &&
+                                        int.TryParse(quantityInspectedTextBox.Text, out dummyTest) &&
+                                        int.TryParse(quantityAcceptedTextBox.Text, out dummyTest) &&
+                                        int.TryParse(quantityRejectedTextBox.Text, out dummyTest);
 
             // check dropdowns
-            bool dropDownFormattingOk = true;
+            bool dropDownFormattingOk = specComboBox.SelectedItem != null &&
+                                        specRevComboBox.SelectedItem != null &&
+                                        acceptCriteriaComboBox.SelectedItem != null &&
+                                        acceptCriteriaRevComboBox.SelectedItem != null &&
+                                        technicianComboBox.SelectedItem != null &&
+                                        magMachineComboBox.SelectedItem != null &&
+                                        rejectionTypeComboBox.SelectedItem != null;
 
             // check textboxes
-            bool textBoxesFormattingOk = true;
+            bool textBoxesFormattingOk = jobNumberTextBox.Text.Length > 0 &&
+                                            partDescriptionTextBox.Text.Length > 0 &&
+                                            revisionTextBox.Text.Length > 0 &&
+                                            partNumberTextBox.Text.Length > 0;
 
             return numberFormattignOk && dropDownFormattingOk && textBoxesFormattingOk;
         }

@@ -29,13 +29,10 @@ namespace ATIShotpeenDatabaseViewer
 
         private void MagListViewer_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             // TODO: This line of code loads data into the 'aTIDeliveryDataSet.MagListLog' table. You can move, or remove it, as needed.
             this.magListLogTableAdapter.Fill(this.aTIDeliveryDataSet.MagListLog);
             dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Descending);
 
-=======
->>>>>>> bc0a195d988a8e4258d5aab7bca5d548bc4177aa
             // check if admin or writable account
             if (!(isAdmin || canWrite))
                 newButton.Enabled = false;

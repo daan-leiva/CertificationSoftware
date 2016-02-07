@@ -39,7 +39,7 @@
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.jobNumberTextBox = new System.Windows.Forms.TextBox();
-            this.processNumberTextBox = new System.Windows.Forms.TextBox();
+            this.certNumberTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,9 +67,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.gradeSpecificationTextBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.gradeAcceptCriteriaComboBox = new System.Windows.Forms.TextBox();
+            this.gradeAcceptCriteriaTextBox = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.classAcceptCriteriaComboBox = new System.Windows.Forms.TextBox();
+            this.classAcceptCriteriaTextBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.typeAcceptCriteriaTextBox = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -87,6 +87,8 @@
             this.rejectionTypeComboBox = new System.Windows.Forms.ComboBox();
             this.remarksTextBox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.magMachineComboBox = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // autoFillButton
@@ -182,13 +184,13 @@
             this.jobNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.jobNumberTextBox.TabIndex = 136;
             // 
-            // processNumberTextBox
+            // certNumberTextBox
             // 
-            this.processNumberTextBox.Location = new System.Drawing.Point(132, 83);
-            this.processNumberTextBox.Name = "processNumberTextBox";
-            this.processNumberTextBox.ReadOnly = true;
-            this.processNumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.processNumberTextBox.TabIndex = 135;
+            this.certNumberTextBox.Location = new System.Drawing.Point(132, 83);
+            this.certNumberTextBox.Name = "certNumberTextBox";
+            this.certNumberTextBox.ReadOnly = true;
+            this.certNumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.certNumberTextBox.TabIndex = 135;
             // 
             // label5
             // 
@@ -414,12 +416,12 @@
             this.label18.TabIndex = 171;
             this.label18.Text = "Grade:";
             // 
-            // gradeAcceptCriteriaComboBox
+            // gradeAcceptCriteriaTextBox
             // 
-            this.gradeAcceptCriteriaComboBox.Location = new System.Drawing.Point(516, 248);
-            this.gradeAcceptCriteriaComboBox.Name = "gradeAcceptCriteriaComboBox";
-            this.gradeAcceptCriteriaComboBox.Size = new System.Drawing.Size(56, 20);
-            this.gradeAcceptCriteriaComboBox.TabIndex = 178;
+            this.gradeAcceptCriteriaTextBox.Location = new System.Drawing.Point(516, 248);
+            this.gradeAcceptCriteriaTextBox.Name = "gradeAcceptCriteriaTextBox";
+            this.gradeAcceptCriteriaTextBox.Size = new System.Drawing.Size(56, 20);
+            this.gradeAcceptCriteriaTextBox.TabIndex = 178;
             // 
             // label19
             // 
@@ -430,12 +432,12 @@
             this.label19.TabIndex = 177;
             this.label19.Text = "Grade:";
             // 
-            // classAcceptCriteriaComboBox
+            // classAcceptCriteriaTextBox
             // 
-            this.classAcceptCriteriaComboBox.Location = new System.Drawing.Point(419, 248);
-            this.classAcceptCriteriaComboBox.Name = "classAcceptCriteriaComboBox";
-            this.classAcceptCriteriaComboBox.Size = new System.Drawing.Size(56, 20);
-            this.classAcceptCriteriaComboBox.TabIndex = 176;
+            this.classAcceptCriteriaTextBox.Location = new System.Drawing.Point(419, 248);
+            this.classAcceptCriteriaTextBox.Name = "classAcceptCriteriaTextBox";
+            this.classAcceptCriteriaTextBox.Size = new System.Drawing.Size(56, 20);
+            this.classAcceptCriteriaTextBox.TabIndex = 176;
             // 
             // label20
             // 
@@ -473,7 +475,7 @@
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(67, 358);
+            this.label70.Location = new System.Drawing.Point(67, 359);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(63, 13);
             this.label70.TabIndex = 179;
@@ -481,7 +483,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(321, 627);
+            this.submitButton.Location = new System.Drawing.Point(321, 625);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(47, 23);
             this.submitButton.TabIndex = 184;
@@ -491,7 +493,7 @@
             // 
             // printCertButton
             // 
-            this.printCertButton.Location = new System.Drawing.Point(232, 627);
+            this.printCertButton.Location = new System.Drawing.Point(232, 625);
             this.printCertButton.Name = "printCertButton";
             this.printCertButton.Size = new System.Drawing.Size(47, 23);
             this.printCertButton.TabIndex = 183;
@@ -501,7 +503,7 @@
             // 
             // notesTextBox
             // 
-            this.notesTextBox.Location = new System.Drawing.Point(132, 384);
+            this.notesTextBox.Location = new System.Drawing.Point(132, 413);
             this.notesTextBox.Multiline = true;
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -511,7 +513,7 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(92, 384);
+            this.label62.Location = new System.Drawing.Point(92, 413);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(38, 13);
             this.label62.TabIndex = 181;
@@ -519,7 +521,7 @@
             // 
             // IDRTextBox
             // 
-            this.IDRTextBox.Location = new System.Drawing.Point(132, 499);
+            this.IDRTextBox.Location = new System.Drawing.Point(132, 528);
             this.IDRTextBox.Name = "IDRTextBox";
             this.IDRTextBox.Size = new System.Drawing.Size(100, 20);
             this.IDRTextBox.TabIndex = 186;
@@ -527,7 +529,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(91, 503);
+            this.label22.Location = new System.Drawing.Point(91, 532);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(36, 13);
             this.label22.TabIndex = 185;
@@ -535,7 +537,7 @@
             // 
             // serialTextBox
             // 
-            this.serialTextBox.Location = new System.Drawing.Point(279, 499);
+            this.serialTextBox.Location = new System.Drawing.Point(279, 528);
             this.serialTextBox.Name = "serialTextBox";
             this.serialTextBox.Size = new System.Drawing.Size(92, 20);
             this.serialTextBox.TabIndex = 188;
@@ -543,7 +545,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(238, 503);
+            this.label23.Location = new System.Drawing.Point(238, 532);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(36, 13);
             this.label23.TabIndex = 187;
@@ -552,7 +554,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(381, 503);
+            this.label24.Location = new System.Drawing.Point(381, 532);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(79, 13);
             this.label24.TabIndex = 189;
@@ -561,14 +563,14 @@
             // rejectionTypeComboBox
             // 
             this.rejectionTypeComboBox.FormattingEnabled = true;
-            this.rejectionTypeComboBox.Location = new System.Drawing.Point(462, 499);
+            this.rejectionTypeComboBox.Location = new System.Drawing.Point(462, 528);
             this.rejectionTypeComboBox.Name = "rejectionTypeComboBox";
             this.rejectionTypeComboBox.Size = new System.Drawing.Size(110, 21);
             this.rejectionTypeComboBox.TabIndex = 191;
             // 
             // remarksTextBox
             // 
-            this.remarksTextBox.Location = new System.Drawing.Point(132, 530);
+            this.remarksTextBox.Location = new System.Drawing.Point(132, 559);
             this.remarksTextBox.Name = "remarksTextBox";
             this.remarksTextBox.Size = new System.Drawing.Size(437, 20);
             this.remarksTextBox.TabIndex = 193;
@@ -576,17 +578,36 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(78, 533);
+            this.label25.Location = new System.Drawing.Point(78, 562);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(52, 13);
             this.label25.TabIndex = 192;
             this.label25.Text = "Remarks:";
             // 
+            // magMachineComboBox
+            // 
+            this.magMachineComboBox.FormattingEnabled = true;
+            this.magMachineComboBox.Location = new System.Drawing.Point(132, 385);
+            this.magMachineComboBox.Name = "magMachineComboBox";
+            this.magMachineComboBox.Size = new System.Drawing.Size(92, 21);
+            this.magMachineComboBox.TabIndex = 195;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(55, 387);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(75, 13);
+            this.label26.TabIndex = 194;
+            this.label26.Text = "Mag Machine:";
+            // 
             // MagCert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 674);
+            this.ClientSize = new System.Drawing.Size(600, 665);
+            this.Controls.Add(this.magMachineComboBox);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.remarksTextBox);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.rejectionTypeComboBox);
@@ -601,9 +622,9 @@
             this.Controls.Add(this.label62);
             this.Controls.Add(this.technicianComboBox);
             this.Controls.Add(this.label70);
-            this.Controls.Add(this.gradeAcceptCriteriaComboBox);
+            this.Controls.Add(this.gradeAcceptCriteriaTextBox);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.classAcceptCriteriaComboBox);
+            this.Controls.Add(this.classAcceptCriteriaTextBox);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.typeAcceptCriteriaTextBox);
             this.Controls.Add(this.label21);
@@ -638,7 +659,7 @@
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.jobNumberTextBox);
-            this.Controls.Add(this.processNumberTextBox);
+            this.Controls.Add(this.certNumberTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -667,7 +688,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox jobNumberTextBox;
-        private System.Windows.Forms.TextBox processNumberTextBox;
+        private System.Windows.Forms.TextBox certNumberTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -695,9 +716,9 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox gradeSpecificationTextBox;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox gradeAcceptCriteriaComboBox;
+        private System.Windows.Forms.TextBox gradeAcceptCriteriaTextBox;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox classAcceptCriteriaComboBox;
+        private System.Windows.Forms.TextBox classAcceptCriteriaTextBox;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox typeAcceptCriteriaTextBox;
         private System.Windows.Forms.Label label21;
@@ -715,5 +736,7 @@
         private System.Windows.Forms.ComboBox rejectionTypeComboBox;
         private System.Windows.Forms.TextBox remarksTextBox;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox magMachineComboBox;
+        private System.Windows.Forms.Label label26;
     }
 }
