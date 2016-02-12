@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 
-namespace ATIShotpeenDatabaseViewer
+namespace ATICertViewer
 {
     public partial class MagListViewer : Form
     {
@@ -29,10 +29,11 @@ namespace ATIShotpeenDatabaseViewer
 
         private void MagListViewer_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aTIDeliveryDataSet1.MagListLog' table. You can move, or remove it, as needed.
+            this.magListLogTableAdapter.Fill(this.aTIDeliveryDataSet1.MagListLog);
             // TODO: This line of code loads data into the 'aTIDeliveryDataSet.MagListLog' table. You can move, or remove it, as needed.
             this.magListLogTableAdapter.Fill(this.aTIDeliveryDataSet.MagListLog);
             dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Descending);
-
             // check if admin or writable account
             if (!(isAdmin || canWrite))
                 newButton.Enabled = false;

@@ -1,4 +1,4 @@
-﻿namespace ATIShotpeenDatabaseViewer
+﻿namespace ATICertViewer
 {
     partial class TAQ525Form
     {
@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TAQ525Form));
-            this.verticalLabel1 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel2 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.particleConc = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.blackLightMin = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.uvAmbientLight = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.availLight = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.as500 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel8 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel9 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel10 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel11 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel12 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel13 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel14 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel15 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel16 = new ATIShotpeenDatabaseViewer.VerticalLabel();
-            this.verticalLabel17 = new ATIShotpeenDatabaseViewer.VerticalLabel();
+            this.verticalLabel1 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel2 = new ATICertViewer.VerticalLabel();
+            this.particleConc = new ATICertViewer.VerticalLabel();
+            this.blackLightMin = new ATICertViewer.VerticalLabel();
+            this.uvAmbientLight = new ATICertViewer.VerticalLabel();
+            this.availLight = new ATICertViewer.VerticalLabel();
+            this.as500 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel8 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel9 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel10 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel11 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel12 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel13 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel14 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel15 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel16 = new ATICertViewer.VerticalLabel();
+            this.verticalLabel17 = new ATICertViewer.VerticalLabel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.internalShortsTextBox = new System.Windows.Forms.TextBox();
             this.particleConcTextBox = new System.Windows.Forms.TextBox();
@@ -65,7 +65,7 @@
             this.inspectorTextBox = new System.Windows.Forms.TextBox();
             this.commentsTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.verticalLabel18 = new ATIShotpeenDatabaseViewer.VerticalLabel();
+            this.verticalLabel18 = new ATICertViewer.VerticalLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -78,7 +78,7 @@
             this.verticalLabel1.Size = new System.Drawing.Size(17, 25);
             this.verticalLabel1.TabIndex = 0;
             this.verticalLabel1.Text = "Date";
-            this.verticalLabel1.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel1.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel1.TransparentBackground = false;
             // 
             // verticalLabel2
@@ -89,7 +89,7 @@
             this.verticalLabel2.Size = new System.Drawing.Size(16, 73);
             this.verticalLabel2.TabIndex = 1;
             this.verticalLabel2.Text = "Internal Shorts";
-            this.verticalLabel2.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel2.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel2.TransparentBackground = false;
             // 
             // particleConc
@@ -100,7 +100,7 @@
             this.particleConc.Size = new System.Drawing.Size(14, 119);
             this.particleConc.TabIndex = 2;
             this.particleConc.Text = "Particle Conc 0.1-0.4 ml";
-            this.particleConc.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.particleConc.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.particleConc.TransparentBackground = false;
             // 
             // blackLightMin
@@ -111,7 +111,7 @@
             this.blackLightMin.Size = new System.Drawing.Size(31, 74);
             this.blackLightMin.TabIndex = 3;
             this.blackLightMin.Text = "Blacklight Min\n1200uw@ 15\"";
-            this.blackLightMin.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.blackLightMin.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.blackLightMin.TransparentBackground = false;
             // 
             // uvAmbientLight
@@ -122,7 +122,7 @@
             this.uvAmbientLight.Size = new System.Drawing.Size(38, 104);
             this.uvAmbientLight.TabIndex = 4;
             this.uvAmbientLight.Text = "UV Ambient Light/\nAmbient White Light\nMax 2FC";
-            this.uvAmbientLight.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.uvAmbientLight.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.uvAmbientLight.TransparentBackground = false;
             // 
             // availLight
@@ -134,7 +134,7 @@
             this.availLight.Size = new System.Drawing.Size(24, 73);
             this.availLight.TabIndex = 5;
             this.availLight.Text = "Avail Light Min\n100FC";
-            this.availLight.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.availLight.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.availLight.TransparentBackground = false;
             // 
             // as500
@@ -145,7 +145,7 @@
             this.as500.Size = new System.Drawing.Size(17, 62);
             this.as500.TabIndex = 6;
             this.as500.Text = "500 (3 holes)";
-            this.as500.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.as500.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.as500.TransparentBackground = false;
             // 
             // verticalLabel8
@@ -156,7 +156,7 @@
             this.verticalLabel8.Size = new System.Drawing.Size(17, 73);
             this.verticalLabel8.TabIndex = 7;
             this.verticalLabel8.Text = "1000 (5 holes)";
-            this.verticalLabel8.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel8.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel8.TransparentBackground = false;
             // 
             // verticalLabel9
@@ -167,7 +167,7 @@
             this.verticalLabel9.Size = new System.Drawing.Size(11, 73);
             this.verticalLabel9.TabIndex = 8;
             this.verticalLabel9.Text = "3500 (9 holes)";
-            this.verticalLabel9.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel9.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel9.TransparentBackground = false;
             // 
             // verticalLabel10
@@ -178,7 +178,7 @@
             this.verticalLabel10.Size = new System.Drawing.Size(19, 73);
             this.verticalLabel10.TabIndex = 9;
             this.verticalLabel10.Text = "1500 (6 holes)";
-            this.verticalLabel10.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel10.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel10.TransparentBackground = false;
             // 
             // verticalLabel11
@@ -189,7 +189,7 @@
             this.verticalLabel11.Size = new System.Drawing.Size(16, 73);
             this.verticalLabel11.TabIndex = 10;
             this.verticalLabel11.Text = "2500 (7 holes)";
-            this.verticalLabel11.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel11.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel11.TransparentBackground = false;
             // 
             // verticalLabel12
@@ -200,7 +200,7 @@
             this.verticalLabel12.Size = new System.Drawing.Size(27, 98);
             this.verticalLabel12.TabIndex = 11;
             this.verticalLabel12.Text = "AS582 QQI @\n1000 amps (5 holes)";
-            this.verticalLabel12.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel12.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel12.TransparentBackground = false;
             // 
             // verticalLabel13
@@ -211,7 +211,7 @@
             this.verticalLabel13.Size = new System.Drawing.Size(16, 73);
             this.verticalLabel13.TabIndex = 12;
             this.verticalLabel13.Text = "1400 (3 holes)";
-            this.verticalLabel13.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel13.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel13.TransparentBackground = false;
             // 
             // verticalLabel14
@@ -222,7 +222,7 @@
             this.verticalLabel14.Size = new System.Drawing.Size(16, 73);
             this.verticalLabel14.TabIndex = 13;
             this.verticalLabel14.Text = "2500 (5 holes)";
-            this.verticalLabel14.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel14.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel14.TransparentBackground = false;
             // 
             // verticalLabel15
@@ -233,7 +233,7 @@
             this.verticalLabel15.Size = new System.Drawing.Size(20, 84);
             this.verticalLabel15.TabIndex = 14;
             this.verticalLabel15.Text = "Bath Comparison";
-            this.verticalLabel15.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel15.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel15.TransparentBackground = false;
             // 
             // verticalLabel16
@@ -244,7 +244,7 @@
             this.verticalLabel16.Size = new System.Drawing.Size(17, 48);
             this.verticalLabel16.TabIndex = 15;
             this.verticalLabel16.Text = "Inspector";
-            this.verticalLabel16.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel16.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel16.TransparentBackground = false;
             // 
             // verticalLabel17
@@ -255,7 +255,7 @@
             this.verticalLabel17.Size = new System.Drawing.Size(19, 53);
             this.verticalLabel17.TabIndex = 16;
             this.verticalLabel17.Text = "Comments";
-            this.verticalLabel17.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel17.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel17.TransparentBackground = false;
             // 
             // dateTimePicker1
@@ -403,7 +403,7 @@
             this.verticalLabel18.Size = new System.Drawing.Size(14, 73);
             this.verticalLabel18.TabIndex = 36;
             this.verticalLabel18.Text = "3400 (6 holes)";
-            this.verticalLabel18.TextDrawMode = ATIShotpeenDatabaseViewer.DrawMode.TopBottom;
+            this.verticalLabel18.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel18.TransparentBackground = false;
             // 
             // label2

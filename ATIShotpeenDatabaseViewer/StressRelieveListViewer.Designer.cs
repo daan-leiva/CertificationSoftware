@@ -1,4 +1,4 @@
-﻿namespace ATIShotpeenDatabaseViewer
+﻿namespace ATICertViewer
 {
     partial class StressRelieveListViewer
     {
@@ -28,14 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.exitButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             this.viewEditButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
+            this.aTIDeliveryDataSet = new ATICertViewer.ATIDeliveryDataSet();
+            this.stressRelieveCertificationLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stressRelieveCertificationLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.StressRelieveCertificationLogTableAdapter();
+            this.certNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.revisionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.operationNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.certifiedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.certDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stressRelieveCertificationLogBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // exitButton
@@ -82,12 +95,20 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.certNumberDataGridViewTextBoxColumn,
+            this.customerDataGridViewTextBoxColumn,
+            this.partNumberDataGridViewTextBoxColumn,
+            this.revisionDataGridViewTextBoxColumn,
+            this.jobNumberDataGridViewTextBoxColumn,
+            this.operationNumberDataGridViewTextBoxColumn,
+            this.certifiedByDataGridViewTextBoxColumn,
+            this.certDateDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.stressRelieveCertificationLogBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 86);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -96,13 +117,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1040, 211);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "process_num";
-            this.Column1.HeaderText = "Cert Num";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // label2
             // 
@@ -113,6 +127,76 @@
             this.label2.Size = new System.Drawing.Size(228, 25);
             this.label2.TabIndex = 12;
             this.label2.Text = "Stress Relieve Certs";
+            // 
+            // aTIDeliveryDataSet
+            // 
+            this.aTIDeliveryDataSet.DataSetName = "ATIDeliveryDataSet";
+            this.aTIDeliveryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stressRelieveCertificationLogBindingSource
+            // 
+            this.stressRelieveCertificationLogBindingSource.DataMember = "StressRelieveCertificationLog";
+            this.stressRelieveCertificationLogBindingSource.DataSource = this.aTIDeliveryDataSet;
+            // 
+            // stressRelieveCertificationLogTableAdapter
+            // 
+            this.stressRelieveCertificationLogTableAdapter.ClearBeforeFill = true;
+            // 
+            // certNumberDataGridViewTextBoxColumn
+            // 
+            this.certNumberDataGridViewTextBoxColumn.DataPropertyName = "CertNumber";
+            this.certNumberDataGridViewTextBoxColumn.HeaderText = "Cert No";
+            this.certNumberDataGridViewTextBoxColumn.Name = "certNumberDataGridViewTextBoxColumn";
+            this.certNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerDataGridViewTextBoxColumn
+            // 
+            this.customerDataGridViewTextBoxColumn.DataPropertyName = "Customer";
+            this.customerDataGridViewTextBoxColumn.HeaderText = "Customer";
+            this.customerDataGridViewTextBoxColumn.Name = "customerDataGridViewTextBoxColumn";
+            this.customerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // partNumberDataGridViewTextBoxColumn
+            // 
+            this.partNumberDataGridViewTextBoxColumn.DataPropertyName = "Part_Number";
+            this.partNumberDataGridViewTextBoxColumn.HeaderText = "Part No";
+            this.partNumberDataGridViewTextBoxColumn.Name = "partNumberDataGridViewTextBoxColumn";
+            this.partNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // revisionDataGridViewTextBoxColumn
+            // 
+            this.revisionDataGridViewTextBoxColumn.DataPropertyName = "Revision";
+            this.revisionDataGridViewTextBoxColumn.HeaderText = "Rev";
+            this.revisionDataGridViewTextBoxColumn.Name = "revisionDataGridViewTextBoxColumn";
+            this.revisionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // jobNumberDataGridViewTextBoxColumn
+            // 
+            this.jobNumberDataGridViewTextBoxColumn.DataPropertyName = "Job_Number";
+            this.jobNumberDataGridViewTextBoxColumn.HeaderText = "Job";
+            this.jobNumberDataGridViewTextBoxColumn.Name = "jobNumberDataGridViewTextBoxColumn";
+            this.jobNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // operationNumberDataGridViewTextBoxColumn
+            // 
+            this.operationNumberDataGridViewTextBoxColumn.DataPropertyName = "Operation_Number";
+            this.operationNumberDataGridViewTextBoxColumn.HeaderText = "Op No";
+            this.operationNumberDataGridViewTextBoxColumn.Name = "operationNumberDataGridViewTextBoxColumn";
+            this.operationNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // certifiedByDataGridViewTextBoxColumn
+            // 
+            this.certifiedByDataGridViewTextBoxColumn.DataPropertyName = "Certified_By";
+            this.certifiedByDataGridViewTextBoxColumn.HeaderText = "Certified By";
+            this.certifiedByDataGridViewTextBoxColumn.Name = "certifiedByDataGridViewTextBoxColumn";
+            this.certifiedByDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // certDateDataGridViewTextBoxColumn
+            // 
+            this.certDateDataGridViewTextBoxColumn.DataPropertyName = "Cert_Date";
+            this.certDateDataGridViewTextBoxColumn.HeaderText = "Cert Date";
+            this.certDateDataGridViewTextBoxColumn.Name = "certDateDataGridViewTextBoxColumn";
+            this.certDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // StressRelieveListViewer
             // 
@@ -129,6 +213,8 @@
             this.Text = "StressRelieveListViewer";
             this.Load += new System.EventHandler(this.StressRelieveListViewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stressRelieveCertificationLogBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,7 +227,17 @@
         private System.Windows.Forms.Button viewEditButton;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Label label2;
+        private ATIDeliveryDataSet aTIDeliveryDataSet;
+        private System.Windows.Forms.BindingSource stressRelieveCertificationLogBindingSource;
+        private ATIDeliveryDataSetTableAdapters.StressRelieveCertificationLogTableAdapter stressRelieveCertificationLogTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn certNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn partNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn revisionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jobNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn operationNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn certifiedByDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn certDateDataGridViewTextBoxColumn;
     }
 }

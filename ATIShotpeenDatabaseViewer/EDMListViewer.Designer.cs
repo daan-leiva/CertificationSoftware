@@ -1,4 +1,4 @@
-﻿namespace ATIShotpeenDatabaseViewer
+﻿namespace ATICertViewer
 {
     partial class EDMListViewer
     {
@@ -36,8 +36,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.eDMCertsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aTIDeliveryDataSet = new ATIShotpeenDatabaseViewer.ATIDeliveryDataSet();
-            this.eDMCertsTableAdapter = new ATIShotpeenDatabaseViewer.ATIDeliveryDataSetTableAdapters.EDMCertsTableAdapter();
+            this.aTIDeliveryDataSet = new ATICertViewer.ATIDeliveryDataSet();
+            this.eDMCertsTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.EDMCertsTableAdapter();
             this.certnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jobnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();

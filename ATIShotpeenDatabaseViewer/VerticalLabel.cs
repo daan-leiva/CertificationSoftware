@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ATIShotpeenDatabaseViewer
+namespace ATICertViewer
 {
     /// <summary>
     /// A custom windows control to display text vertically

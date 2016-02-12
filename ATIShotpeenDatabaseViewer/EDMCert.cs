@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 
-namespace ATIShotpeenDatabaseViewer
+namespace ATICertViewer
 {
     public partial class EDMCert : Form
     {
@@ -30,12 +30,12 @@ namespace ATIShotpeenDatabaseViewer
 
         public EDMCert(string process_num, bool _canEdit, string _userName)
         {
+            InitializeComponent();
+
             newForm = false;
             canEdit = _canEdit;
             certNumberTextBox.Text = process_num;
             userName = _userName;
-
-            InitializeComponent();
         }
 
         private void printCertButton_Click(object sender, EventArgs e)
@@ -118,15 +118,15 @@ namespace ATIShotpeenDatabaseViewer
                 conn.Open();
 
                 string query = "SELECT job_num ,part_num ,part_rev ,part_desc ,customer ,lot_num ,op_num ,date ,edm_program ,qty ,performed ,specification ,specificationRev ,certifier\n" +
-                                "FROM ATIDelivery.dbo.tblJobProcessLog\n" +
-                                "WHERE process_num = " + certNumberTextBox.Text + ";";
-
-                OdbcCommand com = new OdbcCommand(query, conn);
-
-                OdbcDataReader reader = com.ExecuteReader();
-
+                                "FROM ATIDelivery.dbo.EDMCerts\n" +
+                                "WHERE cert_num = " + certNumberTextBox.Text + ";";
                 try
                 {
+                    OdbcCommand com = new OdbcCommand(query, conn);
+
+                    OdbcDataReader reader = com.ExecuteReader();
+
+
                     reader.Read();
 
                     // Fill out corresponding form values

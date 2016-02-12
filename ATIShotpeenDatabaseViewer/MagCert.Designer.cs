@@ -1,4 +1,4 @@
-﻿namespace ATIShotpeenDatabaseViewer
+﻿namespace ATICertViewer
 {
     partial class MagCert
     {

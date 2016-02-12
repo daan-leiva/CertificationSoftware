@@ -7,7 +7,7 @@
     <ProjectGuid>{56D7AE9F-6A6D-4AF2-BAD3-0E90797FC270}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ATIShotpeenDatabaseViewer</RootNamespace>
+    <RootNamespace>ATICertViewer</RootNamespace>
     <AssemblyName>ATIShotpeenDatabaseViewer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

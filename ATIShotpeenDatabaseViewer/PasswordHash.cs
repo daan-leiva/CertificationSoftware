@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography;
 
-namespace ATIShotpeenDatabaseViewer
+namespace ATICertViewer
 {
     public sealed class PasswordHash
     {

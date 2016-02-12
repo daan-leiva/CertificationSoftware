@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ATIShotpeenDatabaseViewer
+namespace ATICertViewer
 {
     public partial class TAQ525Form : Form
     {

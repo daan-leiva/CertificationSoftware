@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.Odbc;
 using System.Security.Cryptography;
 
-namespace ATIShotpeenDatabaseViewer
+namespace ATICertViewer
 {
     public partial class EditUserForm : Form
     {

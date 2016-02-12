@@ -1,4 +1,4 @@
-﻿namespace ATIShotpeenDatabaseViewer
+﻿namespace ATICertViewer
 {
     partial class ShotpeenListViewer
     {
@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tblJobProcessLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aTIDeliveryDataSet = new ATIShotpeenDatabaseViewer.ATIDeliveryDataSet();
-            this.tblJobProcessLogTableAdapter = new ATIShotpeenDatabaseViewer.ATIDeliveryDataSetTableAdapters.tblJobProcessLogTableAdapter();
+            this.aTIDeliveryDataSet = new ATICertViewer.ATIDeliveryDataSet();
+            this.tblJobProcessLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.tblJobProcessLogTableAdapter();
             this.newButton = new System.Windows.Forms.Button();
             this.viewEditButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
