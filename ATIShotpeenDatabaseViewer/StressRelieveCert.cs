@@ -21,11 +21,11 @@ namespace ATICertViewer
 
         public StressRelieveCert(bool _canEdit, string _userName)
         {
+            InitializeComponent();
+            
             newForm = true;
             canEdit = _canEdit;
             userName = _userName;
-            
-            InitializeComponent();
         }
 
         public StressRelieveCert(string process_num, bool _canEdit, string _userName)

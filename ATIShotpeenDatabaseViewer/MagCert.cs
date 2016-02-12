@@ -21,21 +21,21 @@ namespace ATICertViewer
 
         public MagCert(bool _canEdit, string _userName)
         {
+            InitializeComponent();
+            
             newForm = true;
             canEdit = _canEdit;
             userName = _userName;
-
-            InitializeComponent();
         }
 
         public MagCert(string process_num, bool _canEdit, string _userName)
         {
+            InitializeComponent();
+
             newForm = false;
             canEdit = _canEdit;
             certNumberTextBox.Text = process_num;
             userName = _userName;
-
-            InitializeComponent();
         }
 
         private void autoFillButton_Click(object sender, EventArgs e)
