@@ -98,6 +98,7 @@ namespace ATICertViewer
                     // Fill out corresponding form values
                     dateTimePicker.Value = reader.IsDBNull(0) ? DateTime.MinValue : Convert.ToDateTime(reader.GetString(0));
 
+
                     jobNumberTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
                     partDescriptionTextBox.Text = reader.IsDBNull(1) ? "" : reader.GetString(1);
                     revisionTextBox.Text = reader.IsDBNull(2) ? "" : reader.GetString(2);
@@ -117,91 +118,6 @@ namespace ATICertViewer
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
-        }
-
-        private void TrySelectDropdownItem(ComboBox cBox, string item)
-        {
-            if (cBox.Items.Contains(item))
-                cBox.SelectedItem = item;
-            else
-            {
-                cBox.Items.Add(item);
-                cBox.SelectedItem = item;
-            }
-        }
-
-        // TO_DO
-        private void FillInDropDowns()
-        {
-            string query = string.Empty;
-            List<string> controlContent;
-
-            // populate specification dropdown
-            query = "SELECT specification\n" +
-                    "FROM ATIDelivery.dbo.EDMSpecifications;";
-            controlContent = GetValuesFromDB(query, );
-            PopulateControl(controlContent, );
-
-            // populate rev specification dropdown
-            query = "SELECT REV\n" +
-                    "FROM ATIDelivery.dbo.Rev;";
-            controlContent = GetValuesFromDB(query, );
-            PopulateControl(controlContent, );
-        }
-
-        private List<string> GetValuesFromDB(string query, ListControl control)
-        {
-            List<string> values = new List<string>();
-
-            if (control is ComboBox)
-                values.Add("");
-
-            using (OdbcConnection conn = new OdbcConnection(connectionString))
-            {
-                conn.Open();
-
-                OdbcCommand comm = new OdbcCommand(query, conn);
-
-                OdbcDataReader reader = comm.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    switch (Type.GetTypeCode(reader.GetFieldType(0)))
-                    {
-                        case TypeCode.Decimal:
-                            values.Add(reader.GetDecimal(0).ToString());
-                            break;
-                        case TypeCode.Double:
-                            values.Add(reader.GetDouble(0).ToString());
-                            break;
-                        case TypeCode.String:
-                            values.Add(reader.GetString(0).ToString());
-                            break;
-                        case TypeCode.Int32:
-                            values.Add(reader.GetInt32(0).ToString());
-                            break;
-                    }
-                }
-            }
-
-            return values;
-        }
-
-        // this adds the string of values to a single dropdown
-        private void PopulateControl(List<string> values, ListControl target)
-        {
-            if (target is ListBox)
-            {
-                ListBox control = (ListBox)target;
-                foreach (string value in values)
-                    control.Items.Add(value);
-            }
-            else
-            {
-                ComboBox control = (ComboBox)target;
-                foreach (string value in values)
-                    control.Items.Add(value);
             }
         }
 
