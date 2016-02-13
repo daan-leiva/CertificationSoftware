@@ -1,6 +1,6 @@
 ﻿namespace ATICertViewer
 {
-    partial class MainForm
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.

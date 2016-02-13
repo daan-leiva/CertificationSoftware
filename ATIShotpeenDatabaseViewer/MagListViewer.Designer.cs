@@ -34,12 +34,6 @@
             this.viewEditButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.magListLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aTIDeliveryDataSet = new ATICertViewer.ATIDeliveryDataSet();
-            this.label2 = new System.Windows.Forms.Label();
-            this.magListLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.MagListLogTableAdapter();
-            this.aTIDeliveryDataSet1 = new ATICertViewer.ATIDeliveryDataSet();
-            this.magListLogBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.certnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,11 +45,17 @@
             this.inspectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.magmachineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.magListLogBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.aTIDeliveryDataSet1 = new ATICertViewer.ATIDeliveryDataSet();
+            this.magListLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aTIDeliveryDataSet = new ATICertViewer.ATIDeliveryDataSet();
+            this.label2 = new System.Windows.Forms.Label();
+            this.magListLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.MagListLogTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // exitButton
@@ -127,40 +127,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1040, 211);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // magListLogBindingSource
-            // 
-            this.magListLogBindingSource.DataMember = "MagListLog";
-            this.magListLogBindingSource.DataSource = this.aTIDeliveryDataSet;
-            // 
-            // aTIDeliveryDataSet
-            // 
-            this.aTIDeliveryDataSet.DataSetName = "ATIDeliveryDataSet";
-            this.aTIDeliveryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(449, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Mag Certs";
-            // 
-            // magListLogTableAdapter
-            // 
-            this.magListLogTableAdapter.ClearBeforeFill = true;
-            // 
-            // aTIDeliveryDataSet1
-            // 
-            this.aTIDeliveryDataSet1.DataSetName = "ATIDeliveryDataSet";
-            this.aTIDeliveryDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // magListLogBindingSource1
-            // 
-            this.magListLogBindingSource1.DataMember = "MagListLog";
-            this.magListLogBindingSource1.DataSource = this.aTIDeliveryDataSet1;
             // 
             // certnumDataGridViewTextBoxColumn
             // 
@@ -239,6 +205,40 @@
             this.magmachineDataGridViewTextBoxColumn.Name = "magmachineDataGridViewTextBoxColumn";
             this.magmachineDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // magListLogBindingSource1
+            // 
+            this.magListLogBindingSource1.DataMember = "MagListLog";
+            this.magListLogBindingSource1.DataSource = this.aTIDeliveryDataSet1;
+            // 
+            // aTIDeliveryDataSet1
+            // 
+            this.aTIDeliveryDataSet1.DataSetName = "ATIDeliveryDataSet";
+            this.aTIDeliveryDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // magListLogBindingSource
+            // 
+            this.magListLogBindingSource.DataMember = "MagListLog";
+            this.magListLogBindingSource.DataSource = this.aTIDeliveryDataSet;
+            // 
+            // aTIDeliveryDataSet
+            // 
+            this.aTIDeliveryDataSet.DataSetName = "ATIDeliveryDataSet";
+            this.aTIDeliveryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(449, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Mag Certs";
+            // 
+            // magListLogTableAdapter
+            // 
+            this.magListLogTableAdapter.ClearBeforeFill = true;
+            // 
             // MagListViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,10 +254,10 @@
             this.Text = "MagListViewer";
             this.Load += new System.EventHandler(this.MagListViewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

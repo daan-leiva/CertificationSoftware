@@ -110,7 +110,6 @@ namespace ATICertViewer
             }
         }
 
-        // TO_DO
         private void UpdateForm()
         {
             using (OdbcConnection conn = new OdbcConnection(connectionString))
@@ -123,9 +122,7 @@ namespace ATICertViewer
                 try
                 {
                     OdbcCommand com = new OdbcCommand(query, conn);
-
                     OdbcDataReader reader = com.ExecuteReader();
-
 
                     reader.Read();
 
@@ -137,7 +134,7 @@ namespace ATICertViewer
                     customerTextBox.Text = reader.IsDBNull(4) ? "" : reader.GetString(4);
                     lotNumberTextBox.Text = reader.IsDBNull(5) ? "" : reader.GetString(5);
                     operationNoTextBox.Text = reader.IsDBNull(6) ? "" : reader.GetString(6);
-                    dateTimePicker.Value = reader.IsDBNull(7) ? DateTime.MinValue : reader.GetDateTime(7);
+                    dateTimePicker.Value = reader.IsDBNull(7) ? DateTime.MinValue : Convert.ToDateTime(reader.GetString(7));
                     edmProgramTextBox.Text = reader.IsDBNull(8) ? "" : reader.GetString(8);
                     quantityProcesseTextBox.Text = reader.IsDBNull(9) ? "" : reader.GetString(9);
                     performedNotesTextBox.Text = reader.IsDBNull(10) ? "" : reader.GetString(10);
@@ -163,7 +160,6 @@ namespace ATICertViewer
             }
         }
 
-        // TO_DO
         private void FillInDropDowns()
         {
             string query = string.Empty;

@@ -150,9 +150,9 @@ namespace ATICertViewer
                     jobNumberTextBox.Text = reader.IsDBNull(4) ? "" : reader.GetString(4);
                     dateTimePicker.Value = reader.IsDBNull(5) ? dateTimePicker.MinDate : (reader.GetString(5).Length > 0 ? Convert.ToDateTime(reader.GetString(5)) : dateTimePicker.MinDate);
                     customerTextBox.Text = reader.IsDBNull(6) ? "" : reader.GetString(6);
-                    quantityInspectedTextBox.Text = reader.IsDBNull(7) ? "" : reader.GetString(7);
-                    quantityAcceptedTextBox.Text = reader.IsDBNull(8) ? "" : reader.GetString(8);
-                    quantityRejectedTextBox.Text = reader.IsDBNull(9) ? "" : reader.GetString(9);
+                    quantityInspectedTextBox.Text = reader.IsDBNull(7) ? "-999" : reader.GetInt16(7).ToString();
+                    quantityAcceptedTextBox.Text = reader.IsDBNull(8) ? "-999" : reader.GetInt16(8).ToString();
+                    quantityRejectedTextBox.Text = reader.IsDBNull(9) ? "-999" : reader.GetInt16(9).ToString();
                     TrySelectDropdownItem(technicianComboBox, reader.IsDBNull(10) ? "" : reader.GetString(10));
                     TrySelectDropdownItem(specComboBox, reader.IsDBNull(11) ? "" : reader.GetString(11));
                     TrySelectDropdownItem(specRevComboBox, reader.IsDBNull(12) ? "" : reader.GetString(12));

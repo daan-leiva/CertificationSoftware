@@ -50,7 +50,7 @@
             this.blacklightMinTextBox = new System.Windows.Forms.TextBox();
             this.particleConcTextBox = new System.Windows.Forms.TextBox();
             this.internalShortsTextBox = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.verticalLabel17 = new ATICertViewer.VerticalLabel();
             this.verticalLabel16 = new ATICertViewer.VerticalLabel();
             this.verticalLabel15 = new ATICertViewer.VerticalLabel();
@@ -68,6 +68,8 @@
             this.particleConc = new ATICertViewer.VerticalLabel();
             this.verticalLabel2 = new ATICertViewer.VerticalLabel();
             this.verticalLabel1 = new ATICertViewer.VerticalLabel();
+            this.submitButton = new System.Windows.Forms.Button();
+            this.printButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -229,13 +231,13 @@
             this.internalShortsTextBox.Size = new System.Drawing.Size(40, 20);
             this.internalShortsTextBox.TabIndex = 57;
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 235);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(82, 20);
-            this.dateTimePicker1.TabIndex = 56;
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker.Location = new System.Drawing.Point(16, 235);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(82, 20);
+            this.dateTimePicker.TabIndex = 56;
             // 
             // verticalLabel17
             // 
@@ -425,11 +427,33 @@
             this.verticalLabel1.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel1.TransparentBackground = false;
             // 
+            // submitButton
+            // 
+            this.submitButton.Location = new System.Drawing.Point(604, 327);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.TabIndex = 191;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
+            // printButton
+            // 
+            this.printButton.Location = new System.Drawing.Point(515, 327);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(75, 23);
+            this.printButton.TabIndex = 190;
+            this.printButton.Text = "Print";
+            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
+            // 
             // D2060RForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 342);
+            this.ClientSize = new System.Drawing.Size(1204, 365);
+            this.Controls.Add(this.submitButton);
+            this.Controls.Add(this.printButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.verticalLabel18);
@@ -451,7 +475,7 @@
             this.Controls.Add(this.blacklightMinTextBox);
             this.Controls.Add(this.particleConcTextBox);
             this.Controls.Add(this.internalShortsTextBox);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.verticalLabel17);
             this.Controls.Add(this.verticalLabel16);
             this.Controls.Add(this.verticalLabel15);
@@ -471,6 +495,7 @@
             this.Controls.Add(this.verticalLabel1);
             this.Name = "D2060RForm";
             this.Text = "D2060RForm";
+            this.Load += new System.EventHandler(this.D2060RForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,7 +524,7 @@
         private System.Windows.Forms.TextBox blacklightMinTextBox;
         private System.Windows.Forms.TextBox particleConcTextBox;
         private System.Windows.Forms.TextBox internalShortsTextBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private VerticalLabel verticalLabel17;
         private VerticalLabel verticalLabel16;
         private VerticalLabel verticalLabel15;
@@ -517,6 +542,8 @@
         private VerticalLabel particleConc;
         private VerticalLabel verticalLabel2;
         private VerticalLabel verticalLabel1;
+        private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.Button printButton;
 
     }
 }

@@ -55,7 +55,7 @@ namespace ATICertViewer
                         {
                             this.Hide();
 
-                            Form mainForm = new MainForm(reader.GetString(0),
+                            Form mainForm = new MainWindow(reader.GetString(0),
                                 reader.GetFieldType(1) == typeof(bool) ? reader.GetBoolean(1) : Convert.ToBoolean(reader.GetByte(1)),
                                 reader.GetFieldType(2) == typeof(bool) ? reader.GetBoolean(2) :  Convert.ToBoolean(reader.GetByte(2)),
                                 reader.GetFieldType(3) == typeof(bool) ? reader.GetBoolean(3) :  Convert.ToBoolean(reader.GetByte(3)),

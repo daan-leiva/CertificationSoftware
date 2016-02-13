@@ -52,6 +52,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ATIDeliveryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="D2060RListViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="D2060RListViewer.Designer.cs">
+      <DependentUpon>D2060RListViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="D2060RForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,11 +125,11 @@
     <Compile Include="ShotpeenListViewer.Designer.cs">
       <DependentUpon>ShotpeenListViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,6 +151,12 @@
     <Compile Include="TAQ525Form.Designer.cs">
       <DependentUpon>TAQ525Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="TAQ525ListViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TAQ525ListViewer.Designer.cs">
+      <DependentUpon>TAQ525ListViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerticalLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -153,6 +165,9 @@
     </Compile>
     <EmbeddedResource Include="D2060RForm.resx">
       <DependentUpon>D2060RForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="D2060RListViewer.resx">
+      <DependentUpon>D2060RListViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditUserForm.resx">
       <DependentUpon>EditUserForm.cs</DependentUpon>
@@ -186,8 +201,8 @@
     <EmbeddedResource Include="ShotpeenListViewer.resx">
       <DependentUpon>ShotpeenListViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -42,7 +42,7 @@
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.jobNumberTextBox = new System.Windows.Forms.TextBox();
-            this.processNumberTextBox = new System.Windows.Forms.TextBox();
+            this.certNumberTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,12 +52,9 @@
             this.partDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.customerTextBox = new System.Windows.Forms.TextBox();
             this.ovenSNComboBox = new System.Windows.Forms.ComboBox();
-            this.additionalSpecRevComboBox = new System.Windows.Forms.ComboBox();
             this.specRevComboBox = new System.Windows.Forms.ComboBox();
-            this.additionalSpecsComboBox = new System.Windows.Forms.ComboBox();
             this.specificationComboBox = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.hoursRequiredTimeTextBox = new System.Windows.Forms.TextBox();
@@ -68,15 +65,14 @@
             this.certifiedByComboBox = new System.Windows.Forms.ComboBox();
             this.label70 = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
-            this.printCertButton = new System.Windows.Forms.Button();
-            this.notesTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.printButton = new System.Windows.Forms.Button();
             this.plusMinTemperatureTextBox = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.minutesRequiredTimeTextBox = new System.Windows.Forms.TextBox();
+            this.opNumberTextBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -152,7 +148,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(89, 119);
+            this.label11.Location = new System.Drawing.Point(91, 118);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(67, 13);
             this.label11.TabIndex = 143;
@@ -198,18 +194,18 @@
             this.jobNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.jobNumberTextBox.TabIndex = 136;
             // 
-            // processNumberTextBox
+            // certNumberTextBox
             // 
-            this.processNumberTextBox.Location = new System.Drawing.Point(160, 87);
-            this.processNumberTextBox.Name = "processNumberTextBox";
-            this.processNumberTextBox.ReadOnly = true;
-            this.processNumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.processNumberTextBox.TabIndex = 135;
+            this.certNumberTextBox.Location = new System.Drawing.Point(160, 87);
+            this.certNumberTextBox.Name = "certNumberTextBox";
+            this.certNumberTextBox.ReadOnly = true;
+            this.certNumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.certNumberTextBox.TabIndex = 135;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(78, 261);
+            this.label7.Location = new System.Drawing.Point(80, 260);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 26);
             this.label7.TabIndex = 134;
@@ -219,7 +215,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(107, 236);
+            this.label6.Location = new System.Drawing.Point(109, 235);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 133;
@@ -228,7 +224,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(102, 209);
+            this.label5.Location = new System.Drawing.Point(104, 208);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 132;
@@ -237,7 +233,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 178);
+            this.label4.Location = new System.Drawing.Point(73, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 131;
@@ -246,7 +242,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(87, 148);
+            this.label3.Location = new System.Drawing.Point(89, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 130;
@@ -256,11 +252,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 91);
+            this.label2.Location = new System.Drawing.Point(77, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 13);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 129;
-            this.label2.Text = "Process Number:";
+            this.label2.Text = "Cert Number:";
             // 
             // partDescriptionTextBox
             // 
@@ -279,18 +275,10 @@
             // ovenSNComboBox
             // 
             this.ovenSNComboBox.FormattingEnabled = true;
-            this.ovenSNComboBox.Location = new System.Drawing.Point(160, 397);
+            this.ovenSNComboBox.Location = new System.Drawing.Point(161, 368);
             this.ovenSNComboBox.Name = "ovenSNComboBox";
             this.ovenSNComboBox.Size = new System.Drawing.Size(100, 21);
             this.ovenSNComboBox.TabIndex = 162;
-            // 
-            // additionalSpecRevComboBox
-            // 
-            this.additionalSpecRevComboBox.FormattingEnabled = true;
-            this.additionalSpecRevComboBox.Location = new System.Drawing.Point(268, 370);
-            this.additionalSpecRevComboBox.Name = "additionalSpecRevComboBox";
-            this.additionalSpecRevComboBox.Size = new System.Drawing.Size(50, 21);
-            this.additionalSpecRevComboBox.TabIndex = 159;
             // 
             // specRevComboBox
             // 
@@ -299,14 +287,6 @@
             this.specRevComboBox.Name = "specRevComboBox";
             this.specRevComboBox.Size = new System.Drawing.Size(50, 21);
             this.specRevComboBox.TabIndex = 158;
-            // 
-            // additionalSpecsComboBox
-            // 
-            this.additionalSpecsComboBox.FormattingEnabled = true;
-            this.additionalSpecsComboBox.Location = new System.Drawing.Point(160, 370);
-            this.additionalSpecsComboBox.Name = "additionalSpecsComboBox";
-            this.additionalSpecsComboBox.Size = new System.Drawing.Size(100, 21);
-            this.additionalSpecsComboBox.TabIndex = 157;
             // 
             // specificationComboBox
             // 
@@ -319,25 +299,16 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(102, 400);
+            this.label15.Location = new System.Drawing.Point(105, 372);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(54, 13);
             this.label15.TabIndex = 155;
             this.label15.Text = "Oven SN:";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(67, 374);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(89, 13);
-            this.label14.TabIndex = 154;
-            this.label14.Text = "Additional Specs:";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(85, 347);
+            this.label12.Location = new System.Drawing.Point(87, 346);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 13);
             this.label12.TabIndex = 153;
@@ -346,7 +317,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(77, 427);
+            this.label16.Location = new System.Drawing.Point(80, 397);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(79, 13);
             this.label16.TabIndex = 163;
@@ -354,15 +325,15 @@
             // 
             // hoursRequiredTimeTextBox
             // 
-            this.hoursRequiredTimeTextBox.Location = new System.Drawing.Point(159, 423);
+            this.hoursRequiredTimeTextBox.Location = new System.Drawing.Point(160, 394);
             this.hoursRequiredTimeTextBox.Name = "hoursRequiredTimeTextBox";
-            this.hoursRequiredTimeTextBox.Size = new System.Drawing.Size(42, 20);
+            this.hoursRequiredTimeTextBox.Size = new System.Drawing.Size(64, 20);
             this.hoursRequiredTimeTextBox.TabIndex = 165;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(40, 455);
+            this.label9.Location = new System.Drawing.Point(43, 425);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 13);
             this.label9.TabIndex = 166;
@@ -370,15 +341,15 @@
             // 
             // requiredTemperatureTextBox
             // 
-            this.requiredTemperatureTextBox.Location = new System.Drawing.Point(161, 451);
+            this.requiredTemperatureTextBox.Location = new System.Drawing.Point(162, 422);
             this.requiredTemperatureTextBox.Name = "requiredTemperatureTextBox";
-            this.requiredTemperatureTextBox.Size = new System.Drawing.Size(42, 20);
+            this.requiredTemperatureTextBox.Size = new System.Drawing.Size(62, 20);
             this.requiredTemperatureTextBox.TabIndex = 167;
             // 
             // celciousRadioButton
             // 
             this.celciousRadioButton.AutoSize = true;
-            this.celciousRadioButton.Location = new System.Drawing.Point(268, 453);
+            this.celciousRadioButton.Location = new System.Drawing.Point(290, 424);
             this.celciousRadioButton.Name = "celciousRadioButton";
             this.celciousRadioButton.Size = new System.Drawing.Size(36, 17);
             this.celciousRadioButton.TabIndex = 168;
@@ -389,7 +360,7 @@
             // farenheitRadioButton
             // 
             this.farenheitRadioButton.AutoSize = true;
-            this.farenheitRadioButton.Location = new System.Drawing.Point(306, 453);
+            this.farenheitRadioButton.Location = new System.Drawing.Point(328, 424);
             this.farenheitRadioButton.Name = "farenheitRadioButton";
             this.farenheitRadioButton.Size = new System.Drawing.Size(35, 17);
             this.farenheitRadioButton.TabIndex = 169;
@@ -400,7 +371,7 @@
             // certifiedByComboBox
             // 
             this.certifiedByComboBox.FormattingEnabled = true;
-            this.certifiedByComboBox.Location = new System.Drawing.Point(160, 479);
+            this.certifiedByComboBox.Location = new System.Drawing.Point(161, 450);
             this.certifiedByComboBox.Name = "certifiedByComboBox";
             this.certifiedByComboBox.Size = new System.Drawing.Size(102, 21);
             this.certifiedByComboBox.TabIndex = 171;
@@ -408,7 +379,7 @@
             // label70
             // 
             this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(91, 483);
+            this.label70.Location = new System.Drawing.Point(96, 453);
             this.label70.Name = "label70";
             this.label70.Size = new System.Drawing.Size(63, 13);
             this.label70.TabIndex = 170;
@@ -416,7 +387,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(278, 654);
+            this.submitButton.Location = new System.Drawing.Point(277, 477);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 174;
@@ -424,43 +395,19 @@
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
-            // printCertButton
+            // printButton
             // 
-            this.printCertButton.Location = new System.Drawing.Point(189, 654);
-            this.printCertButton.Name = "printCertButton";
-            this.printCertButton.Size = new System.Drawing.Size(75, 23);
-            this.printCertButton.TabIndex = 173;
-            this.printCertButton.Text = "Print";
-            this.printCertButton.UseVisualStyleBackColor = true;
-            // 
-            // notesTextBox
-            // 
-            this.notesTextBox.Location = new System.Drawing.Point(83, 506);
-            this.notesTextBox.Multiline = true;
-            this.notesTextBox.Name = "notesTextBox";
-            this.notesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.notesTextBox.Size = new System.Drawing.Size(468, 139);
-            this.notesTextBox.TabIndex = 172;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(433, 205);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(56, 20);
-            this.textBox1.TabIndex = 176;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(363, 209);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 13);
-            this.label17.TabIndex = 175;
-            this.label17.Text = "Lot Number:";
+            this.printButton.Location = new System.Drawing.Point(188, 477);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(75, 23);
+            this.printButton.TabIndex = 173;
+            this.printButton.Text = "Print";
+            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.printCertButton_Click);
             // 
             // plusMinTemperatureTextBox
             // 
-            this.plusMinTemperatureTextBox.Location = new System.Drawing.Point(220, 451);
+            this.plusMinTemperatureTextBox.Location = new System.Drawing.Point(243, 422);
             this.plusMinTemperatureTextBox.Name = "plusMinTemperatureTextBox";
             this.plusMinTemperatureTextBox.Size = new System.Drawing.Size(42, 20);
             this.plusMinTemperatureTextBox.TabIndex = 177;
@@ -468,7 +415,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(205, 455);
+            this.label18.Location = new System.Drawing.Point(227, 426);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(13, 13);
             this.label18.TabIndex = 178;
@@ -477,7 +424,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(204, 427);
+            this.label19.Location = new System.Drawing.Point(230, 398);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(33, 13);
             this.label19.TabIndex = 179;
@@ -486,7 +433,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(285, 427);
+            this.label20.Location = new System.Drawing.Point(333, 398);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(43, 13);
             this.label20.TabIndex = 181;
@@ -494,26 +441,41 @@
             // 
             // minutesRequiredTimeTextBox
             // 
-            this.minutesRequiredTimeTextBox.Location = new System.Drawing.Point(240, 423);
+            this.minutesRequiredTimeTextBox.Location = new System.Drawing.Point(266, 394);
             this.minutesRequiredTimeTextBox.Name = "minutesRequiredTimeTextBox";
-            this.minutesRequiredTimeTextBox.Size = new System.Drawing.Size(42, 20);
+            this.minutesRequiredTimeTextBox.Size = new System.Drawing.Size(61, 20);
             this.minutesRequiredTimeTextBox.TabIndex = 180;
+            // 
+            // opNumberTextBox
+            // 
+            this.opNumberTextBox.Location = new System.Drawing.Point(433, 201);
+            this.opNumberTextBox.Name = "opNumberTextBox";
+            this.opNumberTextBox.Size = new System.Drawing.Size(56, 20);
+            this.opNumberTextBox.TabIndex = 183;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(363, 205);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(64, 13);
+            this.label14.TabIndex = 182;
+            this.label14.Text = "Op Number:";
             // 
             // StressRelieveCert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 700);
+            this.ClientSize = new System.Drawing.Size(634, 523);
+            this.Controls.Add(this.opNumberTextBox);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.minutesRequiredTimeTextBox);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.plusMinTemperatureTextBox);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.submitButton);
-            this.Controls.Add(this.printCertButton);
-            this.Controls.Add(this.notesTextBox);
+            this.Controls.Add(this.printButton);
             this.Controls.Add(this.certifiedByComboBox);
             this.Controls.Add(this.label70);
             this.Controls.Add(this.farenheitRadioButton);
@@ -522,12 +484,9 @@
             this.Controls.Add(this.requiredTemperatureTextBox);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.ovenSNComboBox);
-            this.Controls.Add(this.additionalSpecRevComboBox);
             this.Controls.Add(this.specRevComboBox);
-            this.Controls.Add(this.additionalSpecsComboBox);
             this.Controls.Add(this.specificationComboBox);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.autoFillButton);
             this.Controls.Add(this.label68);
@@ -542,7 +501,7 @@
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.jobNumberTextBox);
-            this.Controls.Add(this.processNumberTextBox);
+            this.Controls.Add(this.certNumberTextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -577,7 +536,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox jobNumberTextBox;
-        private System.Windows.Forms.TextBox processNumberTextBox;
+        private System.Windows.Forms.TextBox certNumberTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -587,12 +546,9 @@
         private System.Windows.Forms.TextBox partDescriptionTextBox;
         private System.Windows.Forms.TextBox customerTextBox;
         private System.Windows.Forms.ComboBox ovenSNComboBox;
-        private System.Windows.Forms.ComboBox additionalSpecRevComboBox;
         private System.Windows.Forms.ComboBox specRevComboBox;
-        private System.Windows.Forms.ComboBox additionalSpecsComboBox;
         private System.Windows.Forms.ComboBox specificationComboBox;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox hoursRequiredTimeTextBox;
@@ -603,14 +559,13 @@
         private System.Windows.Forms.ComboBox certifiedByComboBox;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Button submitButton;
-        private System.Windows.Forms.Button printCertButton;
-        private System.Windows.Forms.TextBox notesTextBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button printButton;
         private System.Windows.Forms.TextBox plusMinTemperatureTextBox;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox minutesRequiredTimeTextBox;
+        private System.Windows.Forms.TextBox opNumberTextBox;
+        private System.Windows.Forms.Label label14;
     }
 }

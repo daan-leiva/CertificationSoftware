@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ATICertViewer
 {
-    public partial class MainForm : Form
+    public partial class MainWindow : Form
     {
         private string userName;
         private bool shotpeenRead;
@@ -23,7 +23,7 @@ namespace ATICertViewer
         private bool edmWrite;
         private bool stressRelieveWrite;
 
-        public MainForm(string _userName, bool _shotpeenRead, bool _magRead, bool _edmRead, bool _stressRelieveRead, bool _admin, bool _shotpeenWrite, bool _magWrite, bool _edmWrite, bool _stressRelieveWrite)
+        public MainWindow(string _userName, bool _shotpeenRead, bool _magRead, bool _edmRead, bool _stressRelieveRead, bool _admin, bool _shotpeenWrite, bool _magWrite, bool _edmWrite, bool _stressRelieveWrite)
         {
             InitializeComponent();
 
@@ -60,9 +60,9 @@ namespace ATICertViewer
             if (magRead)
             {
                 this.Hide();
-                Form shotPeenform = new MagListViewer(admin, userName, magWrite);
-                shotPeenform.FormClosed += (s, args) => this.Close();
-                shotPeenform.Show();
+                Form magMainWindow = new MagForms(admin, userName, magWrite);
+                magMainWindow.FormClosed += (s, args) => this.Close();
+                magMainWindow.Show();
             }
             else
             {
@@ -75,9 +75,9 @@ namespace ATICertViewer
             if (edmRead)
             {
                 this.Hide();
-                Form shotPeenform = new EDMListViewer(admin, userName, edmWrite);
-                shotPeenform.FormClosed += (s, args) => this.Close();
-                shotPeenform.Show();
+                Form edmCert = new EDMListViewer(admin, userName, edmWrite);
+                edmCert.FormClosed += (s, args) => this.Close();
+                edmCert.Show();
             }
             else
             {
@@ -90,9 +90,9 @@ namespace ATICertViewer
             if (stressRelieveRead)
             {
                 this.Hide();
-                Form shotPeenform = new StressRelieveListViewer(admin, userName, stressRelieveWrite);
-                shotPeenform.FormClosed += (s, args) => this.Close();
-                shotPeenform.Show();
+                Form stressCert = new StressRelieveListViewer(admin, userName, stressRelieveWrite);
+                stressCert.FormClosed += (s, args) => this.Close();
+                stressCert.Show();
             }
             else
             {
