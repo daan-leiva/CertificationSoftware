@@ -28,9 +28,9 @@ namespace ATICertViewer
         private void taqButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form d2060Cert = new D2060RListViewer(admin, userName, canWrite);
-            d2060Cert.FormClosed += (s, args) => this.Close();
-            d2060Cert.Show();
+            Form taqCert = new TAQ525ListViewer(admin, userName, canWrite);
+            taqCert.FormClosed += (s, args) => this.Close();
+            taqCert.Show();
         }
 
         private void magCertButton_Click(object sender, EventArgs e)
@@ -44,9 +44,9 @@ namespace ATICertViewer
         private void d2060Button_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form taqCert = new TAQ525ListViewer(admin, userName, canWrite);
-            taqCert.FormClosed += (s, args) => this.Close();
-            taqCert.Show();
+            Form d2060Cert = new D2060RListViewer(admin, userName, canWrite);
+            d2060Cert.FormClosed += (s, args) => this.Close();
+            d2060Cert.Show();
         }
     }
 }

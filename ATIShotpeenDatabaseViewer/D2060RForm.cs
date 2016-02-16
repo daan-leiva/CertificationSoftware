@@ -75,7 +75,6 @@ namespace ATICertViewer
             }
         }
 
-        // TO_DO
         private void UpdateForm()
         {
             using (OdbcConnection conn = new OdbcConnection(connectionString))
@@ -97,22 +96,23 @@ namespace ATICertViewer
 
                     // Fill out corresponding form values
                     dateTimePicker.Value = reader.IsDBNull(0) ? DateTime.MinValue : Convert.ToDateTime(reader.GetString(0));
-
-
-                    jobNumberTextBox.Text = reader.IsDBNull(0) ? "" : reader.GetString(0);
-                    partDescriptionTextBox.Text = reader.IsDBNull(1) ? "" : reader.GetString(1);
-                    revisionTextBox.Text = reader.IsDBNull(2) ? "" : reader.GetString(2);
-                    partDescriptionTextBox.Text = reader.IsDBNull(3) ? "" : reader.GetString(3);
-                    customerTextBox.Text = reader.IsDBNull(4) ? "" : reader.GetString(4);
-                    lotNumberTextBox.Text = reader.IsDBNull(5) ? "" : reader.GetString(5);
-                    operationNoTextBox.Text = reader.IsDBNull(6) ? "" : reader.GetString(6);
-                    dateTimePicker.Value = reader.IsDBNull(7) ? DateTime.MinValue : Convert.ToDateTime(reader.GetString(7));
-                    edmProgramTextBox.Text = reader.IsDBNull(8) ? "" : reader.GetString(8);
-                    quantityProcesseTextBox.Text = reader.IsDBNull(9) ? "" : reader.GetString(9);
-                    performedNotesTextBox.Text = reader.IsDBNull(10) ? "" : reader.GetString(10);
-                    TrySelectDropdownItem(specificationComboBox, reader.IsDBNull(11) ? "" : reader.GetString(11));
-                    TrySelectDropdownItem(specificationRevComboBox, reader.IsDBNull(12) ? "" : reader.GetString(12));
-                    certifiedByTextBox.Text = reader.IsDBNull(13) ? "" : reader.GetString(13);
+                    internalShortsTextBox.Text = reader.IsDBNull(1) ? "" : reader.GetString(1);
+                    particleConcTextBox.Text = reader.IsDBNull(2) ? "" : reader.GetString(2);
+                    blacklightMinTextBox.Text = reader.IsDBNull(3) ? "" : reader.GetString(3);
+                    availLightMinTextBox.Text = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                    uvAmbientLightTextBox.Text = reader.IsDBNull(5) ? "" : reader.GetString(5);
+                    as500TextBox.Text = reader.IsDBNull(6) ? "" : reader.GetString(6);
+                    as1000TextBox.Text = reader.IsDBNull(7) ? "" : reader.GetString(7);
+                    as1500TextBox.Text = reader.IsDBNull(8) ? "" : reader.GetString(8);
+                    as2500TextBox.Text = reader.IsDBNull(9) ? "" : reader.GetString(9);
+                    as3500TextBox.Text = reader.IsDBNull(10) ? "" : reader.GetString(10);
+                    as5282QQITextBox.Text = reader.IsDBNull(11) ? "" : reader.GetString(11);
+                    bathComparisonTextBox.Text = reader.IsDBNull(12) ? "" : reader.GetString(12);
+                    commentsTextBox.Text = reader.IsDBNull(13) ? "" : reader.GetString(13);
+                    inspectorTextBox.Text = reader.IsDBNull(14) ? "" : reader.GetString(14);
+                    astm1400TextBox.Text = reader.IsDBNull(15) ? "" : reader.GetString(15);
+                    astm2500TextBox.Text = reader.IsDBNull(16) ? "" : reader.GetString(16);
+                    astm3400TextBox.Text = reader.IsDBNull(17) ? "" : reader.GetString(17);
                 }
                 catch (Exception ex)
                 {
@@ -121,13 +121,16 @@ namespace ATICertViewer
             }
         }
 
-        // TO_DO
         private void D2060RForm_Load(object sender, EventArgs e)
         {
+            if (!newForm) // update form with current data
+                UpdateForm();
 
+            // lock if the form is user can't edit
+            if (!canEdit)
+                LockForm();
         }
 
-        // TO_DO
         // inserts a new row to the Production.dbo.tblJobProcessLog database
         private void SubmitNewRow()
         {
@@ -138,40 +141,47 @@ namespace ATICertViewer
                 conn.Open();
 
                 // specify query
-                string query = "INSERT INTO ATIDelivery.dbo.EDMCerts\n" +
-                                "([cert_num]\n" +
-                                ",[job_num]\n" +
-                                ",[part_num]\n" +
-                                ",[part_rev]\n" +
-                                ",[part_desc]\n" +
-                                ",[customer]\n" +
-                                ",[lot_num]\n" +
-                                ",[op_num]\n" +
-                                ",[date]\n" +
-                                ",[edm_program]\n" +
-                                ",[qty]\n" +
-                                ",[performed]\n" +
-                                ",[specification]\n" +
-                                ",[specificationRev]\n" +
-                                ",[certifier]\n" +
+                string query = "INSERT INTO ATIDelivery.dbo.MagD2060RProcessControlLog\n" +
+                                "([ID]\n" +
+                                ",[Date]\n" +
+                                ",[Internal Shorts]\n" +
+                                ",[Particle Conc 1-4 ml]\n" +
+                                ",[Blacklight Min 1000uw@ 15]\n" +
+                                ",[Avail Light Min 100FC]\n" +
+                                ",[UV Ambient Light / Ambient White Light Max 2 FC]\n" +
+                                ",[500 (3 holes)]\n" +
+                                ",[1000 (5 holes)]\n" +
+                                ",[1500 (6 holes)]\n" +
+                                ",[2500 (7 holes)]\n" +
+                                ",[3500 (9 holes)]\n" +
+                                ",[AS5282 QQI @ 1000 amps (5 holes)]\n" +
+                                ",[Bath Comparison]\n" +
+                                ",[Comments]\n" +
+                                ",[Inspector]\n" +
+                                ",[ASTM 1400]\n" +
+                                ",[ASTM 2500]\n" +
+                                ",[ASTM 3400]\n" +
                                 ",[owner])\n" +
                                 "VALUES (\n" +
-                                "'" + certNumberTextBox.Text + "',\n" +
-                                "'" + jobNumberTextBox.Text + "',\n" +
-                                "'" + partNumberTextBox.Text + "',\n" +
-                                "'" + revisionTextBox.Text + "',\n" +
-                                "'" + partDescriptionTextBox.Text + "',\n" +
-                                "'" + customerTextBox.Text + "',\n" +
-                                "'" + lotNumberTextBox.Text + "',\n" +
-                                "'" + operationNoTextBox.Text + "',\n" +
+                                "" + ID + ",\n" +
                                 "'" + dateTimePicker.Value.ToShortDateString() + "',\n" +
-                                "'" + edmProgramTextBox.Text + "',\n" +
-                                "'" + quantityProcesseTextBox.Text + "',\n" +
-                                "'" + performedNotesTextBox.Text + "',\n" +
-                                "'" + specificationComboBox.SelectedItem.ToString() + "',\n" +
-                                "'" + specificationRevComboBox.SelectedItem.ToString() + "',\n" +
-                                "'" + certifiedByTextBox.Text + "',\n" +
-                                "'" + userName + "'\n" +
+                                "'" + internalShortsTextBox.Text + "',\n" +
+                                "'" + particleConcTextBox.Text + "',\n" +
+                                "'" + blacklightMinTextBox.Text + "',\n" +
+                                "'" + availLight.Text + "',\n" +
+                                "'" + uvAmbientLightTextBox.Text + "',\n" +
+                                "'" + as500TextBox.Text + "',\n" +
+                                "'" + as1000TextBox.Text + "',\n" +
+                                "'" + as1500TextBox.Text + "',\n" +
+                                "'" + as2500TextBox.Text + "',\n" +
+                                "'" + as3500TextBox.Text + "',\n" +
+                                "'" + as5282QQITextBox.Text + "',\n" +
+                                "'" + bathComparisonTextBox.Text + "',\n" +
+                                "'" + commentsTextBox.Text + "',\n" +
+                                "'" + astm1400TextBox.Text + "',\n" +
+                                "'" + astm2500TextBox.Text + "',\n" +
+                                "'" + astm3400TextBox.Text + "',\n" +
+                                "'" + userName + "',\n" +
                                 ");";
 
                 OdbcCommand com = new OdbcCommand(query, conn);
@@ -196,22 +206,27 @@ namespace ATICertViewer
                 conn.Open();
 
                 // specify query
-                string query = "UPDATE ATIDelivery.dbo.tblJobProcessLog\n" +
-                                "SET [job_num] = '" + jobNumberTextBox.Text + "',\n" +
-                                "[part_num]= '" + partNumberTextBox.Text + "',\n" +
-                                "[part_rev] = '" + revisionTextBox.Text + "',\n" +
-                                "[part_desc] = '" + partDescriptionTextBox.Text + "',\n" +
-                                "[customer] = '" + customerTextBox.Text + "',\n" +
-                                "[lot_num] = '" + lotNumberTextBox.Text + "',\n" +
-                                "[op_num] = '" + operationNoTextBox.Text + ",\n" +
-                                "[date] = '" + dateTimePicker.Value.ToShortDateString() + "',\n" +
-                                "[edm_program] = '" + edmProgramTextBox.Text + "',\n" +
-                                "[qty] = '" + quantityProcesseTextBox.Text + "',\n" +
-                                "[performed] = '" + performedNotesTextBox.Text + "',\n" +
-                                "[specification] = '" + specificationComboBox.SelectedItem.ToString() + "',\n" +
-                                "[specificationRev] = '" + specificationRevComboBox.SelectedItem.ToString() + "',\n" +
-                                "[certifier] = '" + certifiedByTextBox.Text + "',\n" +
-                                "WHERE cert_num = '" + certNumberTextBox.Text + "';";
+                string query = "UPDATE ATIDelivery.dbo.MagD2060RProcessControlLog\n" +
+                                "SET [Date] = '" + dateTimePicker.Value.ToShortDateString() + "'\n" +
+                                ",[Internal Shorts] = '" + internalShortsTextBox.Text + "'\n" +
+                                ",[Particle Conc 1-4 ml] = '" + particleConcTextBox.Text + "'\n" +
+                                ",[Blacklight Min 1000uw@ 15] = '" + blacklightMinTextBox.Text + "'\n" +
+                                ",[Avail Light Min 100FC] = '" + availLightMinTextBox.Text + "'\n" +
+                                ",[UV Ambient Light / Ambient White Light Max 2 FC] = '" + uvAmbientLightTextBox.Text + "'\n" +
+                                ",[500 (3 holes)] = '" + as500TextBox.Text + "'\n" +
+                                ",[1000 (5 holes)] = '" + as1000TextBox.Text + "'\n" +
+                                ",[1500 (6 holes)] = '" + as1500TextBox.Text + "'\n" +
+                                ",[2500 (7 holes)] = '" + as2500TextBox.Text + "'\n" +
+                                ",[3500 (9 holes)] = '" + as3500TextBox.Text + "'\n" +
+                                ",[AS5282 QQI @ 1000 amps (5 holes)] = '" + as5282QQITextBox.Text + "'\n" +
+                                ",[Bath Comparison] = '" + bathComparisonTextBox.Text + "'\n" +
+                                ",[Comments] = '" + commentsTextBox.Text + "'\n" +
+                                ",[Inspector] = '" + inspectorTextBox.Text + "'\n" +
+                                ",[ASTM 1400] = '" + astm1400TextBox.Text + "'\n" +
+                                ",[ASTM 2500] = '" + astm2500TextBox.Text + "'\n" +
+                                ",[ASTM 3400] = '" + astm3400TextBox.Text + "'\n" +
+                                ",[owner] = '" + userName + "'\n" +
+                                "WHERE ID = " + ID + ";";
 
                 OdbcCommand com = new OdbcCommand(query, conn);
 
@@ -224,7 +239,6 @@ namespace ATICertViewer
             }
         }
 
-        // TO_DO
         private int GetNextProcessNumber()
         {
             using (OdbcConnection conn = new OdbcConnection(connectionString))
@@ -241,8 +255,8 @@ namespace ATICertViewer
                 }
 
                 // query to run
-                string query = "SELECT MAX(cert_num) + 1\n" +
-                                "FROM ATIDelivery.dbo.EDMCerts;";
+                string query = "SELECT MAX(ID) + 1\n" +
+                                "FROM ATIDelivery.dbo.MagD2060RProcessControlLog;";
 
                 // execute query
                 OdbcCommand com = new OdbcCommand(query, conn);
@@ -253,12 +267,12 @@ namespace ATICertViewer
                 if (reader.Read())
                 {
                     // check for null (means it's the first record being added)
-                    return reader.IsDBNull(0) ? "1000" : reader.GetString(0);
+                    return reader.IsDBNull(0) ? 999 : reader.GetInt32(0);
                 }
                 else
                 {
                     MessageBox.Show("DB error. Contact IT Suppor", "DB ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return "0000";
+                    return 999;
                 }
             }
         }
@@ -269,21 +283,12 @@ namespace ATICertViewer
             int dummyTest;
 
             // check numeric values
-            bool numberFormattingOK = int.TryParse(quantityProcesseTextBox.Text, out dummyTest);
-
-            // check dropdowns
-            bool comboBoxesFormattingOK = specificationComboBox.SelectedItem != null
-                                        && specificationRevComboBox.SelectedItem != null;
+            bool numberFormattingOK = true;
 
             // check textboxes
-            bool textBoxesFormattingOK = jobNumberTextBox.Text.Length > 0
-                                        && revisionTextBox.Text.Length > 0
-                                        && partNumberTextBox.Text.Length > 0
-                                        && operationNoTextBox.Text.Length > 0
-                                        && edmProgramTextBox.Text.Length > 0
-                                        && certifiedByTextBox.Text.Length > 0;
+            bool textBoxesFormattingOK = true;
 
-            return numberFormattingOK && comboBoxesFormattingOK && textBoxesFormattingOK;
+            return numberFormattingOK && textBoxesFormattingOK;
         }
 
         private void LockForm()

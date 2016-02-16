@@ -45,7 +45,7 @@
             this.viewEditButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.magD_2060RProcessControlLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.MagD_2060RProcessControlLogTableAdapter();
+            this.magD2060RProcessControlLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.MagD2060RProcessControlLogTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magD2060RProcessControlLogBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).BeginInit();
@@ -137,7 +137,7 @@
             // 
             // magD2060RProcessControlLogBindingSource
             // 
-            this.magD2060RProcessControlLogBindingSource.DataMember = "MagD-2060RProcessControlLog";
+            this.magD2060RProcessControlLogBindingSource.DataMember = "MagD2060RProcessControlLog";
             this.magD2060RProcessControlLogBindingSource.DataSource = this.aTIDeliveryDataSet;
             // 
             // aTIDeliveryDataSet
@@ -197,7 +197,7 @@
             // 
             // magD_2060RProcessControlLogTableAdapter
             // 
-            this.magD_2060RProcessControlLogTableAdapter.ClearBeforeFill = true;
+            this.magD2060RProcessControlLogTableAdapter.ClearBeforeFill = true;
             // 
             // D2060RListViewer
             // 
@@ -231,7 +231,7 @@
         private System.Windows.Forms.Label label2;
         private ATIDeliveryDataSet aTIDeliveryDataSet;
         private System.Windows.Forms.BindingSource magD2060RProcessControlLogBindingSource;
-        private ATIDeliveryDataSetTableAdapters.MagD_2060RProcessControlLogTableAdapter magD_2060RProcessControlLogTableAdapter;
+        private ATIDeliveryDataSetTableAdapters.MagD2060RProcessControlLogTableAdapter magD2060RProcessControlLogTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn internalShortsDataGridViewTextBoxColumn;

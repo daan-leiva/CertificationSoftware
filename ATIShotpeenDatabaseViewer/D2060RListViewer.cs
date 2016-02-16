@@ -29,9 +29,16 @@ namespace ATICertViewer
 
         private void D2060RListViewer_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'aTIDeliveryDataSet._MagD_2060RProcessControlLog' table. You can move, or remove it, as needed.
-            this.magD_2060RProcessControlLogTableAdapter.Fill(this.aTIDeliveryDataSet._MagD_2060RProcessControlLog);
-            dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Descending);
+            try
+            {
+                // TODO: This line of code loads data into the 'aTIDeliveryDataSet._MagD_2060RProcessControlLog' table. You can move, or remove it, as needed.
+                this.magD2060RProcessControlLogTableAdapter.Fill(this.aTIDeliveryDataSet.MagD2060RProcessControlLog);
+                dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Descending);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             // check if admin or writable account
             if (!(isAdmin || canWrite))
@@ -83,7 +90,7 @@ namespace ATICertViewer
         private void refreshButton_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'aTIDeliveryDataSet._MagD_2060RProcessControlLog' table. You can move, or remove it, as needed.
-            this.magD_2060RProcessControlLogTableAdapter.Fill(this.aTIDeliveryDataSet._MagD_2060RProcessControlLog);
+            this.magD2060RProcessControlLogTableAdapter.Fill(this.aTIDeliveryDataSet.MagD2060RProcessControlLog);
             dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Descending);
         }
 

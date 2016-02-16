@@ -96,7 +96,7 @@ namespace ATICertViewer
                 }
 
                 // get new process number
-                string newProcessNumber = GetNextProcessNumber();
+                string newProcessNumber = GetNextProcessNumber().ToString();
 
                 // assign it to the document
                 certNumberTextBox.Text = newProcessNumber;
@@ -340,7 +340,7 @@ namespace ATICertViewer
             }
         }
 
-        private string GetNextProcessNumber()
+        private int GetNextProcessNumber()
         {
             using (OdbcConnection conn = new OdbcConnection(connectionString))
             {
@@ -368,12 +368,12 @@ namespace ATICertViewer
                 if (reader.Read())
                 {
                     // check for null (means it's the first record being added)
-                    return reader.IsDBNull(0) ? "1000" : reader.GetString(0);
+                    return reader.IsDBNull(0) ? 1000 : reader.GetInt32(0);
                 }
                 else
                 {
                     MessageBox.Show("DB error. Contact IT Suppor", "DB ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return "0000";
+                    return -999;
                 }
             }
         }

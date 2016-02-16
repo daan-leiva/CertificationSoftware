@@ -223,6 +223,9 @@
     <EmbeddedResource Include="TAQ525Form.resx">
       <DependentUpon>TAQ525Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TAQ525ListViewer.resx">
+      <DependentUpon>TAQ525ListViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerticalLabel.resx">
       <DependentUpon>VerticalLabel.cs</DependentUpon>
     </EmbeddedResource>
