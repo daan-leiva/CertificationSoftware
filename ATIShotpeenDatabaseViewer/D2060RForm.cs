@@ -129,6 +129,27 @@ namespace ATICertViewer
             // lock if the form is user can't edit
             if (!canEdit)
                 LockForm();
+
+            // add event handlers for error providers
+            // numeric - int
+            blacklightMinTextBox.TextChanged += FormatCheckInteger;
+            availLightMinTextBox.TextChanged += FormatCheckInteger;
+            as500TextBox.TextChanged += FormatCheckInteger;
+            as1000TextBox.TextChanged += FormatCheckInteger;
+            as1500TextBox.TextChanged += FormatCheckInteger;
+            as2500TextBox.TextChanged += FormatCheckInteger;
+            as3500TextBox.TextChanged += FormatCheckInteger;
+            astm1400TextBox.TextChanged += FormatCheckInteger;
+            astm2500TextBox.TextChanged += FormatCheckInteger;
+            astm3400TextBox.TextChanged += FormatCheckInteger;
+            // numeric - doube
+            uvAmbientLightTextBox.TextChanged += FormatCheckDouble;
+            particleConcTextBox.TextChanged += FormatCheckDouble;
+            // textboxes
+            internalShortsTextBox.TextChanged += FormatCheckEmptyTextBox;
+            as5282QQITextBox.TextChanged += FormatCheckEmptyTextBox;
+            bathComparisonTextBox.TextChanged += FormatCheckEmptyTextBox;
+            inspectorTextBox.TextChanged += FormatCheckEmptyTextBox;
         }
 
         // inserts a new row to the Production.dbo.tblJobProcessLog database
@@ -277,16 +298,69 @@ namespace ATICertViewer
             }
         }
 
-        // TO_DO
         private bool CheckFormatting()
         {
-            int dummyTest;
+            int dummyInt;
+            double dummyDouble;
 
             // check numeric values
-            bool numberFormattingOK = true;
+            // int
+            bool numberFormattingOK = int.TryParse(blacklightMinTextBox.Text, out dummyInt)
+                                        && int.TryParse(availLightMinTextBox.Text, out dummyInt)
+                                        && int.TryParse(as500TextBox.Text, out dummyInt)
+                                        && int.TryParse(as1000TextBox.Text, out dummyInt)
+                                        && int.TryParse(as1500TextBox.Text, out dummyInt)
+                                        && int.TryParse(as2500TextBox.Text, out dummyInt)
+                                        && int.TryParse(as3500TextBox.Text, out dummyInt)
+                                        && int.TryParse(astm1400TextBox.Text, out dummyInt)
+                                        && int.TryParse(astm2500TextBox.Text, out dummyInt)
+                                        && int.TryParse(astm3400TextBox.Text, out dummyInt)
+                //double
+                                        && double.TryParse(uvAmbientLightTextBox.Text, out dummyDouble)
+                                        && double.TryParse(particleConcTextBox.Text, out dummyDouble);
 
             // check textboxes
-            bool textBoxesFormattingOK = true;
+            bool textBoxesFormattingOK = internalShortsTextBox.Text.Length > 0
+                                            && as5282QQITextBox.Text.Length > 0
+                                            && bathComparisonTextBox.Text.Length > 0
+                                            && inspectorTextBox.Text.Length > 0;
+
+            // error provider checks
+            // numeric - int
+            if (!int.TryParse(blacklightMinTextBox.Text, out dummyInt))
+                errorProvider1.SetError(blacklightMinTextBox, "Numeric Integer Required");
+            if (!int.TryParse(availLightMinTextBox.Text, out dummyInt))
+                errorProvider1.SetError(availLightMinTextBox, "Numeric Integer Required");
+            if (!int.TryParse(as500TextBox.Text, out dummyInt))
+                errorProvider1.SetError(as500TextBox, "Numeric Integer Required");
+            if (!int.TryParse(as1000TextBox.Text, out dummyInt))
+                errorProvider1.SetError(as1000TextBox, "Numeric Integer Required");
+            if (!int.TryParse(as1500TextBox.Text, out dummyInt))
+                errorProvider1.SetError(as1500TextBox, "Numeric Integer Required");
+            if (!int.TryParse(as2500TextBox.Text, out dummyInt))
+                errorProvider1.SetError(as2500TextBox, "Numeric Integer Required");
+            if (!int.TryParse(as3500TextBox.Text, out dummyInt))
+                errorProvider1.SetError(as3500TextBox, "Numeric Integer Required");
+            if (!int.TryParse(astm1400TextBox.Text, out dummyInt))
+                errorProvider1.SetError(astm1400TextBox, "Numeric Integer Required");
+            if (!int.TryParse(astm2500TextBox.Text, out dummyInt))
+                errorProvider1.SetError(astm2500TextBox, "Numeric Integer Required");
+            if (!int.TryParse(astm3400TextBox.Text, out dummyInt))
+                errorProvider1.SetError(astm3400TextBox, "Numeric Integer Required");
+            // numeric - double
+            if (!double.TryParse(uvAmbientLightTextBox.Text, out dummyDouble))
+                errorProvider1.SetError(uvAmbientLightTextBox, "Numeric Float Point Value Required");
+            if (!double.TryParse(particleConcTextBox.Text, out dummyDouble))
+                errorProvider1.SetError(particleConcTextBox, "Numeric Float Point Value Required");
+            // textboxes
+            if (internalShortsTextBox.Text.Length == 0)
+                errorProvider1.SetError(internalShortsTextBox, "Required Field");
+            if (as5282QQITextBox.Text.Length == 0)
+                errorProvider1.SetError(as5282QQITextBox, "Required Field");
+            if (bathComparisonTextBox.Text.Length == 0)
+                errorProvider1.SetError(bathComparisonTextBox, "Required Field");
+            if (inspectorTextBox.Text.Length == 0)
+                errorProvider1.SetError(inspectorTextBox, "Required Field");
 
             return numberFormattingOK && textBoxesFormattingOK;
         }
@@ -308,6 +382,48 @@ namespace ATICertViewer
             }
             if (!(con is Label))
                 con.Enabled = false;
+        }
+
+        private void FormatCheckInteger(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            int dummyOut;
+            if (!int.TryParse(textBox.Text, out dummyOut))
+                errorProvider1.SetError(textBox, "Needs to be a numeric quantity");
+            else
+                errorProvider1.SetError(textBox, "");
+        }
+
+        private void FormatCheckEmptyTextBox(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (!(textBox.Text.Length > 0))
+                errorProvider1.SetError(textBox, "Cannot leave field empty");
+            else
+                errorProvider1.SetError(textBox, "");
+        }
+
+        private void FormatCheckInvalidComboBox(object sender, EventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+
+            if (comboBox.SelectedItem == null)
+                errorProvider1.SetError(comboBox, "Need to select an item");
+            else
+                errorProvider1.SetError(comboBox, "");
+        }
+
+        private void FormatCheckDouble(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            double dummyOut;
+            if (!double.TryParse(textBox.Text, out dummyOut))
+                errorProvider1.SetError(textBox, "Needs to be a numeric quantity");
+            else
+                errorProvider1.SetError(textBox, "");
         }
     }
 }

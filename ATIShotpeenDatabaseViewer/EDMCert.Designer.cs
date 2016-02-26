@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.autoFillButton = new System.Windows.Forms.Button();
             this.label68 = new System.Windows.Forms.Label();
             this.revisionTextBox = new System.Windows.Forms.TextBox();
@@ -62,6 +63,8 @@
             this.submitButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
             this.certifiedByTextBox = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // autoFillButton
@@ -353,6 +356,11 @@
             this.certifiedByTextBox.Size = new System.Drawing.Size(158, 20);
             this.certifiedByTextBox.TabIndex = 190;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            // 
             // EDMCert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,6 +403,7 @@
             this.Name = "EDMCert";
             this.Text = "EDMCert";
             this.Load += new System.EventHandler(this.EDMCert_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,5 +445,6 @@
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button printButton;
         private System.Windows.Forms.TextBox certifiedByTextBox;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

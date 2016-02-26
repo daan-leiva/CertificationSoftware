@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.autoFillButton = new System.Windows.Forms.Button();
             this.label68 = new System.Windows.Forms.Label();
@@ -73,6 +74,8 @@
             this.minutesRequiredTimeTextBox = new System.Windows.Forms.TextBox();
             this.opNumberTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -462,6 +465,11 @@
             this.label14.TabIndex = 182;
             this.label14.Text = "Op Number:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            // 
             // StressRelieveCert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,6 +523,7 @@
             this.Name = "StressRelieveCert";
             this.Text = "Stress Relieve Cert";
             this.Load += new System.EventHandler(this.StressRelieveCert_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,5 +576,6 @@
         private System.Windows.Forms.TextBox minutesRequiredTimeTextBox;
         private System.Windows.Forms.TextBox opNumberTextBox;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

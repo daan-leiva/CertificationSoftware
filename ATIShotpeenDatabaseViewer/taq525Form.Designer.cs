@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TAQ525Form));
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.internalShortsTextBox = new System.Windows.Forms.TextBox();
@@ -52,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.verticalLabel18 = new ATICertViewer.VerticalLabel();
             this.verticalLabel17 = new ATICertViewer.VerticalLabel();
             this.verticalLabel16 = new ATICertViewer.VerticalLabel();
@@ -70,6 +72,7 @@
             this.particleConc = new ATICertViewer.VerticalLabel();
             this.verticalLabel2 = new ATICertViewer.VerticalLabel();
             this.verticalLabel1 = new ATICertViewer.VerticalLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker
@@ -247,6 +250,11 @@
             this.printButton.Text = "Print";
             this.printButton.UseVisualStyleBackColor = true;
             this.printButton.Click += new System.EventHandler(this.printButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
             // 
             // verticalLabel18
             // 
@@ -496,6 +504,7 @@
             this.Name = "TAQ525Form";
             this.Text = "taq525Form";
             this.Load += new System.EventHandler(this.TAQ525Form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -544,6 +553,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button printButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
 
     }
 }

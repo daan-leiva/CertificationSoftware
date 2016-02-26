@@ -22,7 +22,7 @@ namespace ATICertViewer
         public MagCert(bool _canEdit, string _userName)
         {
             InitializeComponent();
-            
+
             newForm = true;
             canEdit = _canEdit;
             userName = _userName;
@@ -121,6 +121,25 @@ namespace ATICertViewer
             // lock if the form is user can't edit
             if (!canEdit)
                 LockForm();
+
+            // load format checks
+            // numeric
+            quantityAcceptedTextBox.TextChanged += FormatCheckInteger;
+            quantityInspectedTextBox.TextChanged += FormatCheckInteger;
+            quantityRejectedTextBox.TextChanged += FormatCheckInteger;
+            // dropdowns
+            specComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            specRevComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            technicianComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            magMachineComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            materialTypeComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            acceptCriteriaComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            acceptCriteriaRevComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            // textboxes
+            jobNumberTextBox.TextAlignChanged += FormatCheckEmptyTextBox;
+            revisionTextBox.TextAlignChanged += FormatCheckEmptyTextBox;
+            partNumberTextBox.TextAlignChanged += FormatCheckEmptyTextBox;
+            customerTextBox.TextAlignChanged += FormatCheckEmptyTextBox;
         }
 
         private void UpdateForm()
@@ -442,8 +461,7 @@ namespace ATICertViewer
             int dummyTest;
 
             // check numeric values
-            bool numberFormattignOk = int.TryParse(lotNumberTextBox.Text, out dummyTest) &&
-                                        int.TryParse(quantityInspectedTextBox.Text, out dummyTest) &&
+            bool numberFormattignOk = int.TryParse(quantityInspectedTextBox.Text, out dummyTest) &&
                                         int.TryParse(quantityAcceptedTextBox.Text, out dummyTest) &&
                                         int.TryParse(quantityRejectedTextBox.Text, out dummyTest);
 
@@ -454,13 +472,46 @@ namespace ATICertViewer
                                         acceptCriteriaRevComboBox.SelectedItem != null &&
                                         technicianComboBox.SelectedItem != null &&
                                         magMachineComboBox.SelectedItem != null &&
-                                        rejectionTypeComboBox.SelectedItem != null;
+                                        materialTypeComboBox.SelectedItem != null;
 
             // check textboxes
             bool textBoxesFormattingOk = jobNumberTextBox.Text.Length > 0 &&
-                                            partDescriptionTextBox.Text.Length > 0 &&
                                             revisionTextBox.Text.Length > 0 &&
-                                            partNumberTextBox.Text.Length > 0;
+                                            partNumberTextBox.Text.Length > 0 &&
+                                            customerTextBox.Text.Length > 0;
+
+            // check error provider
+            // numeric
+            if (!int.TryParse(quantityInspectedTextBox.Text, out dummyTest))
+                errorProvider1.SetError(quantityInspectedTextBox, "Numeric value required");
+            if (!int.TryParse(quantityAcceptedTextBox.Text, out dummyTest))
+                errorProvider1.SetError(quantityAcceptedTextBox, "Numeric value required");
+            if (!int.TryParse(quantityRejectedTextBox.Text, out dummyTest))
+                errorProvider1.SetError(quantityRejectedTextBox, "Numeric value required");
+            // dropdowns
+            if (specComboBox.SelectedItem == null)
+                errorProvider1.SetError(specComboBox, "Field Required");
+            if (specRevComboBox.SelectedItem == null)
+                errorProvider1.SetError(specRevComboBox, "Field Required");
+            if (acceptCriteriaComboBox.SelectedItem == null)
+                errorProvider1.SetError(acceptCriteriaComboBox, "Field Required");
+            if (acceptCriteriaRevComboBox.SelectedItem == null)
+                errorProvider1.SetError(acceptCriteriaRevComboBox, "Field Required");
+            if (technicianComboBox.SelectedItem == null)
+                errorProvider1.SetError(technicianComboBox, "Field Required");
+            if (magMachineComboBox.SelectedItem == null)
+                errorProvider1.SetError(magMachineComboBox, "Field Required");
+            if (materialTypeComboBox.SelectedItem == null)
+                errorProvider1.SetError(materialTypeComboBox, "Field Required");
+            // textboxes
+            if (jobNumberTextBox.Text.Length == 0)
+                errorProvider1.SetError(jobNumberTextBox, "Field Required");
+            if (revisionTextBox.Text.Length == 0)
+                errorProvider1.SetError(revisionTextBox, "Field Required");
+            if (partNumberTextBox.Text.Length == 0)
+                errorProvider1.SetError(partNumberTextBox, "Field Required");
+            if (customerTextBox.Text.Length == 0)
+                errorProvider1.SetError(customerTextBox, "Field Required");
 
             return numberFormattignOk && dropDownFormattingOk && textBoxesFormattingOk;
         }
@@ -482,6 +533,48 @@ namespace ATICertViewer
             }
             if (!(con is Label))
                 con.Enabled = false;
+        }
+
+        private void FormatCheckInteger(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            int dummyOut;
+            if (!int.TryParse(textBox.Text, out dummyOut))
+                errorProvider1.SetError(textBox, "Needs to be a numeric quantity");
+            else
+                errorProvider1.SetError(textBox, "");
+        }
+
+        private void FormatCheckEmptyTextBox(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (!(textBox.Text.Length > 0))
+                errorProvider1.SetError(textBox, "Cannot leave field empty");
+            else
+                errorProvider1.SetError(textBox, "");
+        }
+
+        private void FormatCheckInvalidComboBox(object sender, EventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+
+            if (comboBox.SelectedItem == null)
+                errorProvider1.SetError(comboBox, "Need to select an item");
+            else
+                errorProvider1.SetError(comboBox, "");
+        }
+
+        private void FormatCheckDouble(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            double dummyOut;
+            if (!double.TryParse(textBox.Text, out dummyOut))
+                errorProvider1.SetError(textBox, "Needs to be a numeric quantity");
+            else
+                errorProvider1.SetError(textBox, "");
         }
     }
 }

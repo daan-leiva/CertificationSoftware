@@ -24,7 +24,7 @@ namespace ATICertViewer
             newForm = true;
             canEdit = _canEdit;
             userName = _userName;
-            
+
             InitializeComponent();
         }
 
@@ -34,7 +34,7 @@ namespace ATICertViewer
             canEdit = _canEdit;
             processNumberTextBox.Text = process_num;
             userName = _userName;
-            
+
             InitializeComponent();
         }
 
@@ -53,6 +53,51 @@ namespace ATICertViewer
             // lock if the form is user can't edit
             if (!canEdit)
                 LockForm();
+
+            // load format checks
+            // check numeric
+            sieve18PreTextBox.TextChanged += FormatCheckInteger;
+            sieve20PreTextBox.TextChanged += FormatCheckInteger;
+            sieve25PreTextBox.TextChanged += FormatCheckInteger;
+            sieve30PreTextBox.TextChanged += FormatCheckInteger;
+            sieve35PreTextBox.TextChanged += FormatCheckInteger;
+            sieve40PreTextBox.TextChanged += FormatCheckInteger;
+            sieve45PreTextBox.TextChanged += FormatCheckInteger;
+            sieve50PreTextBox.TextChanged += FormatCheckInteger;
+            sieve80PreTextBox.TextChanged += FormatCheckInteger;
+            sieve18PostTextBox.TextChanged += FormatCheckInteger;
+            sieve20PostTextBox.TextChanged += FormatCheckInteger;
+            sieve25PostTextBox.TextChanged += FormatCheckInteger;
+            sieve30PostTextBox.TextChanged += FormatCheckInteger;
+            sieve35PostTextBox.TextChanged += FormatCheckInteger;
+            sieve40PostTextBox.TextChanged += FormatCheckInteger;
+            sieve45PostTextBox.TextChanged += FormatCheckInteger;
+            sieve50PostTextBox.TextChanged += FormatCheckInteger;
+            sieve80PostTextBox.TextChanged += FormatCheckInteger;
+            quantityTextBox.TextChanged += FormatCheckInteger;
+            fractureCountPriorTextBox.TextChanged += FormatCheckInteger;
+            fractureCountPostTextBox.TextChanged += FormatCheckInteger;
+            almen1PostTextBox.TextChanged += FormatCheckInteger;
+            almen1PriorTextBox.TextChanged += FormatCheckInteger;
+            almen2PostTextBox.TextChanged += FormatCheckInteger;
+            almen2PriorTextBox.TextChanged += FormatCheckInteger;
+            // check empty
+            jobNumberTextBox.TextChanged += FormatCheckEmptyTextBox;
+            partNumberTextBox.TextChanged += FormatCheckEmptyTextBox;
+            revisionTextBox.TextChanged += FormatCheckEmptyTextBox;
+            customerTextBox.TextChanged += FormatCheckEmptyTextBox;
+            // check dropdowns
+            specificationComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            specRevComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            shotSizeComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            intensityComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            coverageComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            preCleanComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            toolingCheckComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            coverageMethodComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            sampleSizeComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            machineNumberTextBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            technicianComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
         }
 
         private void ValidateListBoxes(object o, EventArgs e)
@@ -620,32 +665,40 @@ namespace ATICertViewer
         // checks that all of the values are numeric for sieve section and that combo boxes have an item selected
         private bool CheckFormatting()
         {
-            decimal dummyTest;
+            decimal dummyDecimal;
 
             // check numeric values
-            bool numberFormattignOk = decimal.TryParse(sieve18PreTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve20PreTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve25PreTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve30PreTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve35PreTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve40PreTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve45PreTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve50PreTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve80PreTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve18PostTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve20PostTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve25PostTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve30PostTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve35PostTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve40PostTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve45PostTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve50PostTextBox.Text, out dummyTest)
-                && decimal.TryParse(sieve80PostTextBox.Text, out dummyTest);
+            bool numberFormattignOk = decimal.TryParse(sieve18PreTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve20PreTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve25PreTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve30PreTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve35PreTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve40PreTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve45PreTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve50PreTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve80PreTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve18PostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve20PostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve25PostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve30PostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve35PostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve40PostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve45PostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve50PostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(sieve80PostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(fractureCountPriorTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(fractureCountPostTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(almen1PriorTextBox.Text, out dummyDecimal)
+                && decimal.TryParse(almen1PostTextBox.Text, out dummyDecimal)
+                && (almen2PostTextBox.Text.Length > 0 ? decimal.TryParse(almen2PostTextBox.Text, out dummyDecimal) : true) // field is not required, only check when content is available
+                && (almen2PriorTextBox.Text.Length > 0 ? decimal.TryParse(almen2PriorTextBox.Text, out dummyDecimal) : true) // field is not required, only check when content is available;
+                && decimal.TryParse(quantityTextBox.Text, out dummyDecimal);
 
 
             // check dropdowns
             bool dropDownFormattingOk = specificationComboBox.SelectedItem != null
                                      && specRevComboBox.SelectedItem != null
+                                     && shotSizeComboBox.SelectedItem != null
                                      && intensityComboBox.SelectedItem != null
                                      && coverageComboBox.SelectedItem != null
                                      && preCleanComboBox.SelectedItem != null
@@ -659,12 +712,92 @@ namespace ATICertViewer
             bool textBoxesFormattingOk = jobNumberTextBox.Text.Length > 0
                                         && partNumberTextBox.Text.Length > 0
                                         && revisionTextBox.Text.Length > 0
-                                        && customerTextBox.Text.Length > 0
-                                        && quantityTextBox.Text.Length > 0
-                                        && fractureCountPriorTextBox.Text.Length > 0
-                                        && fractureCountPostTextBox.Text.Length > 0
-                                        && almen1PriorTextBox.Text.Length > 0
-                                        && almen1PostTextBox.Text.Length > 0;
+                                        && customerTextBox.Text.Length > 0;
+
+            // numeric
+            int dummyInt;
+            if (!int.TryParse(sieve18PreTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve18PreTextBox, "Numeric value required");
+            if (!int.TryParse(sieve20PreTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve20PreTextBox, "Numeric value required");
+            if (!int.TryParse(sieve25PreTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve25PreTextBox, "Numeric value required");
+            if (!int.TryParse(sieve30PreTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve30PreTextBox, "Numeric value required");
+            if (!int.TryParse(sieve35PreTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve35PreTextBox, "Numeric value required");
+            if (!int.TryParse(sieve40PreTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve40PreTextBox, "Numeric value required");
+            if (!int.TryParse(sieve45PreTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve45PreTextBox, "Numeric value required");
+            if (!int.TryParse(sieve50PreTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve50PreTextBox, "Numeric value required");
+            if (!int.TryParse(sieve80PreTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve80PreTextBox, "Numeric value required");
+            if (!int.TryParse(sieve18PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve18PostTextBox, "Numeric value required");
+            if (!int.TryParse(sieve20PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve20PostTextBox, "Numeric value required");
+            if (!int.TryParse(sieve25PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve25PostTextBox, "Numeric value required");
+            if (!int.TryParse(sieve30PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve30PostTextBox, "Numeric value required");
+            if (!int.TryParse(sieve35PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve35PostTextBox, "Numeric value required");
+            if (!int.TryParse(sieve40PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve40PostTextBox, "Numeric value required");
+            if (!int.TryParse(sieve45PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve45PostTextBox, "Numeric value required");
+            if (!int.TryParse(sieve50PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve50PostTextBox, "Numeric value required");
+            if (!int.TryParse(sieve80PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(sieve80PostTextBox, "Numeric value required");
+            if (!int.TryParse(fractureCountPriorTextBox.Text, out dummyInt))
+                errorProvider1.SetError(fractureCountPriorTextBox, "Numeric value required");
+            if (!int.TryParse(fractureCountPostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(fractureCountPostTextBox, "Numeric value required");
+            if (!int.TryParse(almen1PriorTextBox.Text, out dummyInt))
+                errorProvider1.SetError(almen1PriorTextBox, "Numeric value required");
+            if (!int.TryParse(almen1PostTextBox.Text, out dummyInt))
+                errorProvider1.SetError(almen1PostTextBox, "Numeric value required");
+            if (almen2PostTextBox.Text.Length > 0 && (!int.TryParse(almen2PostTextBox.Text, out dummyInt))) // field is not required, only check when content is available
+                errorProvider1.SetError(almen2PostTextBox, "Numeric value required");
+            if (almen2PriorTextBox.Text.Length > 0 && (!int.TryParse(almen2PriorTextBox.Text, out dummyInt))) // field is not required, only check when content is available;
+                errorProvider1.SetError(almen2PriorTextBox, "Numeric value required");
+            if (!int.TryParse(quantityTextBox.Text, out dummyInt))
+                errorProvider1.SetError(quantityTextBox, "Numeric value required");
+            // dropdown
+            if (specificationComboBox.SelectedItem == null)
+                errorProvider1.SetError(specificationComboBox, "Selection Required");
+            if (specRevComboBox.SelectedItem == null)
+                errorProvider1.SetError(specRevComboBox, "Selection Required");
+            if (shotSizeComboBox.SelectedItem == null)
+                errorProvider1.SetError(shotSizeComboBox, "Selection Required");
+            if (intensityComboBox.SelectedItem == null)
+                errorProvider1.SetError(intensityComboBox, "Selection Required");
+            if (coverageComboBox.SelectedItem == null)
+                errorProvider1.SetError(coverageComboBox, "Selection Required");
+            if (preCleanComboBox.SelectedItem == null)
+                errorProvider1.SetError(preCleanComboBox, "Selection Required");
+            if (toolingCheckComboBox.SelectedItem == null)
+                errorProvider1.SetError(toolingCheckComboBox, "Selection Required");
+            if (coverageMethodComboBox.SelectedItem == null)
+                errorProvider1.SetError(coverageMethodComboBox, "Selection Required");
+            if (sampleSizeComboBox.SelectedItem == null)
+                errorProvider1.SetError(sampleSizeComboBox, "Selection Required");
+            if (machineNumberTextBox.SelectedItem == null)
+                errorProvider1.SetError(machineNumberTextBox, "Selection Required");
+            if (technicianComboBox.SelectedItem == null)
+                errorProvider1.SetError(technicianComboBox, "Selection Required");
+            // textbox
+            if (jobNumberTextBox.Text.Length == 0)
+                errorProvider1.SetError(jobNumberTextBox, "Text Required");
+            if (partNumberTextBox.Text.Length == 0)
+                errorProvider1.SetError(partNumberTextBox, "Text Required");
+            if (revisionTextBox.Text.Length == 0)
+                errorProvider1.SetError(revisionTextBox, "Text Required");
+            if (customerTextBox.Text.Length == 0)
+                errorProvider1.SetError(customerTextBox, "Text Required");
 
             return numberFormattignOk && dropDownFormattingOk && textBoxesFormattingOk;
 
@@ -741,6 +874,48 @@ namespace ATICertViewer
             }
             if (!(con is Label))
                 con.Enabled = false;
+        }
+
+        private void FormatCheckInteger(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            int dummyOut;
+            if (textBox.Text.Length > 0 && !int.TryParse(textBox.Text, out dummyOut))
+                errorProvider1.SetError(textBox, "Needs to be a numeric quantity");
+            else
+                errorProvider1.SetError(textBox, "");
+        }
+
+        private void FormatCheckEmptyTextBox(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (!(textBox.Text.Length > 0))
+                errorProvider1.SetError(textBox, "Cannot leave field empty");
+            else
+                errorProvider1.SetError(textBox, "");
+        }
+
+        private void FormatCheckInvalidComboBox(object sender, EventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+
+            if (comboBox.SelectedItem == null)
+                errorProvider1.SetError(comboBox, "Need to select an item");
+            else
+                errorProvider1.SetError(comboBox, "");
+        }
+
+        private void FormatCheckDouble(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            double dummyOut;
+            if (!double.TryParse(textBox.Text, out dummyOut))
+                errorProvider1.SetError(textBox, "Needs to be a numeric quantity");
+            else
+                errorProvider1.SetError(textBox, "");
         }
     }
 }

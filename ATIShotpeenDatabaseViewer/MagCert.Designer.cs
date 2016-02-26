@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.autoFillButton = new System.Windows.Forms.Button();
             this.label68 = new System.Windows.Forms.Label();
             this.revisionTextBox = new System.Windows.Forms.TextBox();
@@ -89,6 +90,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.magMachineComboBox = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // autoFillButton
@@ -601,6 +604,11 @@
             this.label26.TabIndex = 194;
             this.label26.Text = "Mag Machine:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            // 
             // MagCert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,6 +678,7 @@
             this.Name = "MagCert";
             this.Text = "MagCert";
             this.Load += new System.EventHandler(this.MagCert_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -738,5 +747,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox magMachineComboBox;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

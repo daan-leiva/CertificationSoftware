@@ -34,6 +34,11 @@
             this.viewEditButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.aTIDeliveryDataSet = new ATICertViewer.ATIDeliveryDataSet();
+            this.label2 = new System.Windows.Forms.Label();
+            this.magListLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.MagListLogTableAdapter();
+            this.magListLogBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.magListLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.certnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partnumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,19 +48,10 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qtyinspectedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inspectorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.magmachineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.magListLogBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.aTIDeliveryDataSet1 = new ATICertViewer.ATIDeliveryDataSet();
-            this.magListLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aTIDeliveryDataSet = new ATICertViewer.ATIDeliveryDataSet();
-            this.label2 = new System.Windows.Forms.Label();
-            this.magListLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.MagListLogTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // exitButton
@@ -115,10 +111,8 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.qtyinspectedDataGridViewTextBoxColumn,
-            this.inspectorDataGridViewTextBoxColumn,
-            this.commentsDataGridViewTextBoxColumn,
-            this.magmachineDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.magListLogBindingSource1;
+            this.inspectorDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.magListLogBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 86);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -128,17 +122,41 @@
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // aTIDeliveryDataSet
+            // 
+            this.aTIDeliveryDataSet.DataSetName = "ATIDeliveryDataSet";
+            this.aTIDeliveryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(449, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Mag Certs";
+            // 
+            // magListLogTableAdapter
+            // 
+            this.magListLogTableAdapter.ClearBeforeFill = true;
+            // 
+            // magListLogBindingSource
+            // 
+            this.magListLogBindingSource.DataMember = "MagListLog";
+            this.magListLogBindingSource.DataSource = this.aTIDeliveryDataSet;
+            // 
             // certnumDataGridViewTextBoxColumn
             // 
             this.certnumDataGridViewTextBoxColumn.DataPropertyName = "cert_num";
-            this.certnumDataGridViewTextBoxColumn.HeaderText = "Cert No";
+            this.certnumDataGridViewTextBoxColumn.HeaderText = "Cert Num";
             this.certnumDataGridViewTextBoxColumn.Name = "certnumDataGridViewTextBoxColumn";
             this.certnumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // partnumDataGridViewTextBoxColumn
             // 
             this.partnumDataGridViewTextBoxColumn.DataPropertyName = "part_num";
-            this.partnumDataGridViewTextBoxColumn.HeaderText = "Part No";
+            this.partnumDataGridViewTextBoxColumn.HeaderText = "Part Num";
             this.partnumDataGridViewTextBoxColumn.Name = "partnumDataGridViewTextBoxColumn";
             this.partnumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -159,7 +177,7 @@
             // jobnumDataGridViewTextBoxColumn
             // 
             this.jobnumDataGridViewTextBoxColumn.DataPropertyName = "job_num";
-            this.jobnumDataGridViewTextBoxColumn.HeaderText = "Job No";
+            this.jobnumDataGridViewTextBoxColumn.HeaderText = "Job Num";
             this.jobnumDataGridViewTextBoxColumn.Name = "jobnumDataGridViewTextBoxColumn";
             this.jobnumDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -191,54 +209,6 @@
             this.inspectorDataGridViewTextBoxColumn.Name = "inspectorDataGridViewTextBoxColumn";
             this.inspectorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // commentsDataGridViewTextBoxColumn
-            // 
-            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "comments";
-            this.commentsDataGridViewTextBoxColumn.HeaderText = "comments";
-            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
-            this.commentsDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // magmachineDataGridViewTextBoxColumn
-            // 
-            this.magmachineDataGridViewTextBoxColumn.DataPropertyName = "mag_machine";
-            this.magmachineDataGridViewTextBoxColumn.HeaderText = "mag_machine";
-            this.magmachineDataGridViewTextBoxColumn.Name = "magmachineDataGridViewTextBoxColumn";
-            this.magmachineDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // magListLogBindingSource1
-            // 
-            this.magListLogBindingSource1.DataMember = "MagListLog";
-            this.magListLogBindingSource1.DataSource = this.aTIDeliveryDataSet1;
-            // 
-            // aTIDeliveryDataSet1
-            // 
-            this.aTIDeliveryDataSet1.DataSetName = "ATIDeliveryDataSet";
-            this.aTIDeliveryDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // magListLogBindingSource
-            // 
-            this.magListLogBindingSource.DataMember = "MagListLog";
-            this.magListLogBindingSource.DataSource = this.aTIDeliveryDataSet;
-            // 
-            // aTIDeliveryDataSet
-            // 
-            this.aTIDeliveryDataSet.DataSetName = "ATIDeliveryDataSet";
-            this.aTIDeliveryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(449, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Mag Certs";
-            // 
-            // magListLogTableAdapter
-            // 
-            this.magListLogTableAdapter.ClearBeforeFill = true;
-            // 
             // MagListViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,10 +224,9 @@
             this.Text = "MagListViewer";
             this.Load += new System.EventHandler(this.MagListViewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magListLogBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +241,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private ATIDeliveryDataSet aTIDeliveryDataSet;
-        private System.Windows.Forms.BindingSource magListLogBindingSource;
         private ATIDeliveryDataSetTableAdapters.MagListLogTableAdapter magListLogTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn certDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn partNumberDataGridViewTextBoxColumn;
@@ -287,8 +255,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn specDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn specTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn specClassDataGridViewTextBoxColumn;
-        private ATIDeliveryDataSet aTIDeliveryDataSet1;
-        private System.Windows.Forms.BindingSource magListLogBindingSource1;
+        private System.Windows.Forms.BindingSource magListLogBindingSource2;
+        private System.Windows.Forms.BindingSource magListLogBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn certnumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn partnumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -298,7 +266,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtyinspectedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inspectorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn magmachineDataGridViewTextBoxColumn;
     }
 }

@@ -48,6 +48,24 @@ namespace ATICertViewer
             // lock if the form is user can't edit
             if (!canEdit)
                 LockForm();
+
+            // load events
+            // check numeric
+            quantityTextBox.TextChanged += FormatCheckInteger;
+            hoursRequiredTimeTextBox.TextChanged += FormatCheckInteger;
+            minutesRequiredTimeTextBox.TextChanged += FormatCheckInteger;
+            requiredTemperatureTextBox.TextChanged += FormatCheckInteger;
+            plusMinTemperatureTextBox.TextChanged += FormatCheckInteger;
+            // check dropdowns
+            specificationComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            specRevComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            ovenSNComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            certifiedByComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            // check textboxes
+            jobNumberTextBox.TextChanged += FormatCheckEmptyTextBox;
+            partNumberTextBox.TextChanged += FormatCheckEmptyTextBox;
+            revisionTextBox.TextChanged += FormatCheckEmptyTextBox;
+            customerTextBox.TextChanged += FormatCheckEmptyTextBox;
         }
 
         private void autoFillButton_Click(object sender, EventArgs e)
@@ -418,19 +436,59 @@ namespace ATICertViewer
             }
         }
 
-        // TO_DO
         private bool CheckFormatting()
         {
-            int dummyTest;
+            int dummyInt;
 
             // check numeric values
-            bool numberFormattingOK = true;
+            bool numberFormattingOK = int.TryParse(quantityTextBox.Text, out dummyInt)
+                                        && int.TryParse(hoursRequiredTimeTextBox.Text, out dummyInt)
+                                        && int.TryParse(minutesRequiredTimeTextBox.Text, out dummyInt)
+                                        && int.TryParse(requiredTemperatureTextBox.Text, out dummyInt)
+                                        && int.TryParse(plusMinTemperatureTextBox.Text, out dummyInt);
 
             // check dropdowns
-            bool comboBoxesFormattingOK = true;
+            bool comboBoxesFormattingOK = specificationComboBox.SelectedItem != null
+                                            && specRevComboBox.SelectedItem != null
+                                            && ovenSNComboBox.SelectedItem != null
+                                            && certifiedByComboBox.SelectedItem != null;
 
             // check textboxes
-            bool textBoxesFormattingOK = true;
+            bool textBoxesFormattingOK = jobNumberTextBox.Text.Length > 0
+                                            && partNumberTextBox.Text.Length > 0
+                                            && revisionTextBox.Text.Length > 0
+                                            && customerTextBox.Text.Length > 0;
+
+            // format checks
+            // numeric
+            if (!int.TryParse(quantityTextBox.Text, out dummyInt))
+                errorProvider1.SetError(quantityTextBox, "Numeric Value Required");
+            if (!int.TryParse(hoursRequiredTimeTextBox.Text, out dummyInt))
+                errorProvider1.SetError(hoursRequiredTimeTextBox, "Numeric Value Required");
+            if (!int.TryParse(minutesRequiredTimeTextBox.Text, out dummyInt))
+                errorProvider1.SetError(minutesRequiredTimeTextBox, "Numeric Value Required");
+            if (!int.TryParse(requiredTemperatureTextBox.Text, out dummyInt))
+                errorProvider1.SetError(requiredTemperatureTextBox, "Numeric Value Required");
+            if (!int.TryParse(plusMinTemperatureTextBox.Text, out dummyInt))
+                errorProvider1.SetError(plusMinTemperatureTextBox, "Numeric Value Required");
+            // dropdowns
+            if (specificationComboBox.SelectedItem == null)
+                errorProvider1.SetError(specificationComboBox, "Field Required");
+            if (specRevComboBox.SelectedItem == null)
+                errorProvider1.SetError(specRevComboBox, "Field Required");
+            if (ovenSNComboBox.SelectedItem == null)
+                errorProvider1.SetError(ovenSNComboBox, "Field Required");
+            if (certifiedByComboBox.SelectedItem == null)
+                errorProvider1.SetError(certifiedByComboBox, "Field Required");
+            // textboxes
+            if (jobNumberTextBox.Text.Length == 0)
+                errorProvider1.SetError(jobNumberTextBox, "Field Required");
+            if (partNumberTextBox.Text.Length == 0)
+                errorProvider1.SetError(partNumberTextBox, "Field Required");
+            if (revisionTextBox.Text.Length == 0)
+                errorProvider1.SetError(revisionTextBox, "Field Required");
+            if (customerTextBox.Text.Length == 0)
+                errorProvider1.SetError(customerTextBox, "Field Required");
 
             return numberFormattingOK && comboBoxesFormattingOK && textBoxesFormattingOK;
         }
@@ -452,6 +510,48 @@ namespace ATICertViewer
             }
             if (!(con is Label))
                 con.Enabled = false;
+        }
+
+        private void FormatCheckInteger(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            int dummyOut;
+            if (!int.TryParse(textBox.Text, out dummyOut))
+                errorProvider1.SetError(textBox, "Needs to be a numeric quantity");
+            else
+                errorProvider1.SetError(textBox, "");
+        }
+
+        private void FormatCheckEmptyTextBox(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            if (!(textBox.Text.Length > 0))
+                errorProvider1.SetError(textBox, "Cannot leave field empty");
+            else
+                errorProvider1.SetError(textBox, "");
+        }
+
+        private void FormatCheckInvalidComboBox(object sender, EventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+
+            if (comboBox.SelectedItem == null)
+                errorProvider1.SetError(comboBox, "Need to select an item");
+            else
+                errorProvider1.SetError(comboBox, "");
+        }
+
+        private void FormatCheckDouble(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            double dummyOut;
+            if (!double.TryParse(textBox.Text, out dummyOut))
+                errorProvider1.SetError(textBox, "Needs to be a numeric quantity");
+            else
+                errorProvider1.SetError(textBox, "");
         }
     }
 }
