@@ -45,7 +45,7 @@
             this.cancelButton.Location = new System.Drawing.Point(174, 202);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 11;
+            this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -55,7 +55,7 @@
             this.submitButton.Location = new System.Drawing.Point(77, 202);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
-            this.submitButton.TabIndex = 10;
+            this.submitButton.TabIndex = 3;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
@@ -77,7 +77,7 @@
             this.dataGridView1.RowHeadersWidth = 190;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView1.Size = new System.Drawing.Size(302, 104);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Read
@@ -97,7 +97,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(134, 38);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(121, 20);
-            this.passwordTextBox.TabIndex = 8;
+            this.passwordTextBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -123,7 +123,7 @@
             this.userNameComboBox.Location = new System.Drawing.Point(134, 11);
             this.userNameComboBox.Name = "userNameComboBox";
             this.userNameComboBox.Size = new System.Drawing.Size(121, 21);
-            this.userNameComboBox.TabIndex = 13;
+            this.userNameComboBox.TabIndex = 0;
             this.userNameComboBox.SelectedIndexChanged += new System.EventHandler(this.userNameComboBox_SelectedIndexChanged);
             // 
             // EditUserForm

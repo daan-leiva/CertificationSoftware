@@ -21,21 +21,21 @@ namespace ATICertViewer
 
         public ShotpeenCert(bool _canEdit, string _userName)
         {
+            InitializeComponent();
+
             newForm = true;
             canEdit = _canEdit;
             userName = _userName;
-
-            InitializeComponent();
         }
 
         public ShotpeenCert(string process_num, bool _canEdit, string _userName)
         {
+            InitializeComponent();
+
             newForm = false;
             canEdit = _canEdit;
             processNumberTextBox.Text = process_num;
             userName = _userName;
-
-            InitializeComponent();
         }
 
         private void JobProcessForm_Load(object sender, EventArgs e)
@@ -415,10 +415,10 @@ namespace ATICertViewer
                 }
 
                 // get new process number
-                string newProcessNumber = GetNextProcessNumber();
+                int newProcessNumber = GetNextProcessNumber();
 
                 // assign it to the document
-                processNumberTextBox.Text = newProcessNumber;
+                processNumberTextBox.Text = newProcessNumber.ToString();
 
                 // submit to DB
                 SubmitNewRow();
@@ -628,7 +628,7 @@ namespace ATICertViewer
             }
         }
 
-        private string GetNextProcessNumber()
+        private int GetNextProcessNumber()
         {
             using (OdbcConnection conn = new OdbcConnection(connectionString))
             {
@@ -653,11 +653,11 @@ namespace ATICertViewer
 
 
                 if (reader.Read())
-                    return reader.IsDBNull(0) ? "1000" : reader.GetString(0);
+                    return reader.IsDBNull(0) ? 1000 : reader.GetInt32(0);
                 else
                 {
                     MessageBox.Show("DB error. Contact IT Suppor", "DB ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return "0000";
+                    return 0000;
                 }
             }
         }

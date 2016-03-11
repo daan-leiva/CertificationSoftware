@@ -256,8 +256,11 @@ namespace ATICertViewer
             edmProgramTextBox.TextChanged += FormatCheckEmptyTextBox;
             certifiedByTextBox.TextChanged += FormatCheckEmptyTextBox;
             // check drop downs
-            specificationComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
-            specificationRevComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
+            specificationComboBox.TextChanged += FormatCheckInvalidComboBox;
+            specificationRevComboBox.TextChanged += FormatCheckInvalidComboBox;
+
+            // disable resizing
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         }
 
         // inserts a new row to the Production.dbo.tblJobProcessLog database
@@ -327,21 +330,21 @@ namespace ATICertViewer
                 conn.Open();
 
                 // specify query
-                string query = "UPDATE ATIDelivery.dbo.tblJobProcessLog\n" +
+                string query = "UPDATE ATIDelivery.dbo.EDMCerts\n" +
                                 "SET [job_num] = '" + jobNumberTextBox.Text + "',\n" +
                                 "[part_num]= '" + partNumberTextBox.Text + "',\n" +
                                 "[part_rev] = '" + revisionTextBox.Text + "',\n" +
                                 "[part_desc] = '" + partDescriptionTextBox.Text + "',\n" +
                                 "[customer] = '" + customerTextBox.Text + "',\n" +
                                 "[lot_num] = '" + lotNumberTextBox.Text + "',\n" +
-                                "[op_num] = '" + operationNoTextBox.Text + ",\n" +
+                                "[op_num] = '" + operationNoTextBox.Text + "',\n" +
                                 "[date] = '" + dateTimePicker.Value.ToShortDateString() + "',\n" +
                                 "[edm_program] = '" + edmProgramTextBox.Text + "',\n" +
                                 "[qty] = '" + quantityProcesseTextBox.Text + "',\n" +
                                 "[performed] = '" + performedNotesTextBox.Text + "',\n" +
                                 "[specification] = '" + specificationComboBox.SelectedItem.ToString() + "',\n" +
                                 "[specificationRev] = '" + specificationRevComboBox.SelectedItem.ToString() + "',\n" +
-                                "[certifier] = '" + certifiedByTextBox.Text + "',\n" +
+                                "[certifier] = '" + certifiedByTextBox.Text + "'\n" +
                                 "WHERE cert_num = '" + certNumberTextBox.Text + "';";
 
                 OdbcCommand com = new OdbcCommand(query, conn);

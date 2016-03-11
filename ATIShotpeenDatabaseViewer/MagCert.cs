@@ -136,10 +136,10 @@ namespace ATICertViewer
             acceptCriteriaComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
             acceptCriteriaRevComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
             // textboxes
-            jobNumberTextBox.TextAlignChanged += FormatCheckEmptyTextBox;
-            revisionTextBox.TextAlignChanged += FormatCheckEmptyTextBox;
-            partNumberTextBox.TextAlignChanged += FormatCheckEmptyTextBox;
-            customerTextBox.TextAlignChanged += FormatCheckEmptyTextBox;
+            jobNumberTextBox.TextChanged += FormatCheckEmptyTextBox;
+            revisionTextBox.TextChanged += FormatCheckEmptyTextBox;
+            partNumberTextBox.TextChanged += FormatCheckEmptyTextBox;
+            customerTextBox.TextChanged += FormatCheckEmptyTextBox;
         }
 
         private void UpdateForm()
@@ -383,7 +383,7 @@ namespace ATICertViewer
                 conn.Open();
 
                 // specify query
-                string query = "UPDATE [dbo].[MagListLog]\n" +
+                string query = "UPDATE ATIDelivery.[dbo].[MagListLog]\n" +
                                 "SET [part_num] = '" + partNumberTextBox.Text + "'\n" +
                                 ",[rev] = '" + revisionTextBox.Text + "'\n" +
                                 ",[part_description] = '" + partDescriptionTextBox.Text + "'\n" +

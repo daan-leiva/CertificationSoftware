@@ -234,13 +234,14 @@
             this.processNumberTextBox.ReadOnly = true;
             this.processNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.processNumberTextBox.TabIndex = 7;
+            this.processNumberTextBox.TabStop = false;
             // 
             // jobNumberTextBox
             // 
             this.jobNumberTextBox.Location = new System.Drawing.Point(160, 106);
             this.jobNumberTextBox.Name = "jobNumberTextBox";
             this.jobNumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.jobNumberTextBox.TabIndex = 8;
+            this.jobNumberTextBox.TabIndex = 0;
             // 
             // label8
             // 
@@ -266,7 +267,7 @@
             this.startDateTimePicker.Location = new System.Drawing.Point(496, 78);
             this.startDateTimePicker.Name = "startDateTimePicker";
             this.startDateTimePicker.Size = new System.Drawing.Size(104, 20);
-            this.startDateTimePicker.TabIndex = 11;
+            this.startDateTimePicker.TabIndex = 2;
             // 
             // finishDateTimePicker
             // 
@@ -274,7 +275,7 @@
             this.finishDateTimePicker.Location = new System.Drawing.Point(496, 106);
             this.finishDateTimePicker.Name = "finishDateTimePicker";
             this.finishDateTimePicker.Size = new System.Drawing.Size(105, 20);
-            this.finishDateTimePicker.TabIndex = 12;
+            this.finishDateTimePicker.TabIndex = 3;
             // 
             // label10
             // 
@@ -290,7 +291,7 @@
             this.lotNumberTextBox.Location = new System.Drawing.Point(442, 165);
             this.lotNumberTextBox.Name = "lotNumberTextBox";
             this.lotNumberTextBox.Size = new System.Drawing.Size(56, 20);
-            this.lotNumberTextBox.TabIndex = 14;
+            this.lotNumberTextBox.TabIndex = 7;
             // 
             // label11
             // 
@@ -306,14 +307,14 @@
             this.partNumberTextBox.Location = new System.Drawing.Point(160, 135);
             this.partNumberTextBox.Name = "partNumberTextBox";
             this.partNumberTextBox.Size = new System.Drawing.Size(180, 20);
-            this.partNumberTextBox.TabIndex = 16;
+            this.partNumberTextBox.TabIndex = 4;
             // 
             // quantityTextBox
             // 
             this.quantityTextBox.Location = new System.Drawing.Point(160, 223);
             this.quantityTextBox.Name = "quantityTextBox";
             this.quantityTextBox.Size = new System.Drawing.Size(43, 20);
-            this.quantityTextBox.TabIndex = 19;
+            this.quantityTextBox.TabIndex = 9;
             // 
             // serialNumbersTextBox
             // 
@@ -322,7 +323,7 @@
             this.serialNumbersTextBox.Name = "serialNumbersTextBox";
             this.serialNumbersTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.serialNumbersTextBox.Size = new System.Drawing.Size(440, 73);
-            this.serialNumbersTextBox.TabIndex = 20;
+            this.serialNumbersTextBox.TabIndex = 10;
             // 
             // label12
             // 
@@ -482,115 +483,123 @@
             this.fractureCountPriorTextBox.Location = new System.Drawing.Point(161, 618);
             this.fractureCountPriorTextBox.Name = "fractureCountPriorTextBox";
             this.fractureCountPriorTextBox.Size = new System.Drawing.Size(61, 20);
-            this.fractureCountPriorTextBox.TabIndex = 38;
+            this.fractureCountPriorTextBox.TabIndex = 22;
             // 
             // revisionTextBox
             // 
             this.revisionTextBox.Location = new System.Drawing.Point(442, 135);
             this.revisionTextBox.Name = "revisionTextBox";
             this.revisionTextBox.Size = new System.Drawing.Size(158, 20);
-            this.revisionTextBox.TabIndex = 39;
+            this.revisionTextBox.TabIndex = 5;
             // 
             // specificationComboBox
             // 
+            this.specificationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.specificationComboBox.FormattingEnabled = true;
             this.specificationComboBox.Location = new System.Drawing.Point(160, 340);
             this.specificationComboBox.Name = "specificationComboBox";
             this.specificationComboBox.Size = new System.Drawing.Size(100, 21);
-            this.specificationComboBox.TabIndex = 40;
+            this.specificationComboBox.TabIndex = 11;
             this.specificationComboBox.SelectedIndexChanged += new System.EventHandler(this.ValidateListBoxes);
             // 
             // additionalSpecsComboBox
             // 
+            this.additionalSpecsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.additionalSpecsComboBox.FormattingEnabled = true;
             this.additionalSpecsComboBox.Location = new System.Drawing.Point(160, 405);
             this.additionalSpecsComboBox.Name = "additionalSpecsComboBox";
             this.additionalSpecsComboBox.Size = new System.Drawing.Size(100, 21);
-            this.additionalSpecsComboBox.TabIndex = 41;
+            this.additionalSpecsComboBox.TabIndex = 13;
             this.additionalSpecsComboBox.SelectedIndexChanged += new System.EventHandler(this.ValidateListBoxes);
             // 
             // sampleSizeComboBox
             // 
+            this.sampleSizeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sampleSizeComboBox.FormattingEnabled = true;
             this.sampleSizeComboBox.Location = new System.Drawing.Point(129, 594);
             this.sampleSizeComboBox.Name = "sampleSizeComboBox";
             this.sampleSizeComboBox.Size = new System.Drawing.Size(61, 21);
-            this.sampleSizeComboBox.TabIndex = 43;
+            this.sampleSizeComboBox.TabIndex = 21;
             // 
             // toolingCheckComboBox
             // 
+            this.toolingCheckComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.toolingCheckComboBox.FormattingEnabled = true;
             this.toolingCheckComboBox.Location = new System.Drawing.Point(160, 542);
             this.toolingCheckComboBox.Name = "toolingCheckComboBox";
             this.toolingCheckComboBox.Size = new System.Drawing.Size(58, 21);
-            this.toolingCheckComboBox.TabIndex = 44;
+            this.toolingCheckComboBox.TabIndex = 19;
             // 
             // preCleanComboBox
             // 
+            this.preCleanComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.preCleanComboBox.FormattingEnabled = true;
             this.preCleanComboBox.Location = new System.Drawing.Point(160, 514);
             this.preCleanComboBox.Name = "preCleanComboBox";
             this.preCleanComboBox.Size = new System.Drawing.Size(58, 21);
-            this.preCleanComboBox.TabIndex = 45;
+            this.preCleanComboBox.TabIndex = 18;
             // 
             // coverageComboBox
             // 
+            this.coverageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.coverageComboBox.FormattingEnabled = true;
             this.coverageComboBox.Location = new System.Drawing.Point(160, 486);
             this.coverageComboBox.Name = "coverageComboBox";
             this.coverageComboBox.Size = new System.Drawing.Size(100, 21);
-            this.coverageComboBox.TabIndex = 46;
+            this.coverageComboBox.TabIndex = 17;
             // 
             // intensityComboBox
             // 
+            this.intensityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.intensityComboBox.FormattingEnabled = true;
             this.intensityComboBox.Location = new System.Drawing.Point(160, 458);
             this.intensityComboBox.Name = "intensityComboBox";
             this.intensityComboBox.Size = new System.Drawing.Size(100, 21);
-            this.intensityComboBox.TabIndex = 47;
+            this.intensityComboBox.TabIndex = 16;
             // 
             // coverageMethodComboBox
             // 
+            this.coverageMethodComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.coverageMethodComboBox.FormattingEnabled = true;
             this.coverageMethodComboBox.Location = new System.Drawing.Point(160, 570);
             this.coverageMethodComboBox.Name = "coverageMethodComboBox";
             this.coverageMethodComboBox.Size = new System.Drawing.Size(158, 21);
-            this.coverageMethodComboBox.TabIndex = 48;
+            this.coverageMethodComboBox.TabIndex = 20;
             // 
             // almen1PriorTextBox
             // 
             this.almen1PriorTextBox.Location = new System.Drawing.Point(161, 638);
             this.almen1PriorTextBox.Name = "almen1PriorTextBox";
             this.almen1PriorTextBox.Size = new System.Drawing.Size(61, 20);
-            this.almen1PriorTextBox.TabIndex = 49;
+            this.almen1PriorTextBox.TabIndex = 24;
             // 
             // almen2PriorTextBox
             // 
             this.almen2PriorTextBox.Location = new System.Drawing.Point(161, 656);
             this.almen2PriorTextBox.Name = "almen2PriorTextBox";
             this.almen2PriorTextBox.Size = new System.Drawing.Size(61, 20);
-            this.almen2PriorTextBox.TabIndex = 50;
+            this.almen2PriorTextBox.TabIndex = 26;
             // 
             // almen2PostTextBox
             // 
             this.almen2PostTextBox.Location = new System.Drawing.Point(262, 656);
             this.almen2PostTextBox.Name = "almen2PostTextBox";
             this.almen2PostTextBox.Size = new System.Drawing.Size(61, 20);
-            this.almen2PostTextBox.TabIndex = 53;
+            this.almen2PostTextBox.TabIndex = 27;
             // 
             // almen1PostTextBox
             // 
             this.almen1PostTextBox.Location = new System.Drawing.Point(262, 638);
             this.almen1PostTextBox.Name = "almen1PostTextBox";
             this.almen1PostTextBox.Size = new System.Drawing.Size(61, 20);
-            this.almen1PostTextBox.TabIndex = 52;
+            this.almen1PostTextBox.TabIndex = 25;
             // 
             // fractureCountPostTextBox
             // 
             this.fractureCountPostTextBox.Location = new System.Drawing.Point(262, 618);
             this.fractureCountPostTextBox.Name = "fractureCountPostTextBox";
             this.fractureCountPostTextBox.Size = new System.Drawing.Size(61, 20);
-            this.fractureCountPostTextBox.TabIndex = 51;
+            this.fractureCountPostTextBox.TabIndex = 23;
             // 
             // label29
             // 
@@ -696,7 +705,7 @@
             this.sieve18PreTextBox.Location = new System.Drawing.Point(55, 66);
             this.sieve18PreTextBox.Name = "sieve18PreTextBox";
             this.sieve18PreTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve18PreTextBox.TabIndex = 77;
+            this.sieve18PreTextBox.TabIndex = 0;
             this.sieve18PreTextBox.Text = "0";
             this.sieve18PreTextBox.TextChanged += new System.EventHandler(this.UpdatePreTotalMediaPassing);
             // 
@@ -705,7 +714,7 @@
             this.sieve20PreTextBox.Location = new System.Drawing.Point(55, 86);
             this.sieve20PreTextBox.Name = "sieve20PreTextBox";
             this.sieve20PreTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve20PreTextBox.TabIndex = 78;
+            this.sieve20PreTextBox.TabIndex = 1;
             this.sieve20PreTextBox.Text = "0";
             this.sieve20PreTextBox.TextChanged += new System.EventHandler(this.UpdatePreTotalMediaPassing);
             // 
@@ -714,7 +723,7 @@
             this.sieve25PreTextBox.Location = new System.Drawing.Point(55, 106);
             this.sieve25PreTextBox.Name = "sieve25PreTextBox";
             this.sieve25PreTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve25PreTextBox.TabIndex = 79;
+            this.sieve25PreTextBox.TabIndex = 2;
             this.sieve25PreTextBox.Text = "0";
             this.sieve25PreTextBox.TextChanged += new System.EventHandler(this.UpdatePreTotalMediaPassing);
             // 
@@ -723,7 +732,7 @@
             this.sieve30PreTextBox.Location = new System.Drawing.Point(55, 126);
             this.sieve30PreTextBox.Name = "sieve30PreTextBox";
             this.sieve30PreTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve30PreTextBox.TabIndex = 80;
+            this.sieve30PreTextBox.TabIndex = 3;
             this.sieve30PreTextBox.Text = "0";
             this.sieve30PreTextBox.TextChanged += new System.EventHandler(this.UpdatePreTotalMediaPassing);
             // 
@@ -732,7 +741,7 @@
             this.sieve35PreTextBox.Location = new System.Drawing.Point(55, 146);
             this.sieve35PreTextBox.Name = "sieve35PreTextBox";
             this.sieve35PreTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve35PreTextBox.TabIndex = 81;
+            this.sieve35PreTextBox.TabIndex = 4;
             this.sieve35PreTextBox.Text = "0";
             this.sieve35PreTextBox.TextChanged += new System.EventHandler(this.UpdatePreTotalMediaPassing);
             // 
@@ -741,7 +750,7 @@
             this.sieve40PreTextBox.Location = new System.Drawing.Point(55, 166);
             this.sieve40PreTextBox.Name = "sieve40PreTextBox";
             this.sieve40PreTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve40PreTextBox.TabIndex = 82;
+            this.sieve40PreTextBox.TabIndex = 5;
             this.sieve40PreTextBox.Text = "0";
             this.sieve40PreTextBox.TextChanged += new System.EventHandler(this.UpdatePreTotalMediaPassing);
             // 
@@ -750,7 +759,7 @@
             this.sieve45PreTextBox.Location = new System.Drawing.Point(55, 186);
             this.sieve45PreTextBox.Name = "sieve45PreTextBox";
             this.sieve45PreTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve45PreTextBox.TabIndex = 83;
+            this.sieve45PreTextBox.TabIndex = 6;
             this.sieve45PreTextBox.Text = "0";
             this.sieve45PreTextBox.TextChanged += new System.EventHandler(this.UpdatePreTotalMediaPassing);
             // 
@@ -759,7 +768,7 @@
             this.sieve50PreTextBox.Location = new System.Drawing.Point(55, 206);
             this.sieve50PreTextBox.Name = "sieve50PreTextBox";
             this.sieve50PreTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve50PreTextBox.TabIndex = 84;
+            this.sieve50PreTextBox.TabIndex = 7;
             this.sieve50PreTextBox.Text = "0";
             this.sieve50PreTextBox.TextChanged += new System.EventHandler(this.UpdatePreTotalMediaPassing);
             // 
@@ -768,7 +777,7 @@
             this.sieve80PreTextBox.Location = new System.Drawing.Point(55, 226);
             this.sieve80PreTextBox.Name = "sieve80PreTextBox";
             this.sieve80PreTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve80PreTextBox.TabIndex = 85;
+            this.sieve80PreTextBox.TabIndex = 8;
             this.sieve80PreTextBox.Text = "0";
             this.sieve80PreTextBox.TextChanged += new System.EventHandler(this.UpdatePreTotalMediaPassing);
             // 
@@ -939,7 +948,7 @@
             this.sieve80PostTextBox.Location = new System.Drawing.Point(122, 226);
             this.sieve80PostTextBox.Name = "sieve80PostTextBox";
             this.sieve80PostTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve80PostTextBox.TabIndex = 103;
+            this.sieve80PostTextBox.TabIndex = 17;
             this.sieve80PostTextBox.Text = "0";
             this.sieve80PostTextBox.TextChanged += new System.EventHandler(this.UpdatePostTotalMediaPassing);
             // 
@@ -948,7 +957,7 @@
             this.sieve50PostTextBox.Location = new System.Drawing.Point(122, 206);
             this.sieve50PostTextBox.Name = "sieve50PostTextBox";
             this.sieve50PostTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve50PostTextBox.TabIndex = 102;
+            this.sieve50PostTextBox.TabIndex = 16;
             this.sieve50PostTextBox.Text = "0";
             this.sieve50PostTextBox.TextChanged += new System.EventHandler(this.UpdatePostTotalMediaPassing);
             // 
@@ -957,7 +966,7 @@
             this.sieve45PostTextBox.Location = new System.Drawing.Point(122, 186);
             this.sieve45PostTextBox.Name = "sieve45PostTextBox";
             this.sieve45PostTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve45PostTextBox.TabIndex = 101;
+            this.sieve45PostTextBox.TabIndex = 15;
             this.sieve45PostTextBox.Text = "0";
             this.sieve45PostTextBox.TextChanged += new System.EventHandler(this.UpdatePostTotalMediaPassing);
             // 
@@ -966,7 +975,7 @@
             this.sieve40PostTextBox.Location = new System.Drawing.Point(122, 166);
             this.sieve40PostTextBox.Name = "sieve40PostTextBox";
             this.sieve40PostTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve40PostTextBox.TabIndex = 100;
+            this.sieve40PostTextBox.TabIndex = 14;
             this.sieve40PostTextBox.Text = "0";
             this.sieve40PostTextBox.TextChanged += new System.EventHandler(this.UpdatePostTotalMediaPassing);
             // 
@@ -975,7 +984,7 @@
             this.sieve35PostTextBox.Location = new System.Drawing.Point(122, 146);
             this.sieve35PostTextBox.Name = "sieve35PostTextBox";
             this.sieve35PostTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve35PostTextBox.TabIndex = 99;
+            this.sieve35PostTextBox.TabIndex = 13;
             this.sieve35PostTextBox.Text = "0";
             this.sieve35PostTextBox.TextChanged += new System.EventHandler(this.UpdatePostTotalMediaPassing);
             // 
@@ -984,7 +993,7 @@
             this.sieve30PostTextBox.Location = new System.Drawing.Point(122, 126);
             this.sieve30PostTextBox.Name = "sieve30PostTextBox";
             this.sieve30PostTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve30PostTextBox.TabIndex = 98;
+            this.sieve30PostTextBox.TabIndex = 12;
             this.sieve30PostTextBox.Text = "0";
             this.sieve30PostTextBox.TextChanged += new System.EventHandler(this.UpdatePostTotalMediaPassing);
             // 
@@ -993,7 +1002,7 @@
             this.sieve25PostTextBox.Location = new System.Drawing.Point(122, 106);
             this.sieve25PostTextBox.Name = "sieve25PostTextBox";
             this.sieve25PostTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve25PostTextBox.TabIndex = 97;
+            this.sieve25PostTextBox.TabIndex = 11;
             this.sieve25PostTextBox.Text = "0";
             this.sieve25PostTextBox.TextChanged += new System.EventHandler(this.UpdatePostTotalMediaPassing);
             // 
@@ -1002,7 +1011,7 @@
             this.sieve20PostTextBox.Location = new System.Drawing.Point(122, 86);
             this.sieve20PostTextBox.Name = "sieve20PostTextBox";
             this.sieve20PostTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve20PostTextBox.TabIndex = 96;
+            this.sieve20PostTextBox.TabIndex = 10;
             this.sieve20PostTextBox.Text = "0";
             this.sieve20PostTextBox.TextChanged += new System.EventHandler(this.UpdatePostTotalMediaPassing);
             // 
@@ -1011,7 +1020,7 @@
             this.sieve18PostTextBox.Location = new System.Drawing.Point(122, 66);
             this.sieve18PostTextBox.Name = "sieve18PostTextBox";
             this.sieve18PostTextBox.Size = new System.Drawing.Size(40, 20);
-            this.sieve18PostTextBox.TabIndex = 95;
+            this.sieve18PostTextBox.TabIndex = 9;
             this.sieve18PostTextBox.Text = "0";
             this.sieve18PostTextBox.TextChanged += new System.EventHandler(this.UpdatePostTotalMediaPassing);
             // 
@@ -1069,7 +1078,7 @@
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.notesTextBox.Size = new System.Drawing.Size(468, 139);
-            this.notesTextBox.TabIndex = 118;
+            this.notesTextBox.TabIndex = 31;
             // 
             // label63
             // 
@@ -1197,14 +1206,14 @@
             this.panel1.Location = new System.Drawing.Point(400, 340);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 300);
-            this.panel1.TabIndex = 120;
+            this.panel1.TabIndex = 28;
             // 
             // printCertButton
             // 
             this.printCertButton.Location = new System.Drawing.Point(236, 885);
             this.printCertButton.Name = "printCertButton";
             this.printCertButton.Size = new System.Drawing.Size(75, 23);
-            this.printCertButton.TabIndex = 124;
+            this.printCertButton.TabIndex = 33;
             this.printCertButton.Text = "Print";
             this.printCertButton.UseVisualStyleBackColor = true;
             this.printCertButton.Click += new System.EventHandler(this.printCertButton_Click);
@@ -1240,40 +1249,42 @@
             // 
             // machineNumberTextBox
             // 
+            this.machineNumberTextBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.machineNumberTextBox.FormattingEnabled = true;
             this.machineNumberTextBox.Location = new System.Drawing.Point(130, 683);
             this.machineNumberTextBox.Name = "machineNumberTextBox";
             this.machineNumberTextBox.Size = new System.Drawing.Size(92, 21);
-            this.machineNumberTextBox.TabIndex = 124;
+            this.machineNumberTextBox.TabIndex = 29;
             // 
             // technicianComboBox
             // 
+            this.technicianComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.technicianComboBox.FormattingEnabled = true;
             this.technicianComboBox.Location = new System.Drawing.Point(130, 708);
             this.technicianComboBox.Name = "technicianComboBox";
             this.technicianComboBox.Size = new System.Drawing.Size(92, 21);
-            this.technicianComboBox.TabIndex = 125;
+            this.technicianComboBox.TabIndex = 30;
             // 
             // partDescriptionTextBox
             // 
             this.partDescriptionTextBox.Location = new System.Drawing.Point(161, 165);
             this.partDescriptionTextBox.Name = "partDescriptionTextBox";
             this.partDescriptionTextBox.Size = new System.Drawing.Size(179, 20);
-            this.partDescriptionTextBox.TabIndex = 126;
+            this.partDescriptionTextBox.TabIndex = 6;
             // 
             // customerTextBox
             // 
             this.customerTextBox.Location = new System.Drawing.Point(160, 196);
             this.customerTextBox.Name = "customerTextBox";
             this.customerTextBox.Size = new System.Drawing.Size(179, 20);
-            this.customerTextBox.TabIndex = 127;
+            this.customerTextBox.TabIndex = 8;
             // 
             // autoFillButton
             // 
             this.autoFillButton.Location = new System.Drawing.Point(293, 103);
             this.autoFillButton.Name = "autoFillButton";
             this.autoFillButton.Size = new System.Drawing.Size(113, 23);
-            this.autoFillButton.TabIndex = 128;
+            this.autoFillButton.TabIndex = 1;
             this.autoFillButton.Text = "Auto Fill From JB";
             this.autoFillButton.UseVisualStyleBackColor = true;
             this.autoFillButton.Click += new System.EventHandler(this.autoFillButton_Click);
@@ -1283,52 +1294,59 @@
             this.submitButton.Location = new System.Drawing.Point(325, 885);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
-            this.submitButton.TabIndex = 129;
+            this.submitButton.TabIndex = 32;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // specRevComboBox
             // 
+            this.specRevComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.specRevComboBox.FormattingEnabled = true;
             this.specRevComboBox.Location = new System.Drawing.Point(268, 340);
             this.specRevComboBox.Name = "specRevComboBox";
             this.specRevComboBox.Size = new System.Drawing.Size(50, 21);
-            this.specRevComboBox.TabIndex = 130;
+            this.specRevComboBox.TabIndex = 12;
             // 
             // additionalSpecRevComboBox
             // 
+            this.additionalSpecRevComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.additionalSpecRevComboBox.FormattingEnabled = true;
             this.additionalSpecRevComboBox.Location = new System.Drawing.Point(268, 405);
             this.additionalSpecRevComboBox.Name = "additionalSpecRevComboBox";
             this.additionalSpecRevComboBox.Size = new System.Drawing.Size(50, 21);
-            this.additionalSpecRevComboBox.TabIndex = 131;
+            this.additionalSpecRevComboBox.TabIndex = 14;
             // 
             // psdListBox
             // 
+            this.psdListBox.Enabled = false;
             this.psdListBox.FormattingEnabled = true;
             this.psdListBox.Location = new System.Drawing.Point(325, 340);
             this.psdListBox.Name = "psdListBox";
             this.psdListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.psdListBox.Size = new System.Drawing.Size(69, 56);
             this.psdListBox.TabIndex = 132;
+            this.psdListBox.TabStop = false;
             // 
             // additionalPSDListBox
             // 
+            this.additionalPSDListBox.Enabled = false;
             this.additionalPSDListBox.FormattingEnabled = true;
             this.additionalPSDListBox.Location = new System.Drawing.Point(325, 405);
             this.additionalPSDListBox.Name = "additionalPSDListBox";
             this.additionalPSDListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.additionalPSDListBox.Size = new System.Drawing.Size(69, 56);
             this.additionalPSDListBox.TabIndex = 133;
+            this.additionalPSDListBox.TabStop = false;
             // 
             // shotSizeComboBox
             // 
+            this.shotSizeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.shotSizeComboBox.FormattingEnabled = true;
             this.shotSizeComboBox.Location = new System.Drawing.Point(160, 432);
             this.shotSizeComboBox.Name = "shotSizeComboBox";
             this.shotSizeComboBox.Size = new System.Drawing.Size(100, 21);
-            this.shotSizeComboBox.TabIndex = 134;
+            this.shotSizeComboBox.TabIndex = 15;
             // 
             // errorProvider1
             // 

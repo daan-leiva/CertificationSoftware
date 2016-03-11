@@ -20,11 +20,11 @@ namespace ATICertViewer
 
         public MagListViewer(bool _isAdmin, string _userName, bool _canWrite)
         {
+            InitializeComponent();
+
             isAdmin = _isAdmin;
             userName = _userName;
             canWrite = _canWrite;
-
-            InitializeComponent();
         }
 
         private void MagListViewer_Load(object sender, EventArgs e)
@@ -32,9 +32,19 @@ namespace ATICertViewer
             // TODO: This line of code loads data into the 'aTIDeliveryDataSet.MagListLog' table. You can move, or remove it, as needed.
             this.magListLogTableAdapter.Fill(this.aTIDeliveryDataSet.MagListLog);
             dataGridView1.Sort(dataGridView1.Columns[0], ListSortDirection.Descending);
+            
             // check if admin or writable account
             if (!(isAdmin || canWrite))
                 newButton.Enabled = false;
+
+            // add filter events
+            certNoTextBox.TextChanged += this.ApplyFilters;
+            partNoTextBox.TextChanged += this.ApplyFilters;
+            jobTextBox.TextChanged += this.ApplyFilters;
+            customerTextBox.TextChanged += this.ApplyFilters;
+            dateTimePicker1.ValueChanged += this.ApplyFilters;
+            inspectorTextBox.TextChanged += this.ApplyFilters;
+            enableDateFilterCheckBox.CheckedChanged += this.ApplyFilters;
         }
 
         private void newButton_Click(object sender, EventArgs e)
@@ -93,6 +103,16 @@ namespace ATICertViewer
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ApplyFilters(object sender, EventArgs e)
+        {
+            if (enableDateFilterCheckBox.Checked)
+                magListLogBindingSource.Filter = string.Format("Convert([cert_num], 'System.String') LIKE '%{0}%' AND [customer] LIKE '%{1}%' AND [part_num] LIKE '%{2}%' AND [job_num] LIKE '%{3}%' AND [inspector] LIKE '%{4}%' AND [date] = #{5}#",
+                    certNoTextBox.Text, customerTextBox.Text, partNoTextBox.Text, jobTextBox.Text, inspectorTextBox.Text, dateTimePicker1.Value.ToShortDateString());
+            else
+                magListLogBindingSource.Filter = string.Format("Convert([cert_num], 'System.String') LIKE '%{0}%' AND [customer] LIKE '%{1}%' AND [part_num] LIKE '%{2}%' AND [job_num] LIKE '%{3}%' AND [inspector] LIKE '%{4}%'",
+                    certNoTextBox.Text, customerTextBox.Text, partNoTextBox.Text, jobTextBox.Text, inspectorTextBox.Text);
         }
     }
 }

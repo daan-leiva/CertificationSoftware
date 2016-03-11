@@ -93,7 +93,7 @@
             this.autoFillButton.Location = new System.Drawing.Point(270, 113);
             this.autoFillButton.Name = "autoFillButton";
             this.autoFillButton.Size = new System.Drawing.Size(101, 23);
-            this.autoFillButton.TabIndex = 152;
+            this.autoFillButton.TabIndex = 1;
             this.autoFillButton.Text = "Auto Fill From JB";
             this.autoFillButton.UseVisualStyleBackColor = true;
             this.autoFillButton.Click += new System.EventHandler(this.autoFillButton_Click);
@@ -114,7 +114,7 @@
             this.revisionTextBox.Location = new System.Drawing.Point(433, 144);
             this.revisionTextBox.Name = "revisionTextBox";
             this.revisionTextBox.Size = new System.Drawing.Size(158, 20);
-            this.revisionTextBox.TabIndex = 148;
+            this.revisionTextBox.TabIndex = 4;
             // 
             // label13
             // 
@@ -132,21 +132,21 @@
             this.serialNumbersTextBox.Name = "serialNumbersTextBox";
             this.serialNumbersTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.serialNumbersTextBox.Size = new System.Drawing.Size(440, 73);
-            this.serialNumbersTextBox.TabIndex = 146;
+            this.serialNumbersTextBox.TabIndex = 10;
             // 
             // quantityTextBox
             // 
             this.quantityTextBox.Location = new System.Drawing.Point(160, 232);
             this.quantityTextBox.Name = "quantityTextBox";
             this.quantityTextBox.Size = new System.Drawing.Size(43, 20);
-            this.quantityTextBox.TabIndex = 145;
+            this.quantityTextBox.TabIndex = 9;
             // 
             // partNumberTextBox
             // 
             this.partNumberTextBox.Location = new System.Drawing.Point(160, 144);
             this.partNumberTextBox.Name = "partNumberTextBox";
             this.partNumberTextBox.Size = new System.Drawing.Size(180, 20);
-            this.partNumberTextBox.TabIndex = 144;
+            this.partNumberTextBox.TabIndex = 3;
             // 
             // label11
             // 
@@ -162,7 +162,7 @@
             this.lotNumberTextBox.Location = new System.Drawing.Point(433, 174);
             this.lotNumberTextBox.Name = "lotNumberTextBox";
             this.lotNumberTextBox.Size = new System.Drawing.Size(56, 20);
-            this.lotNumberTextBox.TabIndex = 142;
+            this.lotNumberTextBox.TabIndex = 6;
             // 
             // label10
             // 
@@ -179,7 +179,7 @@
             this.dateTimePicker.Location = new System.Drawing.Point(433, 87);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(158, 20);
-            this.dateTimePicker.TabIndex = 139;
+            this.dateTimePicker.TabIndex = 2;
             // 
             // label8
             // 
@@ -195,7 +195,7 @@
             this.jobNumberTextBox.Location = new System.Drawing.Point(160, 115);
             this.jobNumberTextBox.Name = "jobNumberTextBox";
             this.jobNumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.jobNumberTextBox.TabIndex = 136;
+            this.jobNumberTextBox.TabIndex = 0;
             // 
             // certNumberTextBox
             // 
@@ -204,6 +204,7 @@
             this.certNumberTextBox.ReadOnly = true;
             this.certNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.certNumberTextBox.TabIndex = 135;
+            this.certNumberTextBox.TabStop = false;
             // 
             // label7
             // 
@@ -266,14 +267,14 @@
             this.partDescriptionTextBox.Location = new System.Drawing.Point(161, 174);
             this.partDescriptionTextBox.Name = "partDescriptionTextBox";
             this.partDescriptionTextBox.Size = new System.Drawing.Size(179, 20);
-            this.partDescriptionTextBox.TabIndex = 150;
+            this.partDescriptionTextBox.TabIndex = 5;
             // 
             // customerTextBox
             // 
             this.customerTextBox.Location = new System.Drawing.Point(160, 205);
             this.customerTextBox.Name = "customerTextBox";
             this.customerTextBox.Size = new System.Drawing.Size(179, 20);
-            this.customerTextBox.TabIndex = 151;
+            this.customerTextBox.TabIndex = 7;
             // 
             // ovenSNComboBox
             // 
@@ -281,7 +282,7 @@
             this.ovenSNComboBox.Location = new System.Drawing.Point(161, 368);
             this.ovenSNComboBox.Name = "ovenSNComboBox";
             this.ovenSNComboBox.Size = new System.Drawing.Size(100, 21);
-            this.ovenSNComboBox.TabIndex = 162;
+            this.ovenSNComboBox.TabIndex = 13;
             // 
             // specRevComboBox
             // 
@@ -289,7 +290,7 @@
             this.specRevComboBox.Location = new System.Drawing.Point(268, 344);
             this.specRevComboBox.Name = "specRevComboBox";
             this.specRevComboBox.Size = new System.Drawing.Size(50, 21);
-            this.specRevComboBox.TabIndex = 158;
+            this.specRevComboBox.TabIndex = 12;
             // 
             // specificationComboBox
             // 
@@ -297,7 +298,7 @@
             this.specificationComboBox.Location = new System.Drawing.Point(160, 344);
             this.specificationComboBox.Name = "specificationComboBox";
             this.specificationComboBox.Size = new System.Drawing.Size(100, 21);
-            this.specificationComboBox.TabIndex = 156;
+            this.specificationComboBox.TabIndex = 11;
             // 
             // label15
             // 
@@ -331,7 +332,7 @@
             this.hoursRequiredTimeTextBox.Location = new System.Drawing.Point(160, 394);
             this.hoursRequiredTimeTextBox.Name = "hoursRequiredTimeTextBox";
             this.hoursRequiredTimeTextBox.Size = new System.Drawing.Size(64, 20);
-            this.hoursRequiredTimeTextBox.TabIndex = 165;
+            this.hoursRequiredTimeTextBox.TabIndex = 14;
             // 
             // label9
             // 
@@ -347,7 +348,7 @@
             this.requiredTemperatureTextBox.Location = new System.Drawing.Point(162, 422);
             this.requiredTemperatureTextBox.Name = "requiredTemperatureTextBox";
             this.requiredTemperatureTextBox.Size = new System.Drawing.Size(62, 20);
-            this.requiredTemperatureTextBox.TabIndex = 167;
+            this.requiredTemperatureTextBox.TabIndex = 16;
             // 
             // celciousRadioButton
             // 
@@ -355,7 +356,7 @@
             this.celciousRadioButton.Location = new System.Drawing.Point(290, 424);
             this.celciousRadioButton.Name = "celciousRadioButton";
             this.celciousRadioButton.Size = new System.Drawing.Size(36, 17);
-            this.celciousRadioButton.TabIndex = 168;
+            this.celciousRadioButton.TabIndex = 18;
             this.celciousRadioButton.TabStop = true;
             this.celciousRadioButton.Text = "C°";
             this.celciousRadioButton.UseVisualStyleBackColor = true;
@@ -366,7 +367,7 @@
             this.farenheitRadioButton.Location = new System.Drawing.Point(328, 424);
             this.farenheitRadioButton.Name = "farenheitRadioButton";
             this.farenheitRadioButton.Size = new System.Drawing.Size(35, 17);
-            this.farenheitRadioButton.TabIndex = 169;
+            this.farenheitRadioButton.TabIndex = 19;
             this.farenheitRadioButton.TabStop = true;
             this.farenheitRadioButton.Text = "F°";
             this.farenheitRadioButton.UseVisualStyleBackColor = true;
@@ -377,7 +378,7 @@
             this.certifiedByComboBox.Location = new System.Drawing.Point(161, 450);
             this.certifiedByComboBox.Name = "certifiedByComboBox";
             this.certifiedByComboBox.Size = new System.Drawing.Size(102, 21);
-            this.certifiedByComboBox.TabIndex = 171;
+            this.certifiedByComboBox.TabIndex = 19;
             // 
             // label70
             // 
@@ -393,7 +394,7 @@
             this.submitButton.Location = new System.Drawing.Point(277, 477);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
-            this.submitButton.TabIndex = 174;
+            this.submitButton.TabIndex = 20;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
@@ -403,7 +404,7 @@
             this.printButton.Location = new System.Drawing.Point(188, 477);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(75, 23);
-            this.printButton.TabIndex = 173;
+            this.printButton.TabIndex = 21;
             this.printButton.Text = "Print";
             this.printButton.UseVisualStyleBackColor = true;
             this.printButton.Click += new System.EventHandler(this.printCertButton_Click);
@@ -413,7 +414,7 @@
             this.plusMinTemperatureTextBox.Location = new System.Drawing.Point(243, 422);
             this.plusMinTemperatureTextBox.Name = "plusMinTemperatureTextBox";
             this.plusMinTemperatureTextBox.Size = new System.Drawing.Size(42, 20);
-            this.plusMinTemperatureTextBox.TabIndex = 177;
+            this.plusMinTemperatureTextBox.TabIndex = 17;
             // 
             // label18
             // 
@@ -447,14 +448,14 @@
             this.minutesRequiredTimeTextBox.Location = new System.Drawing.Point(266, 394);
             this.minutesRequiredTimeTextBox.Name = "minutesRequiredTimeTextBox";
             this.minutesRequiredTimeTextBox.Size = new System.Drawing.Size(61, 20);
-            this.minutesRequiredTimeTextBox.TabIndex = 180;
+            this.minutesRequiredTimeTextBox.TabIndex = 15;
             // 
             // opNumberTextBox
             // 
             this.opNumberTextBox.Location = new System.Drawing.Point(433, 201);
             this.opNumberTextBox.Name = "opNumberTextBox";
             this.opNumberTextBox.Size = new System.Drawing.Size(56, 20);
-            this.opNumberTextBox.TabIndex = 183;
+            this.opNumberTextBox.TabIndex = 8;
             // 
             // label14
             // 

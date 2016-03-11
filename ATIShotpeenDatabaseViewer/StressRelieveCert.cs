@@ -300,7 +300,7 @@ namespace ATICertViewer
                 conn.Open();
 
                 // specify query
-                string query = "INSERT INTO [dbo].[StressRelieveCertificationLog]\n" +
+                string query = "INSERT INTO ATIDelivery.[dbo].[StressRelieveCertificationLog]\n" +
                                 "([CertNumber]\n" +
                                 ",[Customer]\n" +
                                 ",[Part_Number]\n" +
@@ -365,7 +365,7 @@ namespace ATICertViewer
                 conn.Open();
 
                 // specify query
-                string query = "[dbo].[StressRelieveCertificationLog]\n" +
+                string query = "ATIDelivery.[dbo].[StressRelieveCertificationLog]\n" +
                                 "SET [Customer] = '" + customerTextBox.Text + "'\n" +
                                 ",[Part_Number] = '" + partNumberTextBox.Text + "'\n" +
                                 ",[Revision] = '" + revisionTextBox.Text + "'\n" +

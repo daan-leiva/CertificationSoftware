@@ -42,7 +42,7 @@
             this.shotpeenButton.Location = new System.Drawing.Point(75, 89);
             this.shotpeenButton.Name = "shotpeenButton";
             this.shotpeenButton.Size = new System.Drawing.Size(97, 23);
-            this.shotpeenButton.TabIndex = 0;
+            this.shotpeenButton.TabIndex = 1;
             this.shotpeenButton.Text = "Shotpeen";
             this.shotpeenButton.UseVisualStyleBackColor = true;
             this.shotpeenButton.Click += new System.EventHandler(this.shotpeenButton_Click);
@@ -54,7 +54,7 @@
             this.label1.Location = new System.Drawing.Point(51, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 40);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "CERTIFICATION\r\nFORMS\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -108,7 +108,7 @@
             this.editUserButton.UseVisualStyleBackColor = true;
             this.editUserButton.Click += new System.EventHandler(this.editUserButton_Click);
             // 
-            // MainForm
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -120,7 +120,7 @@
             this.Controls.Add(this.magButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.shotpeenButton);
-            this.Name = "MainForm";
+            this.Name = "MainWindow";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);

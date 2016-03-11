@@ -20,11 +20,11 @@ namespace ATICertViewer
 
         public StressRelieveListViewer(bool _isAdmin, string _userName, bool _canWrite)
         {
+            InitializeComponent();
+            
             isAdmin = _isAdmin;
             userName = _userName;
             canWrite = _canWrite;
-
-            InitializeComponent();
         }
 
         private void StressRelieveListViewer_Load(object sender, EventArgs e)
@@ -36,6 +36,15 @@ namespace ATICertViewer
             // check if admin or writable account
             if (!(isAdmin || canWrite))
                 newButton.Enabled = false;
+
+            // add filtering events
+            certNoTextBox.TextChanged += this.ApplyFilters;
+            customerTextBox.TextChanged += this.ApplyFilters;
+            partNoTextBox.TextChanged += this.ApplyFilters;
+            jobTextBox.TextChanged += this.ApplyFilters;
+            certifiedByTextBox.TextChanged += this.ApplyFilters;
+            dateTimePicker1.ValueChanged += this.ApplyFilters;
+            enableDateFilterCheckBox.CheckedChanged += this.ApplyFilters;
         }
 
         private void newButton_Click(object sender, EventArgs e)
@@ -94,6 +103,16 @@ namespace ATICertViewer
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             viewEditButton_Click(sender, e);
+        }
+
+        private void ApplyFilters(object sender, EventArgs e)
+        {
+            if (enableDateFilterCheckBox.Checked)
+                stressRelieveCertificationLogBindingSource.Filter = string.Format("Convert([CertNumber], 'System.String') LIKE '%{0}%' AND [Customer] LIKE '%{1}%' AND [Part_Number] LIKE '%{2}%' AND [Job_Number] LIKE '%{3}%' AND [Certified_By] LIKE '%{4}%' AND [Cert_Date] = #{5}#",
+                    certNoTextBox.Text, customerTextBox.Text, partNoTextBox.Text, jobTextBox.Text, certifiedByTextBox.Text, dateTimePicker1.Value.ToShortDateString());
+            else
+                stressRelieveCertificationLogBindingSource.Filter = string.Format("Convert([CertNumber], 'System.String') LIKE '%{0}%' AND [Customer] LIKE '%{1}%' AND [Part_Number] LIKE '%{2}%' AND [Job_Number] LIKE '%{3}%' AND [Certified_By] LIKE '%{4}%'",
+                    certNoTextBox.Text, customerTextBox.Text, partNoTextBox.Text, jobTextBox.Text, certifiedByTextBox.Text);
         }
     }
 }

@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(D2060RForm));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.verticalLabel18 = new ATICertViewer.VerticalLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.commentsTextBox = new System.Windows.Forms.TextBox();
             this.inspectorTextBox = new System.Windows.Forms.TextBox();
@@ -52,6 +51,10 @@
             this.particleConcTextBox = new System.Windows.Forms.TextBox();
             this.internalShortsTextBox = new System.Windows.Forms.TextBox();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.submitButton = new System.Windows.Forms.Button();
+            this.printButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.verticalLabel18 = new ATICertViewer.VerticalLabel();
             this.verticalLabel17 = new ATICertViewer.VerticalLabel();
             this.verticalLabel16 = new ATICertViewer.VerticalLabel();
             this.verticalLabel15 = new ATICertViewer.VerticalLabel();
@@ -69,9 +72,6 @@
             this.particleConc = new ATICertViewer.VerticalLabel();
             this.verticalLabel2 = new ATICertViewer.VerticalLabel();
             this.verticalLabel1 = new ATICertViewer.VerticalLabel();
-            this.submitButton = new System.Windows.Forms.Button();
-            this.printButton = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,20 +90,9 @@
             this.label2.Location = new System.Drawing.Point(-136, 258);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(1477, 13);
-            this.label2.TabIndex = 76;
+            this.label2.TabIndex = 17;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // verticalLabel18
-            // 
-            this.verticalLabel18.Location = new System.Drawing.Point(805, 136);
-            this.verticalLabel18.Name = "verticalLabel18";
-            this.verticalLabel18.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
-            this.verticalLabel18.Size = new System.Drawing.Size(14, 73);
-            this.verticalLabel18.TabIndex = 75;
-            this.verticalLabel18.Text = "3400 (6 holes)";
-            this.verticalLabel18.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
-            this.verticalLabel18.TransparentBackground = false;
             // 
             // label1
             // 
@@ -120,119 +109,119 @@
             this.commentsTextBox.Location = new System.Drawing.Point(952, 235);
             this.commentsTextBox.Name = "commentsTextBox";
             this.commentsTextBox.Size = new System.Drawing.Size(236, 20);
-            this.commentsTextBox.TabIndex = 73;
+            this.commentsTextBox.TabIndex = 17;
             // 
             // inspectorTextBox
             // 
             this.inspectorTextBox.Location = new System.Drawing.Point(882, 235);
             this.inspectorTextBox.Name = "inspectorTextBox";
             this.inspectorTextBox.Size = new System.Drawing.Size(69, 20);
-            this.inspectorTextBox.TabIndex = 72;
+            this.inspectorTextBox.TabIndex = 16;
             // 
             // bathComparisonTextBox
             // 
             this.bathComparisonTextBox.Location = new System.Drawing.Point(856, 235);
             this.bathComparisonTextBox.Name = "bathComparisonTextBox";
             this.bathComparisonTextBox.Size = new System.Drawing.Size(25, 20);
-            this.bathComparisonTextBox.TabIndex = 71;
+            this.bathComparisonTextBox.TabIndex = 15;
             // 
             // astm3400TextBox
             // 
             this.astm3400TextBox.Location = new System.Drawing.Point(805, 235);
             this.astm3400TextBox.Name = "astm3400TextBox";
             this.astm3400TextBox.Size = new System.Drawing.Size(50, 20);
-            this.astm3400TextBox.TabIndex = 70;
+            this.astm3400TextBox.TabIndex = 14;
             // 
             // astm2500TextBox
             // 
             this.astm2500TextBox.Location = new System.Drawing.Point(754, 235);
             this.astm2500TextBox.Name = "astm2500TextBox";
             this.astm2500TextBox.Size = new System.Drawing.Size(50, 20);
-            this.astm2500TextBox.TabIndex = 69;
+            this.astm2500TextBox.TabIndex = 13;
             // 
             // astm1400TextBox
             // 
             this.astm1400TextBox.Location = new System.Drawing.Point(703, 235);
             this.astm1400TextBox.Name = "astm1400TextBox";
             this.astm1400TextBox.Size = new System.Drawing.Size(50, 20);
-            this.astm1400TextBox.TabIndex = 68;
+            this.astm1400TextBox.TabIndex = 12;
             // 
             // as5282QQITextBox
             // 
             this.as5282QQITextBox.Location = new System.Drawing.Point(652, 235);
             this.as5282QQITextBox.Name = "as5282QQITextBox";
             this.as5282QQITextBox.Size = new System.Drawing.Size(50, 20);
-            this.as5282QQITextBox.TabIndex = 67;
+            this.as5282QQITextBox.TabIndex = 11;
             // 
             // as3500TextBox
             // 
             this.as3500TextBox.Location = new System.Drawing.Point(601, 235);
             this.as3500TextBox.Name = "as3500TextBox";
             this.as3500TextBox.Size = new System.Drawing.Size(50, 20);
-            this.as3500TextBox.TabIndex = 66;
+            this.as3500TextBox.TabIndex = 10;
             // 
             // as2500TextBox
             // 
             this.as2500TextBox.Location = new System.Drawing.Point(550, 235);
             this.as2500TextBox.Name = "as2500TextBox";
             this.as2500TextBox.Size = new System.Drawing.Size(50, 20);
-            this.as2500TextBox.TabIndex = 65;
+            this.as2500TextBox.TabIndex = 9;
             // 
             // as1500TextBox
             // 
             this.as1500TextBox.Location = new System.Drawing.Point(499, 235);
             this.as1500TextBox.Name = "as1500TextBox";
             this.as1500TextBox.Size = new System.Drawing.Size(50, 20);
-            this.as1500TextBox.TabIndex = 64;
+            this.as1500TextBox.TabIndex = 8;
             // 
             // as1000TextBox
             // 
             this.as1000TextBox.Location = new System.Drawing.Point(448, 235);
             this.as1000TextBox.Name = "as1000TextBox";
             this.as1000TextBox.Size = new System.Drawing.Size(50, 20);
-            this.as1000TextBox.TabIndex = 63;
+            this.as1000TextBox.TabIndex = 7;
             // 
             // as500TextBox
             // 
             this.as500TextBox.Location = new System.Drawing.Point(397, 235);
             this.as500TextBox.Name = "as500TextBox";
             this.as500TextBox.Size = new System.Drawing.Size(50, 20);
-            this.as500TextBox.TabIndex = 62;
+            this.as500TextBox.TabIndex = 6;
             // 
             // uvAmbientLightTextBox
             // 
             this.uvAmbientLightTextBox.Location = new System.Drawing.Point(341, 235);
             this.uvAmbientLightTextBox.Name = "uvAmbientLightTextBox";
             this.uvAmbientLightTextBox.Size = new System.Drawing.Size(55, 20);
-            this.uvAmbientLightTextBox.TabIndex = 61;
+            this.uvAmbientLightTextBox.TabIndex = 5;
             // 
             // availLightMinTextBox
             // 
             this.availLightMinTextBox.Location = new System.Drawing.Point(261, 235);
             this.availLightMinTextBox.Name = "availLightMinTextBox";
             this.availLightMinTextBox.Size = new System.Drawing.Size(79, 20);
-            this.availLightMinTextBox.TabIndex = 60;
+            this.availLightMinTextBox.TabIndex = 4;
             // 
             // blacklightMinTextBox
             // 
             this.blacklightMinTextBox.Location = new System.Drawing.Point(181, 235);
             this.blacklightMinTextBox.Name = "blacklightMinTextBox";
             this.blacklightMinTextBox.Size = new System.Drawing.Size(79, 20);
-            this.blacklightMinTextBox.TabIndex = 59;
+            this.blacklightMinTextBox.TabIndex = 3;
             // 
             // particleConcTextBox
             // 
             this.particleConcTextBox.Location = new System.Drawing.Point(140, 235);
             this.particleConcTextBox.Name = "particleConcTextBox";
             this.particleConcTextBox.Size = new System.Drawing.Size(40, 20);
-            this.particleConcTextBox.TabIndex = 58;
+            this.particleConcTextBox.TabIndex = 2;
             // 
             // internalShortsTextBox
             // 
             this.internalShortsTextBox.Location = new System.Drawing.Point(99, 235);
             this.internalShortsTextBox.Name = "internalShortsTextBox";
             this.internalShortsTextBox.Size = new System.Drawing.Size(40, 20);
-            this.internalShortsTextBox.TabIndex = 57;
+            this.internalShortsTextBox.TabIndex = 1;
             // 
             // dateTimePicker
             // 
@@ -240,7 +229,43 @@
             this.dateTimePicker.Location = new System.Drawing.Point(16, 235);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(82, 20);
-            this.dateTimePicker.TabIndex = 56;
+            this.dateTimePicker.TabIndex = 0;
+            // 
+            // submitButton
+            // 
+            this.submitButton.Location = new System.Drawing.Point(604, 327);
+            this.submitButton.Name = "submitButton";
+            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.TabIndex = 18;
+            this.submitButton.Text = "Submit";
+            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
+            // 
+            // printButton
+            // 
+            this.printButton.Location = new System.Drawing.Point(515, 327);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(75, 23);
+            this.printButton.TabIndex = 19;
+            this.printButton.Text = "Print";
+            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // verticalLabel18
+            // 
+            this.verticalLabel18.Location = new System.Drawing.Point(805, 136);
+            this.verticalLabel18.Name = "verticalLabel18";
+            this.verticalLabel18.RenderingMode = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
+            this.verticalLabel18.Size = new System.Drawing.Size(14, 73);
+            this.verticalLabel18.TabIndex = 75;
+            this.verticalLabel18.Text = "3400 (6 holes)";
+            this.verticalLabel18.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
+            this.verticalLabel18.TransparentBackground = false;
             // 
             // verticalLabel17
             // 
@@ -429,31 +454,6 @@
             this.verticalLabel1.Text = "Date";
             this.verticalLabel1.TextDrawMode = ATICertViewer.DrawMode.TopBottom;
             this.verticalLabel1.TransparentBackground = false;
-            // 
-            // submitButton
-            // 
-            this.submitButton.Location = new System.Drawing.Point(604, 327);
-            this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(75, 23);
-            this.submitButton.TabIndex = 191;
-            this.submitButton.Text = "Submit";
-            this.submitButton.UseVisualStyleBackColor = true;
-            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
-            // 
-            // printButton
-            // 
-            this.printButton.Location = new System.Drawing.Point(515, 327);
-            this.printButton.Name = "printButton";
-            this.printButton.Size = new System.Drawing.Size(75, 23);
-            this.printButton.TabIndex = 190;
-            this.printButton.Text = "Print";
-            this.printButton.UseVisualStyleBackColor = true;
-            this.printButton.Click += new System.EventHandler(this.printButton_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
-            this.errorProvider1.ContainerControl = this;
             // 
             // D2060RForm
             // 

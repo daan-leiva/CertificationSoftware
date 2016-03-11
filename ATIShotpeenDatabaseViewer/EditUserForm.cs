@@ -55,6 +55,9 @@ namespace ATICertViewer
 
             // set up password field
             passwordTextBox.PasswordChar = '*';
+
+            // disable resizing
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         }
 
         private void submitButton_Click(object sender, EventArgs e)

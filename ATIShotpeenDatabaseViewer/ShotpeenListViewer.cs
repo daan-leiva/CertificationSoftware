@@ -20,11 +20,11 @@ namespace ATICertViewer
 
         public ShotpeenListViewer(bool _isAdmin, string _userName, bool _canWrite)
         {
+            InitializeComponent();
+
             isAdmin = _isAdmin;
             userName = _userName;
             canWrite = _canWrite;
-
-            InitializeComponent();
         }
 
         private void ListViewer_Load(object sender, EventArgs e)
@@ -36,6 +36,15 @@ namespace ATICertViewer
             // check if admin or writable account
             if (!(isAdmin || canWrite))
                 newButton.Enabled = false;
+
+            // add filter events
+            certNoTextBox.TextChanged += this.ApplyFilters;
+            customerTextBox.TextChanged += this.ApplyFilters;
+            partNoTextBox.TextChanged += this.ApplyFilters;
+            jobTextBox.TextChanged += this.ApplyFilters;
+            specificationTextBox.TextChanged += this.ApplyFilters;
+            dateTimePicker1.ValueChanged += this.ApplyFilters;
+            enableDateFilterCheckBox.CheckedChanged += this.ApplyFilters;
         }
 
         private void newButton_Click(object sender, EventArgs e)
@@ -94,6 +103,16 @@ namespace ATICertViewer
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ApplyFilters(object sender, EventArgs e)
+        {
+            if (enableDateFilterCheckBox.Checked)
+                tblJobProcessLogBindingSource.Filter = string.Format("Convert([process_num], 'System.String') LIKE '%{0}%' AND [customer] LIKE '%{1}%' AND [part_num] LIKE '%{2}%' AND [job_num] LIKE '%{3}%' AND [specification] LIKE '%{4}%' AND [date] = #{5}#",
+                    certNoTextBox.Text, customerTextBox.Text, partNoTextBox.Text, jobTextBox.Text, specificationTextBox.Text, dateTimePicker1.Value.ToShortDateString());
+            else
+                tblJobProcessLogBindingSource.Filter = string.Format("Convert([process_num], 'System.String') LIKE '%{0}%' AND [customer] LIKE '%{1}%' AND [part_num] LIKE '%{2}%' AND [job_num] LIKE '%{3}%' AND [specification] LIKE '%{4}%'",
+                    certNoTextBox.Text, customerTextBox.Text, partNoTextBox.Text, jobTextBox.Text, specificationTextBox.Text);
         }
     }
 }

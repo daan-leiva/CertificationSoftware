@@ -35,24 +35,29 @@
             this.viewEditButton = new System.Windows.Forms.Button();
             this.newButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.aTIDeliveryDataSet = new ATICertViewer.ATIDeliveryDataSet();
-            this.magTaq525ProcessControlLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.magTaq525ProcessControlLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.MagTaq525ProcessControlLogTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.internalShortsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.particleConc14MlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.blacklightMin1000uw15DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.availLightMin100FCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uVAmbientLightAmbientWhiteLightMax2FCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.holesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.holesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.holesDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.holesDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.holesDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.magTaq525ProcessControlLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aTIDeliveryDataSet = new ATICertViewer.ATIDeliveryDataSet();
+            this.magTaq525ProcessControlLogTableAdapter = new ATICertViewer.ATIDeliveryDataSetTableAdapters.MagTaq525ProcessControlLogTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.inspectorTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.enableDateFilterCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magTaq525ProcessControlLogBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -62,45 +67,45 @@
             this.label2.Location = new System.Drawing.Point(494, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 25);
-            this.label2.TabIndex = 23;
+            this.label2.TabIndex = 0;
             this.label2.Text = "TAQ Logs";
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(1150, 294);
+            this.exitButton.Location = new System.Drawing.Point(1150, 371);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
-            this.exitButton.TabIndex = 22;
+            this.exitButton.TabIndex = 5;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // refreshButton
             // 
-            this.refreshButton.Location = new System.Drawing.Point(227, 294);
+            this.refreshButton.Location = new System.Drawing.Point(227, 371);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(75, 23);
-            this.refreshButton.TabIndex = 21;
+            this.refreshButton.TabIndex = 4;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = true;
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // viewEditButton
             // 
-            this.viewEditButton.Location = new System.Drawing.Point(134, 294);
+            this.viewEditButton.Location = new System.Drawing.Point(134, 371);
             this.viewEditButton.Name = "viewEditButton";
             this.viewEditButton.Size = new System.Drawing.Size(75, 23);
-            this.viewEditButton.TabIndex = 20;
+            this.viewEditButton.TabIndex = 3;
             this.viewEditButton.Text = "View/Edit";
             this.viewEditButton.UseVisualStyleBackColor = true;
             this.viewEditButton.Click += new System.EventHandler(this.viewEditButton_Click);
             // 
             // newButton
             // 
-            this.newButton.Location = new System.Drawing.Point(41, 294);
+            this.newButton.Location = new System.Drawing.Point(41, 371);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(75, 23);
-            this.newButton.TabIndex = 19;
+            this.newButton.TabIndex = 2;
             this.newButton.Text = "New";
             this.newButton.UseVisualStyleBackColor = true;
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
@@ -118,38 +123,22 @@
             this.dateDataGridViewTextBoxColumn,
             this.internalShortsDataGridViewTextBoxColumn,
             this.particleConc14MlDataGridViewTextBoxColumn,
-            this.blacklightMin1000uw15DataGridViewTextBoxColumn,
             this.availLightMin100FCDataGridViewTextBoxColumn,
-            this.uVAmbientLightAmbientWhiteLightMax2FCDataGridViewTextBoxColumn,
             this.holesDataGridViewTextBoxColumn,
             this.holesDataGridViewTextBoxColumn1,
             this.holesDataGridViewTextBoxColumn2,
             this.holesDataGridViewTextBoxColumn3,
             this.holesDataGridViewTextBoxColumn4});
             this.dataGridView1.DataSource = this.magTaq525ProcessControlLogBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 65);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 142);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1213, 211);
-            this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // aTIDeliveryDataSet
-            // 
-            this.aTIDeliveryDataSet.DataSetName = "ATIDeliveryDataSet";
-            this.aTIDeliveryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // magTaq525ProcessControlLogBindingSource
-            // 
-            this.magTaq525ProcessControlLogBindingSource.DataMember = "MagTaq525ProcessControlLog";
-            this.magTaq525ProcessControlLogBindingSource.DataSource = this.aTIDeliveryDataSet;
-            // 
-            // magTaq525ProcessControlLogTableAdapter
-            // 
-            this.magTaq525ProcessControlLogTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -179,26 +168,12 @@
             this.particleConc14MlDataGridViewTextBoxColumn.Name = "particleConc14MlDataGridViewTextBoxColumn";
             this.particleConc14MlDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // blacklightMin1000uw15DataGridViewTextBoxColumn
-            // 
-            this.blacklightMin1000uw15DataGridViewTextBoxColumn.DataPropertyName = "Blacklight Min 1000uw@ 15\"";
-            this.blacklightMin1000uw15DataGridViewTextBoxColumn.HeaderText = "Blacklight Min 1000uw@ 15\"";
-            this.blacklightMin1000uw15DataGridViewTextBoxColumn.Name = "blacklightMin1000uw15DataGridViewTextBoxColumn";
-            this.blacklightMin1000uw15DataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // availLightMin100FCDataGridViewTextBoxColumn
             // 
             this.availLightMin100FCDataGridViewTextBoxColumn.DataPropertyName = "Avail Light Min 100FC";
             this.availLightMin100FCDataGridViewTextBoxColumn.HeaderText = "Avail Light Min 100FC";
             this.availLightMin100FCDataGridViewTextBoxColumn.Name = "availLightMin100FCDataGridViewTextBoxColumn";
             this.availLightMin100FCDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // uVAmbientLightAmbientWhiteLightMax2FCDataGridViewTextBoxColumn
-            // 
-            this.uVAmbientLightAmbientWhiteLightMax2FCDataGridViewTextBoxColumn.DataPropertyName = "UV Ambient Light / Ambient White Light Max 2FC";
-            this.uVAmbientLightAmbientWhiteLightMax2FCDataGridViewTextBoxColumn.HeaderText = "UV Ambient Light / Ambient White Light Max 2FC";
-            this.uVAmbientLightAmbientWhiteLightMax2FCDataGridViewTextBoxColumn.Name = "uVAmbientLightAmbientWhiteLightMax2FCDataGridViewTextBoxColumn";
-            this.uVAmbientLightAmbientWhiteLightMax2FCDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // holesDataGridViewTextBoxColumn
             // 
@@ -235,11 +210,90 @@
             this.holesDataGridViewTextBoxColumn4.Name = "holesDataGridViewTextBoxColumn4";
             this.holesDataGridViewTextBoxColumn4.ReadOnly = true;
             // 
+            // magTaq525ProcessControlLogBindingSource
+            // 
+            this.magTaq525ProcessControlLogBindingSource.DataMember = "MagTaq525ProcessControlLog";
+            this.magTaq525ProcessControlLogBindingSource.DataSource = this.aTIDeliveryDataSet;
+            // 
+            // aTIDeliveryDataSet
+            // 
+            this.aTIDeliveryDataSet.DataSetName = "ATIDeliveryDataSet";
+            this.aTIDeliveryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // magTaq525ProcessControlLogTableAdapter
+            // 
+            this.magTaq525ProcessControlLogTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(45, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "ID:";
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Location = new System.Drawing.Point(69, 43);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(200, 20);
+            this.idTextBox.TabIndex = 7;
+            // 
+            // inspectorTextBox
+            // 
+            this.inspectorTextBox.Location = new System.Drawing.Point(69, 95);
+            this.inspectorTextBox.Name = "inspectorTextBox";
+            this.inspectorTextBox.Size = new System.Drawing.Size(200, 20);
+            this.inspectorTextBox.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Inspector:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(33, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Date:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(69, 69);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 11;
+            // 
+            // enableDateFilterCheckBox
+            // 
+            this.enableDateFilterCheckBox.AutoSize = true;
+            this.enableDateFilterCheckBox.Location = new System.Drawing.Point(276, 72);
+            this.enableDateFilterCheckBox.Name = "enableDateFilterCheckBox";
+            this.enableDateFilterCheckBox.Size = new System.Drawing.Size(105, 17);
+            this.enableDateFilterCheckBox.TabIndex = 12;
+            this.enableDateFilterCheckBox.Text = "Enable date filter";
+            this.enableDateFilterCheckBox.UseVisualStyleBackColor = true;
+            // 
             // TAQ525ListViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 336);
+            this.ClientSize = new System.Drawing.Size(1244, 406);
+            this.Controls.Add(this.enableDateFilterCheckBox);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.inspectorTextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.refreshButton);
@@ -250,8 +304,8 @@
             this.Text = "TAQ525ListViewer";
             this.Load += new System.EventHandler(this.TAQ525ListViewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magTaq525ProcessControlLogBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aTIDeliveryDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +334,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn holesDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn holesDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn holesDataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox inspectorTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.CheckBox enableDateFilterCheckBox;
     }
 }

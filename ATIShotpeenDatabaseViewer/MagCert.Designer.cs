@@ -99,7 +99,7 @@
             this.autoFillButton.Location = new System.Drawing.Point(238, 83);
             this.autoFillButton.Name = "autoFillButton";
             this.autoFillButton.Size = new System.Drawing.Size(52, 47);
-            this.autoFillButton.TabIndex = 151;
+            this.autoFillButton.TabIndex = 1;
             this.autoFillButton.Text = "Auto Fill From JB";
             this.autoFillButton.UseVisualStyleBackColor = true;
             this.autoFillButton.Click += new System.EventHandler(this.autoFillButton_Click);
@@ -120,7 +120,7 @@
             this.revisionTextBox.Location = new System.Drawing.Point(375, 109);
             this.revisionTextBox.Name = "revisionTextBox";
             this.revisionTextBox.Size = new System.Drawing.Size(104, 20);
-            this.revisionTextBox.TabIndex = 147;
+            this.revisionTextBox.TabIndex = 3;
             // 
             // label13
             // 
@@ -136,7 +136,7 @@
             this.partNumberTextBox.Location = new System.Drawing.Point(132, 137);
             this.partNumberTextBox.Name = "partNumberTextBox";
             this.partNumberTextBox.Size = new System.Drawing.Size(158, 20);
-            this.partNumberTextBox.TabIndex = 144;
+            this.partNumberTextBox.TabIndex = 4;
             // 
             // label11
             // 
@@ -152,7 +152,7 @@
             this.lotNumberTextBox.Location = new System.Drawing.Point(375, 135);
             this.lotNumberTextBox.Name = "lotNumberTextBox";
             this.lotNumberTextBox.Size = new System.Drawing.Size(56, 20);
-            this.lotNumberTextBox.TabIndex = 142;
+            this.lotNumberTextBox.TabIndex = 5;
             // 
             // label10
             // 
@@ -169,7 +169,7 @@
             this.dateTimePicker.Location = new System.Drawing.Point(375, 81);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(104, 20);
-            this.dateTimePicker.TabIndex = 139;
+            this.dateTimePicker.TabIndex = 2;
             // 
             // label8
             // 
@@ -185,7 +185,7 @@
             this.jobNumberTextBox.Location = new System.Drawing.Point(132, 110);
             this.jobNumberTextBox.Name = "jobNumberTextBox";
             this.jobNumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.jobNumberTextBox.TabIndex = 136;
+            this.jobNumberTextBox.TabIndex = 0;
             // 
             // certNumberTextBox
             // 
@@ -194,6 +194,7 @@
             this.certNumberTextBox.ReadOnly = true;
             this.certNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.certNumberTextBox.TabIndex = 135;
+            this.certNumberTextBox.TabStop = false;
             // 
             // label5
             // 
@@ -247,14 +248,14 @@
             this.partDescriptionTextBox.Location = new System.Drawing.Point(132, 164);
             this.partDescriptionTextBox.Name = "partDescriptionTextBox";
             this.partDescriptionTextBox.Size = new System.Drawing.Size(158, 20);
-            this.partDescriptionTextBox.TabIndex = 149;
+            this.partDescriptionTextBox.TabIndex = 6;
             // 
             // customerTextBox
             // 
             this.customerTextBox.Location = new System.Drawing.Point(375, 164);
             this.customerTextBox.Name = "customerTextBox";
             this.customerTextBox.Size = new System.Drawing.Size(158, 20);
-            this.customerTextBox.TabIndex = 150;
+            this.customerTextBox.TabIndex = 7;
             // 
             // materialTypeComboBox
             // 
@@ -262,7 +263,7 @@
             this.materialTypeComboBox.Location = new System.Drawing.Point(132, 192);
             this.materialTypeComboBox.Name = "materialTypeComboBox";
             this.materialTypeComboBox.Size = new System.Drawing.Size(158, 21);
-            this.materialTypeComboBox.TabIndex = 153;
+            this.materialTypeComboBox.TabIndex = 8;
             // 
             // label12
             // 
@@ -275,19 +276,21 @@
             // 
             // specRevComboBox
             // 
+            this.specRevComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.specRevComboBox.FormattingEnabled = true;
             this.specRevComboBox.Location = new System.Drawing.Point(238, 220);
             this.specRevComboBox.Name = "specRevComboBox";
             this.specRevComboBox.Size = new System.Drawing.Size(50, 21);
-            this.specRevComboBox.TabIndex = 157;
+            this.specRevComboBox.TabIndex = 10;
             // 
             // specComboBox
             // 
+            this.specComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.specComboBox.FormattingEnabled = true;
             this.specComboBox.Location = new System.Drawing.Point(132, 220);
             this.specComboBox.Name = "specComboBox";
             this.specComboBox.Size = new System.Drawing.Size(100, 21);
-            this.specComboBox.TabIndex = 156;
+            this.specComboBox.TabIndex = 9;
             // 
             // label7
             // 
@@ -303,7 +306,7 @@
             this.quantityInspectedTextBox.Location = new System.Drawing.Point(132, 276);
             this.quantityInspectedTextBox.Name = "quantityInspectedTextBox";
             this.quantityInspectedTextBox.Size = new System.Drawing.Size(43, 20);
-            this.quantityInspectedTextBox.TabIndex = 159;
+            this.quantityInspectedTextBox.TabIndex = 19;
             // 
             // label6
             // 
@@ -319,7 +322,7 @@
             this.quantityAcceptedTextBox.Location = new System.Drawing.Point(132, 303);
             this.quantityAcceptedTextBox.Name = "quantityAcceptedTextBox";
             this.quantityAcceptedTextBox.Size = new System.Drawing.Size(43, 20);
-            this.quantityAcceptedTextBox.TabIndex = 161;
+            this.quantityAcceptedTextBox.TabIndex = 20;
             // 
             // label9
             // 
@@ -335,7 +338,7 @@
             this.quantityRejectedTextBox.Location = new System.Drawing.Point(132, 330);
             this.quantityRejectedTextBox.Name = "quantityRejectedTextBox";
             this.quantityRejectedTextBox.Size = new System.Drawing.Size(43, 20);
-            this.quantityRejectedTextBox.TabIndex = 163;
+            this.quantityRejectedTextBox.TabIndex = 21;
             // 
             // label14
             // 
@@ -348,19 +351,21 @@
             // 
             // acceptCriteriaRevComboBox
             // 
+            this.acceptCriteriaRevComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.acceptCriteriaRevComboBox.FormattingEnabled = true;
             this.acceptCriteriaRevComboBox.Location = new System.Drawing.Point(238, 249);
             this.acceptCriteriaRevComboBox.Name = "acceptCriteriaRevComboBox";
             this.acceptCriteriaRevComboBox.Size = new System.Drawing.Size(50, 21);
-            this.acceptCriteriaRevComboBox.TabIndex = 166;
+            this.acceptCriteriaRevComboBox.TabIndex = 15;
             // 
             // acceptCriteriaComboBox
             // 
+            this.acceptCriteriaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.acceptCriteriaComboBox.FormattingEnabled = true;
             this.acceptCriteriaComboBox.Location = new System.Drawing.Point(132, 248);
             this.acceptCriteriaComboBox.Name = "acceptCriteriaComboBox";
             this.acceptCriteriaComboBox.Size = new System.Drawing.Size(100, 21);
-            this.acceptCriteriaComboBox.TabIndex = 165;
+            this.acceptCriteriaComboBox.TabIndex = 14;
             // 
             // label15
             // 
@@ -376,7 +381,7 @@
             this.specificatinTypeTextBox.Location = new System.Drawing.Point(323, 220);
             this.specificatinTypeTextBox.Name = "specificatinTypeTextBox";
             this.specificatinTypeTextBox.Size = new System.Drawing.Size(56, 20);
-            this.specificatinTypeTextBox.TabIndex = 168;
+            this.specificatinTypeTextBox.TabIndex = 11;
             // 
             // label16
             // 
@@ -392,7 +397,7 @@
             this.specificationClassTextBox.Location = new System.Drawing.Point(419, 220);
             this.specificationClassTextBox.Name = "specificationClassTextBox";
             this.specificationClassTextBox.Size = new System.Drawing.Size(56, 20);
-            this.specificationClassTextBox.TabIndex = 170;
+            this.specificationClassTextBox.TabIndex = 12;
             // 
             // label17
             // 
@@ -408,7 +413,7 @@
             this.gradeSpecificationTextBox.Location = new System.Drawing.Point(516, 220);
             this.gradeSpecificationTextBox.Name = "gradeSpecificationTextBox";
             this.gradeSpecificationTextBox.Size = new System.Drawing.Size(56, 20);
-            this.gradeSpecificationTextBox.TabIndex = 172;
+            this.gradeSpecificationTextBox.TabIndex = 13;
             // 
             // label18
             // 
@@ -424,7 +429,7 @@
             this.gradeAcceptCriteriaTextBox.Location = new System.Drawing.Point(516, 248);
             this.gradeAcceptCriteriaTextBox.Name = "gradeAcceptCriteriaTextBox";
             this.gradeAcceptCriteriaTextBox.Size = new System.Drawing.Size(56, 20);
-            this.gradeAcceptCriteriaTextBox.TabIndex = 178;
+            this.gradeAcceptCriteriaTextBox.TabIndex = 18;
             // 
             // label19
             // 
@@ -440,7 +445,7 @@
             this.classAcceptCriteriaTextBox.Location = new System.Drawing.Point(419, 248);
             this.classAcceptCriteriaTextBox.Name = "classAcceptCriteriaTextBox";
             this.classAcceptCriteriaTextBox.Size = new System.Drawing.Size(56, 20);
-            this.classAcceptCriteriaTextBox.TabIndex = 176;
+            this.classAcceptCriteriaTextBox.TabIndex = 17;
             // 
             // label20
             // 
@@ -456,7 +461,7 @@
             this.typeAcceptCriteriaTextBox.Location = new System.Drawing.Point(323, 248);
             this.typeAcceptCriteriaTextBox.Name = "typeAcceptCriteriaTextBox";
             this.typeAcceptCriteriaTextBox.Size = new System.Drawing.Size(56, 20);
-            this.typeAcceptCriteriaTextBox.TabIndex = 174;
+            this.typeAcceptCriteriaTextBox.TabIndex = 16;
             // 
             // label21
             // 
@@ -469,11 +474,12 @@
             // 
             // technicianComboBox
             // 
+            this.technicianComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.technicianComboBox.FormattingEnabled = true;
             this.technicianComboBox.Location = new System.Drawing.Point(132, 357);
             this.technicianComboBox.Name = "technicianComboBox";
             this.technicianComboBox.Size = new System.Drawing.Size(92, 21);
-            this.technicianComboBox.TabIndex = 180;
+            this.technicianComboBox.TabIndex = 22;
             // 
             // label70
             // 
@@ -489,7 +495,7 @@
             this.submitButton.Location = new System.Drawing.Point(321, 625);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(47, 23);
-            this.submitButton.TabIndex = 184;
+            this.submitButton.TabIndex = 29;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
@@ -499,7 +505,7 @@
             this.printCertButton.Location = new System.Drawing.Point(232, 625);
             this.printCertButton.Name = "printCertButton";
             this.printCertButton.Size = new System.Drawing.Size(47, 23);
-            this.printCertButton.TabIndex = 183;
+            this.printCertButton.TabIndex = 30;
             this.printCertButton.Text = "Print";
             this.printCertButton.UseVisualStyleBackColor = true;
             this.printCertButton.Click += new System.EventHandler(this.printCertButton_Click);
@@ -511,7 +517,7 @@
             this.notesTextBox.Name = "notesTextBox";
             this.notesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.notesTextBox.Size = new System.Drawing.Size(440, 105);
-            this.notesTextBox.TabIndex = 182;
+            this.notesTextBox.TabIndex = 24;
             // 
             // label62
             // 
@@ -527,7 +533,7 @@
             this.IDRTextBox.Location = new System.Drawing.Point(132, 528);
             this.IDRTextBox.Name = "IDRTextBox";
             this.IDRTextBox.Size = new System.Drawing.Size(100, 20);
-            this.IDRTextBox.TabIndex = 186;
+            this.IDRTextBox.TabIndex = 25;
             // 
             // label22
             // 
@@ -543,7 +549,7 @@
             this.serialTextBox.Location = new System.Drawing.Point(279, 528);
             this.serialTextBox.Name = "serialTextBox";
             this.serialTextBox.Size = new System.Drawing.Size(92, 20);
-            this.serialTextBox.TabIndex = 188;
+            this.serialTextBox.TabIndex = 26;
             // 
             // label23
             // 
@@ -565,18 +571,19 @@
             // 
             // rejectionTypeComboBox
             // 
+            this.rejectionTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.rejectionTypeComboBox.FormattingEnabled = true;
             this.rejectionTypeComboBox.Location = new System.Drawing.Point(462, 528);
             this.rejectionTypeComboBox.Name = "rejectionTypeComboBox";
             this.rejectionTypeComboBox.Size = new System.Drawing.Size(110, 21);
-            this.rejectionTypeComboBox.TabIndex = 191;
+            this.rejectionTypeComboBox.TabIndex = 27;
             // 
             // remarksTextBox
             // 
             this.remarksTextBox.Location = new System.Drawing.Point(132, 559);
             this.remarksTextBox.Name = "remarksTextBox";
             this.remarksTextBox.Size = new System.Drawing.Size(437, 20);
-            this.remarksTextBox.TabIndex = 193;
+            this.remarksTextBox.TabIndex = 28;
             // 
             // label25
             // 
@@ -589,11 +596,12 @@
             // 
             // magMachineComboBox
             // 
+            this.magMachineComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.magMachineComboBox.FormattingEnabled = true;
             this.magMachineComboBox.Location = new System.Drawing.Point(132, 385);
             this.magMachineComboBox.Name = "magMachineComboBox";
             this.magMachineComboBox.Size = new System.Drawing.Size(92, 21);
-            this.magMachineComboBox.TabIndex = 195;
+            this.magMachineComboBox.TabIndex = 23;
             // 
             // label26
             // 

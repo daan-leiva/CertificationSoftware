@@ -39,7 +39,7 @@
             this.d2060Button.Location = new System.Drawing.Point(62, 140);
             this.d2060Button.Name = "d2060Button";
             this.d2060Button.Size = new System.Drawing.Size(97, 23);
-            this.d2060Button.TabIndex = 10;
+            this.d2060Button.TabIndex = 2;
             this.d2060Button.Text = "D-2060R";
             this.d2060Button.UseVisualStyleBackColor = true;
             this.d2060Button.Click += new System.EventHandler(this.d2060Button_Click);
@@ -49,7 +49,7 @@
             this.taqButton.Location = new System.Drawing.Point(62, 111);
             this.taqButton.Name = "taqButton";
             this.taqButton.Size = new System.Drawing.Size(97, 23);
-            this.taqButton.TabIndex = 9;
+            this.taqButton.TabIndex = 1;
             this.taqButton.Text = "TAQ 525";
             this.taqButton.UseVisualStyleBackColor = true;
             this.taqButton.Click += new System.EventHandler(this.taqButton_Click);
@@ -70,7 +70,7 @@
             this.magCertButton.Location = new System.Drawing.Point(62, 82);
             this.magCertButton.Name = "magCertButton";
             this.magCertButton.Size = new System.Drawing.Size(97, 23);
-            this.magCertButton.TabIndex = 7;
+            this.magCertButton.TabIndex = 0;
             this.magCertButton.Text = "Mag Cert";
             this.magCertButton.UseVisualStyleBackColor = true;
             this.magCertButton.Click += new System.EventHandler(this.magCertButton_Click);

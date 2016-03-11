@@ -72,7 +72,7 @@
             this.autoFillButton.Location = new System.Drawing.Point(228, 80);
             this.autoFillButton.Name = "autoFillButton";
             this.autoFillButton.Size = new System.Drawing.Size(52, 47);
-            this.autoFillButton.TabIndex = 170;
+            this.autoFillButton.TabIndex = 1;
             this.autoFillButton.Text = "Auto Fill From JB";
             this.autoFillButton.UseVisualStyleBackColor = true;
             this.autoFillButton.Click += new System.EventHandler(this.autoFillButton_Click);
@@ -93,7 +93,7 @@
             this.revisionTextBox.Location = new System.Drawing.Point(375, 107);
             this.revisionTextBox.Name = "revisionTextBox";
             this.revisionTextBox.Size = new System.Drawing.Size(104, 20);
-            this.revisionTextBox.TabIndex = 166;
+            this.revisionTextBox.TabIndex = 3;
             // 
             // label13
             // 
@@ -109,7 +109,7 @@
             this.partNumberTextBox.Location = new System.Drawing.Point(122, 133);
             this.partNumberTextBox.Name = "partNumberTextBox";
             this.partNumberTextBox.Size = new System.Drawing.Size(158, 20);
-            this.partNumberTextBox.TabIndex = 164;
+            this.partNumberTextBox.TabIndex = 4;
             // 
             // label11
             // 
@@ -125,7 +125,7 @@
             this.lotNumberTextBox.Location = new System.Drawing.Point(375, 131);
             this.lotNumberTextBox.Name = "lotNumberTextBox";
             this.lotNumberTextBox.Size = new System.Drawing.Size(56, 20);
-            this.lotNumberTextBox.TabIndex = 162;
+            this.lotNumberTextBox.TabIndex = 5;
             // 
             // label10
             // 
@@ -142,7 +142,7 @@
             this.dateTimePicker.Location = new System.Drawing.Point(375, 79);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(104, 20);
-            this.dateTimePicker.TabIndex = 160;
+            this.dateTimePicker.TabIndex = 2;
             // 
             // label8
             // 
@@ -158,7 +158,7 @@
             this.jobNumberTextBox.Location = new System.Drawing.Point(122, 108);
             this.jobNumberTextBox.Name = "jobNumberTextBox";
             this.jobNumberTextBox.Size = new System.Drawing.Size(100, 20);
-            this.jobNumberTextBox.TabIndex = 158;
+            this.jobNumberTextBox.TabIndex = 0;
             // 
             // certNumberTextBox
             // 
@@ -167,6 +167,7 @@
             this.certNumberTextBox.ReadOnly = true;
             this.certNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.certNumberTextBox.TabIndex = 157;
+            this.certNumberTextBox.TabStop = false;
             // 
             // label5
             // 
@@ -220,14 +221,14 @@
             this.partDescriptionTextBox.Location = new System.Drawing.Point(122, 157);
             this.partDescriptionTextBox.Name = "partDescriptionTextBox";
             this.partDescriptionTextBox.Size = new System.Drawing.Size(158, 20);
-            this.partDescriptionTextBox.TabIndex = 168;
+            this.partDescriptionTextBox.TabIndex = 6;
             // 
             // customerTextBox
             // 
             this.customerTextBox.Location = new System.Drawing.Point(375, 156);
             this.customerTextBox.Name = "customerTextBox";
             this.customerTextBox.Size = new System.Drawing.Size(158, 20);
-            this.customerTextBox.TabIndex = 169;
+            this.customerTextBox.TabIndex = 7;
             // 
             // label6
             // 
@@ -243,7 +244,7 @@
             this.operationNoTextBox.Location = new System.Drawing.Point(122, 182);
             this.operationNoTextBox.Name = "operationNoTextBox";
             this.operationNoTextBox.Size = new System.Drawing.Size(158, 20);
-            this.operationNoTextBox.TabIndex = 172;
+            this.operationNoTextBox.TabIndex = 8;
             // 
             // label7
             // 
@@ -259,7 +260,7 @@
             this.edmProgramTextBox.Location = new System.Drawing.Point(122, 206);
             this.edmProgramTextBox.Name = "edmProgramTextBox";
             this.edmProgramTextBox.Size = new System.Drawing.Size(158, 20);
-            this.edmProgramTextBox.TabIndex = 174;
+            this.edmProgramTextBox.TabIndex = 9;
             // 
             // label9
             // 
@@ -275,23 +276,25 @@
             this.quantityProcesseTextBox.Location = new System.Drawing.Point(122, 232);
             this.quantityProcesseTextBox.Name = "quantityProcesseTextBox";
             this.quantityProcesseTextBox.Size = new System.Drawing.Size(158, 20);
-            this.quantityProcesseTextBox.TabIndex = 176;
+            this.quantityProcesseTextBox.TabIndex = 10;
             // 
             // specificationRevComboBox
             // 
+            this.specificationRevComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.specificationRevComboBox.FormattingEnabled = true;
             this.specificationRevComboBox.Location = new System.Drawing.Point(242, 257);
             this.specificationRevComboBox.Name = "specificationRevComboBox";
             this.specificationRevComboBox.Size = new System.Drawing.Size(50, 21);
-            this.specificationRevComboBox.TabIndex = 183;
+            this.specificationRevComboBox.TabIndex = 12;
             // 
             // specificationComboBox
             // 
+            this.specificationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.specificationComboBox.FormattingEnabled = true;
             this.specificationComboBox.Location = new System.Drawing.Point(122, 257);
             this.specificationComboBox.Name = "specificationComboBox";
             this.specificationComboBox.Size = new System.Drawing.Size(100, 21);
-            this.specificationComboBox.TabIndex = 182;
+            this.specificationComboBox.TabIndex = 11;
             // 
             // label15
             // 
@@ -309,7 +312,7 @@
             this.performedNotesTextBox.Name = "performedNotesTextBox";
             this.performedNotesTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.performedNotesTextBox.Size = new System.Drawing.Size(410, 48);
-            this.performedNotesTextBox.TabIndex = 185;
+            this.performedNotesTextBox.TabIndex = 13;
             // 
             // label62
             // 
@@ -334,7 +337,7 @@
             this.submitButton.Location = new System.Drawing.Point(307, 396);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
-            this.submitButton.TabIndex = 189;
+            this.submitButton.TabIndex = 15;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
@@ -344,7 +347,7 @@
             this.printButton.Location = new System.Drawing.Point(218, 396);
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(75, 23);
-            this.printButton.TabIndex = 188;
+            this.printButton.TabIndex = 16;
             this.printButton.Text = "Print";
             this.printButton.UseVisualStyleBackColor = true;
             this.printButton.Click += new System.EventHandler(this.printCertButton_Click);
@@ -354,7 +357,7 @@
             this.certifiedByTextBox.Location = new System.Drawing.Point(122, 341);
             this.certifiedByTextBox.Name = "certifiedByTextBox";
             this.certifiedByTextBox.Size = new System.Drawing.Size(158, 20);
-            this.certifiedByTextBox.TabIndex = 190;
+            this.certifiedByTextBox.TabIndex = 14;
             // 
             // errorProvider1
             // 

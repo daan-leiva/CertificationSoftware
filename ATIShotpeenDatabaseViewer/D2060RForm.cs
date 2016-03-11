@@ -150,6 +150,9 @@ namespace ATICertViewer
             as5282QQITextBox.TextChanged += FormatCheckEmptyTextBox;
             bathComparisonTextBox.TextChanged += FormatCheckEmptyTextBox;
             inspectorTextBox.TextChanged += FormatCheckEmptyTextBox;
+
+            // disable resizing
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
         }
 
         // inserts a new row to the Production.dbo.tblJobProcessLog database

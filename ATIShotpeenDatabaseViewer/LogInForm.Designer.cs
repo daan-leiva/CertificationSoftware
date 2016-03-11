@@ -59,7 +59,7 @@
             this.userNameTextBox.Location = new System.Drawing.Point(107, 26);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.Size = new System.Drawing.Size(100, 20);
-            this.userNameTextBox.TabIndex = 3;
+            this.userNameTextBox.TabIndex = 0;
             this.userNameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userNameTextBox_KeyDown);
             // 
             // passwordTextBox
@@ -67,7 +67,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(107, 57);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
-            this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.TabIndex = 1;
             this.passwordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passwordTextBox_KeyDown);
             // 
             // logInButton
@@ -75,7 +75,7 @@
             this.logInButton.Location = new System.Drawing.Point(43, 93);
             this.logInButton.Name = "logInButton";
             this.logInButton.Size = new System.Drawing.Size(75, 23);
-            this.logInButton.TabIndex = 5;
+            this.logInButton.TabIndex = 2;
             this.logInButton.Text = "Login";
             this.logInButton.UseVisualStyleBackColor = true;
             this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
@@ -85,12 +85,12 @@
             this.cancelButton.Location = new System.Drawing.Point(130, 93);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 6;
+            this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // LogInDialog
+            // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,7 +101,7 @@
             this.Controls.Add(this.userNameTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "LogInDialog";
+            this.Name = "LogInForm";
             this.Text = "Log In";
             this.Load += new System.EventHandler(this.LogInDialog_Load);
             this.ResumeLayout(false);
