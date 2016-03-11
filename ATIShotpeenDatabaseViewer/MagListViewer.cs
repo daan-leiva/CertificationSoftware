@@ -75,7 +75,7 @@ namespace ATICertViewer
 
                     string query = "SELECT owner\n" +
                                     "FROM ATIDelivery.dbo.MagListLog\n" +
-                                    "WHERE process_num = '" + certNumber.Trim() + "';";
+                                    "WHERE cert_num = '" + certNumber.Trim() + "';";
 
                     OdbcCommand com = new OdbcCommand(query, conn);
                     OdbcDataReader reader = com.ExecuteReader();
