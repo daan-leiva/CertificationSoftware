@@ -33,10 +33,10 @@
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.submitButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.Read = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Write = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.submitButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +94,18 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Read
+            // 
+            this.Read.HeaderText = "Read";
+            this.Read.Name = "Read";
+            this.Read.ReadOnly = true;
+            // 
+            // Write
+            // 
+            this.Write.HeaderText = "Write";
+            this.Write.Name = "Write";
+            this.Write.ReadOnly = true;
+            // 
             // submitButton
             // 
             this.submitButton.Location = new System.Drawing.Point(77, 217);
@@ -114,22 +126,11 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // Read
-            // 
-            this.Read.HeaderText = "Read";
-            this.Read.Name = "Read";
-            this.Read.ReadOnly = true;
-            // 
-            // Write
-            // 
-            this.Write.HeaderText = "Write";
-            this.Write.Name = "Write";
-            this.Write.ReadOnly = true;
-            // 
             // RegisterUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(326, 254);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.submitButton);

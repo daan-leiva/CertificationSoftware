@@ -142,7 +142,6 @@
             this.label67 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.printCertButton = new System.Windows.Forms.Button();
-            this.label68 = new System.Windows.Forms.Label();
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.machineNumberTextBox = new System.Windows.Forms.ComboBox();
@@ -1218,17 +1217,6 @@
             this.printCertButton.UseVisualStyleBackColor = true;
             this.printCertButton.Click += new System.EventHandler(this.printCertButton_Click);
             // 
-            // label68
-            // 
-            this.label68.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label68.Location = new System.Drawing.Point(-4, 45);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(642, 19);
-            this.label68.TabIndex = 121;
-            this.label68.Text = "_________________________________________________________________________________" +
-    "________________________";
-            this.label68.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // label69
             // 
             this.label69.AutoSize = true;
@@ -1357,8 +1345,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(634, 912);
+            this.ClientSize = new System.Drawing.Size(621, 911);
             this.Controls.Add(this.shotSizeComboBox);
             this.Controls.Add(this.additionalPSDListBox);
             this.Controls.Add(this.psdListBox);
@@ -1371,7 +1360,6 @@
             this.Controls.Add(this.machineNumberTextBox);
             this.Controls.Add(this.label70);
             this.Controls.Add(this.label69);
-            this.Controls.Add(this.label68);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.notesTextBox);
             this.Controls.Add(this.label62);
@@ -1557,7 +1545,6 @@
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button printCertButton;
-        private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.ComboBox machineNumberTextBox;

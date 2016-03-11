@@ -404,16 +404,16 @@ namespace ATICertViewer
         // this submits all of the data to the database or edits an old row if already exists
         private void submitButton_Click(object sender, EventArgs e)
         {
+            // check document formating
+            if (!CheckFormatting())
+            {
+                MessageBox.Show("Formatting error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // check if the process number is empty
             if (processNumberTextBox.Text.Length == 0)
             {
-                // check document formating
-                if (!CheckFormatting())
-                {
-                    MessageBox.Show("Formatting error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
                 // get new process number
                 int newProcessNumber = GetNextProcessNumber();
 

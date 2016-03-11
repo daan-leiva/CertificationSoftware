@@ -94,6 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(248, 135);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.logInButton);
@@ -101,6 +102,7 @@
             this.Controls.Add(this.userNameTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximumSize = new System.Drawing.Size(264, 173);
             this.Name = "LogInForm";
             this.Text = "Log In";
             this.Load += new System.EventHandler(this.LogInDialog_Load);

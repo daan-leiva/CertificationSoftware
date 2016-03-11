@@ -112,6 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(247, 266);
             this.Controls.Add(this.editUserButton);
             this.Controls.Add(this.registerUserButton);
@@ -120,6 +121,7 @@
             this.Controls.Add(this.magButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.shotpeenButton);
+            this.MaximumSize = new System.Drawing.Size(263, 304);
             this.Name = "MainWindow";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);

@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(D2060RForm));
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.commentsTextBox = new System.Windows.Forms.TextBox();
             this.inspectorTextBox = new System.Windows.Forms.TextBox();
@@ -74,25 +71,6 @@
             this.verticalLabel1 = new ATICertViewer.VerticalLabel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(-136, 208);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1477, 13);
-            this.label3.TabIndex = 77;
-            this.label3.Text = resources.GetString("label3.Text");
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-136, 258);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1477, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = resources.GetString("label2.Text");
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
@@ -459,11 +437,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 365);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1214, 375);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.printButton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.verticalLabel18);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.commentsTextBox);
@@ -512,8 +489,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private VerticalLabel verticalLabel18;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox commentsTextBox;

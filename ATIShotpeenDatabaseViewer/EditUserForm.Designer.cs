@@ -130,6 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(326, 254);
             this.Controls.Add(this.userNameComboBox);
             this.Controls.Add(this.label1);
@@ -138,6 +139,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.label2);
+            this.MaximumSize = new System.Drawing.Size(342, 292);
             this.Name = "EditUserForm";
             this.Text = "User Edit";
             this.Load += new System.EventHandler(this.EditUserForm_Load);

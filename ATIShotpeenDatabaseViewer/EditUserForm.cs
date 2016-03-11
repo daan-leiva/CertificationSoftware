@@ -88,7 +88,7 @@ namespace ATICertViewer
                 // update query
                 string query = "UPDATE ATIDelivery.dbo.CertUserLogIns\n" +
                     "SET\n" +
-                    (passwordUpdate ? "password = '" + @System.Text.Encoding.Default.GetString(password) + "',\n" : string.Empty) +
+                    (passwordUpdate ? "password = '" + @System.Text.Encoding.Default.GetString(password).ToString() + "',\n" : string.Empty) +
                     "shotpeenRead = " + Convert.ToByte(dataGridView1.Rows[0].Cells[0].Value) + ",\n" +
                     "magRead = " + Convert.ToByte(dataGridView1.Rows[1].Cells[0].Value) + ",\n" +
                     "edmRead = " + Convert.ToByte(dataGridView1.Rows[2].Cells[0].Value) + ",\n" +

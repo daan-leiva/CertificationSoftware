@@ -86,16 +86,16 @@ namespace ATICertViewer
 
         private void submitButton_Click(object sender, EventArgs e)
         {
+            // check document formating
+            if (!CheckFormatting())
+            {
+                MessageBox.Show("Formatting error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             // check if the process number is empty
             if (certNumberTextBox.Text.Length == 0)
             {
-                // check document formating
-                if (!CheckFormatting())
-                {
-                    MessageBox.Show("Formatting error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
                 // get new process number
                 string newProcessNumber = GetNextProcessNumber();
 

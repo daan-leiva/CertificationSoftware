@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TAQ525Form));
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.internalShortsTextBox = new System.Windows.Forms.TextBox();
             this.particleConcTextBox = new System.Windows.Forms.TextBox();
@@ -49,8 +48,6 @@
             this.inspectorTextBox = new System.Windows.Forms.TextBox();
             this.commentsTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -211,25 +208,6 @@
             this.label1.Size = new System.Drawing.Size(735, 24);
             this.label1.TabIndex = 35;
             this.label1.Text = "ABSOLUTE TECHNOLOGIES INC TAQ 525 PROCESS FORM CONTROL LOG";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(-138, 254);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1477, 13);
-            this.label2.TabIndex = 37;
-            this.label2.Text = resources.GetString("label2.Text");
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(-138, 204);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1477, 13);
-            this.label3.TabIndex = 38;
-            this.label3.Text = resources.GetString("label3.Text");
             // 
             // submitButton
             // 
@@ -459,11 +437,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1204, 342);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.printButton);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.verticalLabel18);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.commentsTextBox);
@@ -549,8 +526,6 @@
         private System.Windows.Forms.TextBox commentsTextBox;
         private System.Windows.Forms.Label label1;
         private VerticalLabel verticalLabel18;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button printButton;
         private System.Windows.Forms.ErrorProvider errorProvider1;

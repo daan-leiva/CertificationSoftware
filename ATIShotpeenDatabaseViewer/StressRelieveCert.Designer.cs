@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.autoFillButton = new System.Windows.Forms.Button();
-            this.label68 = new System.Windows.Forms.Label();
             this.revisionTextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.serialNumbersTextBox = new System.Windows.Forms.TextBox();
@@ -97,17 +96,6 @@
             this.autoFillButton.Text = "Auto Fill From JB";
             this.autoFillButton.UseVisualStyleBackColor = true;
             this.autoFillButton.Click += new System.EventHandler(this.autoFillButton_Click);
-            // 
-            // label68
-            // 
-            this.label68.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label68.Location = new System.Drawing.Point(-4, 54);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(642, 19);
-            this.label68.TabIndex = 149;
-            this.label68.Text = "_________________________________________________________________________________" +
-    "________________________";
-            this.label68.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // revisionTextBox
             // 
@@ -475,6 +463,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(634, 523);
             this.Controls.Add(this.opNumberTextBox);
             this.Controls.Add(this.label14);
@@ -498,7 +487,6 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.autoFillButton);
-            this.Controls.Add(this.label68);
             this.Controls.Add(this.revisionTextBox);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.serialNumbersTextBox);
@@ -534,7 +522,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button autoFillButton;
-        private System.Windows.Forms.Label label68;
         private System.Windows.Forms.TextBox revisionTextBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox serialNumbersTextBox;
