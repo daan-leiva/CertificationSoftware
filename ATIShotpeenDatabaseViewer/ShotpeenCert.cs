@@ -44,8 +44,6 @@ namespace ATICertViewer
 
             if (!newForm) // update form with current data
                 UpdateForm();
-            else
-                ValidateListBoxes(new object(), new EventArgs());
 
             UpdatePostTotalMediaPassing(new object(), new EventArgs());
             UpdatePreTotalMediaPassing(new object(), new EventArgs());
@@ -100,18 +98,6 @@ namespace ATICertViewer
             technicianComboBox.SelectedIndexChanged += FormatCheckInvalidComboBox;
         }
 
-        private void ValidateListBoxes(object o, EventArgs e)
-        {
-            if (specificationComboBox.SelectedItem != null && (specificationComboBox.SelectedItem.ToString().ToLower().Contains("bac") || specificationComboBox.SelectedItem.ToString().ToLower().Contains("bps")))
-                psdListBox.Enabled = true;
-            else
-                psdListBox.Enabled = false;
-
-            if (additionalSpecsComboBox.SelectedItem != null && (additionalSpecsComboBox.SelectedItem.ToString().ToLower().Contains("bac") || additionalSpecsComboBox.SelectedItem.ToString().ToLower().Contains("bps")))
-                additionalPSDListBox.Enabled = true;
-            else
-                additionalPSDListBox.Enabled = false;
-        }
 
         private void UpdateForm()
         {
@@ -187,7 +173,6 @@ namespace ATICertViewer
                 }
                 UpdatePreTotalMediaPassing(new object(), new EventArgs());
                 UpdatePostTotalMediaPassing(new object(), new EventArgs());
-                ValidateListBoxes(new object(), new EventArgs());
             }
         }
 
@@ -220,13 +205,7 @@ namespace ATICertViewer
                     "FROM ATIDelivery.dbo.Rev;";
             controlContent = GetValuesFromDB(query, specRevComboBox);
             PopulateControl(controlContent, specRevComboBox);
-
-            // populate psds list
-            query = "SELECT PSD\n" +
-                    "FROM ATIDelivery.dbo.PSD;";
-            controlContent = GetValuesFromDB(query, psdListBox);
-            PopulateControl(controlContent, psdListBox);
-
+            
             // populate additional specs dropdown
             query = "SELECT specification\n" +
                     "FROM ATIDelivery.dbo.tblSpecification;";
@@ -238,13 +217,7 @@ namespace ATICertViewer
                     "FROM ATIDelivery.dbo.Rev;";
             controlContent = GetValuesFromDB(query, additionalSpecRevComboBox);
             PopulateControl(controlContent, additionalSpecRevComboBox);
-
-            // populate additional psd list
-            query = "SELECT PSD\n" +
-                    "FROM ATIDelivery.dbo.PSD;";
-            controlContent = GetValuesFromDB(query, psdListBox);
-            PopulateControl(controlContent, additionalPSDListBox);
-
+            
             // populate shot size dropdown
             query = "SELECT size\n" +
                     "FROM ATIDelivery.dbo.ShotSize;";
